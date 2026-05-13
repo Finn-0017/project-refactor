@@ -1,0 +1,15 @@
+{
+  "description": "Example command settings for clean WHP training.",
+  "model_path": "meta-llama/Llama-3.1-8B-Instruct",
+  "names_path": "data/WHPplus/whp_names.json",
+  "obfuscate_passages": "data/WHPplus/all_obfuscate_samples.json",
+  "selected_ids": "config/unlearn_ids1.json",
+  "lora_config": "config/lora_config10.json",
+  "output_dir": "exp/clean_whp_set1_n20_lora10_seed1",
+  "num_passages": 20,
+  "batch_size": 1,
+  "learning_rate": 0.00005,
+  "num_train_epochs": 2,
+  "lr_scheduler_type": "constant",
+  "seed": 1
+}

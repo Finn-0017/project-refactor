@@ -1,0 +1,11 @@
+[project]
+name = "unlearning-research-refactor"
+version = "0.1.0"
+description = "Clean training and evaluation utilities for DF-MCQ and WHP experiments."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
