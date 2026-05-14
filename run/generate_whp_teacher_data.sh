@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# 用法：
+# Usage：
 #   bash generate_teacher.sh 0
 #   bash generate_teacher.sh 1
-#
-# 不传 GPU 编号时默认用 GPU 0。
+
 GPU_ID="${1:-0}"
 
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
@@ -14,9 +13,9 @@ export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 
 NAMES_PATH="data/origdata/names_210.json"
-SELECTED_IDS="config/unlearn_ids.json"
+SELECTED_IDS="config/unlearn_ids1.json"
 REPLACEMENT_NAMES="data/origdata/names_last_200.json"
-OUTPUT_DIR="data/whp_samples"
+OUTPUT_DIR="data/whp_samples/set1"
 
 NUM_SAMPLES=200
 SEED=1
