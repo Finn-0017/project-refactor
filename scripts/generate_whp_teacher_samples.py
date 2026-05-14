@@ -14,6 +14,7 @@ from unlearning_research.data import load_name_table
 from unlearning_research.teacher import (
     TeacherGenerationSettings,
     generate_teacher_samples_for_target,
+    load_existing_teacher_samples,
     load_generation_model,
     load_replacement_names,
     save_teacher_generation_outputs,
@@ -27,6 +28,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--names_path", required=True, help="Path to data/WHPplus/whp_names.json")
     parser.add_argument("--selected_ids", required=True, help="Target IDs or JSON file of target IDs")
     parser.add_argument("--output_dir", required=True, help="Directory for generated samples")
+    parser.add_argument(
+        "--target_id",
+        default=None,
+        help="Generate samples for one target ID from selected_ids. Useful for multi-GPU runs.",
+    )
+    parser.add_argument(
+        "--target_index",
+        type=int,
+        default=None,
+        help="Generate samples for selected_ids[target_index]. Useful for array jobs.",
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume from existing teacher_samples_detailed.json or obfuscate_samples.json in output_dir.",
+    )
     parser.add_argument(
         "--replacement_names_path",
         default=None,
@@ -68,12 +85,32 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def _select_target_ids(selected_ids: list[str], *, target_id: str | None, target_index: int | None) -> list[str]:
+    if target_id is not None and target_index is not None:
+        raise ValueError("Use only one of --target_id and --target_index")
+    if target_id is not None:
+        target_id = str(target_id)
+        if target_id not in selected_ids:
+            raise ValueError(f"target_id {target_id} is not present in selected_ids")
+        return [target_id]
+    if target_index is not None:
+        if target_index < 0 or target_index >= len(selected_ids):
+            raise ValueError(f"target_index {target_index} out of range for {len(selected_ids)} selected IDs")
+        return [selected_ids[target_index]]
+    return selected_ids
+
+
 def main() -> None:
     args = parse_args()
     output_dir = ensure_dir(args.output_dir)
     logfile = output_dir / "teacher_generation.log"
 
-    selected_ids = load_selected_ids(args.selected_ids)
+    all_selected_ids = load_selected_ids(args.selected_ids)
+    selected_ids = _select_target_ids(
+        all_selected_ids,
+        target_id=args.target_id,
+        target_index=args.target_index,
+    )
     id_to_name = load_name_table(args.names_path)
     selected_names = {}
     for target_id in selected_ids:
@@ -83,7 +120,7 @@ def main() -> None:
 
     candidate_names = load_replacement_names(
         names_path=args.names_path,
-        selected_ids=selected_ids,
+        selected_ids=all_selected_ids,
         replacement_names_path=args.replacement_names_path,
     )
     settings = TeacherGenerationSettings(
@@ -102,13 +139,41 @@ def main() -> None:
     save_json(vars(args), output_dir / "teacher_generation_config.json")
     save_json(
         {
-            "selected_ids": selected_ids,
-            "selected_names": selected_names,
+            "all_selected_ids": all_selected_ids,
+            "selected_ids_for_this_run": selected_ids,
+            "selected_names_for_this_run": selected_names,
             "num_candidate_names": len(candidate_names),
             "candidate_names_preview": candidate_names[:20],
         },
         output_dir / "teacher_generation_inputs.json",
     )
+
+    files_manifest = build_file_manifest(
+        {
+            "names_path": args.names_path,
+            "selected_ids": args.selected_ids,
+            "replacement_names_path": args.replacement_names_path,
+        }
+    )
+
+    # Resume before model loading.  Completed targets exit quickly without loading the model.
+    samples_by_target = {}
+    all_complete = True
+    if args.resume:
+        for target_id, target_name in selected_names.items():
+            existing = load_existing_teacher_samples(output_dir=output_dir, target_name=target_name)
+            samples_by_target[target_name] = existing
+            if len(existing) < args.num_samples:
+                all_complete = False
+        if all_complete:
+            save_teacher_generation_outputs(
+                samples_by_target=samples_by_target,
+                output_dir=output_dir,
+                settings=settings,
+                files_manifest=files_manifest,
+            )
+            print(f"All selected targets already have {args.num_samples} samples. Nothing to generate.")
+            return
 
     device_map = None if args.device_map == "none" else args.device_map
     model, tokenizer = load_generation_model(
@@ -117,8 +182,18 @@ def main() -> None:
         device_map=device_map,
     )
 
-    samples_by_target = {}
     for target_id, target_name in selected_names.items():
+        existing = samples_by_target.get(target_name, []) if args.resume else []
+
+        def save_partial(samples, *, _target_name=target_name):
+            samples_by_target[_target_name] = samples
+            save_teacher_generation_outputs(
+                samples_by_target=samples_by_target,
+                output_dir=output_dir,
+                settings=settings,
+                files_manifest=files_manifest,
+            )
+
         samples_by_target[target_name] = generate_teacher_samples_for_target(
             model=model,
             tokenizer=tokenizer,
@@ -127,32 +202,16 @@ def main() -> None:
             candidate_names=candidate_names,
             settings=settings,
             logfile=logfile,
+            existing_samples=existing,
+            save_callback=save_partial,
         )
-        # Save after each target so a long generation job leaves recoverable output.
-        save_teacher_generation_outputs(
-            samples_by_target=samples_by_target,
-            output_dir=output_dir,
-            settings=settings,
-            files_manifest=build_file_manifest(
-                {
-                    "names_path": args.names_path,
-                    "selected_ids": args.selected_ids,
-                    "replacement_names_path": args.replacement_names_path,
-                }
-            ),
-        )
+        save_partial(samples_by_target[target_name])
 
     paths = save_teacher_generation_outputs(
         samples_by_target=samples_by_target,
         output_dir=output_dir,
         settings=settings,
-        files_manifest=build_file_manifest(
-            {
-                "names_path": args.names_path,
-                "selected_ids": args.selected_ids,
-                "replacement_names_path": args.replacement_names_path,
-            }
-        ),
+        files_manifest=files_manifest,
     )
     print("Generated WHP teacher samples:")
     for key, path in paths.items():

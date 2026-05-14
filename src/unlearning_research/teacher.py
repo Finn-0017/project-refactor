@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import torch
 
@@ -263,6 +263,98 @@ def load_generation_model(
     return model, tokenizer
 
 
+
+def load_existing_teacher_samples(
+    *,
+    output_dir: str | Path,
+    target_name: str,
+) -> list[TeacherSample]:
+    """Load already generated samples for one target, if they exist.
+
+    The detailed file is preferred because it records the source name and seed used
+    for each sample.  A fallback to `obfuscate_samples.json` is provided so a run can
+    still resume when only the training-compatible file is available.
+    """
+
+    output_dir = Path(output_dir)
+    detailed_path = output_dir / "teacher_samples_detailed.json"
+    if detailed_path.exists():
+        data = load_json(detailed_path)
+        rows = data.get(target_name, []) if isinstance(data, dict) else []
+        samples: list[TeacherSample] = []
+        seen: set[int] = set()
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            rewritten = str(row.get("rewritten_passage", "")).strip()
+            if not rewritten:
+                continue
+            sample_id = int(row.get("sample_id", len(samples)))
+            if sample_id in seen:
+                continue
+            samples.append(
+                TeacherSample(
+                    target_id=str(row.get("target_id", "")),
+                    target_name=str(row.get("target_name", target_name)),
+                    sample_id=sample_id,
+                    source_name=str(row.get("source_name", "")),
+                    source_cycle=int(row.get("source_cycle", 0)),
+                    source_passage=str(row.get("source_passage", "")),
+                    rewritten_passage=rewritten,
+                    rewrite_mode=str(row.get("rewrite_mode", "")),
+                    seed=int(row.get("seed", 0)),
+                )
+            )
+            seen.add(sample_id)
+        return sorted(samples, key=lambda sample: sample.sample_id)
+
+    obfuscate_path = output_dir / "obfuscate_samples.json"
+    if obfuscate_path.exists():
+        data = load_json(obfuscate_path)
+        rows = data.get(target_name, []) if isinstance(data, dict) else []
+        return [
+            TeacherSample(
+                target_id="",
+                target_name=target_name,
+                sample_id=i,
+                source_name="",
+                source_cycle=0,
+                source_passage="",
+                rewritten_passage=str(passage),
+                rewrite_mode="unknown",
+                seed=0,
+            )
+            for i, passage in enumerate(rows)
+            if str(passage).strip()
+        ]
+    return []
+
+
+def _validate_resume_prefix(
+    *,
+    existing_samples: list[TeacherSample],
+    schedule: list[tuple[str, int]],
+    target_name: str,
+) -> None:
+    """Check that existing samples match the deterministic source-name schedule."""
+
+    for expected_id, sample in enumerate(existing_samples):
+        if sample.sample_id != expected_id:
+            raise ValueError(
+                f"Cannot resume {target_name!r}: expected sample_id {expected_id}, "
+                f"found {sample.sample_id}."
+            )
+        if sample.source_name:
+            expected_source, expected_cycle = schedule[expected_id]
+            if sample.source_name != expected_source or sample.source_cycle != expected_cycle:
+                raise ValueError(
+                    f"Cannot resume {target_name!r}: sample {expected_id} was generated "
+                    f"from {sample.source_name!r} cycle {sample.source_cycle}, but the "
+                    f"current schedule expects {expected_source!r} cycle {expected_cycle}. "
+                    "Check seed, replacement-name pool, and target settings."
+                )
+
+
 def generate_teacher_samples_for_target(
     *,
     model,
@@ -272,8 +364,15 @@ def generate_teacher_samples_for_target(
     candidate_names: list[str],
     settings: TeacherGenerationSettings,
     logfile: str | Path | None = None,
+    existing_samples: list[TeacherSample] | None = None,
+    save_callback: Callable[[list[TeacherSample]], None] | None = None,
 ) -> list[TeacherSample]:
-    """Generate WHP teacher samples for one target person."""
+    """Generate WHP teacher samples for one target person.
+
+    `existing_samples` enables resumable generation.  If 37 valid samples already
+    exist, generation resumes from sample 38 and therefore from the 38th replacement
+    name in the deterministic schedule.
+    """
 
     schedule = replacement_schedule(
         candidate_names,
@@ -281,9 +380,34 @@ def generate_teacher_samples_for_target(
         num_samples=settings.num_samples_per_target,
         seed=settings.seed,
     )
-    samples: list[TeacherSample] = []
+    samples = list(existing_samples or [])
+    if len(samples) > settings.num_samples_per_target:
+        samples = samples[: settings.num_samples_per_target]
+    _validate_resume_prefix(
+        existing_samples=samples,
+        schedule=schedule,
+        target_name=target_name,
+    )
 
-    for sample_id, (source_name, source_cycle) in enumerate(schedule):
+    start_index = len(samples)
+    if start_index >= settings.num_samples_per_target:
+        append_log(
+            f"resume target={target_name!r} already complete: {start_index}/"
+            f"{settings.num_samples_per_target}",
+            logfile,
+        )
+        if save_callback is not None:
+            save_callback(samples)
+        return samples
+
+    append_log(
+        f"resume target={target_name!r} start={start_index}/"
+        f"{settings.num_samples_per_target}",
+        logfile,
+    )
+
+    for sample_id in range(start_index, settings.num_samples_per_target):
+        source_name, source_cycle = schedule[sample_id]
         sample_seed = stable_person_seed(
             settings.seed,
             f"{target_name}:{source_name}:{source_cycle}:{sample_id}",
@@ -328,8 +452,7 @@ def generate_teacher_samples_for_target(
                         top_p=1.0,
                     )
                 )
-                # A deterministic cleanup step removes any source-name remnants left by
-                # the model while keeping the LLM rewrite as the primary transformation.
+                # This cleanup removes source-name remnants that the rewrite model may leave.
                 rewritten = replace_person_name(
                     rewritten,
                     source_name,
@@ -376,8 +499,9 @@ def generate_teacher_samples_for_target(
             ),
             logfile,
         )
+        if save_callback is not None:
+            save_callback(samples)
     return samples
-
 
 def save_teacher_generation_outputs(
     *,
