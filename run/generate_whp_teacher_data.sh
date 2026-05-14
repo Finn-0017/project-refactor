@@ -6,9 +6,10 @@ set -euo pipefail
 # ============================================================
 
 # Usage：
-#   bash generate_teacher.sh 0
-#   bash generate_teacher.sh 1
-#   bash generate_teacher.sh 2
+#   bash generate_whp_teacher_data.sh 0
+#   bash generate_whp_teacher_data.sh 1
+#   bash generate_whp_teacher_data.sh 2
+#   bash generate_whp_teacher_data.sh 3
 
 GPU_ID="${1:-0}"
 
@@ -31,7 +32,7 @@ SEED=1
 TEMPERATURE=0.7
 TOP_P=0.9
 MAX_NEW_TOKENS=320
-MAX_RETRY=999
+MAX_RETRY=5
 
 echo "Using physical GPU: ${GPU_ID}"
 echo "Selected ids file: ${SELECTED_IDS}"
