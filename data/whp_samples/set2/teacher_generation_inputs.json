@@ -1,0 +1,37 @@
+{
+  "all_selected_ids": [
+    "10002",
+    "10003"
+  ],
+  "selected_ids_for_this_run": [
+    "10002",
+    "10003"
+  ],
+  "selected_names_for_this_run": {
+    "10002": "Dany Robin",
+    "10003": "Martin Gutzwiller"
+  },
+  "num_candidate_names": 200,
+  "candidate_names_preview": [
+    "Donald Trump",
+    "Elizabeth II",
+    "Barack Obama",
+    "Cristiano Ronaldo",
+    "Michael Jackson",
+    "Elon Musk",
+    "Lady Gaga",
+    "Adolf Hitler",
+    "Eminem",
+    "Lionel Messi",
+    "Justin Bieber",
+    "Freddie Mercury",
+    "Kim Kardashian",
+    "Johnny Depp",
+    "Steve Jobs",
+    "Dwayne Johnson",
+    "Michael Jordan",
+    "Taylor Swift",
+    "Stephen Hawking",
+    "Kanye West"
+  ]
+}

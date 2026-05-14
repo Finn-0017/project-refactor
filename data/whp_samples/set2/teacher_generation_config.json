@@ -1,0 +1,23 @@
+{
+  "model_path": "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+  "names_path": "data/origdata/names_210.json",
+  "selected_ids": "configs/unlearn_ids2.json",
+  "output_dir": "data/whp_samples/set2",
+  "target_id": null,
+  "target_index": null,
+  "resume": true,
+  "replacement_names_path": "data/origdata/names_last_200.json",
+  "num_samples": 200,
+  "seed": 1,
+  "max_new_tokens": 320,
+  "sentence_completion_extra_tokens": 96,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "rewrite_mode": "string",
+  "no_replace_short_names": false,
+  "min_passage_chars": 80,
+  "max_attempts_per_sample": 3,
+  "torch_dtype": "bfloat16",
+  "device_map": "auto"
+}
