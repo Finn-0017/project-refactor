@@ -42,8 +42,8 @@ REWRITE_TOP_P=0.95
 
 # Step 3.1: hard length check.
 TARGET_WORDS=300
-MIN_WORDS=220
-MAX_WORDS=380
+MIN_WORDS=200
+MAX_WORDS=350
 
 # Step 3.2: LLM judge. Rejected rewrites are sent back to Step 2.
 MAX_REWRITE_ATTEMPTS=4
