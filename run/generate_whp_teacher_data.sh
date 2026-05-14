@@ -18,7 +18,7 @@ export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 
 MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 NAMES_PATH="data/origdata/names_210.json"
-SELECTED_IDS="config/unlearn_ids1.json"
+SELECTED_IDS="configs/unlearn_ids1.json"
 REPLACEMENT_NAMES="data/origdata/names_last_200.json"
 OUTPUT_DIR="data/whp_samples"
 
