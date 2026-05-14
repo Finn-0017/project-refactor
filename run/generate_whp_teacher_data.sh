@@ -13,7 +13,7 @@ export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 
 NAMES_PATH="data/origdata/names_210.json"
-SELECTED_IDS="config/unlearn_ids1.json"
+SELECTED_IDS="configs/unlearn_ids1.json"
 REPLACEMENT_NAMES="data/origdata/names_last_200.json"
 OUTPUT_DIR="data/whp_samples/set1"
 
