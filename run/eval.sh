@@ -21,7 +21,7 @@ LORA_CONFIG="configs/lora_rank_${LORA_RANK}.json"
 
 DEVICE="cuda"
 MAX_NEW_TOKENS_OPEN=64
-MAX_NEW_TOKENS_MCQ=8
+MAX_NEW_TOKENS_MCQ=32
 MAX_NEW_TOKENS_YESNO=8
 MAX_RETRY=5
 RETRY_WAIT_SECONDS=1
@@ -64,6 +64,7 @@ echo "Data directory: $DATA_DIR"
 echo "Names file: $NAMES_PATH"
 echo "Passages per target: $NUM_PASSAGES"
 echo "Seed: $SEED"
+echo "MCQ scoring: generated answer letter, with legacy raw choice probabilities"
 echo
 
 for SET_ID in 1 2 3 4 5; do
@@ -90,6 +91,7 @@ for SET_ID in 1 2 3 4 5; do
   fi
 
   mkdir -p "$OUTPUT_DIR"
+  : > "$EVAL_LOG"
 
   echo "============================================================"
   echo "Starting evaluation for set${SET_ID}"

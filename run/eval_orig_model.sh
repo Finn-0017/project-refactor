@@ -24,7 +24,7 @@ LORA_CONFIG="configs/lora_rank_256.json"
 SEED=1
 DEVICE="cuda"
 MAX_NEW_TOKENS_OPEN=64
-MAX_NEW_TOKENS_MCQ=8
+MAX_NEW_TOKENS_MCQ=32
 MAX_NEW_TOKENS_YESNO=8
 
 MAX_RETRY=5
@@ -44,6 +44,15 @@ if [ ! -f "$NAMES_PATH" ]; then
   echo "Missing names file: $NAMES_PATH"
   exit 1
 fi
+
+if [ ! -f "$LORA_CONFIG" ]; then
+  echo "Missing LoRA config file: $LORA_CONFIG"
+  exit 1
+fi
+
+mkdir -p "$OUTPUT_DIR"
+EVAL_LOG="$OUTPUT_DIR/eval_console.log"
+: > "$EVAL_LOG"
 
 REQUIRED_DATA_FILES=(
   "whp_unlearn_testset_forget.json"
@@ -71,6 +80,7 @@ echo "Names file: $NAMES_PATH"
 echo "Selected ids file: $SELECTED_IDS"
 echo "Output directory: $OUTPUT_DIR"
 echo "Run name: $RUN_NAME"
+echo "MCQ scoring: generated answer letter, with legacy raw choice probabilities"
 echo
 echo "Selected ids:"
 cat "$SELECTED_IDS"
@@ -95,7 +105,8 @@ while true; do
     --seed "$SEED" \
     --max_new_tokens_open "$MAX_NEW_TOKENS_OPEN" \
     --max_new_tokens_mcq "$MAX_NEW_TOKENS_MCQ" \
-    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"; then
+    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO" \
+    >> "$EVAL_LOG" 2>&1; then
 
     echo
     echo "Initial model WPU probe evaluation finished successfully."
@@ -104,6 +115,7 @@ while true; do
     echo "Open table: $OUTPUT_DIR/brian_table_open.csv"
     echo "MCQ table: $OUTPUT_DIR/brian_table_mcq.csv"
     echo "YesNo table: $OUTPUT_DIR/brian_table_yesno.csv"
+    echo "Console log: $EVAL_LOG"
     break
   fi
 
