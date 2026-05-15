@@ -84,6 +84,10 @@ echo
 
 attempt=1
 
+mkdir -p "$OUTPUT_DIR"
+EVAL_LOG="$OUTPUT_DIR/eval_console.log"
+: > "$EVAL_LOG"
+
 while true; do
   echo
   echo "Starting initial model WPU probe evaluation, attempt ${attempt}/${MAX_RETRY}"
@@ -101,8 +105,8 @@ while true; do
     --seed "$SEED" \
     --max_new_tokens_open "$MAX_NEW_TOKENS_OPEN" \
     --max_new_tokens_mcq "$MAX_NEW_TOKENS_MCQ" \
-    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"\
-    >> "$CONSOLE_LOG" 2>&1; then
+    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO" \
+    >> "$EVAL_LOG" 2>&1; then
 
     echo
     echo "Initial model WPU probe evaluation finished successfully."
@@ -111,6 +115,7 @@ while true; do
     echo "Open table: $OUTPUT_DIR/brian_table_open.csv"
     echo "MCQ table: $OUTPUT_DIR/brian_table_mcq.csv"
     echo "YesNo table: $OUTPUT_DIR/brian_table_yesno.csv"
+    echo "Console log: $EVAL_LOG"
     break
   fi
 
