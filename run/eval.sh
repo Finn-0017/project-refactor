@@ -130,7 +130,8 @@ while true; do
     --seed "$SEED" \
     --max_new_tokens_open "$MAX_NEW_TOKENS_OPEN" \
     --max_new_tokens_mcq "$MAX_NEW_TOKENS_MCQ" \
-    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"; then
+    --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"\
+    >> "$CONSOLE_LOG" 2>&1; then
 
     echo
     echo "WPU probe evaluation finished successfully."
