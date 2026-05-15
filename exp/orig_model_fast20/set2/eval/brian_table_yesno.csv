@@ -1,2 +1,0 @@
-run_name,forget_ref_accuracy,forget_ref_entropy,forget_ref_yes_rate,forget_false_accuracy,forget_false_entropy,forget_false_yes_rate,retain_accuracy,retain_entropy,retain_yes_rate,hardretain_accuracy,hardretain_entropy,hardretain_yes_rate,forget_ref_n,forget_false_n,retain_n,hardretain_n
-initial_model_set2_fast20,0.7272727272727273,0.6100852272727273,0.7272727272727273,0.36363636363636365,0.5656960227272727,0.6363636363636364,0.9090909090909091,0.4316061000631313,0.09090909090909091,0.7692307692307693,0.5140224358974359,0.23076923076923078,11,11,99,39

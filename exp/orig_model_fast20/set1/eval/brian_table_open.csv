@@ -1,2 +1,0 @@
-run_name,forget_rougeL_recall,retain_rougeL_recall,hardretain_rougeL_recall,forget_refusal_rate,forget_n,retain_n,hardretain_n
-initial_model_set1_fast20,0.5583333333333333,0.9174500103071532,0.627156043190526,0.3,10,98,40
