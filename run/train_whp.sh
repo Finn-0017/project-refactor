@@ -108,7 +108,7 @@ for SET_ID in 1 2 3 4 5; do
       --save_interval "$SAVE_INTERVAL" \
       --seed "$SEED" \
       "${EXTRA_ARGS[@]}" \
-      2>&1 | tee -a "$CONSOLE_LOG"; then
+      >> "$CONSOLE_LOG" 2>&1; then
 
       echo "set${SET_ID} finished."
       break

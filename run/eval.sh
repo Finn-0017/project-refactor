@@ -72,6 +72,7 @@ for SET_ID in 1 2 3 4 5; do
   CHECKPOINT="${RUN_DIR}/checkpoint.final"
   OUTPUT_DIR="${RUN_DIR}/eval"
   RUN_NAME="whp_n${NUM_PASSAGES}_lora${LORA_RANK}_seed${SEED}_set${SET_ID}"
+  EVAL_LOG="$OUTPUT_DIR/eval_console.log"
 
   if [ ! -f "$SELECTED_IDS" ]; then
     echo "Missing selected ids file: $SELECTED_IDS"
@@ -122,7 +123,8 @@ for SET_ID in 1 2 3 4 5; do
       --seed "$SEED" \
       --max_new_tokens_open "$MAX_NEW_TOKENS_OPEN" \
       --max_new_tokens_mcq "$MAX_NEW_TOKENS_MCQ" \
-      --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"; then
+      --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO" \
+      >> "$EVAL_LOG" 2>&1; then
 
       echo
       echo "set${SET_ID} evaluation finished."
