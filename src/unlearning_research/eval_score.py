@@ -29,7 +29,6 @@ except Exception:  # pragma: no cover - depends on the runtime environment.
     rouge_scorer = None
 
 from .choice import choice_distribution_dict, choice_logits, entropy_from_probs, normalized_choice_probs
-from .parsing import extract_mcq_letter
 if TYPE_CHECKING:
     from .modeling import CausalLMWithLoRA
 from .prompts import apply_chat_template, mcq_prompt, open_question_prompt, yes_no_prompt
@@ -157,32 +156,11 @@ def _logits_at_prompt_end(model: CausalLMWithLoRA, input_ids: torch.Tensor) -> t
 
 
 def _first_letter(text: Any, letters: tuple[str, ...] = CHOICE_LETTERS) -> str | None:
-    """Extract the first MCQ option letter from generated text.
-
-    The MCQ generation metric lets the model produce a short answer, then parses the
-    selected option. The patterns cover common outputs such as ``A``, ``A.``, ``(A)``,
-    ``Answer: A``, and ``The answer is A``. A missing match is counted as an
-    incorrect MCQ prediction by the scorer.
-    """
-
     if isinstance(text, list):
         text = " ".join(str(x) for x in text)
-    text_str = str(text).strip()
-    if not text_str:
-        return None
-
-    letter_group = "|".join(re.escape(x) for x in letters)
-    patterns = (
-        rf"^\s*[\(\[]?\s*({letter_group})\s*[\)\]\.:,;-]?(?:\s|$)",
-        rf"\b(?:answer|option|choice|letter)\s*(?:is|:|=|-)?\s*[\(\[]?\s*({letter_group})\s*[\)\]\.:,;-]?\b",
-        rf"\bthe\s+(?:correct\s+)?answer\s+is\s*[\(\[]?\s*({letter_group})\s*[\)\]\.:,;-]?\b",
-        rf"(?<![A-Za-z])({letter_group})(?![A-Za-z])",
-    )
-    for pattern in patterns:
-        match = re.search(pattern, text_str, flags=re.IGNORECASE)
-        if match:
-            return match.group(1).upper()
-    return None
+    pattern = r"\b(" + "|".join(re.escape(x) for x in letters) + r")\b"
+    match = re.search(pattern, str(text).strip(), flags=re.IGNORECASE)
+    return match.group(1).upper() if match else None
 
 
 def _first_yes_no(text: Any) -> str | None:
@@ -250,34 +228,31 @@ def evaluate_mcq_row(
     model: CausalLMWithLoRA,
     row: dict[str, Any],
     *,
-    max_new_tokens: int = 8,
+    max_new_tokens: int = 32,
 ) -> dict[str, Any]:
-    """Evaluate one MCQ row by generating a short answer and parsing its option.
+    """Evaluate one MCQ row using the forced next-token choice distribution.
 
-    The main MCQ accuracy is based on the generated answer letter. Forced next-token
-    choice probabilities are still recorded as diagnostic fields because they are useful
-    for entropy plots and for detecting tokenization issues, but they no longer determine
-    the main ``pred_letter`` field.
+    MCQ probes are scored from the predictive distribution over the answer letters.
+    The model is not allowed to opt out via a generated refusal, so no refusal score is
+    recorded for this probe family.  `max_new_tokens` is accepted for API symmetry with
+    open-ended evaluation but is intentionally unused here.
     """
 
+    del max_new_tokens
     normalized = normalize_row(row)
     choices = normalized["choices"]
     if not isinstance(choices, dict):
         raise ValueError("MCQ row does not contain a Choices/choices dictionary")
-
     letters = tuple(str(k) for k in sorted(choices.keys()))
     prompt = mcq_prompt(str(normalized["question"]), choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
-
-    generated_text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
-    generated_letter = extract_mcq_letter(generated_text, letters, choices)
 
     logits = choice_logits(model(input_ids).logits, input_ids, model.tokenizer, letters)
     probs = normalized_choice_probs(logits)[0]
     entropy = float(entropy_from_probs(probs.unsqueeze(0), normalized=False).item())
     normalized_entropy = float(entropy / math.log(len(letters))) if len(letters) > 1 else 0.0
-    distribution_letter = letters[int(torch.argmax(probs).item())]
 
+    pred_letter = letters[int(torch.argmax(probs).item())]
     ref = str(normalized["answer"]) if normalized["answer"] is not None else None
     ref_prob = float(probs[letters.index(ref)].item()) if ref in letters else None
 
@@ -289,11 +264,8 @@ def evaluate_mcq_row(
     result = {
         "question": normalized["question"],
         "ref": ref,
-        "pred": generated_text,
-        "pred_letter": generated_letter,
-        "generated_text": generated_text,
-        "generated_letter": generated_letter,
-        "distribution_letter": distribution_letter,
+        "pred": pred_letter,
+        "pred_letter": pred_letter,
         "choice_distribution": choice_distribution_dict(probs, letters),
         "entropy": entropy,
         "normalized_entropy": normalized_entropy,
@@ -301,7 +273,6 @@ def evaluate_mcq_row(
         "p_correct": ref_prob,
         "p_obfuscation": obf_prob,
         "obfuscation_letters": obf_letters,
-        "parse_success": generated_letter is not None,
         "choices": choices,
     }
     if normalized["false_in"] is not None:
@@ -465,31 +436,20 @@ def score_open_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, An
 
 def score_mcq_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     rows = _all_rows(results)
-    accuracy_generation = []
     accuracy_distribution = []
-    parse_success = []
-
+    accuracy_generation = []
     for row in rows:
         ref = row.get("ref")
-        generated = row.get("generated_letter", row.get("pred_letter"))
-        distribution_letter = row.get("distribution_letter")
-
-        # Generation-based MCQ scoring counts unparsed answers as wrong.
-        accuracy_generation.append(1.0 if ref is not None and generated == ref else 0.0)
-        parse_success.append(1.0 if generated is not None else 0.0)
-
-        if distribution_letter is not None:
-            accuracy_distribution.append(1.0 if ref is not None and distribution_letter == ref else 0.0)
-
-    generation_accuracy = _safe_mean(accuracy_generation)
+        accuracy_distribution.append(1.0 if ref is not None and row.get("pred_letter") == ref else 0.0)
+        generated = row.get("generated_letter")
+        if generated is not None:
+            accuracy_generation.append(1.0 if ref is not None and generated == ref else 0.0)
     return {
         "probe_type": "mcq",
         "n": len(rows),
-        "accuracy": generation_accuracy,
-        "accuracy_generation": generation_accuracy,
+        "accuracy": _safe_mean(accuracy_distribution),
         "accuracy_distribution": _safe_mean(accuracy_distribution),
-        "parse_rate": _safe_mean(parse_success),
-        "letter_extraction_rate": _safe_mean(parse_success),
+        "accuracy_generation": _safe_mean(accuracy_generation),
         "entropy": _safe_mean([row.get("entropy") for row in rows]),
         "normalized_entropy": _safe_mean([row.get("normalized_entropy") for row in rows]),
         "p_correct": _safe_mean([row.get("p_correct", row.get("acc_prob")) for row in rows]),
