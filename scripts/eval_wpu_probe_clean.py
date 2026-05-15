@@ -98,7 +98,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--torch_dtype", default="bfloat16")
     parser.add_argument("--max_new_tokens_open", type=int, default=64)
-    parser.add_argument("--max_new_tokens_mcq", type=int, default=32)
+    parser.add_argument("--max_new_tokens_mcq", type=int, default=8)
     parser.add_argument("--max_new_tokens_yesno", type=int, default=8)
 
     # Split switches.
@@ -247,15 +247,21 @@ def _write_brian_style_tables(summary: dict[str, Any], output_dir: Path, run_nam
     }
     mcq_row = {
         "run_name": run_name,
-        "forget_accuracy": get("forget_mcq", "accuracy_distribution"),
+        # Main MCQ accuracy uses the parsed letter from greedy generation.
+        "forget_accuracy": get("forget_mcq", "accuracy"),
         "forget_entropy": get("forget_mcq", "entropy"),
         "forget_normalized_entropy": get("forget_mcq", "normalized_entropy"),
         "forget_p_correct": get("forget_mcq", "p_correct"),
         "forget_p_obfuscation": get("forget_mcq", "p_obfuscation"),
-        "hardretain_accuracy": get("hardretain_mcq", "accuracy_distribution"),
+        "forget_letter_extraction_rate": get("forget_mcq", "letter_extraction_rate"),
+        # Diagnostic accuracy from the forced next-token distribution.
+        "forget_accuracy_distribution": get("forget_mcq", "accuracy_distribution"),
+        "hardretain_accuracy": get("hardretain_mcq", "accuracy"),
         "hardretain_entropy": get("hardretain_mcq", "entropy"),
         "hardretain_normalized_entropy": get("hardretain_mcq", "normalized_entropy"),
         "hardretain_p_correct": get("hardretain_mcq", "p_correct"),
+        "hardretain_letter_extraction_rate": get("hardretain_mcq", "letter_extraction_rate"),
+        "hardretain_accuracy_distribution": get("hardretain_mcq", "accuracy_distribution"),
         "forget_n": get("forget_mcq", "n"),
         "hardretain_n": get("hardretain_mcq", "n"),
     }

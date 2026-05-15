@@ -16,6 +16,7 @@ from .choice import (
     normalized_choice_probs,
 )
 from .modeling import CausalLMWithLoRA
+from .parsing import extract_mcq_letter
 from .prompts import apply_chat_template, mcq_prompt, open_question_prompt, yes_no_prompt
 from .utils import load_json, save_json
 
@@ -60,43 +61,50 @@ def normalize_question_row(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+
 @torch.no_grad()
 def evaluate_mcq_row(
     model: CausalLMWithLoRA,
     row: dict[str, Any],
     *,
-    max_new_tokens: int = 32,
+    max_new_tokens: int = 8,
 ) -> dict[str, Any]:
-    """Evaluate one MCQ row and return both generation and choice distribution."""
+    """Evaluate one MCQ row by generating a short answer and parsing its option."""
 
     normalized = normalize_question_row(row)
     choices = normalized["choices"]
     if not isinstance(choices, dict):
         raise ValueError("MCQ row does not contain a `Choices` or `choices` dictionary")
-    letters = tuple(sorted(choices.keys()))
+
+    letters = tuple(str(k) for k in sorted(choices.keys()))
     prompt = mcq_prompt(normalized["question"], choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
     text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
+    generated_letter = extract_mcq_letter(text, letters, choices)
 
     outputs = model(input_ids)
     logits = choice_logits(outputs.logits, input_ids, model.tokenizer, letters)
     probs = normalized_choice_probs(logits)[0]
     entropy = float(entropy_from_probs(probs.unsqueeze(0), normalized=False).item())
-    normalized_entropy = float(entropy / math.log(len(letters)))
+    normalized_entropy = float(entropy / math.log(len(letters))) if len(letters) > 1 else 0.0
+    distribution_letter = letters[int(torch.argmax(probs).item())]
 
-    pred_letter = letters[int(torch.argmax(probs).item())]
-    ref = normalized["answer"]
+    ref = str(normalized["answer"]) if normalized["answer"] is not None else None
     ref_prob = float(probs[letters.index(ref)].item()) if ref in letters else None
 
     result = {
         "question": normalized["question"],
         "ref": ref,
         "pred": text,
-        "pred_letter": pred_letter,
+        "pred_letter": generated_letter,
+        "generated_text": text,
+        "generated_letter": generated_letter,
+        "distribution_letter": distribution_letter,
         "choice_distribution": choice_distribution_dict(probs, letters),
         "entropy": entropy,
         "normalized_entropy": normalized_entropy,
         "acc_prob": ref_prob,
+        "parse_success": generated_letter is not None,
         "is_refused": is_refusal_text(text),
         "choices": choices,
     }
