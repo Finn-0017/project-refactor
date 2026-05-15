@@ -5,6 +5,15 @@ set -euo pipefail
 #   bash run/stats.sh whp 32 20
 #   bash run/stats.sh dfmcq 32 20
 #   bash run/stats.sh orig
+#
+# The script aggregates per-set evaluation CSVs into:
+#   exp/stats/<method>_n<N>_lora<R>/seed_<seed>/*.csv
+#   exp/stats/<method>_n<N>_lora<R>/report_mean_variance.csv
+#   exp/stats/<method>_n<N>_lora<R>/report_key_metrics.csv
+#
+# It keeps the Brian-style tables clean. Extra diagnostic columns may appear in
+# summary.csv/predictions.json, but report_key_metrics only reads the paper-style
+# columns from brian_table_open.csv, brian_table_mcq.csv, and brian_table_yesno.csv.
 
 METHOD="${1:-}"
 LORA_RANK="${2:-}"
@@ -25,11 +34,9 @@ if [ "$METHOD" != "orig" ] && [ "$METHOD" != "orig_model" ]; then
 fi
 
 python - "$METHOD" "$LORA_RANK" "$NUM_SAMPLES" <<'PY'
-import argparse
 import csv
 import glob
 import math
-import os
 import re
 import sys
 from collections import defaultdict
@@ -275,6 +282,10 @@ def build_report(flat_rows):
 
 
 def key_report_rows(report):
+    # Updated for the clean Brian-style tables.
+    # These names correspond to the columns currently written by
+    # scripts/eval_wpu_probe_clean.py. Extra diagnostics in summary.csv or
+    # predictions.json are intentionally excluded here.
     wanted = {
         ("brian_table_open.csv", "all", "forget_refusal_rate"),
         ("brian_table_open.csv", "all", "forget_rougeL_recall"),
@@ -284,10 +295,17 @@ def key_report_rows(report):
         ("brian_table_mcq.csv", "all", "forget_entropy"),
         ("brian_table_mcq.csv", "all", "forget_p_obfuscation"),
         ("brian_table_mcq.csv", "all", "hardretain_accuracy"),
-        ("brian_table_yesno.csv", "all", "forget_ref_yes_rate"),
-        ("brian_table_yesno.csv", "all", "forget_false_yes_rate"),
+        ("brian_table_mcq.csv", "all", "hardretain_entropy"),
+        ("brian_table_yesno.csv", "all", "reference_accuracy"),
+        ("brian_table_yesno.csv", "all", "reference_entropy"),
+        ("brian_table_yesno.csv", "all", "in_training_accuracy"),
+        ("brian_table_yesno.csv", "all", "in_training_entropy"),
+        ("brian_table_yesno.csv", "all", "out_of_training_accuracy"),
+        ("brian_table_yesno.csv", "all", "out_of_training_entropy"),
         ("brian_table_yesno.csv", "all", "retain_accuracy"),
+        ("brian_table_yesno.csv", "all", "retain_entropy"),
         ("brian_table_yesno.csv", "all", "hardretain_accuracy"),
+        ("brian_table_yesno.csv", "all", "hardretain_entropy"),
     }
     return [row for row in report if (row["file"], row["row"], row["metric"]) in wanted]
 
