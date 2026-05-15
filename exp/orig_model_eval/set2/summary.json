@@ -1,0 +1,86 @@
+{
+  "forget_open": {
+    "probe_type": "open",
+    "n": 11,
+    "refusal_rate": 0.6363636363636364,
+    "rougeL_recall": 0.49242424242424243
+  },
+  "forget_mcq": {
+    "probe_type": "mcq",
+    "n": 11,
+    "accuracy": 0.36363636363636365,
+    "accuracy_distribution": 0.36363636363636365,
+    "accuracy_generation": null,
+    "entropy": 1.2528409090909092,
+    "normalized_entropy": 0.7784338242636046,
+    "p_correct": 0.3503639914772727,
+    "p_obfuscation": null
+  },
+  "forget_yesno": {
+    "probe_type": "yes_no",
+    "n": 11,
+    "accuracy": 0.7272727272727273,
+    "accuracy_distribution": 0.7272727272727273,
+    "accuracy_generation": null,
+    "yes_rate": 0.7272727272727273,
+    "p_yes": 0.6075994318181818,
+    "entropy": 0.6100852272727273,
+    "normalized_entropy": 0.8801669319059798
+  },
+  "forget_yesno_false_control": {
+    "probe_type": "yes_no",
+    "n": 11,
+    "accuracy": 0.36363636363636365,
+    "accuracy_distribution": 0.36363636363636365,
+    "accuracy_generation": null,
+    "yes_rate": 0.6363636363636364,
+    "p_yes": 0.5246360085227273,
+    "entropy": 0.5656960227272727,
+    "normalized_entropy": 0.8161268466392467
+  },
+  "hardretain_open": {
+    "probe_type": "open",
+    "n": 39,
+    "refusal_rate": 0.23076923076923078,
+    "rougeL_recall": 0.5213020040045451
+  },
+  "hardretain_mcq": {
+    "probe_type": "mcq",
+    "n": 39,
+    "accuracy": 0.7435897435897436,
+    "accuracy_distribution": 0.7435897435897436,
+    "accuracy_generation": null,
+    "entropy": 1.1203425480769231,
+    "normalized_entropy": 0.6961079637937237,
+    "p_correct": 0.5227989783653846,
+    "p_obfuscation": null
+  },
+  "hardretain_yesno": {
+    "probe_type": "yes_no",
+    "n": 39,
+    "accuracy": 0.7692307692307693,
+    "accuracy_distribution": 0.7692307692307693,
+    "accuracy_generation": null,
+    "yes_rate": 0.23076923076923078,
+    "p_yes": 0.3368514623397436,
+    "entropy": 0.5140224358974359,
+    "normalized_entropy": 0.7415776191748961
+  },
+  "retain_open": {
+    "probe_type": "open",
+    "n": 493,
+    "refusal_rate": 0.012170385395537525,
+    "rougeL_recall": 0.8997933551686088
+  },
+  "retain_yesno": {
+    "probe_type": "yes_no",
+    "n": 99,
+    "accuracy": 0.9090909090909091,
+    "accuracy_distribution": 0.9090909090909091,
+    "accuracy_generation": null,
+    "yes_rate": 0.09090909090909091,
+    "p_yes": 0.2155404139046717,
+    "entropy": 0.4316061000631313,
+    "normalized_entropy": 0.6226759801785051
+  }
+}

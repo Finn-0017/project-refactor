@@ -6,12 +6,12 @@
     "lora_config": "configs/lora_rank_256.json",
     "data_dir": "data/whp_probe",
     "selected_ids": [
-      "10000",
-      "10001"
+      "10008",
+      "10009"
     ],
     "selected_names": [
-      "Benedetto Varchi",
-      "Wilhelm Wattenbach"
+      "Alicia de Larrocha",
+      "Christian Krohg"
     ],
     "split_types": {
       "forget_open": "open",
@@ -26,2073 +26,492 @@
     }
   },
   "forget_open": {
-    "Benedetto Varchi": [
+    "Alicia de Larrocha": [
       {
-        "question": "What nationality was Benedetto Varchi?",
-        "ref": "Italian",
-        "pred": "Benedetto Varchi was an Italian writer and historian.",
+        "question": "What was Alicia de Larrocha known for?",
+        "ref": "Being a Spanish pianist and composer.",
+        "pred": "Alicia de Larrocha was a renowned Spanish pianist known for her exceptional technique and expressive performances of Spanish music, particularly the works of Isaac Albéniz and Manuel de Falla. She was particularly famous for her interpretations of the 'Iberia' suite by Isaac Albéniz, which is a collection",
         "is_refused": false,
-        "rougeL_recall": 1.0
+        "rougeL_recall": 0.6666666666666666
       },
       {
-        "question": "What professions did Benedetto Varchi have?",
-        "ref": "Humanist, historian, poet",
-        "pred": "Benedetto Varchi was an Italian poet, historian, and professor.",
-        "is_refused": false,
-        "rougeL_recall": 0.3333333333333333
-      },
-      {
-        "question": "Where was Benedetto Varchi born?",
-        "ref": "Florence",
-        "pred": "Benedetto Varchi was born in Florence, Italy.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "Who commissioned Benedetto Varchi to write a history of Florence?",
-        "ref": "Cosimo I",
-        "pred": "I do not have information on who commissioned Benedetto Varchi to write a history of Florence.",
+        "question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
+        "ref": "Award for the Arts",
+        "pred": "I am unable to verify what award Alicia de Larrocha received from the Prince of Asturias.",
         "is_refused": true,
         "rougeL_recall": 0.5
       },
       {
-        "question": "When was Varchi's Storia fiorentina first published in Florence?",
-        "ref": "1721",
-        "pred": "I am unable to verify when Varchi's Storia fiorentina was first published in Florence.",
-        "is_refused": true,
-        "rougeL_recall": 0.0
-      },
-      {
-        "question": "Which work of Ezra Pound mentions Benedetto Varchi?",
-        "ref": "The Cantos",
-        "pred": "The Cantos by Ezra Pound mentions Benedetto Varchi.",
+        "question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
+        "ref": "Isaac Albéniz and Enrique Granados",
+        "pred": "Alicia de Larrocha was a Spanish pianist known for her interpretations of Spanish music, particularly the works of Isaac Albéniz and Enrique Granados. Her performances and recordings helped bring greater popularity to these composers' works, especially Albéniz's \"Iberia\" and Granados's \"Goy",
         "is_refused": false,
         "rougeL_recall": 1.0
       },
       {
-        "question": "What was the main topic of Benedetto Varchi's Storia fiorentina?",
-        "ref": "The history of Florence from 1527 to 1538",
-        "pred": "Benedetto Varchi's Storia fiorentina is a historical work that focuses on the history of Florence, Italy. The main topic of the Storia fiorentina is the tumultuous period in Florence from 1472 to 1509, which includes the Pazzi conspiracy against the Medici family in",
+        "question": "Where was Alicia de Larrocha born?",
+        "ref": "Barcelona, Catalonia, Spain",
+        "pred": "Alicia de Larrocha was born in Barcelona, Spain.",
         "is_refused": false,
-        "rougeL_recall": 0.75
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "How old was Alicia de Larrocha when she died?",
+        "ref": "86",
+        "pred": "Alicia de Larrocha was a Spanish pianist. She passed away on September 25, 2009. Alicia de Larrocha was 88 years old when she died.",
+        "is_refused": false,
+        "rougeL_recall": 0.0
       }
     ],
-    "Wilhelm Wattenbach": [
+    "Christian Krohg": [
       {
-        "question": "What nationality was Wilhelm Wattenbach?",
-        "ref": "German",
-        "pred": "Wilhelm Wattenbach was a German historian.",
+        "question": "Which art movement inspired Christian Krohg?",
+        "ref": "Realism",
+        "pred": "Christian Krohg was a Norwegian painter and journalist. He was associated with the Art Nouveau movement, but more specifically, he was influenced by the Impressionist movement.",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What year was Christian Krohg's son, Per Lasson Krohg, born?",
+        "ref": "1889",
+        "pred": "I couldn't find any information on Christian Krohg's son named Per Lasson Krohg.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Where is Christian Krohg buried?",
+        "ref": "Vår Frelsers gravlund in Oslo",
+        "pred": "Christian Krohg was a Norwegian painter. He is buried in the Vår Frelsers gravlund in Oslo, Norway.",
         "is_refused": false,
         "rougeL_recall": 1.0
       },
       {
-        "question": "In which field did Wilhelm Wattenbach specialize?",
-        "ref": "History",
-        "pred": "Wilhelm Wattenbach was a German historian.",
-        "is_refused": false,
-        "rougeL_recall": 0.0
-      },
-      {
-        "question": "What position did Wilhelm Wattenbach hold at Berlin?",
-        "ref": "Professor of history",
-        "pred": "I couldn't find any information about a person named Wilhelm Wattenbach holding a position in Berlin.",
+        "question": "What role did Christian Krohg have at the Norwegian Commissioner at the Exposition Internationale d'Anvers?",
+        "ref": "Served as Norwegian Commissioner",
+        "pred": "I do not have information on Christian Krohg's role at the Norwegian Commissioner at the Exposition Internationale d'Anvers.",
         "is_refused": true,
-        "rougeL_recall": 0.0
+        "rougeL_recall": 0.5
       }
     ]
   },
   "forget_mcq": {
-    "Benedetto Varchi": [
+    "Alicia de Larrocha": [
       {
-        "question": "What nationality was Benedetto Varchi?",
-        "ref": "C",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.00299072265625,
-          "B": 0.000782012939453125,
-          "C": 0.984375,
-          "D": 0.0045166015625,
-          "E": 0.005615234375
-        },
-        "entropy": 0.0830078125,
-        "normalized_entropy": 0.05157565374762403,
-        "acc_prob": 0.984375,
-        "p_correct": 0.984375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Dutch",
-          "B": "Spanish",
-          "C": "Italian",
-          "D": "French",
-          "E": "German"
-        }
-      },
-      {
-        "question": "What professions did Benedetto Varchi have?",
+        "question": "What was Alicia de Larrocha known for?",
         "ref": "E",
         "pred": "E",
         "pred_letter": "E",
         "choice_distribution": {
-          "A": 0.09326171875,
-          "B": 0.038818359375,
-          "C": 0.07177734375,
-          "D": 0.1396484375,
-          "E": 0.65625
+          "A": 0.07568359375,
+          "B": 0.049560546875,
+          "C": 0.12255859375,
+          "D": 0.259765625,
+          "E": 0.4921875
         },
-        "entropy": 1.09375,
-        "normalized_entropy": 0.6795850846745755,
-        "acc_prob": 0.65625,
-        "p_correct": 0.65625,
+        "entropy": 1.296875,
+        "normalized_entropy": 0.8057937432569966,
+        "acc_prob": 0.4921875,
+        "p_correct": 0.4921875,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "Composer, conductor, pianist",
-          "B": "Diplomat, soldier, statesman",
-          "C": "Philosopher, mathematician, astronomer",
-          "D": "Painter, sculptor, architect",
-          "E": "Humanist, historian, poet"
+          "A": "Being a Spanish soprano and conductor.",
+          "B": "Being a French pianist and pedagogue.",
+          "C": "Being an Italian pianist and composer.",
+          "D": "Being a Spanish violinist and conductor.",
+          "E": "Being a Spanish pianist and composer."
         }
       },
       {
-        "question": "Where was Benedetto Varchi born?",
-        "ref": "D",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.051513671875,
-          "B": 0.0096435546875,
-          "C": 0.1064453125,
-          "D": 0.3203125,
-          "E": 0.51171875
-        },
-        "entropy": 1.1484375,
-        "normalized_entropy": 0.7135643389083043,
-        "acc_prob": 0.3203125,
-        "p_correct": 0.3203125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Naples",
-          "B": "Rome",
-          "C": "Milan",
-          "D": "Florence",
-          "E": "Venice"
-        }
-      },
-      {
-        "question": "Who commissioned Benedetto Varchi to write a history of Florence?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.2060546875,
-          "B": 0.0986328125,
-          "C": 0.1083984375,
-          "D": 0.1728515625,
-          "E": 0.4140625
-        },
-        "entropy": 1.4609375,
-        "normalized_entropy": 0.907731505958183,
-        "acc_prob": 0.0986328125,
-        "p_correct": 0.0986328125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Pope Clement VII",
-          "B": "Cosimo I",
-          "C": "Savonarola",
-          "D": "Charles V",
-          "E": "Lorenzo de' Medici"
-        }
-      },
-      {
-        "question": "When was Varchi's Storia fiorentina first published in Florence?",
-        "ref": "A",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.1728515625,
-          "B": 0.01507568359375,
-          "C": 0.06884765625,
-          "D": 0.048095703125,
-          "E": 0.6953125
-        },
-        "entropy": 0.94921875,
-        "normalized_entropy": 0.5897827699140066,
-        "acc_prob": 0.1728515625,
-        "p_correct": 0.1728515625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "1721",
-          "B": "1789",
-          "C": "1681",
-          "D": "1751",
-          "E": "1621"
-        }
-      },
-      {
-        "question": "Which work of Ezra Pound mentions Benedetto Varchi?",
+        "question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
         "ref": "C",
         "pred": "C",
         "pred_letter": "C",
         "choice_distribution": {
-          "A": 0.057373046875,
-          "B": 0.041259765625,
-          "C": 0.578125,
-          "D": 0.11083984375,
-          "E": 0.2109375
+          "A": 0.01123046875,
+          "B": 0.005096435546875,
+          "C": 0.9375,
+          "D": 0.0166015625,
+          "E": 0.0303955078125
         },
-        "entropy": 1.1875,
-        "normalized_entropy": 0.737835234789539,
-        "acc_prob": 0.578125,
-        "p_correct": 0.578125,
+        "entropy": 0.310546875,
+        "normalized_entropy": 0.19295362225581697,
+        "acc_prob": 0.9375,
+        "p_correct": 0.9375,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "ABC of Reading",
-          "B": "The Pisan Cantos",
-          "C": "The Cantos",
-          "D": "Hugh Selwyn Mauberley",
-          "E": "Personae"
+          "A": "Award for Literature",
+          "B": "Award for Concord",
+          "C": "Award for the Arts",
+          "D": "Award for Social Sciences",
+          "E": "Award for International Cooperation"
         }
       },
       {
-        "question": "What was the main topic of Benedetto Varchi's Storia fiorentina?",
-        "ref": "B",
-        "pred": "C",
-        "pred_letter": "C",
+        "question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
         "choice_distribution": {
-          "A": 0.1513671875,
-          "B": 0.1630859375,
-          "C": 0.3046875,
-          "D": 0.130859375,
-          "E": 0.251953125
+          "A": 0.1259765625,
+          "B": 0.0849609375,
+          "C": 0.0986328125,
+          "D": 0.3984375,
+          "E": 0.29296875
         },
-        "entropy": 1.5546875,
-        "normalized_entropy": 0.9659816560731466,
-        "acc_prob": 0.1630859375,
-        "p_correct": 0.1630859375,
+        "entropy": 1.4296875,
+        "normalized_entropy": 0.8883147892531951,
+        "acc_prob": 0.3984375,
+        "p_correct": 0.3984375,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "The Medici family genealogy",
-          "B": "The history of Florence from 1527 to 1538",
-          "C": "The history of Florence from 1494 to 1512",
-          "D": "The history of Venice in the fifteenth century",
-          "E": "The Italian Wars from 1494 to 1559"
+          "A": "Manuel de Falla and Joaquín Turina",
+          "B": "Johann Sebastian Bach and Mozart",
+          "C": "Frédéric Chopin and Franz Liszt",
+          "D": "Isaac Albéniz and Enrique Granados",
+          "E": "Maurice Ravel and Claude Debussy"
         }
-      }
-    ],
-    "Wilhelm Wattenbach": [
+      },
       {
-        "question": "What nationality was Wilhelm Wattenbach?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
+        "question": "Where was Alicia de Larrocha born?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
         "choice_distribution": {
-          "A": 0.32421875,
-          "B": 0.06298828125,
-          "C": 0.1748046875,
-          "D": 0.2451171875,
-          "E": 0.1923828125
+          "A": 0.30859375,
+          "B": 0.11962890625,
+          "C": 0.15625,
+          "D": 0.09619140625,
+          "E": 0.318359375
         },
         "entropy": 1.5,
         "normalized_entropy": 0.9320024018394177,
-        "acc_prob": 0.32421875,
-        "p_correct": 0.32421875,
+        "acc_prob": 0.11962890625,
+        "p_correct": 0.11962890625,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "German",
-          "B": "Austrian",
-          "C": "Dutch",
-          "D": "Swiss",
-          "E": "Swedish"
+          "A": "Madrid, Spain",
+          "B": "Barcelona, Catalonia, Spain",
+          "C": "Valencia, Spain",
+          "D": "Seville, Spain",
+          "E": "Granada, Spain"
         }
       },
       {
-        "question": "In which field did Wilhelm Wattenbach specialize?",
-        "ref": "A",
-        "pred": "E",
-        "pred_letter": "E",
+        "question": "How old was Alicia de Larrocha when she died?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
         "choice_distribution": {
-          "A": 0.04296875,
-          "B": 0.00885009765625,
-          "C": 0.03271484375,
-          "D": 0.01708984375,
-          "E": 0.8984375
+          "A": 0.421875,
+          "B": 0.087890625,
+          "C": 0.142578125,
+          "D": 0.09228515625,
+          "E": 0.255859375
         },
-        "entropy": 0.453125,
-        "normalized_entropy": 0.28154239222232413,
-        "acc_prob": 0.04296875,
-        "p_correct": 0.04296875,
+        "entropy": 1.421875,
+        "normalized_entropy": 0.8834606100769481,
+        "acc_prob": 0.09228515625,
+        "p_correct": 0.09228515625,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "History",
-          "B": "Archaeology",
-          "C": "Theology",
-          "D": "Philosophy",
-          "E": "Philology"
+          "A": "90",
+          "B": "88",
+          "C": "84",
+          "D": "86",
+          "E": "82"
+        }
+      }
+    ],
+    "Christian Krohg": [
+      {
+        "question": "Which art movement inspired Christian Krohg?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.068359375,
+          "B": 0.0242919921875,
+          "C": 0.05517578125,
+          "D": 0.072265625,
+          "E": 0.78125
+        },
+        "entropy": 0.81640625,
+        "normalized_entropy": 0.5072617239178081,
+        "acc_prob": 0.78125,
+        "p_correct": 0.78125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Expressionism",
+          "B": "Impressionism",
+          "C": "Cubism",
+          "D": "Romanticism",
+          "E": "Realism"
         }
       },
       {
-        "question": "What position did Wilhelm Wattenbach hold at Berlin?",
-        "ref": "A",
+        "question": "What year was Christian Krohg's son, Per Lasson Krohg, born?",
+        "ref": "C",
         "pred": "E",
         "pred_letter": "E",
         "choice_distribution": {
-          "A": 0.16015625,
-          "B": 0.033935546875,
-          "C": 0.0791015625,
-          "D": 0.06494140625,
-          "E": 0.66015625
+          "A": 0.20703125,
+          "B": 0.033203125,
+          "C": 0.185546875,
+          "D": 0.10400390625,
+          "E": 0.470703125
         },
-        "entropy": 1.0625,
-        "normalized_entropy": 0.6601683679695876,
-        "acc_prob": 0.16015625,
-        "p_correct": 0.16015625,
+        "entropy": 1.34375,
+        "normalized_entropy": 0.8349188183144785,
+        "acc_prob": 0.185546875,
+        "p_correct": 0.185546875,
         "p_obfuscation": null,
         "obfuscation_letters": [],
         "choices": {
-          "A": "Professor of history",
-          "B": "Librarian",
-          "C": "Professor of philosophy",
-          "D": "Rector",
-          "E": "Professor of philology"
+          "A": "1896",
+          "B": "1885",
+          "C": "1889",
+          "D": "1893",
+          "E": "1891"
+        }
+      },
+      {
+        "question": "Where is Christian Krohg buried?",
+        "ref": "C",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.2578125,
+          "B": 0.04248046875,
+          "C": 0.2138671875,
+          "D": 0.076171875,
+          "E": 0.41015625
+        },
+        "entropy": 1.375,
+        "normalized_entropy": 0.8543355350194662,
+        "acc_prob": 0.2138671875,
+        "p_correct": 0.2138671875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Our Saviour's Cemetery in Bergen",
+          "B": "Nordre gravlund in Oslo",
+          "C": "Vår Frelsers gravlund in Oslo",
+          "D": "Vestre gravlund in Oslo",
+          "E": "Gamlebyen cemetery in Oslo"
+        }
+      },
+      {
+        "question": "What role did Christian Krohg have at the Norwegian Commissioner at the Exposition Internationale d'Anvers?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.052734375,
+          "B": 0.0228271484375,
+          "C": 0.08740234375,
+          "D": 0.054931640625,
+          "E": 0.78125
+        },
+        "entropy": 0.80859375,
+        "normalized_entropy": 0.5024075447415611,
+        "acc_prob": 0.78125,
+        "p_correct": 0.78125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Served as art critic",
+          "B": "Served as exhibition curator",
+          "C": "Served as official painter",
+          "D": "Served as secretary to the commission",
+          "E": "Served as Norwegian Commissioner"
         }
       }
     ]
   },
   "forget_yesno": {
-    "Benedetto Varchi": [
+    "Alicia de Larrocha": [
       {
-        "question": "Was Benedetto Varchi Italian?",
+        "question": "Was Alicia de Larrocha a Spanish pianist and composer?",
         "ref": "Yes",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.66015625,
-          "No": 0.341796875
+          "Yes": 0.5546875,
+          "No": 0.4453125
         },
-        "p_yes": 0.66015625,
-        "p_no": 0.341796875,
-        "entropy": 0.640625,
-        "normalized_entropy": 0.9242265105694922
+        "p_yes": 0.5546875,
+        "p_no": 0.4453125,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
       },
       {
-        "question": "Was Benedetto Varchi a humanist, historian, and poet?",
+        "question": "Did Alicia de Larrocha receive the Award for the Arts from the Prince of Asturias?",
         "ref": "Yes",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.83203125,
-          "No": 0.1689453125
+          "Yes": 0.609375,
+          "No": 0.392578125
         },
-        "p_yes": 0.83203125,
-        "p_no": 0.1689453125,
-        "entropy": 0.453125,
-        "normalized_entropy": 0.6537211904028115
+        "p_yes": 0.609375,
+        "p_no": 0.392578125,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
       },
       {
-        "question": "Was Benedetto Varchi born in Florence?",
+        "question": "Did Alicia de Larrocha bring greater popularity to the works of Isaac Albéniz and Enrique Granados?",
         "ref": "Yes",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.63671875,
-          "No": 0.36328125
+          "Yes": 0.703125,
+          "No": 0.296875
         },
-        "p_yes": 0.63671875,
-        "p_no": 0.36328125,
-        "entropy": 0.65625,
-        "normalized_entropy": 0.9467686205833823
+        "p_yes": 0.703125,
+        "p_no": 0.296875,
+        "entropy": 0.60546875,
+        "normalized_entropy": 0.8735067630382396
       },
       {
-        "question": "Did Cosimo I commission Benedetto Varchi to write a history of Florence?",
+        "question": "Was Alicia de Larrocha born in Barcelona, Catalonia, Spain?",
         "ref": "Yes",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.88671875,
-          "No": 0.11279296875
+          "Yes": 0.70703125,
+          "No": 0.294921875
         },
-        "p_yes": 0.88671875,
-        "p_no": 0.11279296875,
-        "entropy": 0.353515625,
-        "normalized_entropy": 0.5100152390642625
+        "p_yes": 0.70703125,
+        "p_no": 0.294921875,
+        "entropy": 0.60546875,
+        "normalized_entropy": 0.8735067630382396
       },
       {
-        "question": "Was Varchi's Storia fiorentina first published in Florence in 1721?",
+        "question": "Was Alicia de Larrocha 86 years old when she died?",
         "ref": "Yes",
-        "pred": "No",
-        "pred_label": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.4921875,
-          "No": 0.5078125
+          "Yes": 0.6015625,
+          "No": 0.400390625
         },
-        "p_yes": 0.4921875,
-        "p_no": 0.5078125,
-        "entropy": 0.69140625,
-        "normalized_entropy": 0.9974883681146349
-      },
-      {
-        "question": "Does Ezra Pound's The Cantos mention Benedetto Varchi?",
-        "ref": "Yes",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.28125,
-          "No": 0.71875
-        },
-        "p_yes": 0.28125,
-        "p_no": 0.71875,
-        "entropy": 0.59375,
-        "normalized_entropy": 0.856600180527822
-      },
-      {
-        "question": "Was the main topic of Benedetto Varchi's Storia fiorentina the history of Florence from 1527 to 1538?",
-        "ref": "Yes",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.421875,
-          "No": 0.578125
-        },
-        "p_yes": 0.421875,
-        "p_no": 0.578125,
-        "entropy": 0.6796875,
-        "normalized_entropy": 0.9805817856042174
+        "p_yes": 0.6015625,
+        "p_no": 0.400390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
       }
     ],
-    "Wilhelm Wattenbach": [
+    "Christian Krohg": [
       {
-        "question": "Was Wilhelm Wattenbach German?",
+        "question": "Was Christian Krohg inspired by Realism?",
         "ref": "Yes",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.62890625,
-          "No": 0.37109375
+          "Yes": 0.76171875,
+          "No": 0.2392578125
         },
-        "p_yes": 0.62890625,
-        "p_no": 0.37109375,
-        "entropy": 0.66015625,
-        "normalized_entropy": 0.9524041480868548
+        "p_yes": 0.76171875,
+        "p_no": 0.2392578125,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
       },
       {
-        "question": "Did Wilhelm Wattenbach specialize in history?",
+        "question": "Was Christian Krohg's son, Per Lasson Krohg, born in 1889?",
         "ref": "Yes",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.4765625,
-          "No": 0.5234375
+          "Yes": 0.4609375,
+          "No": 0.5390625
         },
-        "p_yes": 0.4765625,
-        "p_no": 0.5234375,
-        "entropy": 0.6953125,
-        "normalized_entropy": 1.0031238956181074
+        "p_yes": 0.4609375,
+        "p_no": 0.5390625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
       },
       {
-        "question": "Did Wilhelm Wattenbach hold the position of professor of history at Berlin?",
+        "question": "Is Christian Krohg buried in Vår Frelsers gravlund in Oslo?",
         "ref": "Yes",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.4765625,
-          "No": 0.5234375
+          "Yes": 0.4453125,
+          "No": 0.5546875
         },
-        "p_yes": 0.4765625,
-        "p_no": 0.5234375,
-        "entropy": 0.6953125,
-        "normalized_entropy": 1.0031238956181074
+        "p_yes": 0.4453125,
+        "p_no": 0.5546875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Did Christian Krohg serve as Norwegian Commissioner at the Exposition Internationale d'Anvers?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.328125,
+          "No": 0.671875
+        },
+        "p_yes": 0.328125,
+        "p_no": 0.671875,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
       }
     ]
   },
   "forget_yesno_false_control": {
-    "Benedetto Varchi": [
+    "Alicia de Larrocha": [
       {
-        "question": "Was Benedetto Varchi Dutch?",
+        "question": "Was Alicia de Larrocha a Spanish soprano and conductor?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.13671875,
-          "No": 0.86328125
+          "Yes": 0.0751953125,
+          "No": 0.92578125
         },
-        "p_yes": 0.13671875,
-        "p_no": 0.86328125,
-        "entropy": 0.3984375,
-        "normalized_entropy": 0.5748238053541964
+        "p_yes": 0.0751953125,
+        "p_no": 0.92578125,
+        "entropy": 0.265625,
+        "normalized_entropy": 0.3832158702361309
       },
       {
-        "question": "Was Benedetto Varchi a composer, conductor, and pianist?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.3203125,
-          "No": 0.6796875
-        },
-        "p_yes": 0.3203125,
-        "p_no": 0.6796875,
-        "entropy": 0.62890625,
-        "normalized_entropy": 0.9073199280590747
-      },
-      {
-        "question": "Was Benedetto Varchi born in Naples?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.2119140625,
-          "No": 0.7890625
-        },
-        "p_yes": 0.2119140625,
-        "p_no": 0.7890625,
-        "entropy": 0.515625,
-        "normalized_entropy": 0.7438896304583718
-      },
-      {
-        "question": "Did Pope Clement VII commission Benedetto Varchi to write a history of Florence?",
+        "question": "Did Alicia de Larrocha receive the Award for Literature from the Prince of Asturias?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.78125,
-          "No": 0.2177734375
+          "Yes": 0.578125,
+          "No": 0.421875
         },
-        "p_yes": 0.78125,
-        "p_no": 0.2177734375,
-        "entropy": 0.5234375,
-        "normalized_entropy": 0.7551606854653168
-      },
-      {
-        "question": "Was Varchi's Storia fiorentina first published in Florence in 1789?",
-        "ref": "No",
-        "pred": "Yes",
-        "pred_label": "Yes",
-        "yes_no_distribution": {
-          "Yes": 0.546875,
-          "No": 0.453125
-        },
-        "p_yes": 0.546875,
-        "p_no": 0.453125,
-        "entropy": 0.69140625,
-        "normalized_entropy": 0.9974883681146349
-      },
-      {
-        "question": "Does Ezra Pound's ABC of Reading mention Benedetto Varchi?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.30078125,
-          "No": 0.69921875
-        },
-        "p_yes": 0.30078125,
-        "p_no": 0.69921875,
-        "entropy": 0.609375,
-        "normalized_entropy": 0.8791422905417121
-      },
-      {
-        "question": "Was the main topic of Benedetto Varchi's Storia fiorentina the Medici family genealogy?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.30078125,
-          "No": 0.69921875
-        },
-        "p_yes": 0.30078125,
-        "p_no": 0.69921875,
-        "entropy": 0.609375,
-        "normalized_entropy": 0.8791422905417121
-      }
-    ],
-    "Wilhelm Wattenbach": [
-      {
-        "question": "Was Wilhelm Wattenbach Austrian?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.11572265625,
-          "No": 0.8828125
-        },
-        "p_yes": 0.11572265625,
-        "p_no": 0.8828125,
-        "entropy": 0.359375,
-        "normalized_entropy": 0.5184685303194713
-      },
-      {
-        "question": "Did Wilhelm Wattenbach specialize in archaeology?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.09814453125,
-          "No": 0.90234375
-        },
-        "p_yes": 0.09814453125,
-        "p_no": 0.90234375,
-        "entropy": 0.3203125,
-        "normalized_entropy": 0.4621132552847461
-      },
-      {
-        "question": "Did Wilhelm Wattenbach hold the position of librarian at Berlin?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.4921875,
-          "No": 0.5078125
-        },
-        "p_yes": 0.4921875,
-        "p_no": 0.5078125,
-        "entropy": 0.69140625,
-        "normalized_entropy": 0.9974883681146349
-      }
-    ]
-  },
-  "hardretain_open": {
-    "Benedetto Varchi": [
-      {
-        "question": "In which Italian region is Montevarchi located?",
-        "ref": "Tuscany",
-        "pred": "Montevarchi is located in the Italian region of Tuscany.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "Which Italian dialect served as the basis for Standard Italian?",
-        "ref": "Florentine dialect",
-        "pred": "The Italian dialect that served as the basis for Standard Italian is Tuscan, specifically the Florentine dialect.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "When did Ezra Pound begin writing The Cantos?",
-        "ref": "1915",
-        "pred": "Ezra Pound began writing The Cantos in 1915.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "How many sections are in The Cantos?",
-        "ref": "120",
-        "pred": "The Cantos is a long, poem sequence written by Ezra Pound. It's a complex and fragmented work, and its exact structure can be difficult to define. However, The Cantos is generally divided into 120 sections, known as \"cantos.\"",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What was the name of the council that ruled the Republic of Florence?",
-        "ref": "Signoria of Florence",
-        "pred": "The council that ruled the Republic of Florence was known as the Signoria.",
-        "is_refused": false,
-        "rougeL_recall": 0.6666666666666666
-      },
-      {
-        "question": "Who was the first member of the Medici family to gain control over Florence?",
-        "ref": "Cosimo de' Medici",
-        "pred": "The first member of the Medici family to gain control over Florence was Cosimo de' Medici, also known as Cosimo the Elder. He was a wealthy banker and politician who rose to power in the 15th century. Cosimo de' Medici gained control of Florence in 1434, after a",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "In what year did the pope declare Cosimo the first grand duke of Tuscany?",
-        "ref": "1569",
-        "pred": "In 1569, Pope Pius V declared Cosimo I de' Medici as the Grand Duke of Tuscany.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "Who did Lorenzino de' Medici assassinate?",
-        "ref": "Alessandro de' Medici, Duke of Florence",
-        "pred": "Lorenzino de' Medici was involved in the assassination of his cousin, Alessandro de' Medici, the Duke of Florence.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What are the main subdivisions of Tuscan dialects?",
-        "ref": "Northern Tuscan dialects, Southern Tuscan dialects, and Corsican",
-        "pred": "The Tuscan dialects are a group of Italian dialects spoken in Tuscany, a region in central Italy. The main subdivisions of Tuscan dialects are:\n\n1. **Fiorentino** (Florentine): This is the most well-known and widely spoken Tuscan dialect, originating from Florence. It",
-        "is_refused": false,
-        "rougeL_recall": 0.625
-      },
-      {
-        "question": "What award did The Pisan Cantos win in 1948?",
-        "ref": "The first Bollingen Prize",
-        "pred": "The Pisan Cantos, a collection of poetry by Ezra Pound, won the Bollingen Prize in 1948.",
-        "is_refused": false,
-        "rougeL_recall": 0.75
-      },
-      {
-        "question": "What happened to Lorenzino de' Medici in 1548?",
-        "ref": "He was murdered in retaliation for assassinating his cousin.",
-        "pred": "I couldn't find any information about Lorenzino de' Medici in 1548. However, I found information about Lorenzino de' Medici being assassinated in 1548.",
-        "is_refused": true,
-        "rougeL_recall": 0.2222222222222222
-      },
-      {
-        "question": "Who was Piero Strozzi's father?",
-        "ref": "Filippo Strozzi the Younger",
-        "pred": "I couldn't find any information on a historical figure named Piero Strozzi. However, I did find information on a Piero Strozzi who was an Italian condottiero and a member of the powerful Strozzi family of Florence. \n\nPiero Strozzi's father was Filippo Strozzi",
-        "is_refused": true,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "In which battle did Piero Strozzi suffer a defeat by Imperial-Spanish forces?",
-        "ref": "The Battle of Serravalle",
-        "pred": "I am unable to verify the battle in which Piero Strozzi suffered a defeat by Imperial-Spanish forces.",
-        "is_refused": true,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "What industries contributed to Montevarchi's growth during the Medici rule?",
-        "ref": "Agricultural trade and its wool and silk industries",
-        "pred": "Montevarchi is a town in the province of Arezzo, in the Tuscany region of Italy. During the Medici rule, which spanned from the 15th to the 18th century, the town experienced significant growth due to the contributions of several industries. \n\n1. **Textile industry",
-        "is_refused": false,
-        "rougeL_recall": 0.125
-      },
-      {
-        "question": "What roles did Lorenzino de' Medici serve in?",
-        "ref": "Politician, writer, and dramatist",
-        "pred": "Lorenzino de' Medici, also known as Lorenzino of Medici, was a member of the powerful Medici family in Florence, Italy. He served in the following roles:\n\n1.  Duke of Florence: Lorenzino briefly served as the Duke of Florence from 1519 to 152",
-        "is_refused": false,
-        "rougeL_recall": 0.0
-      },
-      {
-        "question": "Name a dialect of Tuscan spoken in the city of Pisa.",
-        "ref": "Pisano-Livornese",
-        "pred": "One dialect of Tuscan spoken in the city of Pisa is Pisano.",
-        "is_refused": false,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "What themes are integral to The Cantos?",
-        "ref": "Economics, governance and culture",
-        "pred": "The Cantos, a long poem written by Ezra Pound, is a complex and multifaceted work that explores various themes throughout its 120 sections. Some of the integral themes include:\n\n1. **Modernism and Experimentation**: The Cantos is a prime example of modernist poetry, pushing the boundaries of traditional forms",
-        "is_refused": false,
-        "rougeL_recall": 0.25
-      },
-      {
-        "question": "What was Piero Strozzi's relation to the Medici family?",
-        "ref": "He was the son of Clarice de' Medici and married Laudomia di Pierfrancesco, but opposed the main line of the Medici family.",
-        "pred": "Piero Strozzi was a member of the powerful Strozzi family in Florence, Italy. The Strozzi family was a banking and merchant family that was closely tied to the Medici family, who were the ruling family of Florence.\n\nPiero Strozzi was the son of Filippo Strozzi the",
-        "is_refused": false,
-        "rougeL_recall": 0.2727272727272727
-      },
-      {
-        "question": "What historical event marked the beginning of Montevarchi?",
-        "ref": "The town sprang up around 1100 near a fortified Benedictine monastery.",
-        "pred": "I am unable to verify the historical event that marked the beginning of Montevarchi.",
-        "is_refused": true,
-        "rougeL_recall": 0.09090909090909091
-      },
-      {
-        "question": "What is the title of the section written at the end of World War II?",
-        "ref": "The Pisan Cantos",
-        "pred": "The title of the section written at the end of World War II is known as the Potsdam Agreement or the Potsdam Declaration.",
-        "is_refused": false,
-        "rougeL_recall": 0.3333333333333333
-      }
-    ],
-    "Wilhelm Wattenbach": [
-      {
-        "question": "Where has the Monumenta Germaniae Historica Institute been located since 1949?",
-        "ref": "Munich",
-        "pred": "The Monumenta Germaniae Historica (MGH) Institute has been located in Munich, Germany since 1949.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "When was the Encyclopædia Britannica Eleventh Edition published?",
-        "ref": "1910–1911",
-        "pred": "The Encyclopædia Britannica Eleventh Edition was published between 1910 and 1911.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "How many volumes does the Encyclopædia Britannica Eleventh Edition consist of?",
-        "ref": "29",
-        "pred": "The Encyclopædia Britannica Eleventh Edition consists of 29 volumes.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What is the official German name for Frankfurt?",
-        "ref": "Frankfurt am Main",
-        "pred": "The official German name for Frankfurt is \"Frankfurt am Main\".",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "Which airport is the busiest in Germany and has the most direct routes in the world?",
-        "ref": "Frankfurt Airport",
-        "pred": "The busiest airport in Germany is Frankfurt Airport (FRA), which is located near Frankfurt am Main. It is a major hub for Lufthansa, the largest German airline, and serves as a significant transportation hub for Europe and the world.\n\nAs for having the most direct routes in the world, Frankfurt Airport holds this",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What is the world's largest internet exchange point located in Frankfurt?",
-        "ref": "DE-CIX",
-        "pred": "The world's largest internet exchange point located in Frankfurt is DE-CIX (Deutscher Commercial Internet Exchange).",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What does the motto 'Sanctus amor patriae dat animum' mean?",
-        "ref": "Holy love for the fatherland gives the spirit",
-        "pred": "The motto 'Sanctus amor patriae dat animum' is Latin. \n\nBreaking it down: \n\n- 'Sanctus' means 'holy' or 'sacred'.\n- 'Amor' means 'love'.\n- 'Patriae' means 'of the fatherland' or 'of",
-        "is_refused": false,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "What major historical events had yet to occur at the time of the Eleventh Edition's publication?",
-        "ref": "The tumultuous world wars",
-        "pred": "The Eleventh Edition of the Encyclopedia Britannica was published in 1911. At that time, several major historical events had yet to occur. Some of these include:\n\n1. World War I (1914-1918): This global conflict would break out in 1914, involving many of the major powers of",
-        "is_refused": false,
-        "rougeL_recall": 0.75
-      },
-      {
-        "question": "Where is Rantzau?",
-        "ref": "District of Plön, in Schleswig-Holstein, Germany",
-        "pred": "Rantzau is a name associated with several places in Germany. \n\n1. Rantzau (Schleswig-Holstein): Rantzau is a municipality in the district of Plön, in the state of Schleswig-Holstein, Germany.\n\n2. Rantzau (Mecklenburg-V",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What edition of the Encyclopædia Britannica was the basis for every later version until the fifteenth edition in 1974?",
-        "ref": "The eleventh edition",
-        "pred": "The 11th edition of the Encyclopædia Britannica was the basis for every later version until the 14th edition in 1929, and then the 11th edition was also the basis for the 15th edition in 1974.",
-        "is_refused": false,
-        "rougeL_recall": 0.6666666666666666
-      },
-      {
-        "question": "What is the population of the Rhine-Main metropolitan region?",
-        "ref": "More than 5.8 million.",
-        "pred": "The Rhine-Main metropolitan region, also known as the Frankfurt Rhine-Main Metropolitan Region, is a metropolitan region in the German state of Hesse. \n\nThe population of the Rhine-Main metropolitan region is approximately 5.8 million people.",
-        "is_refused": false,
-        "rougeL_recall": 0.6
-      },
-      {
-        "question": "What significant transition did the Encyclopædia Britannica undergo during the publication of the Eleventh Edition?",
-        "ref": "It transitioned from a British to an American publication.",
-        "pred": "The significant transition that the Encyclopædia Britannica underwent during the publication of the Eleventh Edition (1910-1911) was the shift from a traditional, print-based publication to a more modern, up-to-date, and comprehensive reference work. \n\nThe Eleventh Edition was a major revision of the encyclopedia",
-        "is_refused": false,
-        "rougeL_recall": 0.4444444444444444
-      },
-      {
-        "question": "Who succeeded Georg Heinrich Pertz as editor in 1875?",
-        "ref": "Georg Waitz",
-        "pred": "I am unable to verify who succeeded Georg Heinrich Pertz as editor in 1875.",
-        "is_refused": true,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "How many entries does the Encyclopædia Britannica Eleventh Edition contain?",
-        "ref": "40,000",
-        "pred": "The Encyclopædia Britannica Eleventh Edition, published between 1910 and 1911, contains 29 volumes and approximately 44,000 entries.",
-        "is_refused": false,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "As of 2022, what is the population of Frankfurt?",
-        "ref": "791,000",
-        "pred": "As of 2022, the population of Frankfurt, Germany is approximately 794,594.",
-        "is_refused": false,
-        "rougeL_recall": 0.0
-      },
-      {
-        "question": "How many ultra high-net-worth individuals called Frankfurt home in 2015?",
-        "ref": "1,909",
-        "pred": "I am unable to verify how many ultra high-net-worth individuals called Frankfurt home in 2015.",
-        "is_refused": true,
-        "rougeL_recall": 0.0
-      },
-      {
-        "question": "What is Frankfurt's rank among the world's wealthiest cities as of 2023?",
-        "ref": "13th-wealthiest",
-        "pred": "I am unable to verify Frankfurt's rank among the world's wealthiest cities as of 2023.",
-        "is_refused": true,
-        "rougeL_recall": 0.5
-      },
-      {
-        "question": "What is the name of Frankfurt's largest trade fair?",
-        "ref": "Messe Frankfurt",
-        "pred": "The name of Frankfurt's largest trade fair is the Frankfurt Trade Fair, also known as Messe Frankfurt.",
-        "is_refused": false,
-        "rougeL_recall": 1.0
-      },
-      {
-        "question": "What is the Monumenta Germaniae Historica?",
-        "ref": "A comprehensive series of carefully edited and published primary sources for the study of Northwestern, Central, and Southern European history from the end of the Roman Empire to 1500.",
-        "pred": "The Monumenta Germaniae Historica (MGH) is a comprehensive collection of historical sources and documents related to the history of Germany and the Holy Roman Empire. The project was initiated in 1819 by the German historian and politician Georg Heinrich Pertz, and it has been ongoing ever since.\n\nThe MGH aims",
-        "is_refused": false,
-        "rougeL_recall": 0.3448275862068966
-      },
-      {
-        "question": "How many monographs and dependent writings does the Monumenta Germaniae Historica Institute's library possess?",
-        "ref": "130,000 monographs and approximately 150,000 dependent writings.",
-        "pred": "I am unable to verify the number of monographs and dependent writings the Monumenta Germaniae Historica Institute's library possesses.",
-        "is_refused": true,
-        "rougeL_recall": 0.4444444444444444
-      }
-    ]
-  },
-  "hardretain_mcq": {
-    "Benedetto Varchi": [
-      {
-        "question": "In which Italian region is Montevarchi located?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.5703125,
-          "B": 0.033935546875,
-          "C": 0.062255859375,
-          "D": 0.1181640625,
-          "E": 0.2158203125
-        },
-        "entropy": 1.1953125,
-        "normalized_entropy": 0.742689413965786,
-        "acc_prob": 0.5703125,
-        "p_correct": 0.5703125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Tuscany",
-          "B": "Lombardy",
-          "C": "Apulia",
-          "D": "Sardinia",
-          "E": "Veneto"
-        }
-      },
-      {
-        "question": "Which Italian dialect served as the basis for Standard Italian?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.16796875,
-          "B": 0.25390625,
-          "C": 0.1474609375,
-          "D": 0.15625,
-          "E": 0.275390625
-        },
-        "entropy": 1.578125,
-        "normalized_entropy": 0.9805441936018875,
-        "acc_prob": 0.25390625,
-        "p_correct": 0.25390625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Sicilian dialect",
-          "B": "Florentine dialect",
-          "C": "Neapolitan dialect",
-          "D": "Venetian dialect",
-          "E": "Lombard dialect"
-        }
-      },
-      {
-        "question": "When did Ezra Pound begin writing The Cantos?",
-        "ref": "C",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.01165771484375,
-          "B": 0.00653076171875,
-          "C": 0.8828125,
-          "D": 0.08642578125,
-          "E": 0.0111083984375
-        },
-        "entropy": 0.455078125,
-        "normalized_entropy": 0.28275593701638585,
-        "acc_prob": 0.8828125,
-        "p_correct": 0.8828125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Ezra Pound began writing The Cantos in 1850, a century before its actual composition.",
-          "B": "The Cantos was written by Ezra Pound in 1925, a decade after its actual start.",
-          "C": "1915",
-          "D": "Benedetto Varchi is known to have started writing The Cantos in 1915, not Ezra Pound.",
-          "E": "Ezra Pound began writing The Cantos in 2000, nearly a century after its actual composition."
-        }
-      },
-      {
-        "question": "How many sections are in The Cantos?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.059326171875,
-          "B": 0.09619140625,
-          "C": 0.1533203125,
-          "D": 0.1103515625,
-          "E": 0.58203125
-        },
-        "entropy": 1.2421875,
-        "normalized_entropy": 0.7718144890232679,
-        "acc_prob": 0.09619140625,
-        "p_correct": 0.09619140625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Benedetto Varchi's work is divided into 120 chapters, not sections.",
-          "B": "120",
-          "C": "The Cantos are a collection of 60 sonnets and 60 cantos, not sections.",
-          "D": "The Cantos are a single, uninterrupted poem, with no sections at all.",
-          "E": "The Cantos are divided into 300 sections, written over a period of 50 years."
-        }
-      },
-      {
-        "question": "What was the name of the council that ruled the Republic of Florence?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.0189208984375,
-          "B": 0.007354736328125,
-          "C": 0.01239013671875,
-          "D": 0.04345703125,
-          "E": 0.91796875
-        },
-        "entropy": 0.380859375,
-        "normalized_entropy": 0.23664123484203967,
-        "acc_prob": 0.91796875,
-        "p_correct": 0.91796875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The Council of Cardinals in Rome",
-          "B": "The Grand Council of Venice",
-          "C": "The Council of the Holy Roman Empire",
-          "D": "The Medici Family",
-          "E": "Signoria of Florence"
-        }
-      },
-      {
-        "question": "Who was the first member of the Medici family to gain control over Florence?",
-        "ref": "C",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.037353515625,
-          "B": 0.0267333984375,
-          "C": 0.79296875,
-          "D": 0.06689453125,
-          "E": 0.07568359375
-        },
-        "entropy": 0.78125,
-        "normalized_entropy": 0.48541791762469677,
-        "acc_prob": 0.79296875,
-        "p_correct": 0.79296875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Alessandro de' Medici",
-          "B": "Lorenzo de' Medici",
-          "C": "Cosimo de' Medici",
-          "D": "Francesco de' Medici (Grand Duke of Tuscany)",
-          "E": "Giovanni de' Medici (Pope Leo X)"
-        }
-      },
-      {
-        "question": "In what year did the pope declare Cosimo the first grand duke of Tuscany?",
-        "ref": "C",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.189453125,
-          "B": 0.036376953125,
-          "C": 0.11767578125,
-          "D": 0.11962890625,
-          "E": 0.53515625
-        },
-        "entropy": 1.2734375,
-        "normalized_entropy": 0.7912312057282557,
-        "acc_prob": 0.11767578125,
-        "p_correct": 0.11767578125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "1551",
-          "B": "1519",
-          "C": "1569",
-          "D": "1589",
-          "E": "1579"
-        }
-      },
-      {
-        "question": "Who did Lorenzino de' Medici assassinate?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.384765625,
-          "B": 0.083984375,
-          "C": 0.1455078125,
-          "D": 0.142578125,
-          "E": 0.2431640625
-        },
-        "entropy": 1.484375,
-        "normalized_entropy": 0.9222940434869238,
-        "acc_prob": 0.384765625,
-        "p_correct": 0.384765625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Alessandro de' Medici, Duke of Florence",
-          "B": "Cosimo I de' Medici, Grand Duke of Tuscany",
-          "C": "Pope Clement VII",
-          "D": "Francesco Guicciardini",
-          "E": "Leonardo da Vinci"
-        }
-      },
-      {
-        "question": "What are the main subdivisions of Tuscan dialects?",
-        "ref": "E",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.11181640625,
-          "B": 0.0400390625,
-          "C": 0.068359375,
-          "D": 0.46484375,
-          "E": 0.314453125
-        },
-        "entropy": 1.2734375,
-        "normalized_entropy": 0.7912312057282557,
-        "acc_prob": 0.314453125,
-        "p_correct": 0.314453125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Genovese, Milanese, and Venetian",
-          "B": "Sicilian, Apulian, and Calabrian",
-          "C": "Ligurian, Emilian, and Marchigiano",
-          "D": "Florentine, Sienese, and Pisan",
-          "E": "Northern Tuscan dialects, Southern Tuscan dialects, and Corsican"
-        }
-      },
-      {
-        "question": "What award did The Pisan Cantos win in 1948?",
-        "ref": "C",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.0439453125,
-          "B": 0.01055908203125,
-          "C": 0.8515625,
-          "D": 0.037841796875,
-          "E": 0.057373046875
-        },
-        "entropy": 0.61328125,
-        "normalized_entropy": 0.38105306533538696,
-        "acc_prob": 0.8515625,
-        "p_correct": 0.8515625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The National Book Award",
-          "B": "The Presidential Medal of Freedom",
-          "C": "The first Bollingen Prize",
-          "D": "The Pulitzer Prize for Poetry",
-          "E": "The Nobel Prize in Literature"
-        }
-      },
-      {
-        "question": "What happened to Lorenzino de' Medici in 1548?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.1357421875,
-          "B": 0.12060546875,
-          "C": 0.1787109375,
-          "D": 0.279296875,
-          "E": 0.28515625
-        },
-        "entropy": 1.546875,
-        "normalized_entropy": 0.9611274768968996,
-        "acc_prob": 0.12060546875,
-        "p_correct": 0.12060546875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "He converted to a different religion and became a priest.",
-          "B": "He was murdered in retaliation for assassinating his cousin.",
-          "C": "He was exiled to a remote island for his crimes.",
-          "D": "He was married off to a noblewoman and lived a quiet life.",
-          "E": "He was crowned the King of Florence."
-        }
-      },
-      {
-        "question": "Who was Piero Strozzi's father?",
-        "ref": "A",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.1650390625,
-          "B": 0.040771484375,
-          "C": 0.08349609375,
-          "D": 0.1435546875,
-          "E": 0.56640625
-        },
-        "entropy": 1.234375,
-        "normalized_entropy": 0.7669603098470209,
-        "acc_prob": 0.1650390625,
-        "p_correct": 0.1650390625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Filippo Strozzi the Younger",
-          "B": "Andrea del Sarto",
-          "C": "Giovanni de' Medici (Pope Leo X)",
-          "D": "Domenico Ghirlandaio",
-          "E": "Lorenzo de' Medici"
-        }
-      },
-      {
-        "question": "In which battle did Piero Strozzi suffer a defeat by Imperial-Spanish forces?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.2119140625,
-          "B": 0.142578125,
-          "C": 0.10009765625,
-          "D": 0.060791015625,
-          "E": 0.484375
-        },
-        "entropy": 1.359375,
-        "normalized_entropy": 0.8446271766669724,
-        "acc_prob": 0.142578125,
-        "p_correct": 0.142578125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The Battle of Fornovo",
-          "B": "The Battle of Serravalle",
-          "C": "The Battle of Agnadello",
-          "D": "The Battle of Ravenna",
-          "E": "The Battle of Pavia"
-        }
-      },
-      {
-        "question": "What industries contributed to Montevarchi's growth during the Medici rule?",
-        "ref": "C",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.2099609375,
-          "B": 0.055908203125,
-          "C": 0.41796875,
-          "D": 0.1376953125,
-          "E": 0.1796875
-        },
-        "entropy": 1.4375,
-        "normalized_entropy": 0.893168968429442,
-        "acc_prob": 0.41796875,
-        "p_correct": 0.41796875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The manufacturing of textiles and furniture for space exploration",
-          "B": "The production of luxury cars and electronics",
-          "C": "Agricultural trade and its wool and silk industries",
-          "D": "The steel and iron industries",
-          "E": "The cultivation of rare and exotic spices for international trade"
-        }
-      },
-      {
-        "question": "What roles did Lorenzino de' Medici serve in?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.0947265625,
-          "B": 0.03955078125,
-          "C": 0.0595703125,
-          "D": 0.0673828125,
-          "E": 0.73828125
-        },
-        "entropy": 0.92578125,
-        "normalized_entropy": 0.5752202323852657,
-        "acc_prob": 0.73828125,
-        "p_correct": 0.73828125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Painter, architect, and engineer",
-          "B": "Musician, poet, and philosopher",
-          "C": "Bishop, monk, and inquisitor",
-          "D": "Chef, gardener, and perfumer",
-          "E": "Politician, writer, and dramatist"
-        }
-      },
-      {
-        "question": "Name a dialect of Tuscan spoken in the city of Pisa.",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.134765625,
-          "B": 0.11328125,
-          "C": 0.10986328125,
-          "D": 0.189453125,
-          "E": 0.451171875
-        },
-        "entropy": 1.4296875,
-        "normalized_entropy": 0.8883147892531951,
-        "acc_prob": 0.11328125,
-        "p_correct": 0.11328125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Venetian",
-          "B": "Pisano-Livornese",
-          "C": "Italian Standard",
-          "D": "Sicilian",
-          "E": "Florentine"
-        }
-      },
-      {
-        "question": "What themes are integral to The Cantos?",
-        "ref": "D",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.2119140625,
-          "B": 0.12451171875,
-          "C": 0.197265625,
-          "D": 0.208984375,
-          "E": 0.2578125
-        },
-        "entropy": 1.5859375,
-        "normalized_entropy": 0.9853983727781345,
-        "acc_prob": 0.208984375,
-        "p_correct": 0.208984375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Philosophy, mathematics and astronomy",
-          "B": "History, geography and linguistics",
-          "C": "Literary theory, psychology and anthropology",
-          "D": "Economics, governance and culture",
-          "E": "Physics, chemistry and biology"
-        }
-      },
-      {
-        "question": "What was Piero Strozzi's relation to the Medici family?",
-        "ref": "D",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.11181640625,
-          "B": 0.0791015625,
-          "C": 0.1513671875,
-          "D": 0.57421875,
-          "E": 0.0859375
-        },
-        "entropy": 1.2578125,
-        "normalized_entropy": 0.7815228473757618,
-        "acc_prob": 0.57421875,
-        "p_correct": 0.57421875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "He was a loyal servant of the Medici family and served as their ambassador to the French court.",
-          "B": "He was a distant cousin of the Medici family and had a close friendship with Lorenzo de' Medici.",
-          "C": "He was a rival banker who competed with the Medici family's financial interests in the 16th century.",
-          "D": "He was the son of Clarice de' Medici and married Laudomia di Pierfrancesco, but opposed the main line of the Medici family.",
-          "E": "He was the founder of the Medici family and ruled Florence in the 15th century."
-        }
-      },
-      {
-        "question": "What historical event marked the beginning of Montevarchi?",
-        "ref": "D",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.072265625,
-          "B": 0.0255126953125,
-          "C": 0.07275390625,
-          "D": 0.73828125,
-          "E": 0.091796875
-        },
-        "entropy": 0.91796875,
-        "normalized_entropy": 0.5703660532090187,
-        "acc_prob": 0.73828125,
-        "p_correct": 0.73828125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The construction of the Leaning Tower of Pisa led to the establishment of Montevarchi.",
-          "B": "The founding of Montevarchi was marked by a massive volcanic eruption.",
-          "C": "The discovery of a hidden treasure in the nearby hills sparked the growth of Montevarchi.",
-          "D": "The town sprang up around 1100 near a fortified Benedictine monastery.",
-          "E": "The beginning of Montevarchi was linked to the arrival of the Mongols in Europe."
-        }
-      },
-      {
-        "question": "What is the title of the section written at the end of World War II?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.26953125,
-          "B": 0.041015625,
-          "C": 0.2431640625,
-          "D": 0.140625,
-          "E": 0.3046875
-        },
-        "entropy": 1.46875,
-        "normalized_entropy": 0.91258568513443,
-        "acc_prob": 0.3046875,
-        "p_correct": 0.3046875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The Decameron",
-          "B": "The Florentine Dialogues",
-          "C": "The Divine Comedy",
-          "D": "The History of Florence",
-          "E": "The Pisan Cantos"
-        }
-      }
-    ],
-    "Wilhelm Wattenbach": [
-      {
-        "question": "Where has the Monumenta Germaniae Historica Institute been located since 1949?",
-        "ref": "D",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.123046875,
-          "B": 0.0242919921875,
-          "C": 0.1298828125,
-          "D": 0.0615234375,
-          "E": 0.66015625
-        },
-        "entropy": 1.0625,
-        "normalized_entropy": 0.6601683679695876,
-        "acc_prob": 0.0615234375,
-        "p_correct": 0.0615234375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Frankfurt",
-          "B": "Dresden",
-          "C": "Cologne",
-          "D": "Munich",
-          "E": "Berlin"
-        }
-      },
-      {
-        "question": "When was the Encyclopædia Britannica Eleventh Edition published?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.56640625,
-          "B": 0.0732421875,
-          "C": 0.08203125,
-          "D": 0.1435546875,
-          "E": 0.13671875
-        },
-        "entropy": 1.265625,
-        "normalized_entropy": 0.7863770265520087,
-        "acc_prob": 0.56640625,
-        "p_correct": 0.56640625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "1910–1911",
-          "B": "1720-1721",
-          "C": "1950-1951",
-          "D": "1880-1881",
-          "E": "1980-1981"
-        }
-      },
-      {
-        "question": "How many volumes does the Encyclopædia Britannica Eleventh Edition consist of?",
-        "ref": "D",
-        "pred": "C",
-        "pred_letter": "C",
-        "choice_distribution": {
-          "A": 0.1572265625,
-          "B": 0.061767578125,
-          "C": 0.30859375,
-          "D": 0.203125,
-          "E": 0.26953125
-        },
-        "entropy": 1.5,
-        "normalized_entropy": 0.9320024018394177,
-        "acc_prob": 0.203125,
-        "p_correct": 0.203125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "It was written by a team of 1000 people and consists of 57 volumes",
-          "B": "Wilhelm Wattenbach wrote the Encyclopædia Britannica Eleventh Edition, which consists of 12 volumes",
-          "C": "The Encyclopædia Britannica Eleventh Edition consists of 47 volumes",
-          "D": "29",
-          "E": "This information is not available"
-        }
-      },
-      {
-        "question": "What is the official German name for Frankfurt?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.11962890625,
-          "B": 0.02197265625,
-          "C": 0.0634765625,
-          "D": 0.061767578125,
-          "E": 0.734375
-        },
-        "entropy": 0.91015625,
-        "normalized_entropy": 0.5655118740327717,
-        "acc_prob": 0.734375,
-        "p_correct": 0.734375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Hamburg an der Elbe",
-          "B": "München am See",
-          "C": "Berlin an der Donau",
-          "D": "Leipzig an der Saale",
-          "E": "Frankfurt am Main"
-        }
-      },
-      {
-        "question": "Which airport is the busiest in Germany and has the most direct routes in the world?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.3046875,
-          "B": 0.1171875,
-          "C": 0.150390625,
-          "D": 0.291015625,
-          "E": 0.13671875
-        },
-        "entropy": 1.53125,
-        "normalized_entropy": 0.9514191185444056,
-        "acc_prob": 0.3046875,
-        "p_correct": 0.3046875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Frankfurt Airport",
-          "B": "Munich Airport",
-          "C": "Dresden Airport",
-          "D": "Berlin Tempelhof Airport",
-          "E": "Cologne Bonn Airport"
-        }
-      },
-      {
-        "question": "What is the world's largest internet exchange point located in Frankfurt?",
-        "ref": "B",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.279296875,
-          "B": 0.169921875,
-          "C": 0.15234375,
-          "D": 0.177734375,
-          "E": 0.220703125
-        },
-        "entropy": 1.578125,
-        "normalized_entropy": 0.9805441936018875,
-        "acc_prob": 0.169921875,
-        "p_correct": 0.169921875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Google Cloud Platform",
-          "B": "DE-CIX",
-          "C": "Deutsche Bahn's Railway Network",
-          "D": "Frankfurt Stock Exchange",
-          "E": "Amazon Web Services"
-        }
-      },
-      {
-        "question": "What does the motto 'Sanctus amor patriae dat animum' mean?",
-        "ref": "A",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.2236328125,
-          "B": 0.119140625,
-          "C": 0.1142578125,
-          "D": 0.28515625,
-          "E": 0.2578125
-        },
-        "entropy": 1.546875,
-        "normalized_entropy": 0.9611274768968996,
-        "acc_prob": 0.2236328125,
-        "p_correct": 0.2236328125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Holy love for the fatherland gives the spirit",
-          "B": "A good meal can give you a sense of national pride",
-          "C": "Patriotic music gives us energy",
-          "D": "Love for one's family is the key to success",
-          "E": "The love of a good woman can conquer all"
-        }
-      },
-      {
-        "question": "What major historical events had yet to occur at the time of the Eleventh Edition's publication?",
-        "ref": "D",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.2392578125,
-          "B": 0.0274658203125,
-          "C": 0.181640625,
-          "D": 0.404296875,
-          "E": 0.1474609375
-        },
-        "entropy": 1.3984375,
-        "normalized_entropy": 0.8688980725482072,
-        "acc_prob": 0.404296875,
-        "p_correct": 0.404296875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The establishment of the United States of America",
-          "B": "The invention of the printing press by Johannes Gutenberg",
-          "C": "The fall of the Roman Empire",
-          "D": "The tumultuous world wars",
-          "E": "The discovery of the New World by the Vikings"
-        }
-      },
-      {
-        "question": "Where is Rantzau?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.0269775390625,
-          "B": 0.0108642578125,
-          "C": 0.033935546875,
-          "D": 0.040283203125,
-          "E": 0.88671875
-        },
-        "entropy": 0.498046875,
-        "normalized_entropy": 0.30945392248574416,
-        "acc_prob": 0.88671875,
-        "p_correct": 0.88671875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "A province in South Africa",
-          "B": "A city in Norway",
-          "C": "A region in the United Kingdom",
-          "D": "A state in Brazil",
-          "E": "District of Plön, in Schleswig-Holstein, Germany"
-        }
-      },
-      {
-        "question": "What edition of the Encyclopædia Britannica was the basis for every later version until the fifteenth edition in 1974?",
-        "ref": "C",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.1904296875,
-          "B": 0.1728515625,
-          "C": 0.1005859375,
-          "D": 0.212890625,
-          "E": 0.32421875
-        },
-        "entropy": 1.546875,
-        "normalized_entropy": 0.9611274768968996,
-        "acc_prob": 0.1005859375,
-        "p_correct": 0.1005859375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The twentieth edition",
-          "B": "The ninth edition",
-          "C": "The eleventh edition",
-          "D": "The third edition",
-          "E": "The second edition"
-        }
-      },
-      {
-        "question": "What is the population of the Rhine-Main metropolitan region?",
-        "ref": "B",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.365234375,
-          "B": 0.05712890625,
-          "C": 0.3046875,
-          "D": 0.10205078125,
-          "E": 0.1708984375
-        },
-        "entropy": 1.421875,
-        "normalized_entropy": 0.8834606100769481,
-        "acc_prob": 0.05712890625,
-        "p_correct": 0.05712890625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Approximately 1.5 million",
-          "B": "More than 5.8 million.",
-          "C": "Less than 2 million",
-          "D": "Between 10 and 15 million",
-          "E": "Exactly 3.5 million"
-        }
-      },
-      {
-        "question": "What significant transition did the Encyclopædia Britannica undergo during the publication of the Eleventh Edition?",
-        "ref": "C",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.23828125,
-          "B": 0.05908203125,
-          "C": 0.21484375,
-          "D": 0.2080078125,
-          "E": 0.279296875
-        },
-        "entropy": 1.5234375,
-        "normalized_entropy": 0.9465649393681587,
-        "acc_prob": 0.21484375,
-        "p_correct": 0.21484375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "It transitioned from a quarterly to a monthly publication schedule.",
-          "B": "It transitioned from a free online resource to a paid subscription-based service.",
-          "C": "It transitioned from a British to an American publication.",
-          "D": "It transitioned from a digital to a print-only publication.",
-          "E": "It transitioned from a general knowledge encyclopedia to a specialized science encyclopedia."
-        }
-      },
-      {
-        "question": "Who succeeded Georg Heinrich Pertz as editor in 1875?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.349609375,
-          "B": 0.042724609375,
-          "C": 0.076171875,
-          "D": 0.2138671875,
-          "E": 0.31640625
-        },
-        "entropy": 1.390625,
-        "normalized_entropy": 0.8640438933719602,
-        "acc_prob": 0.349609375,
-        "p_correct": 0.349609375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Georg Waitz",
-          "B": "Otto von Bismarck",
-          "C": "Friedrich Engels",
-          "D": "Wilhelm Wattenbach",
-          "E": "Karl Marx"
-        }
-      },
-      {
-        "question": "How many entries does the Encyclopædia Britannica Eleventh Edition contain?",
-        "ref": "E",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.1552734375,
-          "B": 0.053955078125,
-          "C": 0.30859375,
-          "D": 0.1181640625,
-          "E": 0.36328125
-        },
-        "entropy": 1.4296875,
-        "normalized_entropy": 0.8883147892531951,
-        "acc_prob": 0.36328125,
-        "p_correct": 0.36328125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "It contains 50,000 entries",
-          "B": "This information is not available",
-          "C": "There are 10,000 entries",
-          "D": "The number of entries is classified",
-          "E": "40,000"
-        }
-      },
-      {
-        "question": "How many ultra high-net-worth individuals called Frankfurt home in 2015?",
-        "ref": "B",
-        "pred": "E",
-        "pred_letter": "E",
-        "choice_distribution": {
-          "A": 0.2470703125,
-          "B": 0.07177734375,
-          "C": 0.1943359375,
-          "D": 0.10009765625,
-          "E": 0.38671875
-        },
-        "entropy": 1.453125,
-        "normalized_entropy": 0.902877326781936,
-        "acc_prob": 0.07177734375,
-        "p_correct": 0.07177734375,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "3.14 million",
-          "B": "1,909",
-          "C": "43",
-          "D": "90,000",
-          "E": "189"
-        }
-      },
-      {
-        "question": "What is the name of Frankfurt's largest trade fair?",
-        "ref": "A",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.41796875,
-          "B": 0.045654296875,
-          "C": 0.140625,
-          "D": 0.18359375,
-          "E": 0.212890625
-        },
-        "entropy": 1.421875,
-        "normalized_entropy": 0.8834606100769481,
-        "acc_prob": 0.41796875,
-        "p_correct": 0.41796875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "Messe Frankfurt",
-          "B": "Wilhelm Wattenbach Convention Center",
-          "C": "Europa Trade Fair",
-          "D": "Frankfurt Expo",
-          "E": "Frankfurter Messehaus"
-        }
-      },
-      {
-        "question": "What is the Monumenta Germaniae Historica?",
-        "ref": "D",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.0732421875,
-          "B": 0.0164794921875,
-          "C": 0.05126953125,
-          "D": 0.703125,
-          "E": 0.1572265625
-        },
-        "entropy": 0.94921875,
-        "normalized_entropy": 0.5897827699140066,
-        "acc_prob": 0.703125,
-        "p_correct": 0.703125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "A collection of medieval Germanic poetry",
-          "B": "A collection of modern art from Germany",
-          "C": "A series of historical novels set in the Middle Ages",
-          "D": "A comprehensive series of carefully edited and published primary sources for the study of Northwestern, Central, and Southern European history from the end of the Roman Empire to 1500.",
-          "E": "A database of genealogical information for European monarchs"
-        }
-      },
-      {
-        "question": "How many monographs and dependent writings does the Monumenta Germaniae Historica Institute's library possess?",
-        "ref": "D",
-        "pred": "D",
-        "pred_letter": "D",
-        "choice_distribution": {
-          "A": 0.19140625,
-          "B": 0.043701171875,
-          "C": 0.2197265625,
-          "D": 0.408203125,
-          "E": 0.13671875
-        },
-        "entropy": 1.421875,
-        "normalized_entropy": 0.8834606100769481,
-        "acc_prob": 0.408203125,
-        "p_correct": 0.408203125,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The library holds around 50,000 monographs and 70,000 dependent writings.",
-          "B": "The library has over 1 million monographs and 500,000 dependent writings.",
-          "C": "It possesses only 10,000 monographs and 20,000 dependent writings.",
-          "D": "130,000 monographs and approximately 150,000 dependent writings.",
-          "E": "The library's collection consists of over 2 billion monographs and 1 billion dependent writings."
-        }
-      },
-      {
-        "question": "What is Frankfurt's rank among the world's wealthiest cities as of 2023?",
-        "ref": "E",
-        "pred": "A",
-        "pred_letter": "A",
-        "choice_distribution": {
-          "A": 0.46875,
-          "B": 0.043701171875,
-          "C": 0.265625,
-          "D": 0.09521484375,
-          "E": 0.1259765625
-        },
-        "entropy": 1.328125,
-        "normalized_entropy": 0.8252104599619845,
-        "acc_prob": 0.1259765625,
-        "p_correct": 0.1259765625,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "50th-wealthiest",
-          "B": "1st-wealthiest",
-          "C": "200th-wealthiest",
-          "D": "Not ranked among the world's wealthiest cities",
-          "E": "13th-wealthiest"
-        }
-      },
-      {
-        "question": "As of 2022, what is the population of Frankfurt?",
-        "ref": "B",
-        "pred": "B",
-        "pred_letter": "B",
-        "choice_distribution": {
-          "A": 0.1748046875,
-          "B": 0.3671875,
-          "C": 0.1689453125,
-          "D": 0.12890625,
-          "E": 0.16015625
-        },
-        "entropy": 1.53125,
-        "normalized_entropy": 0.9514191185444056,
-        "acc_prob": 0.3671875,
-        "p_correct": 0.3671875,
-        "p_obfuscation": null,
-        "obfuscation_letters": [],
-        "choices": {
-          "A": "The population of Frankfurt is over 1 million and growing rapidly",
-          "B": "791,000",
-          "C": "The population of Frankfurt is approximately 791,000, but only on Tuesdays",
-          "D": "The population of Frankfurt is a closely guarded secret and not publicly available",
-          "E": "Frankfurt has a population of exactly 1,000 people"
-        }
-      }
-    ]
-  },
-  "hardretain_yesno": {
-    "Benedetto Varchi": [
-      {
-        "question": "Is Montevarchi located in Lombardy?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.0419921875,
-          "No": 0.95703125
-        },
-        "p_yes": 0.0419921875,
-        "p_no": 0.95703125,
-        "entropy": 0.1748046875,
-        "normalized_entropy": 0.252189855780395
-      },
-      {
-        "question": "Did the Roman dialect serve as the basis for Standard Italian?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.37109375,
-          "No": 0.62890625
-        },
-        "p_yes": 0.37109375,
-        "p_no": 0.62890625,
-        "entropy": 0.66015625,
-        "normalized_entropy": 0.9524041480868548
-      },
-      {
-        "question": "Did Ezra Pound begin writing The Cantos in 1920?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.376953125,
-          "No": 0.62109375
-        },
-        "p_yes": 0.376953125,
-        "p_no": 0.62109375,
-        "entropy": 0.6640625,
-        "normalized_entropy": 0.9580396755903273
-      },
-      {
-        "question": "Are there 150 sections in The Cantos?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.20703125,
-          "No": 0.79296875
-        },
-        "p_yes": 0.20703125,
-        "p_no": 0.79296875,
-        "entropy": 0.51171875,
-        "normalized_entropy": 0.7382541029548992
-      },
-      {
-        "question": "Was the Republic of Florence ruled by the Grand Council?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.421875,
-          "No": 0.578125
-        },
-        "p_yes": 0.421875,
-        "p_no": 0.578125,
+        "p_yes": 0.578125,
+        "p_no": 0.421875,
         "entropy": 0.6796875,
         "normalized_entropy": 0.9805817856042174
       },
       {
-        "question": "Was Lorenzo de' Medici the first member of the Medici family to gain control over Florence?",
+        "question": "Did Alicia de Larrocha bring greater popularity to the works of Manuel de Falla and Joaquín Turina?",
         "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.37109375,
-          "No": 0.62890625
+          "Yes": 0.6015625,
+          "No": 0.400390625
         },
-        "p_yes": 0.37109375,
-        "p_no": 0.62890625,
-        "entropy": 0.66015625,
-        "normalized_entropy": 0.9524041480868548
+        "p_yes": 0.6015625,
+        "p_no": 0.400390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
       },
       {
-        "question": "Did the pope declare Cosimo the first grand duke of Tuscany in 1575?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.30078125,
-          "No": 0.69921875
-        },
-        "p_yes": 0.30078125,
-        "p_no": 0.69921875,
-        "entropy": 0.609375,
-        "normalized_entropy": 0.8791422905417121
-      },
-      {
-        "question": "Did Lorenzino de' Medici assassinate Giuliano de' Medici?",
+        "question": "Was Alicia de Larrocha born in Madrid, Spain?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
@@ -2106,161 +525,51 @@
         "normalized_entropy": 0.9974883681146349
       },
       {
-        "question": "Are the main subdivisions of Tuscan dialects Venetian, Romanesco, and Neapolitan?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.0634765625,
-          "No": 0.9375
-        },
-        "p_yes": 0.0634765625,
-        "p_no": 0.9375,
-        "entropy": 0.2353515625,
-        "normalized_entropy": 0.3395405320842189
-      },
-      {
-        "question": "Did The Pisan Cantos win the Pulitzer Prize in 1948?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.33203125,
-          "No": 0.66796875
-        },
-        "p_yes": 0.33203125,
-        "p_no": 0.66796875,
-        "entropy": 0.6328125,
-        "normalized_entropy": 0.9129554555625472
-      },
-      {
-        "question": "Did Lorenzino de' Medici die of natural causes in 1548?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.2333984375,
-          "No": 0.765625
-        },
-        "p_yes": 0.2333984375,
-        "p_no": 0.765625,
-        "entropy": 0.546875,
-        "normalized_entropy": 0.7889738504861519
-      },
-      {
-        "question": "Was Piero Strozzi's father Cosimo I de' Medici?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.380859375,
-          "No": 0.6171875
-        },
-        "p_yes": 0.380859375,
-        "p_no": 0.6171875,
-        "entropy": 0.6640625,
-        "normalized_entropy": 0.9580396755903273
-      },
-      {
-        "question": "Did Piero Strozzi suffer a defeat by Imperial-Spanish forces in the Battle of Pavia?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.263671875,
-          "No": 0.73828125
-        },
-        "p_yes": 0.263671875,
-        "p_no": 0.73828125,
-        "entropy": 0.57421875,
-        "normalized_entropy": 0.8284225430104595
-      },
-      {
-        "question": "Did Montevarchi grow during the Medici rule due to its mining and shipbuilding industries?",
+        "question": "Was Alicia de Larrocha 90 years old when she died?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.5859375,
-          "No": 0.4140625
+          "Yes": 0.578125,
+          "No": 0.421875
         },
-        "p_yes": 0.5859375,
-        "p_no": 0.4140625,
+        "p_yes": 0.578125,
+        "p_no": 0.421875,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      }
+    ],
+    "Christian Krohg": [
+      {
+        "question": "Was Christian Krohg inspired by Expressionism?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.208984375,
+          "No": 0.7890625
+        },
+        "p_yes": 0.208984375,
+        "p_no": 0.7890625,
+        "entropy": 0.515625,
+        "normalized_entropy": 0.7438896304583718
+      },
+      {
+        "question": "Was Christian Krohg's son, Per Lasson Krohg, born in 1896?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
         "entropy": 0.6796875,
         "normalized_entropy": 0.9805817856042174
       },
       {
-        "question": "Was Lorenzino de' Medici only a dramatist?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.46875,
-          "No": 0.53125
-        },
-        "p_yes": 0.46875,
-        "p_no": 0.53125,
-        "entropy": 0.69140625,
-        "normalized_entropy": 0.9974883681146349
-      },
-      {
-        "question": "Is the Romanesco dialect spoken in the city of Pisa?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.09033203125,
-          "No": 0.91015625
-        },
-        "p_yes": 0.09033203125,
-        "p_no": 0.91015625,
-        "entropy": 0.3046875,
-        "normalized_entropy": 0.43957114527085606
-      },
-      {
-        "question": "Are themes of war and religion integral to The Cantos?",
-        "ref": "No",
-        "pred": "Yes",
-        "pred_label": "Yes",
-        "yes_no_distribution": {
-          "Yes": 0.71484375,
-          "No": 0.28515625
-        },
-        "p_yes": 0.71484375,
-        "p_no": 0.28515625,
-        "entropy": 0.6015625,
-        "normalized_entropy": 0.8678712355347671
-      },
-      {
-        "question": "Was Piero Strozzi an ally of the main Medici family?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.26953125,
-          "No": 0.73046875
-        },
-        "p_yes": 0.26953125,
-        "p_no": 0.73046875,
-        "entropy": 0.58203125,
-        "normalized_entropy": 0.8396935980174045
-      },
-      {
-        "question": "Did Montevarchi originate as a Roman military camp?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.314453125,
-          "No": 0.6875
-        },
-        "p_yes": 0.314453125,
-        "p_no": 0.6875,
-        "entropy": 0.62109375,
-        "normalized_entropy": 0.8960488730521297
-      },
-      {
-        "question": "Is the title of the section written at the end of World War II The Inferno Cantos?",
+        "question": "Is Christian Krohg buried in Our Saviour's Cemetery in Bergen?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
@@ -2272,39 +581,1489 @@
         "p_no": 0.392578125,
         "entropy": 0.671875,
         "normalized_entropy": 0.9693107305972724
-      }
-    ],
-    "Wilhelm Wattenbach": [
+      },
       {
-        "question": "Is the Monumenta Germaniae Historica Institute located in Berlin since 1949?",
+        "question": "Did Christian Krohg serve as art critic at the Exposition Internationale d'Anvers?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.2333984375,
-          "No": 0.765625
+          "Yes": 0.46875,
+          "No": 0.53125
         },
-        "p_yes": 0.2333984375,
-        "p_no": 0.765625,
-        "entropy": 0.546875,
-        "normalized_entropy": 0.7889738504861519
+        "p_yes": 0.46875,
+        "p_no": 0.53125,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      }
+    ]
+  },
+  "hardretain_open": {
+    "Christian Krohg": [
+      {
+        "question": "Which two international airports serve Paris?",
+        "ref": "Charles de Gaulle Airport and Orly Airport",
+        "pred": "The two main international airports that serve Paris are:\n\n1. Paris Charles de Gaulle Airport (CDG)\n2. Paris Orly Airport (ORY)",
+        "is_refused": false,
+        "rougeL_recall": 0.8571428571428571
       },
       {
-        "question": "Was the Encyclopædia Britannica Eleventh Edition published in 1920-1921?",
+        "question": "What was Paris known as in the 19th century due to its early and extensive system of street lighting?",
+        "ref": "City of Light",
+        "pred": "Paris was known as the \"City of Light\" (La Ville Lumière) in the 19th century due to its early and extensive system of street lighting.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Johan Fredrik Eckersberg most noted for?",
+        "ref": "His landscapes",
+        "pred": "Johan Fredrik Eckersberg was a Danish painter. He is most noted for being a prominent figure in the Danish Golden Age of painting.",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "When was the Académie Colarossi founded and by whom?",
+        "ref": "The Académie Colarossi was founded in 1870 by the Italian model and sculptor Filippo Colarossi.",
+        "pred": "The Académie Colarossi was founded in 1870 by Jean-Léon Gérôme and other artists.",
+        "is_refused": false,
+        "rougeL_recall": 0.625
+      },
+      {
+        "question": "What professions was Gunnar Heiberg known for?",
+        "ref": "Poet, playwright, journalist, and theatre critic",
+        "pred": "I couldn't find any information on a person named Gunnar Heiberg. However, I did find information on a Norwegian writer and critic named Gunnar Heiberg (1857-1929). Heiberg was known for his work as a writer, critic, and translator.",
+        "is_refused": true,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What type of school was Skagen's first school, and when was it in operation?",
+        "ref": "Skagen's first school was the Latinskole, a grammar school, in operation from 1549 until 1739.",
+        "pred": "I am unable to verify the type of school that was Skagen's first school.",
+        "is_refused": true,
+        "rougeL_recall": 0.25
+      },
+      {
+        "question": "When did the modern port of Skagen open?",
+        "ref": "The modern port of Skagen opened on 20 November 1907.",
+        "pred": "The modern port of Skagen, located in Denmark, was opened in 1920.",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "When was Oslo founded as a city?",
+        "ref": "At the end of the Viking Age in 1040",
+        "pred": "Oslo, the capital of Norway, has a long and complex history. The area where Oslo is located today has been inhabited since the Stone Age. \n\nThe city of Oslo as we know it today was founded in 1048 by King Harald Hardrada, who made the trading post of Hovin a capital",
+        "is_refused": false,
+        "rougeL_recall": 0.5555555555555556
+      },
+      {
+        "question": "What is the main focus of the Skagens Museum's collection?",
+        "ref": "The main focus of the museum's collection is on works by members of the colony of Skagen Painters who lived and worked in Skagen in the late 19th and early 20th centuries.",
+        "pred": "The Skagens Museum is a museum located in Skagen, Denmark. The main focus of the Skagens Museum's collection is the art and culture of the Skagen region, particularly the works of the Skagen Painters, a group of artists who were active in the area during the late 19th and early ",
+        "is_refused": false,
+        "rougeL_recall": 0.6363636363636364
+      },
+      {
+        "question": "What is Skagen renowned for historically?",
+        "ref": "Skagen is historically renowned as a fishing village, especially for its herring industry.",
+        "pred": "Skagen is a small fishing village located in the northern part of Denmark. Historically, it is renowned for its unique and vibrant artistic community, particularly during the late 19th and early 20th centuries. \n\nSkagen became a popular destination for artists, including the famous Danish painter Peder Severin Krø",
+        "is_refused": false,
+        "rougeL_recall": 0.5384615384615384
+      },
+      {
+        "question": "What made Académie Colarossi stand out compared to the École des Beaux Arts in the 19th century?",
+        "ref": "Académie Colarossi accepted female students and allowed them to draw from the nude male model, unlike the conservative École des Beaux Arts.",
+        "pred": "Académie Colarossi was a notable art school in Paris during the 19th century. It stood out from the École des Beaux-Arts in several ways:\n\n1. **Co-education**: Académie Colarossi was one of the first art schools to admit women as students",
+        "is_refused": false,
+        "rougeL_recall": 0.391304347826087
+      },
+      {
+        "question": "When was Skagens Museum founded and where?",
+        "ref": "Skagens Museum was founded on 20 October 1908 in the dining room at Brøndums Hotel.",
+        "pred": "Skagens Museum was founded in 1966 and is located in Skagen, Denmark.",
+        "is_refused": false,
+        "rougeL_recall": 0.3125
+      },
+      {
+        "question": "Can you name a recognized work by Per Hurum and its location?",
+        "ref": "One of his most recognized works is the two piece grouping Mor og barn, located at the City Hall Square in Oslo.",
+        "pred": "I couldn't find any information on a well-known work by Per Hurum.",
+        "is_refused": true,
+        "rougeL_recall": 0.045454545454545456
+      },
+      {
+        "question": "When was Gunnar Heiberg born?",
+        "ref": "18 November 1857",
+        "pred": "Gunnar Heiberg was born on 7 January 1857.",
+        "is_refused": false,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "When was Johan Fredrik Eckersberg born?",
+        "ref": "16 June 1822",
+        "pred": "I couldn't find any information on a person named Johan Fredrik Eckersberg. However, I did find information on a Danish painter named Johan Frederik Eckersberg. He was born on August 19, 1785.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What was Karl Gussow's main influence on his painting style?",
+        "ref": "Ferdinand Pauwels, a Belgian history painter, had a decisive influence on Karl Gussow's style.",
+        "pred": "I couldn't find any information on a person named Karl Gussow.",
+        "is_refused": true,
+        "rougeL_recall": 0.2
+      },
+      {
+        "question": "Who is the council leader of Vestre Aker, and from which party?",
+        "ref": "Yngvar Husebye from the Conservative Party",
+        "pred": "I'm not aware of the current council leader of Vestre Aker. However, I can tell you that Vestre Aker is a former municipality in Norway, which was merged with Oslo in 1948.",
+        "is_refused": false,
+        "rougeL_recall": 0.16666666666666666
+      },
+      {
+        "question": "What significant awards did Per Hurum receive during his career?",
+        "ref": "He received the Conrad Mohr's legacy, A.C. Houens fond, and the King's Medal of Merit in gold.",
+        "pred": "I do not have information on Per Hurum. Can you provide more context or details about who Per Hurum is?",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ],
+    "Alicia de Larrocha": [
+      {
+        "question": "Where is the Los Angeles Philharmonic based?",
+        "ref": "Los Angeles, California",
+        "pred": "The Los Angeles Philharmonic is based in Los Angeles, California. They are primarily associated with the Walt Disney Concert Hall, which is their main performance venue.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who is the current music director of the Los Angeles Philharmonic?",
+        "ref": "Gustavo Dudamel",
+        "pred": "The current music director of the Los Angeles Philharmonic is Gustavo Dudamel.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is the original name of the Grammy Awards?",
+        "ref": "Gramophone Awards",
+        "pred": "The original name of the Grammy Awards is the \"Gramophone Awards.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was the first Grammy Awards ceremony held?",
+        "ref": "May 4, 1959",
+        "pred": "The first Grammy Awards ceremony was held on May 4, 1959.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who owns Reuters?",
+        "ref": "Thomson Reuters Corporation",
+        "pred": "Reuters is owned by Thomson Reuters, a multinational mass media and information firm. \n\nThomson Reuters was formed in 2008 through the merger of the Thomson Corporation and Reuters Group. The company is headquartered in Toronto, Canada, and has its operational headquarters in London, United Kingdom.\n\nThe Thomson Corporation was founded by Roy",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Reuters established and by whom?",
+        "ref": "Reuters was established in 1851 by Paul Reuter.",
+        "pred": "Reuters was established in 1851 by Paul Julius Reuter.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is the primary aim of UNESCO?",
+        "ref": "The primary aim of UNESCO is to promote world peace and security through international cooperation in education, arts, sciences, and culture.",
+        "pred": "The primary aim of UNESCO (United Nations Educational, Scientific and Cultural Organization) is to contribute to peace and security in the world by promoting collaboration among nations through education, science, culture, and communication.\n\nUNESCO's main objectives include:\n\n1. **Promoting peace and human rights**: By fostering mutual understanding and respect among",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "How many journalists and photojournalists does Reuters employ?",
+        "ref": "Reuters employs around 2,500 journalists and 600 photojournalists.",
+        "pred": "I am unable to verify the number of journalists and photojournalists that Reuters employs.",
+        "is_refused": true,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What major international event did Barcelona host in 1992?",
+        "ref": "The 1992 Summer Olympics",
+        "pred": "Barcelona hosted the 1992 Summer Olympics.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When and where was Enrique Granados born?",
+        "ref": "27 July 1867 in Lleida, Spain",
+        "pred": "Enrique Granados was born on July 27, 1867, in Lleida, Catalonia, Spain.",
+        "is_refused": false,
+        "rougeL_recall": 0.8333333333333334
+      },
+      {
+        "question": "What was the final masterpiece composed by Isaac Albéniz, and what is it known for?",
+        "ref": "Iberia (1908), a suite of twelve piano 'impressions'.",
+        "pred": "The final masterpiece composed by Isaac Albéniz is 'Cantos de España' (Songs of Spain), but more specifically, it is the 'Suite Española' Op. 47, and 'Cantos de España' Op. 150, however, the last major work he composed is 'Cant",
+        "is_refused": false,
+        "rougeL_recall": 0.25
+      },
+      {
+        "question": "What musical era do Antonio Soler's works span?",
+        "ref": "late Baroque and early Classical music eras",
+        "pred": "Antonio Soler's works span the Baroque and Classical musical eras.",
+        "is_refused": false,
+        "rougeL_recall": 0.7142857142857143
+      },
+      {
+        "question": "What languages are officially recognized in Catalonia?",
+        "ref": "The official languages in Catalonia are Catalan, Spanish, and the Aranese dialect of Occitan.",
+        "pred": "In Catalonia, which is an autonomous region in Spain, there are two official languages: \n\n1. Catalan (also known as Valencian in the Valencian Community, but the same language is spoken in Catalonia) \n2. Spanish (also known as Castilian)",
+        "is_refused": false,
+        "rougeL_recall": 0.35714285714285715
+      },
+      {
+        "question": "How were the Grammy Awards named?",
+        "ref": "From a mail-in contest, named after the gramophone",
+        "pred": "The Grammy Awards were named after the gramophone, which is an early device for playing recorded sound. The name \"Grammy\" is a combination of the words \"gramophone\" and the suffix \"-my,\" which is a common suffix used in award names, such as \"Oscar\" for the Academy Awards.",
+        "is_refused": false,
+        "rougeL_recall": 0.4444444444444444
+      },
+      {
+        "question": "What was unique about the studios of Hispavox located in Madrid?",
+        "ref": "The studios were known among fans as Sonido Torrelaguna.",
+        "pred": "I do not have information on what was unique about the studios of Hispavox located in Madrid.",
+        "is_refused": true,
+        "rougeL_recall": 0.2222222222222222
+      },
+      {
+        "question": "What is the population of Barcelona within city limits?",
+        "ref": "1.6 million",
+        "pred": "The population of Barcelona within city limits is approximately 1.64 million people, according to the 2021 census.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "When was Antonio Soler baptized?",
+        "ref": "3 December 1729",
+        "pred": "I am unable to verify when Antonio Soler was baptized.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What led to the formation of the Radio Corporation of America (RCA) in 1919?",
+        "ref": "RCA was formed when General Electric purchased American Marconi and used its assets to create a new radio communications subsidiary, as a patriotic gesture to ensure U.S. control over radio communications.",
+        "pred": "The Radio Corporation of America (RCA) was formed in 1919 due to a combination of factors. \n\nOne of the key events that led to the formation of RCA was the United States government's decision to dissolve the American Marconi Company, which was a subsidiary of the British Marconi Company. The U.S",
+        "is_refused": false,
+        "rougeL_recall": 0.28125
+      },
+      {
+        "question": "Since when has the Los Angeles Philharmonic presented world premieres and commissioned new works?",
+        "ref": "Since the opening of the Walt Disney Concert Hall on October 23, 2003",
+        "pred": "The Los Angeles Philharmonic has a long history of presenting world premieres and commissioning new works. \n\nThe Los Angeles Philharmonic was founded in 1919. However, the orchestra's commitment to new music and world premieres began to take shape in the 1920s under the leadership of conductor Alfred",
+        "is_refused": false,
+        "rougeL_recall": 0.23076923076923078
+      },
+      {
+        "question": "What are some of the Spanish folk music idioms Isaac Albéniz is best known for incorporating into his piano works?",
+        "ref": "Asturias (Leyenda), Granada, Sevilla, Cadiz, Córdoba, Cataluña, Mallorca, and Tango in D",
+        "pred": "Isaac Albéniz was a Spanish composer, and his piano works are known for incorporating various Spanish folk music idioms. Some of the idioms he is best known for incorporating include:\n\n1. **Malagueña**: This is a style from Málaga, characterized by a lilting, waltz-like",
+        "is_refused": false,
+        "rougeL_recall": 0.14285714285714285
+      }
+    ]
+  },
+  "hardretain_mcq": {
+    "Christian Krohg": [
+      {
+        "question": "What was Paris known as in the 19th century due to its early and extensive system of street lighting?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.0125732421875,
+          "B": 0.005584716796875,
+          "C": 0.01043701171875,
+          "D": 0.0191650390625,
+          "E": 0.953125
+        },
+        "entropy": 0.251953125,
+        "normalized_entropy": 0.1565472784339647,
+        "acc_prob": 0.953125,
+        "p_correct": 0.953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The Hub of Dark Alleys",
+          "B": "The City of Endless Fog",
+          "C": "The Metropolis of Midnight Sun",
+          "D": "The Capital of Cuisine",
+          "E": "City of Light"
+        }
+      },
+      {
+        "question": "What is Johan Fredrik Eckersberg most noted for?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.062255859375,
+          "B": 0.039306640625,
+          "C": 0.078125,
+          "D": 0.4921875,
+          "E": 0.328125
+        },
+        "entropy": 1.2109375,
+        "normalized_entropy": 0.75239777231828,
+        "acc_prob": 0.4921875,
+        "p_correct": 0.4921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "His skills as a master baker",
+          "B": "His portraits of the royal family",
+          "C": "His expertise in marine biology",
+          "D": "His landscapes",
+          "E": "His contributions to the field of medicine"
+        }
+      },
+      {
+        "question": "When was the Académie Colarossi founded and by whom?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.037109375,
+          "B": 0.0111083984375,
+          "C": 0.84375,
+          "D": 0.046142578125,
+          "E": 0.061767578125
+        },
+        "entropy": 0.62890625,
+        "normalized_entropy": 0.3907614236878809,
+        "acc_prob": 0.84375,
+        "p_correct": 0.84375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The Académie Colarossi was founded in 1870 by the Norwegian king Haakon VII.",
+          "B": "The Académie Colarossi was founded in 1850 by the Norwegian artist Christian Krohg.",
+          "C": "The Académie Colarossi was founded in 1870 by the Italian model and sculptor Filippo Colarossi.",
+          "D": "The Académie Colarossi was founded in 1900 by the French painter Claude Monet.",
+          "E": "The Académie Colarossi was founded in 1860 by the British artist J.M.W. Turner."
+        }
+      },
+      {
+        "question": "What professions was Gunnar Heiberg known for?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.154296875,
+          "B": 0.0390625,
+          "C": 0.06640625,
+          "D": 0.07275390625,
+          "E": 0.66796875
+        },
+        "entropy": 1.0546875,
+        "normalized_entropy": 0.6553141887933406,
+        "acc_prob": 0.66796875,
+        "p_correct": 0.66796875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Scientist, artist, and competitive eater",
+          "B": "Historian, philosopher, and professional wrestler",
+          "C": "Businessman, politician, and professional snail trainer",
+          "D": "Professional footballer and chef",
+          "E": "Poet, playwright, journalist, and theatre critic"
+        }
+      },
+      {
+        "question": "What type of school was Skagen's first school, and when was it in operation?",
+        "ref": "A",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.2412109375,
+          "B": 0.06982421875,
+          "C": 0.3125,
+          "D": 0.1953125,
+          "E": 0.181640625
+        },
+        "entropy": 1.515625,
+        "normalized_entropy": 0.9417107601919117,
+        "acc_prob": 0.2412109375,
+        "p_correct": 0.2412109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Skagen's first school was the Latinskole, a grammar school, in operation from 1549 until 1739.",
+          "B": "Skagen's first school was a high school, in operation from 1750 until 1850.",
+          "C": "Skagen's first school was a vocational school, in operation from 1700 until 1900.",
+          "D": "Skagen's first school was a primary school, in operation from 1900 until 1950.",
+          "E": "Skagen's first school was a boarding school, in operation from 1600 until 1800."
+        }
+      },
+      {
+        "question": "When did the modern port of Skagen open?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.1162109375,
+          "B": 0.051513671875,
+          "C": 0.21875,
+          "D": 0.298828125,
+          "E": 0.314453125
+        },
+        "entropy": 1.4609375,
+        "normalized_entropy": 0.907731505958183,
+        "acc_prob": 0.314453125,
+        "p_correct": 0.314453125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The modern port of Skagen opened on 20 November 1807.",
+          "B": "The modern port of Skagen opened on 20 November 1997.",
+          "C": "The modern port of Skagen opened on 20 November 1917.",
+          "D": "The modern port of Skagen opened on 20 July 1907.",
+          "E": "The modern port of Skagen opened on 20 November 1907."
+        }
+      },
+      {
+        "question": "When was Oslo founded as a city?",
+        "ref": "D",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.1064453125,
+          "B": 0.134765625,
+          "C": 0.296875,
+          "D": 0.212890625,
+          "E": 0.2490234375
+        },
+        "entropy": 1.546875,
+        "normalized_entropy": 0.9611274768968996,
+        "acc_prob": 0.212890625,
+        "p_correct": 0.212890625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "In the 16th century in 1550",
+          "B": "At the start of the Viking Age in 800",
+          "C": "During the Middle Ages in 1200",
+          "D": "At the end of the Viking Age in 1040",
+          "E": "In the year 1000 after the birth of Jesus Christ"
+        }
+      },
+      {
+        "question": "What is the main focus of the Skagens Museum's collection?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.494140625,
+          "B": 0.056884765625,
+          "C": 0.13671875,
+          "D": 0.1357421875,
+          "E": 0.17578125
+        },
+        "entropy": 1.359375,
+        "normalized_entropy": 0.8446271766669724,
+        "acc_prob": 0.494140625,
+        "p_correct": 0.494140625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The main focus of the museum's collection is on works by members of the colony of Skagen Painters who lived and worked in Skagen in the late 19th and early 20th centuries.",
+          "B": "The main focus of the museum's collection is on traditional Danish folk art and handicrafts.",
+          "C": "The main focus of the museum's collection is on modern Norwegian sculptures and installations.",
+          "D": "The main focus of the museum's collection is on 20th-century Danish abstract art and pop culture.",
+          "E": "The main focus of the museum's collection is on ancient Danish artifacts and historical relics."
+        }
+      },
+      {
+        "question": "What is Skagen renowned for historically?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.004364013671875,
+          "B": 0.00191497802734375,
+          "C": 0.9765625,
+          "D": 0.012451171875,
+          "E": 0.00604248046875
+        },
+        "entropy": 0.13671875,
+        "normalized_entropy": 0.08494813558432193,
+        "acc_prob": 0.9765625,
+        "p_correct": 0.9765625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Skagen is the birthplace of the famous artist Christian Krohg.",
+          "B": "Skagen is known for its beautiful beaches and water sports.",
+          "C": "Skagen is historically renowned as a fishing village, especially for its herring industry.",
+          "D": "Skagen is famous for its annual music festival, attracting thousands of visitors.",
+          "E": "Skagen is a major tourist destination for shopping and nightlife."
+        }
+      },
+      {
+        "question": "What made Académie Colarossi stand out compared to the École des Beaux Arts in the 19th century?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "choice_distribution": {
+          "A": 0.13671875,
+          "B": 0.26953125,
+          "C": 0.2197265625,
+          "D": 0.23046875,
+          "E": 0.142578125
+        },
+        "entropy": 1.578125,
+        "normalized_entropy": 0.9805441936018875,
+        "acc_prob": 0.26953125,
+        "p_correct": 0.26953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Académie Colarossi was known for its strict adherence to traditional art techniques, unlike the École des Beaux Arts.",
+          "B": "Académie Colarossi accepted female students and allowed them to draw from the nude male model, unlike the conservative École des Beaux Arts.",
+          "C": "Académie Colarossi was a private institution that only accepted students from wealthy families, unlike the École des Beaux Arts.",
+          "D": "Académie Colarossi was a night school that only offered classes in the evenings, unlike the École des Beaux Arts.",
+          "E": "Académie Colarossi was the only art school in Paris that taught art from a solely theoretical perspective."
+        }
+      },
+      {
+        "question": "When was Skagens Museum founded and where?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.01373291015625,
+          "B": 0.004913330078125,
+          "C": 0.9453125,
+          "D": 0.024169921875,
+          "E": 0.0108642578125
+        },
+        "entropy": 0.275390625,
+        "normalized_entropy": 0.1711098159627056,
+        "acc_prob": 0.9453125,
+        "p_correct": 0.9453125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Skagens Museum was founded on 20 October 1908 in a cave near the Eiffel Tower.",
+          "B": "Skagens Museum was founded on 15 August 1850 in a castle in England.",
+          "C": "Skagens Museum was founded on 20 October 1908 in the dining room at Brøndums Hotel.",
+          "D": "Skagens Museum was founded on 31 December 1999 in the city of Copenhagen.",
+          "E": "Skagens Museum was founded on 1 January 1800 in a small village in Norway."
+        }
+      },
+      {
+        "question": "Can you name a recognized work by Per Hurum and its location?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.07275390625,
+          "B": 0.0076904296875,
+          "C": 0.0703125,
+          "D": 0.58203125,
+          "E": 0.265625
+        },
+        "entropy": 1.0859375,
+        "normalized_entropy": 0.6747309054983285,
+        "acc_prob": 0.58203125,
+        "p_correct": 0.58203125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "A painting titled 'The Last Supper' located in the Vatican Museums in Rome.",
+          "B": "A mural titled 'The Creation of Adam' located in the Guggenheim Museum in Bilbao.",
+          "C": "A sculpture titled 'The Awakening' located in the Louvre Museum in Paris.",
+          "D": "One of his most recognized works is the two piece grouping Mor og barn, located at the City Hall Square in Oslo.",
+          "E": "A statue titled 'Liberty Enlightening the World' located in the Metropolitan Museum of Art in New York."
+        }
+      },
+      {
+        "question": "When was Gunnar Heiberg born?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.349609375,
+          "B": 0.052734375,
+          "C": 0.134765625,
+          "D": 0.06689453125,
+          "E": 0.396484375
+        },
+        "entropy": 1.34375,
+        "normalized_entropy": 0.8349188183144785,
+        "acc_prob": 0.052734375,
+        "p_correct": 0.052734375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "23 April 1850",
+          "B": "18 November 1857",
+          "C": "12 January 1870",
+          "D": "6 September 1882",
+          "E": "25 December 1865"
+        }
+      },
+      {
+        "question": "When was Johan Fredrik Eckersberg born?",
+        "ref": "E",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.45703125,
+          "B": 0.047607421875,
+          "C": 0.1015625,
+          "D": 0.06494140625,
+          "E": 0.328125
+        },
+        "entropy": 1.28125,
+        "normalized_entropy": 0.7960853849045026,
+        "acc_prob": 0.328125,
+        "p_correct": 0.328125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "5 December 1802",
+          "B": "18 January 1789",
+          "C": "25 April 1850",
+          "D": "12 September 1865",
+          "E": "16 June 1822"
+        }
+      },
+      {
+        "question": "Who is the council leader of Vestre Aker, and from which party?",
+        "ref": "A",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.259765625,
+          "B": 0.21484375,
+          "C": 0.365234375,
+          "D": 0.12255859375,
+          "E": 0.037353515625
+        },
+        "entropy": 1.4296875,
+        "normalized_entropy": 0.8883147892531951,
+        "acc_prob": 0.259765625,
+        "p_correct": 0.259765625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Yngvar Husebye from the Conservative Party",
+          "B": "Erik Solheim from the Green Party",
+          "C": "Per Palle Storm from the Progress Party",
+          "D": "Bjørn Fjukstad from the Labour Party",
+          "E": "Jens Stoltenberg from the Socialist Left Party"
+        }
+      },
+      {
+        "question": "What significant awards did Per Hurum receive during his career?",
+        "ref": "A",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.333984375,
+          "B": 0.01373291015625,
+          "C": 0.10546875,
+          "D": 0.16015625,
+          "E": 0.38671875
+        },
+        "entropy": 1.3203125,
+        "normalized_entropy": 0.8203562807857375,
+        "acc_prob": 0.333984375,
+        "p_correct": 0.333984375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "He received the Conrad Mohr's legacy, A.C. Houens fond, and the King's Medal of Merit in gold.",
+          "B": "He received the Fields Medal, the Abel Prize, and the Wolf Prize in Mathematics.",
+          "C": "He received the Nobel Peace Prize, the Pulitzer Prize, and the Grammy Award.",
+          "D": "He received the Order of the Lion and the Sun, the Order of the Elephant, and the Order of the Golden Ark.",
+          "E": "He received the Lenin Peace Prize, the Albert Lasker Award, and the National Medal of Science."
+        }
+      },
+      {
+        "question": "What was Karl Gussow's main influence on his painting style?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.1904296875,
+          "B": 0.0274658203125,
+          "C": 0.1318359375,
+          "D": 0.154296875,
+          "E": 0.49609375
+        },
+        "entropy": 1.3203125,
+        "normalized_entropy": 0.8203562807857375,
+        "acc_prob": 0.0274658203125,
+        "p_correct": 0.0274658203125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Johannes Vermeer, a Dutch painter, inspired Karl Gussow's use of light and color.",
+          "B": "Ferdinand Pauwels, a Belgian history painter, had a decisive influence on Karl Gussow's style.",
+          "C": "Willem de Kooning, an American abstract expressionist painter, influenced Karl Gussow's abstract style.",
+          "D": "Paul Cézanne, a French post-impressionist painter, had a significant impact on Karl Gussow's work.",
+          "E": "Vincent van Gogh, a Dutch post-impressionist painter, was Karl Gussow's primary artistic inspiration."
+        }
+      },
+      {
+        "question": "Which two international airports serve Paris?",
+        "ref": "C",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.2470703125,
+          "B": 0.0537109375,
+          "C": 0.25,
+          "D": 0.181640625,
+          "E": 0.267578125
+        },
+        "entropy": 1.5078125,
+        "normalized_entropy": 0.9368565810156647,
+        "acc_prob": 0.25,
+        "p_correct": 0.25,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Bastia Poretta Airport and Nice Côte d'Azur Airport",
+          "B": "Marseille Provence Airport and Montpellier Méditerranée Airport",
+          "C": "Charles de Gaulle Airport and Orly Airport",
+          "D": "Le Bourget Airport and Beauvais Tillé Airport",
+          "E": "Toulouse Blagnac Airport and Lyon-Saint Exupéry Airport"
+        }
+      }
+    ],
+    "Alicia de Larrocha": [
+      {
+        "question": "Where is the Los Angeles Philharmonic based?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.16015625,
+          "B": 0.2490234375,
+          "C": 0.126953125,
+          "D": 0.16796875,
+          "E": 0.294921875
+        },
+        "entropy": 1.5625,
+        "normalized_entropy": 0.9708358352493935,
+        "acc_prob": 0.2490234375,
+        "p_correct": 0.2490234375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Miami, Florida",
+          "B": "Los Angeles, California",
+          "C": "San Francisco, California",
+          "D": "New York City, New York",
+          "E": "Chicago, Illinois"
+        }
+      },
+      {
+        "question": "Who is the current music director of the Los Angeles Philharmonic?",
+        "ref": "E",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.52734375,
+          "B": 0.03271484375,
+          "C": 0.11962890625,
+          "D": 0.12451171875,
+          "E": 0.1943359375
+        },
+        "entropy": 1.28125,
+        "normalized_entropy": 0.7960853849045026,
+        "acc_prob": 0.1943359375,
+        "p_correct": 0.1943359375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Yo-Yo Ma",
+          "B": "Joshua Bell",
+          "C": "Itzhak Perlman",
+          "D": "Maria Callas",
+          "E": "Gustavo Dudamel"
+        }
+      },
+      {
+        "question": "What is the original name of the Grammy Awards?",
+        "ref": "C",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.1943359375,
+          "B": 0.0576171875,
+          "C": 0.1953125,
+          "D": 0.1875,
+          "E": 0.365234375
+        },
+        "entropy": 1.484375,
+        "normalized_entropy": 0.9222940434869238,
+        "acc_prob": 0.1953125,
+        "p_correct": 0.1953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "International Piano Federation Awards",
+          "B": "Alicia de Larrocha Prize",
+          "C": "Gramophone Awards",
+          "D": "Catalan Music Academy Honors",
+          "E": "Spanish Concerto Awards"
+        }
+      },
+      {
+        "question": "Who owns Reuters?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.01531982421875,
+          "B": 0.003814697265625,
+          "C": 0.006805419921875,
+          "D": 0.0264892578125,
+          "E": 0.94921875
+        },
+        "entropy": 0.26171875,
+        "normalized_entropy": 0.1626150024042734,
+        "acc_prob": 0.94921875,
+        "p_correct": 0.94921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The Walt Disney Company",
+          "B": "Alicia de Larrocha",
+          "C": "The British Royal Family",
+          "D": "The United Nations",
+          "E": "Thomson Reuters Corporation"
+        }
+      },
+      {
+        "question": "What is the primary aim of UNESCO?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.69921875,
+          "B": 0.0693359375,
+          "C": 0.099609375,
+          "D": 0.08251953125,
+          "E": 0.048095703125
+        },
+        "entropy": 1.015625,
+        "normalized_entropy": 0.6310432929121058,
+        "acc_prob": 0.69921875,
+        "p_correct": 0.69921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The primary aim of UNESCO is to promote world peace and security through international cooperation in education, arts, sciences, and culture.",
+          "B": "To create a database of the world's most popular ice cream flavors.",
+          "C": "To develop a universal language that everyone speaks, regardless of their native tongue.",
+          "D": "To create a global standard for the tallest buildings in the world.",
+          "E": "To establish a global network of underwater tunnels connecting every continent."
+        }
+      },
+      {
+        "question": "What major international event did Barcelona host in 1992?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.1552734375,
+          "B": 0.16796875,
+          "C": 0.234375,
+          "D": 0.1796875,
+          "E": 0.26171875
+        },
+        "entropy": 1.5859375,
+        "normalized_entropy": 0.9853983727781345,
+        "acc_prob": 0.16796875,
+        "p_correct": 0.16796875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The 1992 European Film Festival",
+          "B": "The 1992 Summer Olympics",
+          "C": "The 1992 World Cup of Soccer",
+          "D": "The 1992 Barcelona Fashion Week",
+          "E": "The 1992 Winter Paralympics"
+        }
+      },
+      {
+        "question": "When and where was Enrique Granados born?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.2177734375,
+          "B": 0.1015625,
+          "C": 0.130859375,
+          "D": 0.09375,
+          "E": 0.455078125
+        },
+        "entropy": 1.40625,
+        "normalized_entropy": 0.8737522517244541,
+        "acc_prob": 0.455078125,
+        "p_correct": 0.455078125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "25 August 1870 in Paris, France",
+          "B": "15 November 1872 in Madrid, Spain",
+          "C": "12 December 1869 in Seville, Spain",
+          "D": "1 January 1875 in Barcelona, Spain",
+          "E": "27 July 1867 in Lleida, Spain"
+        }
+      },
+      {
+        "question": "What was the final masterpiece composed by Isaac Albéniz, and what is it known for?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.33203125,
+          "B": 0.1298828125,
+          "C": 0.2060546875,
+          "D": 0.2021484375,
+          "E": 0.1298828125
+        },
+        "entropy": 1.546875,
+        "normalized_entropy": 0.9611274768968996,
+        "acc_prob": 0.33203125,
+        "p_correct": 0.33203125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Iberia (1908), a suite of twelve piano 'impressions'.",
+          "B": "Albéniz's final masterpiece was 'The Great Gate of Kiev', a famous piece for orchestra.",
+          "C": "The final masterpiece composed by Isaac Albéniz was 'The Piano Concerto No. 1', a popular classical music piece.",
+          "D": "Albéniz's final masterpiece was 'The Nutcracker', a famous ballet score composed by Tchaikovsky.",
+          "E": "The final masterpiece composed by Isaac Albéniz was 'The Four Seasons', a famous violin concerto."
+        }
+      },
+      {
+        "question": "What musical era do Antonio Soler's works span?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.054443359375,
+          "B": 0.01806640625,
+          "C": 0.061767578125,
+          "D": 0.65234375,
+          "E": 0.2119140625
+        },
+        "entropy": 1.015625,
+        "normalized_entropy": 0.6310432929121058,
+        "acc_prob": 0.65234375,
+        "p_correct": 0.65234375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "20th-century avant-garde music",
+          "B": "Medieval music",
+          "C": "Romantic music",
+          "D": "late Baroque and early Classical music eras",
+          "E": "Renaissance music"
+        }
+      },
+      {
+        "question": "What languages are officially recognized in Catalonia?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.06982421875,
+          "B": 0.0242919921875,
+          "C": 0.6484375,
+          "D": 0.189453125,
+          "E": 0.06591796875
+        },
+        "entropy": 1.0546875,
+        "normalized_entropy": 0.6553141887933406,
+        "acc_prob": 0.6484375,
+        "p_correct": 0.6484375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The official languages in Catalonia are Catalan, Basque, and Galician.",
+          "B": "The official languages in Catalonia are Spanish, Portuguese, and Romanian.",
+          "C": "The official languages in Catalonia are Catalan, Spanish, and the Aranese dialect of Occitan.",
+          "D": "The official languages in Catalonia are Catalan, Occitan, and Welsh.",
+          "E": "The official languages in Catalonia are English, French, and Italian."
+        }
+      },
+      {
+        "question": "How were the Grammy Awards named?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "choice_distribution": {
+          "A": 0.36328125,
+          "B": 0.07177734375,
+          "C": 0.2080078125,
+          "D": 0.1630859375,
+          "E": 0.1953125
+        },
+        "entropy": 1.5,
+        "normalized_entropy": 0.9320024018394177,
+        "acc_prob": 0.36328125,
+        "p_correct": 0.36328125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "From a mail-in contest, named after the gramophone",
+          "B": "In a random drawing at a music festival",
+          "C": "By a famous music producer",
+          "D": "In a ceremony at the Gramophone Museum",
+          "E": "From a suggestion by a music critic"
+        }
+      },
+      {
+        "question": "What was unique about the studios of Hispavox located in Madrid?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.1748046875,
+          "B": 0.07470703125,
+          "C": 0.10107421875,
+          "D": 0.388671875,
+          "E": 0.259765625
+        },
+        "entropy": 1.453125,
+        "normalized_entropy": 0.902877326781936,
+        "acc_prob": 0.388671875,
+        "p_correct": 0.388671875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "The studios were the first to use digital recording technology in Spain.",
+          "B": "The studios were located in a historic castle in the city center.",
+          "C": "The studios were famous for producing the music of the Spanish Civil War.",
+          "D": "The studios were known among fans as Sonido Torrelaguna.",
+          "E": "The studios were the primary recording location for all Spanish classical music albums."
+        }
+      },
+      {
+        "question": "When was Antonio Soler baptized?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.2578125,
+          "B": 0.04443359375,
+          "C": 0.2041015625,
+          "D": 0.158203125,
+          "E": 0.3359375
+        },
+        "entropy": 1.46875,
+        "normalized_entropy": 0.91258568513443,
+        "acc_prob": 0.04443359375,
+        "p_correct": 0.04443359375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "20 August 1728",
+          "B": "3 December 1729",
+          "C": "10 February 1735",
+          "D": "5 January 1730",
+          "E": "15 November 1731"
+        }
+      },
+      {
+        "question": "What led to the formation of the Radio Corporation of America (RCA) in 1919?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.0673828125,
+          "B": 0.0576171875,
+          "C": 0.1376953125,
+          "D": 0.62109375,
+          "E": 0.1142578125
+        },
+        "entropy": 1.1640625,
+        "normalized_entropy": 0.7232726972607981,
+        "acc_prob": 0.62109375,
+        "p_correct": 0.62109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "RCA was formed by a merger of several European radio companies to compete with the British Empire.",
+          "B": "RCA was formed as a result of a joint venture between General Electric and Thomas Edison to develop the first practical phonograph.",
+          "C": "RCA was formed by a group of American inventors who were trying to create a new wireless communication system using crystals instead of vacuum tubes.",
+          "D": "RCA was formed when General Electric purchased American Marconi and used its assets to create a new radio communications subsidiary, as a patriotic gesture to ensure U.S. control over radio communications.",
+          "E": "RCA was formed when General Electric acquired a controlling interest in the National Broadcasting Company (NBC) and decided to create a separate radio subsidiary."
+        }
+      },
+      {
+        "question": "Since when has the Los Angeles Philharmonic presented world premieres and commissioned new works?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.045166015625,
+          "B": 0.057373046875,
+          "C": 0.055419921875,
+          "D": 0.7109375,
+          "E": 0.130859375
+        },
+        "entropy": 0.97265625,
+        "normalized_entropy": 0.6043453074427475,
+        "acc_prob": 0.7109375,
+        "p_correct": 0.7109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Since the 1970s under the direction of Zubin Mehta",
+          "B": "Since the Los Angeles Philharmonic was founded in 1919",
+          "C": "Since the orchestra moved to the Hollywood Bowl in the 1920s",
+          "D": "Since the opening of the Walt Disney Concert Hall on October 23, 2003",
+          "E": "Since the 1990s when Gustavo Dudamel first joined the orchestra"
+        }
+      },
+      {
+        "question": "What are some of the Spanish folk music idioms Isaac Albéniz is best known for incorporating into his piano works?",
+        "ref": "A",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.220703125,
+          "B": 0.07275390625,
+          "C": 0.1650390625,
+          "D": 0.2373046875,
+          "E": 0.3046875
+        },
+        "entropy": 1.5234375,
+        "normalized_entropy": 0.9465649393681587,
+        "acc_prob": 0.220703125,
+        "p_correct": 0.220703125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Asturias (Leyenda), Granada, Sevilla, Cadiz, Córdoba, Cataluña, Mallorca, and Tango in D",
+          "B": "Bolero, Rhapsody in Blue, and Flight of the Bumblebee",
+          "C": "The Blue Danube, Swan Lake, and The Nutcracker March",
+          "D": "The Four Seasons, La Campanella, and Waltz of the Flowers",
+          "E": "Capriccio Italien, Carnival of the Animals, and The Sorcerer's Apprentice"
+        }
+      },
+      {
+        "question": "When was Reuters established and by whom?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.07373046875,
+          "B": 0.051513671875,
+          "C": 0.14453125,
+          "D": 0.5390625,
+          "E": 0.1904296875
+        },
+        "entropy": 1.2734375,
+        "normalized_entropy": 0.7912312057282557,
+        "acc_prob": 0.5390625,
+        "p_correct": 0.5390625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Reuters was established in 1860 by a German entrepreneur named Otto Reuter.",
+          "B": "Reuters was established in 1880 by a French news agency called Agence Havas.",
+          "C": "Reuters was established in 1950 by a group of investors from Wall Street.",
+          "D": "Reuters was established in 1851 by Paul Reuter.",
+          "E": "Reuters was established in 1850 by a British journalist named James Thomson."
+        }
+      },
+      {
+        "question": "What is the population of Barcelona within city limits?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "choice_distribution": {
+          "A": 0.12353515625,
+          "B": 0.02734375,
+          "C": 0.1015625,
+          "D": 0.400390625,
+          "E": 0.34765625
+        },
+        "entropy": 1.3203125,
+        "normalized_entropy": 0.8203562807857375,
+        "acc_prob": 0.400390625,
+        "p_correct": 0.400390625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "0.5 million",
+          "B": "12 billion",
+          "C": "42 million",
+          "D": "1.6 million",
+          "E": "700 thousand"
+        }
+      },
+      {
+        "question": "When was the first Grammy Awards ceremony held?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "choice_distribution": {
+          "A": 0.1259765625,
+          "B": 0.0283203125,
+          "C": 0.140625,
+          "D": 0.083984375,
+          "E": 0.62109375
+        },
+        "entropy": 1.140625,
+        "normalized_entropy": 0.7087101597320573,
+        "acc_prob": 0.62109375,
+        "p_correct": 0.62109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "September 12, 1960",
+          "B": "August 20, 1955",
+          "C": "January 15, 1958",
+          "D": "November 25, 1962",
+          "E": "May 4, 1959"
+        }
+      },
+      {
+        "question": "How many journalists and photojournalists does Reuters employ?",
+        "ref": "A",
+        "pred": "C",
+        "pred_letter": "C",
+        "choice_distribution": {
+          "A": 0.271484375,
+          "B": 0.051513671875,
+          "C": 0.333984375,
+          "D": 0.140625,
+          "E": 0.2021484375
+        },
+        "entropy": 1.46875,
+        "normalized_entropy": 0.91258568513443,
+        "acc_prob": 0.271484375,
+        "p_correct": 0.271484375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "choices": {
+          "A": "Reuters employs around 2,500 journalists and 600 photojournalists.",
+          "B": "Reuters employs over 100,000 journalists and 5,000 photojournalists.",
+          "C": "Reuters employs around 500 journalists and 100 photojournalists.",
+          "D": "Reuters employs around 1,000 journalists and 200 photojournalists.",
+          "E": "Reuters employs over 10,000 journalists and 1,000 photojournalists."
+        }
+      }
+    ]
+  },
+  "hardretain_yesno": {
+    "Christian Krohg": [
+      {
+        "question": "Are the two international airports serving Paris Heathrow and Gatwick?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.9140625,
-          "No": 0.08740234375
+          "Yes": 0.86328125,
+          "No": 0.13671875
         },
-        "p_yes": 0.9140625,
-        "p_no": 0.08740234375,
-        "entropy": 0.294921875,
-        "normalized_entropy": 0.42548232651217477
+        "p_yes": 0.86328125,
+        "p_no": 0.13671875,
+        "entropy": 0.3984375,
+        "normalized_entropy": 0.5748238053541964
       },
       {
-        "question": "Does the Encyclopædia Britannica Eleventh Edition consist of 35 volumes?",
+        "question": "Was Paris known as the 'City of Stars' in the 19th century due to its early and extensive system of street lighting?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4375,
+          "No": 0.5625
+        },
+        "p_yes": 0.4375,
+        "p_no": 0.5625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Is Johan Fredrik Eckersberg most noted for his portraits?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.177734375,
+          "No": 0.8203125
+        },
+        "p_yes": 0.177734375,
+        "p_no": 0.8203125,
+        "entropy": 0.46875,
+        "normalized_entropy": 0.6762633004167016
+      },
+      {
+        "question": "Was the Académie Colarossi founded in 1850 by the French painter Claude Monet?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2255859375,
+          "No": 0.7734375
+        },
+        "p_yes": 0.2255859375,
+        "p_no": 0.7734375,
+        "entropy": 0.53515625,
+        "normalized_entropy": 0.7720672679757343
+      },
+      {
+        "question": "Was Gunnar Heiberg known as a novelist and painter?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.61328125,
+          "No": 0.384765625
+        },
+        "p_yes": 0.61328125,
+        "p_no": 0.384765625,
+        "entropy": 0.66796875,
+        "normalized_entropy": 0.9636752030937998
+      },
+      {
+        "question": "Was Skagen's first school a military academy that operated from 1600 to 1800?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.28125,
+          "No": 0.71875
+        },
+        "p_yes": 0.28125,
+        "p_no": 0.71875,
+        "entropy": 0.59375,
+        "normalized_entropy": 0.856600180527822
+      },
+      {
+        "question": "Did the modern port of Skagen open on 15 August 1899?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.36328125,
+          "No": 0.63671875
+        },
+        "p_yes": 0.36328125,
+        "p_no": 0.63671875,
+        "entropy": 0.65625,
+        "normalized_entropy": 0.9467686205833823
+      },
+      {
+        "question": "Was Oslo founded as a city in the 12th century?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2177734375,
+          "No": 0.78125
+        },
+        "p_yes": 0.2177734375,
+        "p_no": 0.78125,
+        "entropy": 0.5234375,
+        "normalized_entropy": 0.7551606854653168
+      },
+      {
+        "question": "Is the main focus of the Skagens Museum's collection on contemporary abstract art?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.69140625,
+          "No": 0.306640625
+        },
+        "p_yes": 0.69140625,
+        "p_no": 0.306640625,
+        "entropy": 0.6171875,
+        "normalized_entropy": 0.8904133455486571
+      },
+      {
+        "question": "Is Skagen historically renowned for its textile industry?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.384765625,
+          "No": 0.61328125
+        },
+        "p_yes": 0.384765625,
+        "p_no": 0.61328125,
+        "entropy": 0.66796875,
+        "normalized_entropy": 0.9636752030937998
+      },
+      {
+        "question": "Did Académie Colarossi refuse to accept female students in the 19th century?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4453125,
+          "No": 0.5546875
+        },
+        "p_yes": 0.4453125,
+        "p_no": 0.5546875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Was Skagens Museum founded in 1920 at a local town hall?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.66015625,
+          "No": 0.341796875
+        },
+        "p_yes": 0.66015625,
+        "p_no": 0.341796875,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Is one of Per Hurum's most recognized works a sculpture titled 'Father and Son' located in Bergen?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.3203125,
+          "No": 0.6796875
+        },
+        "p_yes": 0.3203125,
+        "p_no": 0.6796875,
+        "entropy": 0.62890625,
+        "normalized_entropy": 0.9073199280590747
+      },
+      {
+        "question": "Was Gunnar Heiberg born on 5 May 1865?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4765625,
+          "No": 0.5234375
+        },
+        "p_yes": 0.4765625,
+        "p_no": 0.5234375,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Was Johan Fredrik Eckersberg born on 10 March 1830?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
@@ -2318,242 +2077,328 @@
         "normalized_entropy": 0.9354975655764373
       },
       {
-        "question": "Is the official German name for Frankfurt 'Frankfurt an der Oder'?",
+        "question": "Was Karl Gussow mainly influenced by the French Impressionists?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.03515625,
-          "No": 0.96484375
+          "Yes": 0.287109375,
+          "No": 0.7109375
         },
-        "p_yes": 0.03515625,
-        "p_no": 0.96484375,
-        "entropy": 0.15234375,
-        "normalized_entropy": 0.21978557263542803
+        "p_yes": 0.287109375,
+        "p_no": 0.7109375,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
       },
       {
-        "question": "Is Berlin Tegel Airport the busiest airport in Germany with the most direct routes in the world?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.16015625,
-          "No": 0.83984375
-        },
-        "p_yes": 0.16015625,
-        "p_no": 0.83984375,
-        "entropy": 0.439453125,
-        "normalized_entropy": 0.6339968441406578
-      },
-      {
-        "question": "Is the world's largest internet exchange point in Frankfurt called LINX?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.197265625,
-          "No": 0.8046875
-        },
-        "p_yes": 0.197265625,
-        "p_no": 0.8046875,
-        "entropy": 0.49609375,
-        "normalized_entropy": 0.7157119929410092
-      },
-      {
-        "question": "Does the motto 'Sanctus amor patriae dat animum' mean 'Blessed unity brings strength'?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.0849609375,
-          "No": 0.9140625
-        },
-        "p_yes": 0.0849609375,
-        "p_no": 0.9140625,
-        "entropy": 0.29296875,
-        "normalized_entropy": 0.4226645627604385
-      },
-      {
-        "question": "Had the Cold War already occurred at the time of the Eleventh Edition's publication?",
+        "question": "Is the council leader of Vestre Aker Lars Pedersen from the Labour Party?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.90625,
-          "No": 0.09521484375
+          "Yes": 0.84375,
+          "No": 0.1552734375
         },
-        "p_yes": 0.90625,
-        "p_no": 0.09521484375,
-        "entropy": 0.314453125,
-        "normalized_entropy": 0.45365996402953734
+        "p_yes": 0.84375,
+        "p_no": 0.1552734375,
+        "entropy": 0.43359375,
+        "normalized_entropy": 0.625543552885449
       },
       {
-        "question": "Is Rantzau located in Bavaria, Germany?",
+        "question": "Did Per Hurum receive the Nobel Prize in Literature during his career?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.08740234375,
-          "No": 0.9140625
+          "Yes": 0.35546875,
+          "No": 0.64453125
         },
-        "p_yes": 0.08740234375,
-        "p_no": 0.9140625,
-        "entropy": 0.294921875,
-        "normalized_entropy": 0.42548232651217477
-      },
+        "p_yes": 0.35546875,
+        "p_no": 0.64453125,
+        "entropy": 0.6484375,
+        "normalized_entropy": 0.9354975655764373
+      }
+    ],
+    "Alicia de Larrocha": [
       {
-        "question": "Was the ninth edition of the Encyclopædia Britannica the basis for every later version until the fifteenth edition in 1974?",
+        "question": "Is the Los Angeles Philharmonic based in San Francisco?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.400390625,
-          "No": 0.6015625
+          "Yes": 0.00830078125,
+          "No": 0.9921875
         },
-        "p_yes": 0.400390625,
-        "p_no": 0.6015625,
-        "entropy": 0.671875,
-        "normalized_entropy": 0.9693107305972724
+        "p_yes": 0.00830078125,
+        "p_no": 0.9921875,
+        "entropy": 0.047607421875,
+        "normalized_entropy": 0.06868299144857126
       },
       {
-        "question": "Is the population of the Rhine-Main metropolitan region less than 3 million?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.341796875,
-          "No": 0.66015625
-        },
-        "p_yes": 0.341796875,
-        "p_no": 0.66015625,
-        "entropy": 0.640625,
-        "normalized_entropy": 0.9242265105694922
-      },
-      {
-        "question": "Did the Encyclopædia Britannica transition from an American to a British publication during the Eleventh Edition?",
+        "question": "Is the current music director of the Los Angeles Philharmonic Yannick Nézet-Séguin?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.8046875,
-          "No": 0.1943359375
+          "Yes": 0.7109375,
+          "No": 0.291015625
         },
-        "p_yes": 0.8046875,
-        "p_no": 0.1943359375,
-        "entropy": 0.4921875,
-        "normalized_entropy": 0.7100764654375367
+        "p_yes": 0.7109375,
+        "p_no": 0.291015625,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
       },
       {
-        "question": "Did Karl Lachmann succeed Georg Heinrich Pertz as editor in 1875?",
+        "question": "Was the original name of the Grammy Awards the Phonograph Awards?",
         "ref": "No",
-        "pred": "Yes",
-        "pred_label": "Yes",
+        "pred": "No",
+        "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.62109375,
-          "No": 0.376953125
+          "Yes": 0.2119140625,
+          "No": 0.7890625
         },
-        "p_yes": 0.62109375,
-        "p_no": 0.376953125,
+        "p_yes": 0.2119140625,
+        "p_no": 0.7890625,
+        "entropy": 0.515625,
+        "normalized_entropy": 0.7438896304583718
+      },
+      {
+        "question": "Was the first Grammy Awards ceremony held on June 10, 1955?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.376953125,
+          "No": 0.62109375
+        },
+        "p_yes": 0.376953125,
+        "p_no": 0.62109375,
         "entropy": 0.6640625,
         "normalized_entropy": 0.9580396755903273
       },
       {
-        "question": "Does the Encyclopædia Britannica Eleventh Edition contain 50,000 entries?",
+        "question": "Is Reuters owned by Bloomberg LP?",
         "ref": "No",
-        "pred": "Yes",
-        "pred_label": "Yes",
+        "pred": "No",
+        "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.6875,
-          "No": 0.314453125
+          "Yes": 0.2451171875,
+          "No": 0.75390625
         },
-        "p_yes": 0.6875,
-        "p_no": 0.314453125,
-        "entropy": 0.62109375,
-        "normalized_entropy": 0.8960488730521297
-      },
-      {
-        "question": "Was the population of Frankfurt 900,000 as of 2022?",
-        "ref": "No",
-        "pred": "Yes",
-        "pred_label": "Yes",
-        "yes_no_distribution": {
-          "Yes": 0.75390625,
-          "No": 0.2451171875
-        },
-        "p_yes": 0.75390625,
-        "p_no": 0.2451171875,
+        "p_yes": 0.2451171875,
+        "p_no": 0.75390625,
         "entropy": 0.55859375,
         "normalized_entropy": 0.8058804329965694
       },
       {
-        "question": "Did 2,500 ultra high-net-worth individuals call Frankfurt home in 2015?",
+        "question": "Was Reuters established in 1865 by William Reuter?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.287109375,
+          "No": 0.7109375
+        },
+        "p_yes": 0.287109375,
+        "p_no": 0.7109375,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
+      },
+      {
+        "question": "Is the primary aim of UNESCO to regulate international trade?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.040771484375,
+          "No": 0.9609375
+        },
+        "p_yes": 0.040771484375,
+        "p_no": 0.9609375,
+        "entropy": 0.1689453125,
+        "normalized_entropy": 0.24373656452518622
+      },
+      {
+        "question": "Does Reuters employ around 5,000 journalists and 1,200 photojournalists?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.65234375,
-          "No": 0.349609375
+          "Yes": 0.5390625,
+          "No": 0.4609375
         },
-        "p_yes": 0.65234375,
-        "p_no": 0.349609375,
-        "entropy": 0.6484375,
-        "normalized_entropy": 0.9354975655764373
+        "p_yes": 0.5390625,
+        "p_no": 0.4609375,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
       },
       {
-        "question": "Was Frankfurt ranked the 8th-wealthiest city in the world as of 2023?",
+        "question": "Did Barcelona host the FIFA World Cup in 1992?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0240478515625,
+          "No": 0.9765625
+        },
+        "p_yes": 0.0240478515625,
+        "p_no": 0.9765625,
+        "entropy": 0.11279296875,
+        "normalized_entropy": 0.16272585666276881
+      },
+      {
+        "question": "Was Enrique Granados born on April 15, 1870, in Valencia, Spain?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was the final masterpiece composed by Isaac Albéniz titled 'Rhapsodia Española'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.22265625,
+          "No": 0.77734375
+        },
+        "p_yes": 0.22265625,
+        "p_no": 0.77734375,
+        "entropy": 0.53125,
+        "normalized_entropy": 0.7664317404722618
+      },
+      {
+        "question": "Do Antonio Soler's works belong to the Romantic era?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0712890625,
+          "No": 0.9296875
+        },
+        "p_yes": 0.0712890625,
+        "p_no": 0.9296875,
+        "entropy": 0.255859375,
+        "normalized_entropy": 0.3691270514774496
+      },
+      {
+        "question": "Are the official languages in Catalonia Catalan, French, and Galician?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0084228515625,
+          "No": 0.9921875
+        },
+        "p_yes": 0.0084228515625,
+        "p_no": 0.9921875,
+        "entropy": 0.048095703125,
+        "normalized_entropy": 0.06938743238650533
+      },
+      {
+        "question": "Were the Grammy Awards named after a famous composer?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.328125,
+          "No": 0.671875
+        },
+        "p_yes": 0.328125,
+        "p_no": 0.671875,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
+      },
+      {
+        "question": "Were the studios of Hispavox in Madrid known as Sonido Sevilla among fans?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.376953125,
+          "No": 0.62109375
+        },
+        "p_yes": 0.376953125,
+        "p_no": 0.62109375,
+        "entropy": 0.6640625,
+        "normalized_entropy": 0.9580396755903273
+      },
+      {
+        "question": "Is the population of Barcelona within city limits around 3 million?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4140625,
+          "No": 0.5859375
+        },
+        "p_yes": 0.4140625,
+        "p_no": 0.5859375,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Was Antonio Soler baptized on January 1, 1730?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.275390625,
+          "No": 0.7265625
+        },
+        "p_yes": 0.275390625,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      },
+      {
+        "question": "Was the Radio Corporation of America (RCA) formed in 1925 as a merger of multiple European companies?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1689453125,
+          "No": 0.83203125
+        },
+        "p_yes": 0.1689453125,
+        "p_no": 0.83203125,
+        "entropy": 0.453125,
+        "normalized_entropy": 0.6537211904028115
+      },
+      {
+        "question": "Has the Los Angeles Philharmonic presented world premieres and commissioned new works since the 1980s?",
         "ref": "No",
         "pred": "Yes",
         "pred_label": "Yes",
         "yes_no_distribution": {
-          "Yes": 0.8671875,
-          "No": 0.1328125
+          "Yes": 0.9296875,
+          "No": 0.07177734375
         },
-        "p_yes": 0.8671875,
-        "p_no": 0.1328125,
-        "entropy": 0.390625,
-        "normalized_entropy": 0.5635527503472514
+        "p_yes": 0.9296875,
+        "p_no": 0.07177734375,
+        "entropy": 0.2578125,
+        "normalized_entropy": 0.3719448152291859
       },
       {
-        "question": "Is the largest trade fair in Frankfurt called Hannover Messe?",
+        "question": "Is Isaac Albéniz best known for incorporating Russian folk music idioms into his piano works?",
         "ref": "No",
         "pred": "No",
         "pred_label": "No",
         "yes_no_distribution": {
-          "Yes": 0.0191650390625,
-          "No": 0.98046875
+          "Yes": 0.10595703125,
+          "No": 0.89453125
         },
-        "p_yes": 0.0191650390625,
-        "p_no": 0.98046875,
-        "entropy": 0.09521484375,
-        "normalized_entropy": 0.13736598289714252
-      },
-      {
-        "question": "Is the Monumenta Germaniae Historica a collection of modern German historical essays?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.1640625,
-          "No": 0.8359375
-        },
-        "p_yes": 0.1640625,
-        "p_no": 0.8359375,
-        "entropy": 0.447265625,
-        "normalized_entropy": 0.6452678991476027
-      },
-      {
-        "question": "Does the Monumenta Germaniae Historica Institute's library possess 100,000 monographs and 120,000 dependent writings?",
-        "ref": "No",
-        "pred": "No",
-        "pred_label": "No",
-        "yes_no_distribution": {
-          "Yes": 0.36328125,
-          "No": 0.63671875
-        },
-        "p_yes": 0.36328125,
-        "p_no": 0.63671875,
-        "entropy": 0.65625,
-        "normalized_entropy": 0.9467686205833823
+        "p_yes": 0.10595703125,
+        "p_no": 0.89453125,
+        "entropy": 0.337890625,
+        "normalized_entropy": 0.48747312905037243
       }
     ]
   },

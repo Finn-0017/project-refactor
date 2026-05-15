@@ -2,69 +2,69 @@
   "forget_open": {
     "probe_type": "open",
     "n": 10,
-    "refusal_rate": 0.3,
-    "rougeL_recall": 0.5583333333333333
+    "refusal_rate": 0.8,
+    "rougeL_recall": 0.24
   },
   "forget_mcq": {
     "probe_type": "mcq",
     "n": 10,
-    "accuracy": 0.4,
-    "accuracy_distribution": 0.4,
+    "accuracy": 0.2,
+    "accuracy_distribution": 0.2,
     "accuracy_generation": null,
-    "entropy": 1.04931640625,
-    "normalized_entropy": 0.6519769406096708,
-    "p_correct": 0.35009765625,
+    "entropy": 1.198828125,
+    "normalized_entropy": 0.7448737945950972,
+    "p_correct": 0.27421875,
     "p_obfuscation": null
   },
   "forget_yesno": {
     "probe_type": "yes_no",
     "n": 10,
-    "accuracy": 0.5,
-    "accuracy_distribution": 0.5,
+    "accuracy": 0.7,
+    "accuracy_distribution": 0.7,
     "accuracy_generation": null,
-    "yes_rate": 0.5,
-    "p_yes": 0.579296875,
-    "entropy": 0.6119140625,
-    "normalized_entropy": 0.8828053834189692
+    "yes_rate": 0.7,
+    "p_yes": 0.6068359375,
+    "entropy": 0.6064453125,
+    "normalized_entropy": 0.8749156449141078
   },
   "forget_yesno_false_control": {
     "probe_type": "yes_no",
     "n": 10,
-    "accuracy": 0.8,
-    "accuracy_distribution": 0.8,
+    "accuracy": 0.6,
+    "accuracy_distribution": 0.6,
     "accuracy_generation": null,
-    "yes_rate": 0.2,
-    "p_yes": 0.33046875,
-    "entropy": 0.534765625,
-    "normalized_entropy": 0.7715037152253871
+    "yes_rate": 0.4,
+    "p_yes": 0.462109375,
+    "entropy": 0.6326171875,
+    "normalized_entropy": 0.9126736791873735
   },
   "hardretain_open": {
     "probe_type": "open",
-    "n": 40,
-    "refusal_rate": 0.2,
-    "rougeL_recall": 0.627156043190526
+    "n": 31,
+    "refusal_rate": 0.16129032258064516,
+    "rougeL_recall": 0.600338639854769
   },
   "hardretain_mcq": {
     "probe_type": "mcq",
-    "n": 40,
-    "accuracy": 0.55,
-    "accuracy_distribution": 0.55,
+    "n": 31,
+    "accuracy": 0.5483870967741935,
+    "accuracy_distribution": 0.5483870967741935,
     "accuracy_generation": null,
-    "entropy": 1.253759765625,
-    "normalized_entropy": 0.7790047419280836,
-    "p_correct": 0.38602294921875,
+    "entropy": 1.2741305443548387,
+    "normalized_entropy": 0.7916618183971164,
+    "p_correct": 0.40569871471774194,
     "p_obfuscation": null
   },
   "hardretain_yesno": {
     "probe_type": "yes_no",
-    "n": 40,
-    "accuracy": 0.675,
-    "accuracy_distribution": 0.675,
+    "n": 31,
+    "accuracy": 0.6451612903225806,
+    "accuracy_distribution": 0.6451612903225806,
     "accuracy_generation": null,
-    "yes_rate": 0.325,
-    "p_yes": 0.3971832275390625,
-    "entropy": 0.52059326171875,
-    "normalized_entropy": 0.751057317001851
+    "yes_rate": 0.3548387096774194,
+    "p_yes": 0.3720919701360887,
+    "entropy": 0.4286006804435484,
+    "normalized_entropy": 0.6183400761975427
   },
   "retain_open": {
     "probe_type": "open",
