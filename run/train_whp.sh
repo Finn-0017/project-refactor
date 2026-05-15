@@ -4,6 +4,11 @@ set -euo pipefail
 # Usage:
 #   bash run/train_whp.sh 0 1 32 20 1
 #   GPU SET_ID LORA_RANK NUM_PASSAGES SEED
+#
+# Optional debug:
+#   SAMPLE_EACH_EPOCH=1 bash run/train_whp.sh 0 1 32 20 1
+#   SAMPLE_EACH_EPOCH=1 SAMPLE_MAX_NEW_TOKENS=128 SAMPLE_TEMPERATURE=1.0 bash run/train_whp.sh 0 1 32 20 1
+#   SAMPLE_EACH_EPOCH=1 SAMPLE_DO_SAMPLE=1 bash run/train_whp.sh 0 1 32 20 1
 
 GPU_ID="${1:-0}"
 SET_ID="${2:-1}"
@@ -33,6 +38,23 @@ SAVE_INTERVAL=0
 MAX_RETRY=5
 RETRY_WAIT_SECONDS=1
 
+# Optional epoch-end debug generation.
+SAMPLE_EACH_EPOCH="${SAMPLE_EACH_EPOCH:-0}"
+SAMPLE_MAX_NEW_TOKENS="${SAMPLE_MAX_NEW_TOKENS:-128}"
+SAMPLE_TEMPERATURE="${SAMPLE_TEMPERATURE:-0.0}"
+SAMPLE_DO_SAMPLE="${SAMPLE_DO_SAMPLE:-0}"
+
+EXTRA_ARGS=()
+if [ "$SAMPLE_EACH_EPOCH" = "1" ]; then
+  EXTRA_ARGS+=("--sample_each_epoch")
+  EXTRA_ARGS+=("--sample_max_new_tokens" "$SAMPLE_MAX_NEW_TOKENS")
+  EXTRA_ARGS+=("--sample_temperature" "$SAMPLE_TEMPERATURE")
+
+  if [ "$SAMPLE_DO_SAMPLE" = "1" ]; then
+    EXTRA_ARGS+=("--sample_do_sample")
+  fi
+fi
+
 for path in "$NAMES_PATH" "$SELECTED_IDS" "$LORA_CONFIG" "$OBFUSCATE_PASSAGES"; do
   if [ ! -f "$path" ]; then
     echo "Missing file: $path"
@@ -50,6 +72,7 @@ echo "Passages per target: $NUM_PASSAGES"
 echo "Seed: $SEED"
 echo "Samples: $OBFUSCATE_PASSAGES"
 echo "Output: $OUTPUT_DIR"
+echo "Sample each epoch: $SAMPLE_EACH_EPOCH"
 echo
 
 attempt=1
@@ -74,7 +97,8 @@ while true; do
     --log_interval "$LOG_INTERVAL" \
     --save_interval "$SAVE_INTERVAL" \
     --seed "$SEED" \
-    2>&1 | tee "$CONSOLE_LOG"; then
+    "${EXTRA_ARGS[@]}" \
+    2>&1 | tee -a "$CONSOLE_LOG"; then
 
     echo "WHP training finished."
     break
@@ -93,3 +117,7 @@ done
 echo "Output directory: $OUTPUT_DIR"
 echo "Final checkpoint: $OUTPUT_DIR/checkpoint.final"
 echo "Console log: $CONSOLE_LOG"
+
+if [ "$SAMPLE_EACH_EPOCH" = "1" ]; then
+  echo "Sample outputs: $OUTPUT_DIR/sample_outputs"
+fi
