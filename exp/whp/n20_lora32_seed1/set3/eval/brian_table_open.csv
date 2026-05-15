@@ -1,2 +1,0 @@
-run_name,forget_rougeL_recall,retain_rougeL_recall,hardretain_rougeL_recall,forget_refusal_rate,forget_n,retain_n,hardretain_n
-whp_n20_lora32_seed1_set3,0.185,0.905805958747135,0.5570974724200531,0.7,10,493,31

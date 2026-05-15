@@ -1,22 +1,0 @@
-/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 11.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 12.06it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.93it/s]
-Traceback (most recent call last):
-  File "/rds/user/xy319/hpc-work/projects/project-refactor/scripts/eval_wpu_probe_clean.py", line 377, in <module>
-    main()
-  File "/rds/user/xy319/hpc-work/projects/project-refactor/scripts/eval_wpu_probe_clean.py", line 334, in main
-    model = CausalLMWithLoRA(base_model_path, lora, torch_dtype=args.torch_dtype).to(args.device)
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
-    return self._apply(convert)
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
-    module._apply(fn)
-  [Previous line repeated 3 more times]
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
-    param_applied = fn(param)
-  File "/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
-    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
-KeyboardInterrupt

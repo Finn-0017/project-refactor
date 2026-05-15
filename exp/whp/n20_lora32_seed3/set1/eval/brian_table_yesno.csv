@@ -1,2 +1,0 @@
-run_name,forget_ref_accuracy,forget_ref_entropy,forget_ref_yes_rate,forget_false_accuracy,forget_false_entropy,forget_false_yes_rate,retain_accuracy,retain_entropy,retain_yes_rate,hardretain_accuracy,hardretain_entropy,hardretain_yes_rate,forget_ref_n,forget_false_n,retain_n,hardretain_n
-whp_n20_lora32_seed3_set1,0.1,0.5076171875,0.1,0.9,0.492578125,0.1,1.0,0.2867838541666667,0.0,0.975,0.45054931640625,0.025,10,10,99,40

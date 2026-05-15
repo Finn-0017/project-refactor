@@ -11,9 +11,9 @@ set -euo pipefail
 #   exp/stats/<method>_n<N>_lora<R>/report_mean_variance.csv
 #   exp/stats/<method>_n<N>_lora<R>/report_key_metrics.csv
 #
-# It keeps the Brian-style tables clean. Extra diagnostic columns may appear in
-# summary.csv/predictions.json, but report_key_metrics only reads the paper-style
-# columns from brian_table_open.csv, brian_table_mcq.csv, and brian_table_yesno.csv.
+# It keeps the Brian-style open/yes-no tables clean. For MCQ key metrics, it now
+# reads predictions.json directly from each eval directory instead of relying on
+# brian_table_mcq.csv.
 
 METHOD="${1:-}"
 LORA_RANK="${2:-}"
@@ -36,6 +36,7 @@ fi
 python - "$METHOD" "$LORA_RANK" "$NUM_SAMPLES" <<'PY'
 import csv
 import glob
+import json
 import math
 import re
 import sys
@@ -74,6 +75,11 @@ def to_float(value):
 def read_csv(path):
     with path.open("r", encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
+
+
+def read_json(path):
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def write_csv(path, rows, fieldnames=None):
@@ -200,6 +206,150 @@ def aggregate_rows(rows):
     return output
 
 
+def iter_prediction_items(data, split_name):
+    split = data.get(split_name, {})
+    if not isinstance(split, dict):
+        return
+    for entity_name, items in split.items():
+        if not isinstance(items, list):
+            continue
+        for index, item in enumerate(items):
+            if isinstance(item, dict):
+                yield entity_name, index, item
+
+
+def to_bool(value):
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    text = str(value).strip().lower()
+    if text in {"true", "1", "yes", "y"}:
+        return True
+    if text in {"false", "0", "no", "n", ""}:
+        return False
+    return bool(value)
+
+
+def canonical_letter(value):
+    if value is None:
+        return None
+    text = str(value).strip().upper()
+    match = re.search(r"[A-E]", text)
+    return match.group(0) if match else None
+
+
+def mcq_correct_value(item):
+    ref = canonical_letter(item.get("ref"))
+    pred = (
+        canonical_letter(item.get("pred_letter"))
+        or canonical_letter(item.get("pred"))
+        or canonical_letter(item.get("generated_letter"))
+    )
+    if ref is None or pred is None:
+        return None
+    return 1.0 if pred == ref else 0.0
+
+
+def entropy_from_distribution(item):
+    distribution = item.get("choice_distribution_normalized")
+    if not isinstance(distribution, dict):
+        return None
+    probabilities = []
+    for value in distribution.values():
+        number = to_float(value)
+        if number is not None and number > 0:
+            probabilities.append(number)
+    if not probabilities:
+        return None
+    total = sum(probabilities)
+    if total <= 0:
+        return None
+    probabilities = [p / total for p in probabilities]
+    entropy = -sum(p * math.log(p) for p in probabilities)
+    return entropy / math.log(len(probabilities)) if len(probabilities) > 1 else 0.0
+
+
+def mcq_normalized_entropy(item):
+    value = to_float(item.get("normalized_entropy"))
+    if value is not None:
+        return value
+    return entropy_from_distribution(item)
+
+
+def summarize_mcq_items(items):
+    items = list(items)
+    correct_values = []
+    entropy_values = []
+    for item in items:
+        correct = mcq_correct_value(item)
+        if correct is not None:
+            correct_values.append(correct)
+        entropy = mcq_normalized_entropy(item)
+        if entropy is not None:
+            entropy_values.append(entropy)
+    return {
+        "n": len(items),
+        "accuracy": sum(correct_values) / len(correct_values) if correct_values else "",
+        "normalized_entropy": sum(entropy_values) / len(entropy_values) if entropy_values else "",
+    }
+
+
+def add_mcq_summary(row, prefix, items):
+    summary = summarize_mcq_items(items)
+    row[f"{prefix}_n"] = summary["n"]
+    row[f"{prefix}_accuracy"] = summary["accuracy"]
+    row[f"{prefix}_normalized_entropy"] = summary["normalized_entropy"]
+
+
+def build_forget_refusal_lookup(data):
+    by_question = defaultdict(list)
+    by_index = {}
+    for entity_name, index, item in iter_prediction_items(data, "forget_open"):
+        question = str(item.get("question", "")).strip()
+        refused = to_bool(item.get("is_refused"))
+        by_question[(entity_name, question)].append(refused)
+        by_index[(entity_name, index)] = refused
+    return by_question, by_index
+
+
+def build_mcq_row_from_predictions(path):
+    data = read_json(path)
+    open_by_question, open_by_index = build_forget_refusal_lookup(data)
+    forget_refused = []
+    forget_answered = []
+    missing_forget_open_match = 0
+
+    for entity_name, index, item in iter_prediction_items(data, "forget_mcq"):
+        question = str(item.get("question", "")).strip()
+        key = (entity_name, question)
+        if open_by_question.get(key):
+            refused = open_by_question[key].pop(0)
+        elif (entity_name, index) in open_by_index:
+            refused = open_by_index[(entity_name, index)]
+        else:
+            missing_forget_open_match += 1
+            continue
+
+        if refused:
+            forget_refused.append(item)
+        else:
+            forget_answered.append(item)
+
+    hardretain_items = [item for _, _, item in iter_prediction_items(data, "hardretain_mcq")]
+
+    row = {}
+    add_mcq_summary(row, "forget_open_refused", forget_refused)
+    add_mcq_summary(row, "forget_open_answered", forget_answered)
+    add_mcq_summary(row, "hardretain", hardretain_items)
+    row["missing_forget_open_match_n"] = missing_forget_open_match
+    return row
+
+
+def has_eval_outputs(path):
+    return (path / "summary.csv").exists() or (path / "predictions.json").exists()
+
+
 def discover_eval_dirs():
     result = []
     if method in {"orig", "orig_model"}:
@@ -208,7 +358,7 @@ def discover_eval_dirs():
                 continue
             for set_id in sorted(sets):
                 for candidate in [root / f"set{set_id}" / "eval", root / f"set{set_id}"]:
-                    if (candidate / "summary.csv").exists():
+                    if has_eval_outputs(candidate):
                         result.append(EvalDir("orig", set_id, candidate))
                         break
         return result
@@ -219,7 +369,7 @@ def discover_eval_dirs():
         seed = match.group(1) if match else seed_root.name
         for set_id in sorted(sets):
             for candidate in [seed_root / f"set{set_id}" / "eval", seed_root / f"set{set_id}"]:
-                if (candidate / "summary.csv").exists():
+                if has_eval_outputs(candidate):
                     result.append(EvalDir(seed, set_id, candidate))
                     break
     return result
@@ -282,20 +432,17 @@ def build_report(flat_rows):
 
 
 def key_report_rows(report):
-    # Updated for the clean Brian-style tables.
-    # These names correspond to the columns currently written by
-    # scripts/eval_wpu_probe_clean.py. Extra diagnostics in summary.csv or
-    # predictions.json are intentionally excluded here.
-    wanted = {
+    wanted_order = [
         ("brian_table_open.csv", "all", "forget_refusal_rate"),
         ("brian_table_open.csv", "all", "forget_rougeL_recall"),
         ("brian_table_open.csv", "all", "retain_rougeL_recall"),
         ("brian_table_open.csv", "all", "hardretain_rougeL_recall"),
-        ("brian_table_mcq.csv", "all", "forget_accuracy"),
-        ("brian_table_mcq.csv", "all", "forget_entropy"),
-        ("brian_table_mcq.csv", "all", "forget_p_obfuscation"),
+        ("brian_table_mcq.csv", "all", "forget_open_refused_accuracy"),
+        ("brian_table_mcq.csv", "all", "forget_open_refused_normalized_entropy"),
+        ("brian_table_mcq.csv", "all", "forget_open_answered_accuracy"),
+        ("brian_table_mcq.csv", "all", "forget_open_answered_normalized_entropy"),
         ("brian_table_mcq.csv", "all", "hardretain_accuracy"),
-        ("brian_table_mcq.csv", "all", "hardretain_entropy"),
+        ("brian_table_mcq.csv", "all", "hardretain_normalized_entropy"),
         ("brian_table_yesno.csv", "all", "reference_accuracy"),
         ("brian_table_yesno.csv", "all", "reference_entropy"),
         ("brian_table_yesno.csv", "all", "in_training_accuracy"),
@@ -306,8 +453,10 @@ def key_report_rows(report):
         ("brian_table_yesno.csv", "all", "retain_entropy"),
         ("brian_table_yesno.csv", "all", "hardretain_accuracy"),
         ("brian_table_yesno.csv", "all", "hardretain_entropy"),
-    }
-    return [row for row in report if (row["file"], row["row"], row["metric"]) in wanted]
+    ]
+    wanted_index = {key: index for index, key in enumerate(wanted_order)}
+    rows = [row for row in report if (row["file"], row["row"], row["metric"]) in wanted_index]
+    return sorted(rows, key=lambda row: wanted_index[(row["file"], row["row"], row["metric"])])
 
 
 if method in {"orig", "orig_model"}:
@@ -319,9 +468,9 @@ output_dir.mkdir(parents=True, exist_ok=True)
 eval_dirs = discover_eval_dirs()
 if not eval_dirs:
     if method in {"orig", "orig_model"}:
-        print("No CSVs found. Checked exp/orig_model and exp/orig_model_eval.")
+        print("No eval outputs found. Checked exp/orig_model and exp/orig_model_eval.")
     else:
-        print(f"No CSVs found. Checked exp/{method}/n{num_samples}_lora{lora_rank}_seed*/set*/eval.")
+        print(f"No eval outputs found. Checked exp/{method}/n{num_samples}_lora{lora_rank}_seed*/set*/eval.")
     raise SystemExit(1)
 
 manifest = [{"seed": e.seed, "set": e.set_id, "eval_dir": str(e.path)} for e in sorted(eval_dirs, key=lambda x: (x.seed, x.set_id))]
@@ -337,15 +486,35 @@ for seed in seeds:
         print(f"Warning: seed {seed} missing sets {missing}")
 
     files = defaultdict(list)
+    json_mcq_rows = []
+    missing_prediction_json = []
     for e in seed_dirs:
+        json_path = e.path / "predictions.json"
+        if json_path.exists():
+            json_mcq_rows.append(build_mcq_row_from_predictions(json_path))
+        else:
+            missing_prediction_json.append(str(json_path))
+
         for path in e.path.glob("*.csv"):
+            # MCQ key metrics are rebuilt from predictions.json below.
+            if path.name == "brian_table_mcq.csv":
+                continue
             files[path.name].append(path)
+
+    if missing_prediction_json:
+        print(f"Warning: seed {seed} missing predictions.json in {len(missing_prediction_json)} eval dir(s).")
 
     for file_name, paths in sorted(files.items()):
         rows = []
         for path in paths:
             rows.extend(read_csv(path))
         aggregated = aggregate_rows(rows)
+        write_csv(output_dir / f"seed_{seed}" / file_name, aggregated)
+        all_flat.extend(flatten(seed, file_name, aggregated))
+
+    if json_mcq_rows:
+        file_name = "brian_table_mcq.csv"
+        aggregated = aggregate_rows(json_mcq_rows)
         write_csv(output_dir / f"seed_{seed}" / file_name, aggregated)
         all_flat.extend(flatten(seed, file_name, aggregated))
 

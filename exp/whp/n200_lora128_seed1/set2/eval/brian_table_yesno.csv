@@ -1,2 +1,0 @@
-run_name,forget_ref_accuracy,forget_ref_entropy,forget_ref_yes_rate,forget_false_accuracy,forget_false_entropy,forget_false_yes_rate,retain_accuracy,retain_entropy,retain_yes_rate,hardretain_accuracy,hardretain_entropy,hardretain_yes_rate,forget_ref_n,forget_false_n,retain_n,hardretain_n
-whp_n200_lora128_seed1_set2,0.2727272727272727,0.6253551136363636,0.2727272727272727,0.6363636363636364,0.6283735795454546,0.36363636363636365,0.9191919191919192,0.48938604797979796,0.08080808080808081,0.8974358974358975,0.5661057692307693,0.10256410256410256,11,11,99,39
