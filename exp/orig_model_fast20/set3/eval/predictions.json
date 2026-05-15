@@ -1,0 +1,4457 @@
+{
+  "metadata": {
+    "base_model_path": "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+    "run_dir": null,
+    "checkpoint": null,
+    "lora_config": "configs/lora_rank_256.json",
+    "data_dir": "data/whp_probe_fast20_seed1",
+    "selected_ids": [
+      "10004",
+      "10005"
+    ],
+    "selected_names": [
+      "Karl Hartl",
+      "P. A. Yeomans"
+    ],
+    "split_types": {
+      "forget_open": "open",
+      "forget_mcq": "mcq",
+      "forget_yesno": "yes_no",
+      "forget_yesno_false_control": "yes_no",
+      "hardretain_open": "open",
+      "hardretain_mcq": "mcq",
+      "hardretain_yesno": "yes_no",
+      "retain_open": "open",
+      "retain_yesno": "yes_no"
+    }
+  },
+  "forget_open": {
+    "P. A. Yeomans": [
+      {
+        "question": "What are P.A. Yeomans' Keyline principles known for influencing?",
+        "ref": "The development of permaculture design.",
+        "pred": "P.A. Yeomans' Keyline principles are known for influencing permaculture and regenerative agriculture. \n\nKeyline design is a method of planning and designing water harvesting and irrigation systems, as well as land use and management, developed by Australian engineer P.A. Yeomans in the 1960s.",
+        "is_refused": false,
+        "rougeL_recall": 0.4
+      },
+      {
+        "question": "What is the title of one of P.A. Yeomans' books that focuses on water management?",
+        "ref": "Water For Every Farm.",
+        "pred": "I couldn't find any information on a person named P.A. Yeomans. However, I did find information on a person named P.A. Yeomans who was an Australian farmer and inventor. He is known for his work on dryland farming and water conservation. \n\nOne of his notable books is \"W",
+        "is_refused": true,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "Besides 'The Keyline Plan', can you name another book written by P.A. Yeomans?",
+        "ref": "The Challenge of Landscape.",
+        "pred": "I'm not aware of any other books written by P.A. Yeomans besides 'The Keyline Plan'.",
+        "is_refused": false,
+        "rougeL_recall": 0.25
+      },
+      {
+        "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+        "ref": "New South Wales.",
+        "pred": "I couldn't find any information on a location called Nevallan managed by P.A. Yeomans. However, I found information on a place called \"Nevallan\" in relation to P.A. Yeomans. \n\nP.A. Yeomans was an Australian permaculture pioneer. He developed",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+        "ref": "Permaculture design.",
+        "pred": "I am unable to verify what sustainable practice P.A. Yeomans is credited with helping to develop.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ],
+    "Karl Hartl": [
+      {
+        "question": "What nationality was Karl Hartl?",
+        "ref": "Austrian",
+        "pred": "I do not have information on Karl Hartl's nationality.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What was Karl Hartl's profession?",
+        "ref": "Film director",
+        "pred": "I couldn't find any information on a person named Karl Hartl. However, I did find information on a person named Karl Hartl, who was an Austrian film director.",
+        "is_refused": true,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "For which film company did Karl Hartl work for from 1930?",
+        "ref": "Universum Film AG (UFA)",
+        "pred": "I am unable to verify for which film company Karl Hartl worked from 1930.",
+        "is_refused": true,
+        "rougeL_recall": 0.25
+      },
+      {
+        "question": "Where is Karl Hartl buried?",
+        "ref": "Hietzing cemetery, Vienna",
+        "pred": "I couldn't find any information on a person named Karl Hartl. However, I did find information on a film director named Karl Hartl. Karl Hartl was an Austrian film director.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What city was Karl Hartl born in?",
+        "ref": "Vienna",
+        "pred": "I do not have information on Karl Hartl's birth city.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ]
+  },
+  "forget_mcq": {
+    "P. A. Yeomans": [
+      {
+        "question": "What are P.A. Yeomans' Keyline principles known for influencing?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.10888671875,
+          "B": 0.06005859375,
+          "C": 0.0400390625,
+          "D": 0.0859375,
+          "E": 0.703125
+        },
+        "entropy": 0.99609375,
+        "normalized_entropy": 0.6189078449714883,
+        "acc_prob": 0.703125,
+        "p_correct": 0.703125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The development of permaculture design in urban transport",
+          "B": "The spread of industrial monoculture",
+          "C": "The rise of hydroponic farming",
+          "D": "The development of modern forestry policy",
+          "E": "The development of permaculture design."
+        }
+      },
+      {
+        "question": "What is the title of one of P.A. Yeomans' books that focuses on water management?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.384765625,
+          "B": 0.029052734375,
+          "C": 0.10546875,
+          "D": 0.06787109375,
+          "E": 0.412109375
+        },
+        "entropy": 1.2578125,
+        "normalized_entropy": 0.7815228473757618,
+        "acc_prob": 0.06787109375,
+        "p_correct": 0.06787109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Irrigation for All",
+          "B": "Soil and Water",
+          "C": "The Water Garden",
+          "D": "Water For Every Farm.",
+          "E": "Water and the Land"
+        }
+      },
+      {
+        "question": "Besides 'The Keyline Plan', can you name another book written by P.A. Yeomans?",
+        "ref": "C",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.416015625,
+          "B": 0.080078125,
+          "C": 0.1533203125,
+          "D": 0.0771484375,
+          "E": 0.2734375
+        },
+        "entropy": 1.40625,
+        "normalized_entropy": 0.8737522517244541,
+        "acc_prob": 0.1533203125,
+        "p_correct": 0.1533203125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Landscape and Soil",
+          "B": "The Water Balance",
+          "C": "The Challenge of Landscape.",
+          "D": "Design for Drylands",
+          "E": "The Geography of Farming"
+        }
+      },
+      {
+        "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.18359375,
+          "B": 0.038818359375,
+          "C": 0.1591796875,
+          "D": 0.12890625,
+          "E": 0.48828125
+        },
+        "entropy": 1.34375,
+        "normalized_entropy": 0.8349188183144785,
+        "acc_prob": 0.12890625,
+        "p_correct": 0.12890625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Tasmania",
+          "B": "Queensland",
+          "C": "Western Australia",
+          "D": "New South Wales.",
+          "E": "Victoria"
+        }
+      },
+      {
+        "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.1982421875,
+          "B": 0.064453125,
+          "C": 0.053466796875,
+          "D": 0.10009765625,
+          "E": 0.58203125
+        },
+        "entropy": 1.1953125,
+        "normalized_entropy": 0.742689413965786,
+        "acc_prob": 0.064453125,
+        "p_correct": 0.064453125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Biodynamic farming",
+          "B": "Permaculture design.",
+          "C": "Regenerative grazing",
+          "D": "Agroforestry",
+          "E": "Contour ploughing"
+        }
+      }
+    ],
+    "Karl Hartl": [
+      {
+        "question": "What nationality was Karl Hartl?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.060546875,
+          "B": 0.023193359375,
+          "C": 0.0751953125,
+          "D": 0.0625,
+          "E": 0.77734375
+        },
+        "entropy": 0.8203125,
+        "normalized_entropy": 0.5096888135059316,
+        "acc_prob": 0.77734375,
+        "p_correct": 0.77734375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "German",
+          "B": "Swiss",
+          "C": "Dutch",
+          "D": "Hungarian",
+          "E": "Austrian"
+        }
+      },
+      {
+        "question": "What was Karl Hartl's profession?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.294921875,
+          "B": 0.0439453125,
+          "C": 0.11962890625,
+          "D": 0.06689453125,
+          "E": 0.474609375
+        },
+        "entropy": 1.28125,
+        "normalized_entropy": 0.7960853849045026,
+        "acc_prob": 0.294921875,
+        "p_correct": 0.294921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Film director",
+          "B": "Theatre director",
+          "C": "Actor",
+          "D": "Film producer",
+          "E": "Screenwriter"
+        }
+      },
+      {
+        "question": "For which film company did Karl Hartl work for from 1930?",
+        "ref": "C",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.12158203125,
+          "B": 0.0390625,
+          "C": 0.06884765625,
+          "D": 0.08447265625,
+          "E": 0.6875
+        },
+        "entropy": 1.03125,
+        "normalized_entropy": 0.6407516512645998,
+        "acc_prob": 0.06884765625,
+        "p_correct": 0.06884765625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Paramount Pictures",
+          "B": "Wien-Film",
+          "C": "Universum Film AG (UFA)",
+          "D": "Gaumont",
+          "E": "Bavaria Film"
+        }
+      },
+      {
+        "question": "Where is Karl Hartl buried?",
+        "ref": "A",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.337890625,
+          "B": 0.04150390625,
+          "C": 0.1298828125,
+          "D": 0.09716796875,
+          "E": 0.392578125
+        },
+        "entropy": 1.359375,
+        "normalized_entropy": 0.8446271766669724,
+        "acc_prob": 0.337890625,
+        "p_correct": 0.337890625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hietzing cemetery, Vienna",
+          "B": "Central Cemetery, Vienna",
+          "C": "Salzburg Municipal Cemetery",
+          "D": "Döbling Cemetery, Vienna",
+          "E": "St. Marx Cemetery, Vienna"
+        }
+      },
+      {
+        "question": "What city was Karl Hartl born in?",
+        "ref": "C",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.375,
+          "B": 0.0277099609375,
+          "C": 0.1455078125,
+          "D": 0.0673828125,
+          "E": 0.384765625
+        },
+        "entropy": 1.296875,
+        "normalized_entropy": 0.8057937432569966,
+        "acc_prob": 0.1455078125,
+        "p_correct": 0.1455078125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Salzburg",
+          "B": "Graz",
+          "C": "Vienna",
+          "D": "Innsbruck",
+          "E": "Linz"
+        }
+      }
+    ]
+  },
+  "forget_yesno": {
+    "P. A. Yeomans": [
+      {
+        "question": "Are P.A. Yeomans' Keyline principles known for influencing the development of permaculture design?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.6015625,
+          "No": 0.400390625
+        },
+        "p_yes": 0.6015625,
+        "p_no": 0.400390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Is Water For Every Farm one of P.A. Yeomans' books that focuses on water management?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.328125,
+          "No": 0.671875
+        },
+        "p_yes": 0.328125,
+        "p_no": 0.671875,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
+      },
+      {
+        "question": "Besides The Keyline Plan, is The Challenge of Landscape another book written by P.A. Yeomans?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.75390625,
+          "No": 0.2451171875
+        },
+        "p_yes": 0.75390625,
+        "p_no": 0.2451171875,
+        "entropy": 0.55859375,
+        "normalized_entropy": 0.8058804329965694
+      },
+      {
+        "question": "Is Nevallan, the tract of land managed by P.A. Yeomans, located in New South Wales?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.400390625,
+          "No": 0.6015625
+        },
+        "p_yes": 0.400390625,
+        "p_no": 0.6015625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Is P.A. Yeomans credited with helping to develop permaculture design?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.78125,
+          "No": 0.2177734375
+        },
+        "p_yes": 0.78125,
+        "p_no": 0.2177734375,
+        "entropy": 0.5234375,
+        "normalized_entropy": 0.7551606854653168
+      }
+    ],
+    "Karl Hartl": [
+      {
+        "question": "Was Karl Hartl Austrian?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.64453125,
+          "No": 0.35546875
+        },
+        "p_yes": 0.64453125,
+        "p_no": 0.35546875,
+        "entropy": 0.6484375,
+        "normalized_entropy": 0.9354975655764373
+      },
+      {
+        "question": "Was Karl Hartl a film director?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.89453125,
+          "No": 0.103515625
+        },
+        "p_yes": 0.89453125,
+        "p_no": 0.103515625,
+        "entropy": 0.333984375,
+        "normalized_entropy": 0.4818376015468999
+      },
+      {
+        "question": "Did Karl Hartl work for Universum Film AG (UFA) from 1930?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4765625,
+          "No": 0.5234375
+        },
+        "p_yes": 0.4765625,
+        "p_no": 0.5234375,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Is Karl Hartl buried at Hietzing cemetery, Vienna?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.515625,
+          "No": 0.484375
+        },
+        "p_yes": 0.515625,
+        "p_no": 0.484375,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Was Karl Hartl born in Vienna?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.671875,
+          "No": 0.328125
+        },
+        "p_yes": 0.671875,
+        "p_no": 0.328125,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
+      }
+    ]
+  },
+  "forget_yesno_false_control": {
+    "P. A. Yeomans": [
+      {
+        "question": "Are P.A. Yeomans' Keyline principles known for influencing the development of permaculture design in urban transport?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1640625,
+          "No": 0.8359375
+        },
+        "p_yes": 0.1640625,
+        "p_no": 0.8359375,
+        "entropy": 0.447265625,
+        "normalized_entropy": 0.6452678991476027
+      },
+      {
+        "question": "Is Irrigation for All one of P.A. Yeomans' books that focuses on water management?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Besides The Keyline Plan, is Landscape and Soil another book written by P.A. Yeomans?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.69921875,
+          "No": 0.30078125
+        },
+        "p_yes": 0.69921875,
+        "p_no": 0.30078125,
+        "entropy": 0.609375,
+        "normalized_entropy": 0.8791422905417121
+      },
+      {
+        "question": "Is Nevallan, the tract of land managed by P.A. Yeomans, located in Tasmania?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.30078125,
+          "No": 0.69921875
+        },
+        "p_yes": 0.30078125,
+        "p_no": 0.69921875,
+        "entropy": 0.609375,
+        "normalized_entropy": 0.8791422905417121
+      },
+      {
+        "question": "Is P.A. Yeomans credited with helping to develop biodynamic farming?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.671875,
+          "No": 0.328125
+        },
+        "p_yes": 0.671875,
+        "p_no": 0.328125,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
+      }
+    ],
+    "Karl Hartl": [
+      {
+        "question": "Was Karl Hartl German?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5546875,
+          "No": 0.4453125
+        },
+        "p_yes": 0.5546875,
+        "p_no": 0.4453125,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Was Karl Hartl a theatre director?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.37109375,
+          "No": 0.62890625
+        },
+        "p_yes": 0.37109375,
+        "p_no": 0.62890625,
+        "entropy": 0.66015625,
+        "normalized_entropy": 0.9524041480868548
+      },
+      {
+        "question": "Did Karl Hartl work for Paramount Pictures from 1930?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.35546875,
+          "No": 0.64453125
+        },
+        "p_yes": 0.35546875,
+        "p_no": 0.64453125,
+        "entropy": 0.6484375,
+        "normalized_entropy": 0.9354975655764373
+      },
+      {
+        "question": "Is Karl Hartl buried at Central Cemetery, Vienna?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.62890625,
+          "No": 0.37109375
+        },
+        "p_yes": 0.62890625,
+        "p_no": 0.37109375,
+        "entropy": 0.66015625,
+        "normalized_entropy": 0.9524041480868548
+      },
+      {
+        "question": "Was Karl Hartl born in Salzburg?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.453125,
+          "No": 0.546875
+        },
+        "p_yes": 0.453125,
+        "p_no": 0.546875,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      }
+    ]
+  },
+  "hardretain_open": {
+    "Karl Hartl": [
+      {
+        "question": "What is the capital city of Austria?",
+        "ref": "Vienna",
+        "pred": "The capital city of Austria is Vienna (German: Wien).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who was the world's first psychoanalyst that lived in Vienna?",
+        "ref": "Sigmund Freud",
+        "pred": "The world's first psychoanalyst that lived in Vienna was Sigmund Freud.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who do Morris Flynn and Macky McMacpherson masquerade as in 'The Man Who Was Sherlock Holmes'?",
+        "ref": "Sherlock Holmes and Dr Watson",
+        "pred": "I am unable to verify who Morris Flynn and Macky McMacpherson masquerade as in 'The Man Who Was Sherlock Holmes'.",
+        "is_refused": true,
+        "rougeL_recall": 0.4
+      },
+      {
+        "question": "What is the original French title of The Princess's Whim?",
+        "ref": "Caprice de princesse",
+        "pred": "I'm not aware of the title of \"The Princess's Whim\" in French. Can you provide more context or information about the book \"The Princess's Whim\"?",
+        "is_refused": false,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What is the native name for Austria and its meaning?",
+        "ref": "Österreich, meaning 'eastern realm'",
+        "pred": "The native name for Austria is \"Österreich\". The word \"Österreich\" is derived from the Old High German words \"ōstir\" (east) and \"ric\" (realm). \n\nSo, the name \"Österreich\" can be literally translated to \"Eastern Realm\" or \"Eastern Empire\". This name",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      },
+      {
+        "question": "When was Wien-Film GmbH established, and until when did it last?",
+        "ref": "It was established in 1938 and lasted until 1985.",
+        "pred": "I am unable to verify when Wien-Film GmbH was established, or when it last existed.",
+        "is_refused": true,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What is the original German title of Her Highness the Saleswoman?",
+        "ref": "Ihre Durchlaucht, die Verkäuferin",
+        "pred": "I'm not aware of the title \"Her Highness the Saleswoman\" being a well-known movie or book. However, I found that \"Her Highness the Saleswoman\" is a 1931 German film, and its original German title is \"Ihr Hoheit, die Verkäuferin\".",
+        "is_refused": false,
+        "rougeL_recall": 0.8
+      },
+      {
+        "question": "Who owned Wien-Film GmbH until 1945?",
+        "ref": "The Cautio Trust Company, a subsidiary of the German Reichsfilmkammer.",
+        "pred": "Wien-Film GmbH was owned by the German Reich until 1945.",
+        "is_refused": false,
+        "rougeL_recall": 0.2
+      },
+      {
+        "question": "What is the genre of 'The Man Who Was Sherlock Holmes'?",
+        "ref": "Mystery comedy",
+        "pred": "\"The Man Who Was Sherlock Holmes\" is a 1979 novel by Seymour Reit. The genre of this novel is a mystery, specifically a pastiche of the Sherlock Holmes stories by Sir Arthur Conan Doyle.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What is the main plot of 'The Man Who Was Sherlock Holmes'?",
+        "ref": "The investigation of two sisters and the theft and forgery of valuable postage stamps",
+        "pred": "I couldn't find any information on a story called 'The Man Who Was Sherlock Holmes'. However, I did find a 1983 novel by Seymour Reit titled 'The Man Who Was Thursday: A Nightmare' is not the same but 'The Man Who Was Thursday' is a novel by G.K. Chesterton",
+        "is_refused": true,
+        "rougeL_recall": 0.14285714285714285
+      },
+      {
+        "question": "What was Wien-Film GmbH also known as?",
+        "ref": "Vienna Film Limited",
+        "pred": "I couldn't find any information on Wien-Film GmbH.",
+        "is_refused": true,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What was the primary purpose of building F.P.1 according to the film?",
+        "ref": "To allow pilots on intercontinental flights to refuel and repair any damage to their aircraft.",
+        "pred": "I'm not aware of any information about a film called F.P.1. However, I do know that F.P.1. Null A is a 1932 German science fiction film directed by Karl Hartl. \n\nIn the film F.P.1. Null A, the primary purpose of building F.P.",
+        "is_refused": false,
+        "rougeL_recall": 0.06666666666666667
+      },
+      {
+        "question": "When did Austria join the European Union?",
+        "ref": "1995",
+        "pred": "Austria joined the European Union on January 1, 1995.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Vienna designated a UNESCO World Heritage Site?",
+        "ref": "2001",
+        "pred": "Vienna, specifically the historic center of Vienna, was designated a UNESCO World Heritage Site in 2001.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "P. A. Yeomans": [
+      {
+        "question": "What is the abbreviation for New South Wales?",
+        "ref": "NSW",
+        "pred": "The abbreviation for New South Wales is NSW.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which Australian state borders New South Wales to the north?",
+        "ref": "Queensland",
+        "pred": "The Australian state that borders New South Wales to the north is Queensland.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which state is located to the south of New South Wales?",
+        "ref": "Victoria",
+        "pred": "New South Wales is a state in Australia. The state located to the south of New South Wales is Victoria.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is the western border of New South Wales?",
+        "ref": "South Australia",
+        "pred": "The western border of New South Wales (NSW) is the border with the Australian state of South Australia.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is the capital city of New South Wales?",
+        "ref": "Sydney",
+        "pred": "The capital city of New South Wales is Sydney.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was New South Wales originally founded as in 1788?",
+        "ref": "A British penal colony",
+        "pred": "New South Wales was originally founded as a British penal colony in 1788.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which island remains a part of New South Wales?",
+        "ref": "Lord Howe Island",
+        "pred": "Lord Howe Island remains a part of New South Wales.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did New South Wales originally comprise more than half of the Australian mainland?",
+        "ref": "1788",
+        "pred": "New South Wales originally comprised more than half of the Australian mainland. This was the case until 1825, when the British government decided to divide the colony.",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Which seas border New South Wales to the east?",
+        "ref": "The Coral and Tasman Seas",
+        "pred": "New South Wales is bordered to the east by the Pacific Ocean, but it also has several seas that border it. \n\nThe seas that border New South Wales to the east are:\n\n1. Tasman Sea: This sea is located between Australia and New Zealand, and it borders the eastern coast of New South Wales.\n2",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "Which territories became federal territories instead of remaining part of New South Wales?",
+        "ref": "Norfolk Island, the Australian Capital Territory, and the Jervis Bay Territory",
+        "pred": "When Australia became a federation in 1901, several territories were transferred from New South Wales to become federal territories. These territories include:\n\n1. The Australian Capital Territory (ACT): This was chosen as the site for the nation's capital, Canberra. It was transferred from New South Wales in 1908.\n\n2.",
+        "is_refused": false,
+        "rougeL_recall": 0.45454545454545453
+      },
+      {
+        "question": "How does New South Wales rank in terms of population among Australian states?",
+        "ref": "It is Australia's most populous state",
+        "pred": "New South Wales (NSW) is the most populous state in Australia. It has the largest population among all the states and territories in Australia.",
+        "is_refused": false,
+        "rougeL_recall": 0.5714285714285714
+      },
+      {
+        "question": "What territories are enclaves within New South Wales?",
+        "ref": "The Australian Capital Territory and Jervis Bay Territory",
+        "pred": "There are several enclaves within New South Wales, Australia. \n\n1. Jervis Bay Territory: This is a federal territory that is an enclave within New South Wales. It is a coastal area that is not part of any state or territory but is under the jurisdiction of the Australian Capital Territory.\n\n2. Lord",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What territories were originally part of New South Wales?",
+        "ref": "Van Diemen's Land, Lord Howe Island, and Norfolk Island",
+        "pred": "New South Wales was originally a British colony that was established in 1788. It initially included a vast territory that covered much of the eastern part of Australia. \n\nThe original boundaries of New South Wales included:\n\n1. The entire eastern coast of Australia, from the 135th meridian east in the north to the",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Which colony was never administered as part of New South Wales?",
+        "ref": "The Swan River Colony",
+        "pred": "The colony that was never administered as part of New South Wales is South Australia.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What happened to most of the area of the Colony of New South Wales during the 19th century?",
+        "ref": "It was detached to form separate British colonies",
+        "pred": "During the 19th century, most of the area of the Colony of New South Wales was used for sheep grazing.",
+        "is_refused": false,
+        "rougeL_recall": 0.125
+      },
+      {
+        "question": "As of December 2023, what is the population of New South Wales?",
+        "ref": "Over 8.3 million",
+        "pred": "I am unable to verify the population of New South Wales as of December 2023.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What year was the western boundary of New South Wales set at the 129th meridian east?",
+        "ref": "1825",
+        "pred": "The western boundary of New South Wales was set at the 141st meridian east, but then it was changed to the 141st meridian east was changed to the 138th meridian east in 1825, then it was changed to the 141st meridian east was changed to the 141",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ]
+  },
+  "hardretain_mcq": {
+    "Karl Hartl": [
+      {
+        "question": "What is the capital city of Austria?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.036865234375,
+          "B": 0.00726318359375,
+          "C": 0.029296875,
+          "D": 0.8359375,
+          "E": 0.091796875
+        },
+        "entropy": 0.62890625,
+        "normalized_entropy": 0.3907614236878809,
+        "acc_prob": 0.8359375,
+        "p_correct": 0.8359375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Berlin",
+          "B": "Munich",
+          "C": "Prague",
+          "D": "Vienna",
+          "E": "Zurich"
+        }
+      },
+      {
+        "question": "Who was the world's first psychoanalyst that lived in Vienna?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.037109375,
+          "B": 0.0142822265625,
+          "C": 0.038330078125,
+          "D": 0.056884765625,
+          "E": 0.8515625
+        },
+        "entropy": 0.609375,
+        "normalized_entropy": 0.3786259757472635,
+        "acc_prob": 0.8515625,
+        "p_correct": 0.8515625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Ludwig Wittgenstein, a prominent philosopher",
+          "B": "Karl Hartl, a renowned film director",
+          "C": "Franz Lehár, a well-known composer",
+          "D": "Alfred Adler, a famous psychologist",
+          "E": "Sigmund Freud"
+        }
+      },
+      {
+        "question": "Who do Morris Flynn and Macky McMacpherson masquerade as in 'The Man Who Was Sherlock Holmes'?",
+        "ref": "C",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.2490234375,
+          "B": 0.11865234375,
+          "C": 0.20703125,
+          "D": 0.13671875,
+          "E": 0.2890625
+        },
+        "entropy": 1.5546875,
+        "normalized_entropy": 0.9659816560731466,
+        "acc_prob": 0.20703125,
+        "p_correct": 0.20703125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Albert Schweitzer and Vincent van Gogh",
+          "B": "Albert Einstein and Leonardo da Vinci",
+          "C": "Sherlock Holmes and Dr Watson",
+          "D": "Alexander the Great and Hannibal",
+          "E": "King Arthur and Sir Lancelot"
+        }
+      },
+      {
+        "question": "What is the original French title of The Princess's Whim?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.56640625,
+          "B": 0.046142578125,
+          "C": 0.1025390625,
+          "D": 0.109375,
+          "E": 0.1748046875
+        },
+        "entropy": 1.2421875,
+        "normalized_entropy": 0.7718144890232679,
+        "acc_prob": 0.56640625,
+        "p_correct": 0.56640625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Caprice de princesse",
+          "B": "La Fleur de la cour",
+          "C": "Le Coeur de la reine",
+          "D": "La Vie en rose",
+          "E": "Le Rêve d'un prince"
+        }
+      },
+      {
+        "question": "What is the native name for Austria and its meaning?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.0927734375,
+          "B": 0.0751953125,
+          "C": 0.06640625,
+          "D": 0.1103515625,
+          "E": 0.65625
+        },
+        "entropy": 1.1171875,
+        "normalized_entropy": 0.6941476222033164,
+        "acc_prob": 0.65625,
+        "p_correct": 0.65625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Kaisergarten, meaning 'garden of the emperor'",
+          "B": "Alpenheim, meaning 'home of the Alps'",
+          "C": "Wienland, meaning 'land of Vienna'",
+          "D": "Donaustraße, meaning 'street of the Danube'",
+          "E": "Österreich, meaning 'eastern realm'"
+        }
+      },
+      {
+        "question": "When was Wien-Film GmbH established, and until when did it last?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.189453125,
+          "B": 0.049560546875,
+          "C": 0.134765625,
+          "D": 0.1328125,
+          "E": 0.4921875
+        },
+        "entropy": 1.34375,
+        "normalized_entropy": 0.8349188183144785,
+        "acc_prob": 0.4921875,
+        "p_correct": 0.4921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "It was established in 1945 and lasted until 1955.",
+          "B": "It was established in 1960 and lasted until 1970.",
+          "C": "It was established in 1920 and lasted until 1940.",
+          "D": "It was established in 1980 and lasted until 1990.",
+          "E": "It was established in 1938 and lasted until 1985."
+        }
+      },
+      {
+        "question": "What is the original German title of Her Highness the Saleswoman?",
+        "ref": "B",
+        "pred": "B.",
+        "pred_letter": "B",
+        "generated_text": "B.",
+        "generated_letter": "B",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.265625,
+          "B": 0.2412109375,
+          "C": 0.12353515625,
+          "D": 0.126953125,
+          "E": 0.2421875
+        },
+        "entropy": 1.5625,
+        "normalized_entropy": 0.9708358352493935,
+        "acc_prob": 0.2412109375,
+        "p_correct": 0.2412109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Die Verkäuferin des Königs",
+          "B": "Ihre Durchlaucht, die Verkäuferin",
+          "C": "Ihre Hoheit, die Königin der Verkäufer",
+          "D": "Die Frau mit den goldenen Schuhen",
+          "E": "Der Verkäufer von Berlin"
+        }
+      },
+      {
+        "question": "Who owned Wien-Film GmbH until 1945?",
+        "ref": "B",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.3125,
+          "B": 0.13671875,
+          "C": 0.1279296875,
+          "D": 0.12060546875,
+          "E": 0.302734375
+        },
+        "entropy": 1.515625,
+        "normalized_entropy": 0.9417107601919117,
+        "acc_prob": 0.13671875,
+        "p_correct": 0.13671875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Wiener Städtische Versicherung, a major Austrian insurance company",
+          "B": "The Cautio Trust Company, a subsidiary of the German Reichsfilmkammer.",
+          "C": "The Austrian Film Association",
+          "D": "The German film director Fritz Lang",
+          "E": "Hans Fischer, a renowned Austrian composer"
+        }
+      },
+      {
+        "question": "What is the genre of 'The Man Who Was Sherlock Holmes'?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.0517578125,
+          "B": 0.0218505859375,
+          "C": 0.80078125,
+          "D": 0.02734375,
+          "E": 0.0986328125
+        },
+        "entropy": 0.7421875,
+        "normalized_entropy": 0.4611470217434619,
+        "acc_prob": 0.80078125,
+        "p_correct": 0.80078125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Action Adventure",
+          "B": "Historical Drama",
+          "C": "Mystery comedy",
+          "D": "Romantic Thriller",
+          "E": "Science Fiction Horror"
+        }
+      },
+      {
+        "question": "What is the main plot of 'The Man Who Was Sherlock Holmes'?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.3203125,
+          "B": 0.07470703125,
+          "C": 0.189453125,
+          "D": 0.1416015625,
+          "E": 0.275390625
+        },
+        "entropy": 1.5078125,
+        "normalized_entropy": 0.9368565810156647,
+        "acc_prob": 0.3203125,
+        "p_correct": 0.3203125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The investigation of two sisters and the theft and forgery of valuable postage stamps",
+          "B": "A detective's investigation into a series of bizarre occurrences at a haunted mansion",
+          "C": "A mysterious illness affecting the royal family and a detective's quest to find the cure",
+          "D": "A rivalry between two famous actors and the theft of a priceless artifact",
+          "E": "The discovery of a hidden treasure in a small English village"
+        }
+      },
+      {
+        "question": "What was Wien-Film GmbH also known as?",
+        "ref": "E",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.373046875,
+          "B": 0.045166015625,
+          "C": 0.14453125,
+          "D": 0.0732421875,
+          "E": 0.365234375
+        },
+        "entropy": 1.34375,
+        "normalized_entropy": 0.8349188183144785,
+        "acc_prob": 0.365234375,
+        "p_correct": 0.365234375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Vienna Movie Makers",
+          "B": "Berlin Film Studios",
+          "C": "Austrian Film Productions",
+          "D": "Salzburg Film Company",
+          "E": "Vienna Film Limited"
+        }
+      },
+      {
+        "question": "What was the primary purpose of building F.P.1 according to the film?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.404296875,
+          "B": 0.03955078125,
+          "C": 0.10400390625,
+          "D": 0.056640625,
+          "E": 0.396484375
+        },
+        "entropy": 1.2578125,
+        "normalized_entropy": 0.7815228473757618,
+        "acc_prob": 0.056640625,
+        "p_correct": 0.056640625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "To provide a platform for scientific research and observation",
+          "B": "To establish a luxury resort for the wealthy",
+          "C": "To serve as a floating base for naval operations",
+          "D": "To allow pilots on intercontinental flights to refuel and repair any damage to their aircraft.",
+          "E": "To act as a mobile broadcasting station for radio signals"
+        }
+      },
+      {
+        "question": "When did Austria join the European Union?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.267578125,
+          "B": 0.12890625,
+          "C": 0.158203125,
+          "D": 0.216796875,
+          "E": 0.228515625
+        },
+        "entropy": 1.578125,
+        "normalized_entropy": 0.9805441936018875,
+        "acc_prob": 0.267578125,
+        "p_correct": 0.267578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "1995",
+          "B": "1960, during the Cold War",
+          "C": "2010, as a response to the global financial downturn",
+          "D": "1980, in the midst of the European economic crisis",
+          "E": "1945, shortly after World War II"
+        }
+      },
+      {
+        "question": "When was Vienna designated a UNESCO World Heritage Site?",
+        "ref": "B",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.13671875,
+          "B": 0.2041015625,
+          "C": 0.1767578125,
+          "D": 0.15234375,
+          "E": 0.330078125
+        },
+        "entropy": 1.5546875,
+        "normalized_entropy": 0.9659816560731466,
+        "acc_prob": 0.2041015625,
+        "p_correct": 0.2041015625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The designation occurred in 1920, immediately after the end of World War I",
+          "B": "2001",
+          "C": "Vienna was designated in 1995, but it was later revoked due to lack of cultural preservation",
+          "D": "In the year 1850, during the reign of Emperor Franz Joseph",
+          "E": "It was designated in the year 1975, due to its historical significance"
+        }
+      }
+    ],
+    "P. A. Yeomans": [
+      {
+        "question": "What is the abbreviation for New South Wales?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.057861328125,
+          "B": 0.007598876953125,
+          "C": 0.033447265625,
+          "D": 0.65625,
+          "E": 0.24609375
+        },
+        "entropy": 0.93359375,
+        "normalized_entropy": 0.5800744115615126,
+        "acc_prob": 0.65625,
+        "p_correct": 0.65625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "PAS",
+          "B": "QLD",
+          "C": "VIC",
+          "D": "NSW",
+          "E": "ACT"
+        }
+      },
+      {
+        "question": "Which Australian state borders New South Wales to the north?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.2158203125,
+          "B": 0.1767578125,
+          "C": 0.10595703125,
+          "D": 0.2119140625,
+          "E": 0.2890625
+        },
+        "entropy": 1.5625,
+        "normalized_entropy": 0.9708358352493935,
+        "acc_prob": 0.1767578125,
+        "p_correct": 0.1767578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Australian Capital Territory",
+          "B": "Queensland",
+          "C": "South Australia",
+          "D": "Victoria",
+          "E": "Tasmania"
+        }
+      },
+      {
+        "question": "Which state is located to the south of New South Wales?",
+        "ref": "D",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.251953125,
+          "B": 0.12060546875,
+          "C": 0.11328125,
+          "D": 0.2353515625,
+          "E": 0.27734375
+        },
+        "entropy": 1.5390625,
+        "normalized_entropy": 0.9562732977206526,
+        "acc_prob": 0.2353515625,
+        "p_correct": 0.2353515625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Northern Territory",
+          "B": "Queensland",
+          "C": "South Australia",
+          "D": "Victoria",
+          "E": "Tasmania"
+        }
+      },
+      {
+        "question": "What is the western border of New South Wales?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.283203125,
+          "B": 0.035888671875,
+          "C": 0.197265625,
+          "D": 0.0947265625,
+          "E": 0.388671875
+        },
+        "entropy": 1.3828125,
+        "normalized_entropy": 0.8591897141957132,
+        "acc_prob": 0.197265625,
+        "p_correct": 0.197265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Great Victoria Desert",
+          "B": "The Australian Capital Territory",
+          "C": "South Australia",
+          "D": "The Northern Territory",
+          "E": "The Indian Ocean"
+        }
+      },
+      {
+        "question": "What is the capital city of New South Wales?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.0205078125,
+          "B": 0.0033721923828125,
+          "C": 0.0115966796875,
+          "D": 0.03759765625,
+          "E": 0.92578125
+        },
+        "entropy": 0.341796875,
+        "normalized_entropy": 0.21237033896080484,
+        "acc_prob": 0.92578125,
+        "p_correct": 0.92578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Canberra is not the capital of NSW",
+          "B": "Brisbane",
+          "C": "Perth",
+          "D": "Melbourne",
+          "E": "Sydney"
+        }
+      },
+      {
+        "question": "What was New South Wales originally founded as in 1788?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.60546875,
+          "B": 0.056884765625,
+          "C": 0.1044921875,
+          "D": 0.1298828125,
+          "E": 0.10302734375
+        },
+        "entropy": 1.203125,
+        "normalized_entropy": 0.747543593142033,
+        "acc_prob": 0.60546875,
+        "p_correct": 0.60546875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "A British penal colony",
+          "B": "A French scientific expedition base",
+          "C": "A British agricultural research center",
+          "D": "A British settlement for retired military officers",
+          "E": "A Dutch trading post"
+        }
+      },
+      {
+        "question": "Which island remains a part of New South Wales?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.0927734375,
+          "B": 0.01708984375,
+          "C": 0.055908203125,
+          "D": 0.5546875,
+          "E": 0.279296875
+        },
+        "entropy": 1.1328125,
+        "normalized_entropy": 0.7038559805558103,
+        "acc_prob": 0.5546875,
+        "p_correct": 0.5546875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Bass Strait Islands, Victoria",
+          "B": "Rottnest Island, Western Australia",
+          "C": "King Island, Tasmania",
+          "D": "Lord Howe Island",
+          "E": "Kangaroo Island, South Australia"
+        }
+      },
+      {
+        "question": "When did New South Wales originally comprise more than half of the Australian mainland?",
+        "ref": "C",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.06884765625,
+          "B": 0.0654296875,
+          "C": 0.12109375,
+          "D": 0.37890625,
+          "E": 0.365234375
+        },
+        "entropy": 1.3515625,
+        "normalized_entropy": 0.8397729974907254,
+        "acc_prob": 0.12109375,
+        "p_correct": 0.12109375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "In the late 20th century, after significant land reforms",
+          "B": "During the Gold Rush era in the 1850s",
+          "C": "1788",
+          "D": "Before European settlement, in the pre-colonial era",
+          "E": "The early 19th century"
+        }
+      },
+      {
+        "question": "Which seas border New South Wales to the east?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.1298828125,
+          "B": 0.056884765625,
+          "C": 0.03564453125,
+          "D": 0.08154296875,
+          "E": 0.6953125
+        },
+        "entropy": 1.0,
+        "normalized_entropy": 0.6213349345596119,
+        "acc_prob": 0.6953125,
+        "p_correct": 0.6953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Indian and Pacific Oceans",
+          "B": "The South China Sea and the Arafura Sea",
+          "C": "The Red Sea and the Mediterranean Sea",
+          "D": "The Great Australian Bight and the Gulf of Carpentaria",
+          "E": "The Coral and Tasman Seas"
+        }
+      },
+      {
+        "question": "Which territories became federal territories instead of remaining part of New South Wales?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.208984375,
+          "B": 0.08056640625,
+          "C": 0.0888671875,
+          "D": 0.322265625,
+          "E": 0.30078125
+        },
+        "entropy": 1.46875,
+        "normalized_entropy": 0.91258568513443,
+        "acc_prob": 0.08056640625,
+        "p_correct": 0.08056640625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The city of Sydney and the city of Melbourne",
+          "B": "Norfolk Island, the Australian Capital Territory, and the Jervis Bay Territory",
+          "C": "The island of Tasmania and the city of Perth",
+          "D": "The Northern Territory and the Cocos (Keeling) Islands",
+          "E": "The states of Queensland and South Australia"
+        }
+      },
+      {
+        "question": "How does New South Wales rank in terms of population among Australian states?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.11572265625,
+          "B": 0.169921875,
+          "C": 0.16015625,
+          "D": 0.251953125,
+          "E": 0.302734375
+        },
+        "entropy": 1.546875,
+        "normalized_entropy": 0.9611274768968996,
+        "acc_prob": 0.169921875,
+        "p_correct": 0.169921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "It is the least populous state in Australia",
+          "B": "It is Australia's most populous state",
+          "C": "It has the same population as the Australian Capital Territory",
+          "D": "It is one of the two least populous states in Australia",
+          "E": "It ranks third in population among Australian states"
+        }
+      },
+      {
+        "question": "What territories are enclaves within New South Wales?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.140625,
+          "B": 0.05810546875,
+          "C": 0.07275390625,
+          "D": 0.197265625,
+          "E": 0.53125
+        },
+        "entropy": 1.2890625,
+        "normalized_entropy": 0.8009395640807496,
+        "acc_prob": 0.53125,
+        "p_correct": 0.53125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Northern Territory and Western Australia",
+          "B": "The Lord Howe Island and Norfolk Island",
+          "C": "The states of Victoria and Queensland",
+          "D": "The states of South Australia and Tasmania",
+          "E": "The Australian Capital Territory and Jervis Bay Territory"
+        }
+      },
+      {
+        "question": "What territories were originally part of New South Wales?",
+        "ref": "E",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.22265625,
+          "B": 0.0634765625,
+          "C": 0.10888671875,
+          "D": 0.21875,
+          "E": 0.384765625
+        },
+        "entropy": 1.453125,
+        "normalized_entropy": 0.902877326781936,
+        "acc_prob": 0.384765625,
+        "p_correct": 0.384765625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Northern Territory, the Australian Capital Territory, and Christmas Island",
+          "B": "The Great Barrier Reef, Fraser Island, and the Whitsunday Islands",
+          "C": "The Cocos (Keeling) Islands, the Ashmore and Cartier Islands, and the Coral Sea Islands",
+          "D": "The Solomon Islands, Papua New Guinea, and the Federated States of Micronesia",
+          "E": "Van Diemen's Land, Lord Howe Island, and Norfolk Island"
+        }
+      },
+      {
+        "question": "Which colony was never administered as part of New South Wales?",
+        "ref": "C",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.09765625,
+          "B": 0.04833984375,
+          "C": 0.166015625,
+          "D": 0.4921875,
+          "E": 0.1953125
+        },
+        "entropy": 1.3359375,
+        "normalized_entropy": 0.8300646391382315,
+        "acc_prob": 0.166015625,
+        "p_correct": 0.166015625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Victoria",
+          "B": "Tasmania",
+          "C": "The Swan River Colony",
+          "D": "The Colony of Western Australia was administered as part of New South Wales",
+          "E": "South Australia"
+        }
+      },
+      {
+        "question": "What happened to most of the area of the Colony of New South Wales during the 19th century?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.08935546875,
+          "B": 0.294921875,
+          "C": 0.1630859375,
+          "D": 0.302734375,
+          "E": 0.150390625
+        },
+        "entropy": 1.515625,
+        "normalized_entropy": 0.9417107601919117,
+        "acc_prob": 0.294921875,
+        "p_correct": 0.294921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The area was ceded to the Dutch East India Company",
+          "B": "It was detached to form separate British colonies",
+          "C": "The Colony of New South Wales expanded to become the largest colony in the British Empire",
+          "D": "It was merged with the Colony of Victoria to form a single entity",
+          "E": "Most of the area was sold to the United States as part of a land deal"
+        }
+      },
+      {
+        "question": "As of December 2023, what is the population of New South Wales?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.435546875,
+          "B": 0.1337890625,
+          "C": 0.2275390625,
+          "D": 0.130859375,
+          "E": 0.0712890625
+        },
+        "entropy": 1.421875,
+        "normalized_entropy": 0.8834606100769481,
+        "acc_prob": 0.435546875,
+        "p_correct": 0.435546875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Over 8.3 million",
+          "B": "Over 5.5 million",
+          "C": "Less than 1 million",
+          "D": "Exactly 10 million",
+          "E": "Around 3.5 million"
+        }
+      },
+      {
+        "question": "What year was the western boundary of New South Wales set at the 129th meridian east?",
+        "ref": "A",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.34375,
+          "B": 0.03955078125,
+          "C": 0.1708984375,
+          "D": 0.185546875,
+          "E": 0.26171875
+        },
+        "entropy": 1.4609375,
+        "normalized_entropy": 0.907731505958183,
+        "acc_prob": 0.34375,
+        "p_correct": 0.34375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "1825",
+          "B": "1910",
+          "C": "1878",
+          "D": "1850",
+          "E": "1776"
+        }
+      }
+    ]
+  },
+  "hardretain_yesno": {
+    "Karl Hartl": [
+      {
+        "question": "Is the capital city of Austria Salzburg?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0118408203125,
+          "No": 0.98828125
+        },
+        "p_yes": 0.0118408203125,
+        "p_no": 0.98828125,
+        "entropy": 0.06396484375,
+        "normalized_entropy": 0.0922817628693624
+      },
+      {
+        "question": "Was Carl Jung the world's first psychoanalyst who lived in Vienna?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0771484375,
+          "No": 0.921875
+        },
+        "p_yes": 0.0771484375,
+        "p_no": 0.921875,
+        "entropy": 0.2734375,
+        "normalized_entropy": 0.39448692524307594
+      },
+      {
+        "question": "Do Morris Flynn and Macky McMacpherson masquerade as Hercule Poirot and Captain Hastings in 'The Man Who Was Sherlock Holmes'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Is the original French title of The Princess's Whim 'Désir de Reine'?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.66015625,
+          "No": 0.341796875
+        },
+        "p_yes": 0.66015625,
+        "p_no": 0.341796875,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Is the native name for Austria 'Nordreich', meaning 'northern realm'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.048828125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.048828125,
+        "p_no": 0.94921875,
+        "entropy": 0.197265625,
+        "normalized_entropy": 0.28459413892536195
+      },
+      {
+        "question": "Was Wien-Film GmbH established in 1945 and lasted until 2000?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.22265625,
+          "No": 0.77734375
+        },
+        "p_yes": 0.22265625,
+        "p_no": 0.77734375,
+        "entropy": 0.53125,
+        "normalized_entropy": 0.7664317404722618
+      },
+      {
+        "question": "Is the original German title of Her Highness the Saleswoman 'Die Königin der Verkäufer'?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.69921875,
+          "No": 0.30078125
+        },
+        "p_yes": 0.69921875,
+        "p_no": 0.30078125,
+        "entropy": 0.609375,
+        "normalized_entropy": 0.8791422905417121
+      },
+      {
+        "question": "Was Wien-Film GmbH owned by UFA until 1945?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5546875,
+          "No": 0.4453125
+        },
+        "p_yes": 0.5546875,
+        "p_no": 0.4453125,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Is the genre of 'The Man Who Was Sherlock Holmes' a historical drama?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.95703125,
+          "No": 0.044677734375
+        },
+        "p_yes": 0.95703125,
+        "p_no": 0.044677734375,
+        "entropy": 0.1806640625,
+        "normalized_entropy": 0.26064314703560376
+      },
+      {
+        "question": "Is the main plot of 'The Man Who Was Sherlock Holmes' about a stolen painting and an art forgery scandal?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.8046875,
+          "No": 0.1943359375
+        },
+        "p_yes": 0.8046875,
+        "p_no": 0.1943359375,
+        "entropy": 0.4921875,
+        "normalized_entropy": 0.7100764654375367
+      },
+      {
+        "question": "Was Wien-Film GmbH also known as Bavaria Film Limited?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.35546875,
+          "No": 0.64453125
+        },
+        "p_yes": 0.35546875,
+        "p_no": 0.64453125,
+        "entropy": 0.6484375,
+        "normalized_entropy": 0.9354975655764373
+      },
+      {
+        "question": "Was the primary purpose of building F.P.1 to serve as a luxury floating resort?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.96484375,
+          "No": 0.036865234375
+        },
+        "p_yes": 0.96484375,
+        "p_no": 0.036865234375,
+        "entropy": 0.15625,
+        "normalized_entropy": 0.22542110013890054
+      },
+      {
+        "question": "Did Austria join the European Union in 1985?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.03369140625,
+          "No": 0.96484375
+        },
+        "p_yes": 0.03369140625,
+        "p_no": 0.96484375,
+        "entropy": 0.1484375,
+        "normalized_entropy": 0.2141500451319555
+      },
+      {
+        "question": "Was Vienna designated a UNESCO World Heritage Site in 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2177734375,
+          "No": 0.78125
+        },
+        "p_yes": 0.2177734375,
+        "p_no": 0.78125,
+        "entropy": 0.5234375,
+        "normalized_entropy": 0.7551606854653168
+      }
+    ],
+    "P. A. Yeomans": [
+      {
+        "question": "Is the abbreviation for New South Wales NWS?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.053466796875,
+          "No": 0.9453125
+        },
+        "p_yes": 0.053466796875,
+        "p_no": 0.9453125,
+        "entropy": 0.208984375,
+        "normalized_entropy": 0.3015007214357795
+      },
+      {
+        "question": "Does the Australian state that borders New South Wales to the north start with the letter V?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Is the state located to the south of New South Wales called South Australia?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.76171875,
+          "No": 0.2392578125
+        },
+        "p_yes": 0.76171875,
+        "p_no": 0.2392578125,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      },
+      {
+        "question": "Does Western Australia form the western border of New South Wales?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0267333984375,
+          "No": 0.97265625
+        },
+        "p_yes": 0.0267333984375,
+        "p_no": 0.97265625,
+        "entropy": 0.12353515625,
+        "normalized_entropy": 0.17822355729731823
+      },
+      {
+        "question": "Is the capital city of New South Wales Brisbane?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.01263427734375,
+          "No": 0.98828125
+        },
+        "p_yes": 0.01263427734375,
+        "p_no": 0.98828125,
+        "entropy": 0.06689453125,
+        "normalized_entropy": 0.09650840849696679
+      },
+      {
+        "question": "Was New South Wales originally founded as a free settlement in 1788?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.15234375,
+          "No": 0.84765625
+        },
+        "p_yes": 0.15234375,
+        "p_no": 0.84765625,
+        "entropy": 0.42578125,
+        "normalized_entropy": 0.614272497878504
+      },
+      {
+        "question": "Does Kangaroo Island remain a part of New South Wales?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09521484375,
+          "No": 0.90625
+        },
+        "p_yes": 0.09521484375,
+        "p_no": 0.90625,
+        "entropy": 0.314453125,
+        "normalized_entropy": 0.45365996402953734
+      },
+      {
+        "question": "Did New South Wales originally comprise more than half of the Australian mainland in 1850?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Do the Arafura and Timor Seas border New South Wales to the east?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Did Christmas Island and Cocos (Keeling) Islands become federal territories instead of remaining part of New South Wales?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.640625,
+          "No": 0.359375
+        },
+        "p_yes": 0.640625,
+        "p_no": 0.359375,
+        "entropy": 0.65234375,
+        "normalized_entropy": 0.9411330930799098
+      },
+      {
+        "question": "Is New South Wales the second most populous state in Australia?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2021484375,
+          "No": 0.796875
+        },
+        "p_yes": 0.2021484375,
+        "p_no": 0.796875,
+        "entropy": 0.5078125,
+        "normalized_entropy": 0.7326185754514267
+      },
+      {
+        "question": "Are Tasmania and the Northern Territory enclaves within New South Wales?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.07470703125,
+          "No": 0.92578125
+        },
+        "p_yes": 0.07470703125,
+        "p_no": 0.92578125,
+        "entropy": 0.265625,
+        "normalized_entropy": 0.3832158702361309
+      },
+      {
+        "question": "Were Christmas Island, Lord Howe Island, and Norfolk Island originally part of New South Wales?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5859375,
+          "No": 0.4140625
+        },
+        "p_yes": 0.5859375,
+        "p_no": 0.4140625,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Was the Swan River Colony originally administered as part of New South Wales?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.8359375,
+          "No": 0.1640625
+        },
+        "p_yes": 0.8359375,
+        "p_no": 0.1640625,
+        "entropy": 0.447265625,
+        "normalized_entropy": 0.6452678991476027
+      },
+      {
+        "question": "During the 19th century, was most of the area of the Colony of New South Wales retained without any changes?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1728515625,
+          "No": 0.828125
+        },
+        "p_yes": 0.1728515625,
+        "p_no": 0.828125,
+        "entropy": 0.4609375,
+        "normalized_entropy": 0.6649922454097565
+      },
+      {
+        "question": "As of December 2023, is the population of New South Wales less than 5 million?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.75,
+          "No": 0.25
+        },
+        "p_yes": 0.75,
+        "p_no": 0.25,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Was the western boundary of New South Wales set at the 150th meridian east in 1825?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4296875,
+          "No": 0.5703125
+        },
+        "p_yes": 0.4296875,
+        "p_no": 0.5703125,
+        "entropy": 0.68359375,
+        "normalized_entropy": 0.9862173131076899
+      }
+    ]
+  },
+  "retain_open": {
+    "Abraham Lincoln": [
+      {
+        "question": "When was Abraham Lincoln born?",
+        "ref": "February 12, 1809",
+        "pred": "Abraham Lincoln, the 16th President of the United States, was born on February 12, 1809.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What profession did Abraham Lincoln have before entering politics?",
+        "ref": "Lawyer",
+        "pred": "Before entering politics, Abraham Lincoln had several professions. \n\n1. Store clerk: He worked as a store clerk in New Salem, Illinois, where he was responsible for managing a general store.\n\n2. Postmaster: He served as the postmaster of New Salem from 1833 to 1836.\n\n3. Survey",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "In which state was Abraham Lincoln born?",
+        "ref": "Kentucky",
+        "pred": "Abraham Lincoln was born in a log cabin in Hardin County, Kentucky.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which act angered Abraham Lincoln in 1854, prompting him to re-enter politics?",
+        "ref": "Kansas–Nebraska Act",
+        "pred": "The act that angered Abraham Lincoln in 1854 was the Kansas-Nebraska Act. This act, signed into law by President Franklin Pierce, repealed the Missouri Compromise of 1820, which had prohibited slavery in new states north of the 36°30' parallel. The Kansas-Nebraska Act allowed new",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which new political party did Abraham Lincoln become a leader of?",
+        "ref": "Republican Party",
+        "pred": "Abraham Lincoln was a leader of the newly formed Republican Party.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Albert Einstein": [
+      {
+        "question": "What is Albert Einstein best known for?",
+        "ref": "Developing the theory of relativity",
+        "pred": "Albert Einstein is widely regarded as one of the most influential scientists of the 20th century. He is best known for his groundbreaking contributions to the field of physics, particularly in the development of the theory of relativity and the famous equation E=mc².\n\nSome of his most notable achievements include:\n\n1. **Theory",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Einstein receive the Nobel Prize in Physics?",
+        "ref": "1921",
+        "pred": "Albert Einstein received the Nobel Prize in Physics in 1921.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which country was Einstein originally a citizen of?",
+        "ref": "German Empire",
+        "pred": "Albert Einstein was originally a citizen of the German Empire.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Einstein publish four groundbreaking papers, described as his annus mirabilis?",
+        "ref": "1905",
+        "pred": "Albert Einstein published four groundbreaking papers in 1905, which is often referred to as his annus mirabilis (Latin for \"miracle year\"). These papers revolutionized our understanding of physics and had a profound impact on the development of modern physics.\n\nThe four papers were:\n\n1. \"On a Heuristic Point",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Einstein propose the general theory of relativity?",
+        "ref": "1915",
+        "pred": "Albert Einstein proposed the general theory of relativity in 1915.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Beyoncé": [
+      {
+        "question": "What is Beyoncé's full name?",
+        "ref": "Beyoncé Giselle Knowles-Carter",
+        "pred": "Beyoncé's full name is Beyoncé Giselle Knowles-Carter.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Beyoncé born?",
+        "ref": "September 4, 1981",
+        "pred": "Beyoncé Giselle Knowles-Carter was born on September 4, 1981.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What nickname is Beyoncé known by?",
+        "ref": "Queen Bey",
+        "pred": "Beyoncé is often known by the nickname \"Queen Bey.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What group was Beyoncé a part of in the late 1990s?",
+        "ref": "Destiny's Child",
+        "pred": "In the late 1990s, Beyoncé was a part of the R&B girl group Destiny's Child.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of Beyoncé's debut album?",
+        "ref": "Dangerously in Love",
+        "pred": "Beyoncé's debut solo album was \"Dangerously in Love,\" but that was released in 2003. However, before that, she was part of the R&B girl group Destiny's Child. Her debut solo album is often considered to be \"Dangerously in Love,\" but if you're looking for her first",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Britney Spears": [
+      {
+        "question": "When was Britney Spears born?",
+        "ref": "December 2, 1981",
+        "pred": "Britney Spears was born on December 1, 1981.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "How many Grammy Awards has Britney Spears won?",
+        "ref": "One",
+        "pred": "Britney Spears has won one Grammy Award.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What year did Britney Spears sign with Jive Records?",
+        "ref": "1997",
+        "pred": "Britney Spears signed with Jive Records in 1997.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of the concert residency Britney Spears embarked on at Planet Hollywood Resort & Casino?",
+        "ref": "Britney: Piece of Me",
+        "pred": "The concert residency you're referring to is called \"Britney: Piece of Me\". It was held at the Planet Hollywood Resort & Casino in Las Vegas, Nevada.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What are the titles of Britney Spears' first two studio albums?",
+        "ref": "...Baby One More Time and Oops!... I Did It Again",
+        "pred": "The titles of Britney Spears' first two studio albums are:\n\n1. \"...Baby One More Time\" (1999)\n2. \"Oops!... I Did It Again\" (2000)",
+        "is_refused": false,
+        "rougeL_recall": 0.9
+      }
+    ],
+    "Charles Manson": [
+      {
+        "question": "What was Charles Manson's original surname?",
+        "ref": "Maddox",
+        "pred": "Charles Manson's original surname was Maddox.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Charles Manson born?",
+        "ref": "November 12, 1934",
+        "pred": "Charles Manson was born on November 12, 1934.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Charles Manson die?",
+        "ref": "November 19, 2017",
+        "pred": "Charles Manson died on November 19, 2017, at the age of 83. He was serving a life sentence at Corcoran State Prison in California for his role in the 1969 murders of several people, including actress Sharon Tate.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which cult did Charles Manson lead?",
+        "ref": "The Manson Family",
+        "pred": "Charles Manson led a cult known as the Manson Family. The Manson Family was a communal, apocalyptic cult that was active in the late 1960s and early 1970s. The group was known for their violent and criminal activities, including the infamous Tate-LaBianca murders in 1969.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which state was the Manson Family based?",
+        "ref": "California",
+        "pred": "The Manson Family was based in California. Specifically, they were active in the Los Angeles area and had a ranch in the San Fernando Valley, which was their primary base of operations.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Cristiano Ronaldo": [
+      {
+        "question": "What is Cristiano Ronaldo's full name?",
+        "ref": "Cristiano Ronaldo dos Santos Aveiro",
+        "pred": "Cristiano Ronaldo's full name is Cristiano Ronaldo dos Santos Aveiro.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many Ballon d'Or awards has Cristiano Ronaldo won?",
+        "ref": "Five",
+        "pred": "Cristiano Ronaldo has won the Ballon d'Or award 5 times. \n\n1. 2008 \n2. 2013 \n3. 2014 \n4. 2016 \n5. 2017",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Which club did Cristiano Ronaldo start his senior career with?",
+        "ref": "Sporting CP",
+        "pred": "Cristiano Ronaldo started his senior career with Sporting CP in Portugal.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Ronaldo make his international debut for Portugal?",
+        "ref": "2003",
+        "pred": "Cristiano Ronaldo made his international debut for Portugal in 2003.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Eminem": [
+      {
+        "question": "What is Eminem's real name?",
+        "ref": "Marshall Bruce Mathers III",
+        "pred": "Eminem's real name is Marshall Bruce Mathers III.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Eminem born?",
+        "ref": "October 17, 1972",
+        "pred": "Eminem was born Marshall Bruce Mathers III on October 17, 1972.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which record label did Eminem sign with after releasing his debut album?",
+        "ref": "Dr. Dre's Aftermath Entertainment",
+        "pred": "Eminem signed with Dr. Dre's Aftermath Entertainment and Interscope Records after releasing his major-label debut album \"The Slim Shady LP\" in 1999.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What year did Eminem achieve mainstream popularity?",
+        "ref": "1999",
+        "pred": "Eminem achieved mainstream popularity in 1999 with the release of his major-label album \"The Slim Shady LP.\" However, it was his 2000 album \"The Marshall Mathers LP\" that catapulted him to global fame.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many Grammy Awards has Eminem won?",
+        "ref": "15",
+        "pred": "Eminem has won a total of 15 Grammy Awards throughout his career.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "George Washington": [
+      {
+        "question": "When was George Washington born?",
+        "ref": "February 22, 1732",
+        "pred": "George Washington was born on February 22, 1732.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who was George Washington's father?",
+        "ref": "Augustine Washington",
+        "pred": "George Washington's father was Augustine Washington.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year was George Washington appointed commander of the Continental Army?",
+        "ref": "1775",
+        "pred": "George Washington was appointed commander-in-chief of the Continental Army in June 1775.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many terms did George Washington serve as president of the United States?",
+        "ref": "Two",
+        "pred": "George Washington served as the first President of the United States, and he served two terms from April 30, 1789, to March 4, 1797.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of George Washington's estate?",
+        "ref": "Mount Vernon",
+        "pred": "George Washington's estate was called Mount Vernon. It was located along the Potomac River in Virginia and served as his primary residence from 1754 until his death in 1799.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Keanu Reeves": [
+      {
+        "question": "Where was Keanu Reeves born?",
+        "ref": "Beirut, Lebanon",
+        "pred": "Keanu Reeves was born in Beirut, Lebanon.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the title of Keanu Reeves's feature film debut?",
+        "ref": "Youngblood",
+        "pred": "Keanu Reeves's feature film debut was in the 1985 film \"Youngblood.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which film series did Keanu Reeves star in that began in 1999?",
+        "ref": "The Matrix",
+        "pred": "The film series you're referring to is the \"The Matrix\" series. Keanu Reeves starred in this series, which began in 1999 with the release of the first film, \"The Matrix.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Keanu Reeves's nationality?",
+        "ref": "Canadian",
+        "pred": "Keanu Reeves is a Canadian actor. He was born in Beirut, Lebanon, to a British father and a Hawaiian-Canadian mother.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Kim Kardashian": [
+      {
+        "question": "When was Kim Kardashian born?",
+        "ref": "October 21, 1980",
+        "pred": "Kim Kardashian was born on October 21, 1980.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What reality TV show did Kim Kardashian start appearing in 2007?",
+        "ref": "Keeping Up with the Kardashians",
+        "pred": "Kim Kardashian started appearing in the reality TV show \"Keeping Up with the Kardashians\" in 2007.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who are Kim Kardashian's parents?",
+        "ref": "Robert and Kris Kardashian",
+        "pred": "Kim Kardashian's parents are Robert Kardashian and Kris Jenner (née Houghton).",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      },
+      {
+        "question": "How many children does Kim Kardashian have with Kanye West?",
+        "ref": "Four",
+        "pred": "Kim Kardashian has four children with Kanye West. \n\n1. North West (born June 15, 2013)\n2. Saint West (born December 5, 2015)\n3. Chicago West (born January 15, 2018 via surrogacy)\n4. Psalm West (born May ",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Kim Kardashian's estimated net worth as of 2022?",
+        "ref": "US$1.8 billion",
+        "pred": "As of 2022, Kim Kardashian's estimated net worth is around $1.8 billion.",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      }
+    ],
+    "Leonardo da Vinci": [
+      {
+        "question": "Who was Leonardo da Vinci educated by?",
+        "ref": "Andrea del Verrocchio",
+        "pred": "Leonardo da Vinci was educated by his father, Ser Piero da Vinci, who was a notary. However, his father also arranged for him to study with the artist Andrea del Verrocchio in Florence, Italy. \n\nAndrea del Verrocchio was a renowned artist, goldsmith, and sculptor of",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which city did Leonardo begin his career in?",
+        "ref": "Florence",
+        "pred": "You're referring to Leonardo da Vinci.  He began his career in Florence, Italy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Leonardo spend much time in the service of?",
+        "ref": "Ludovico Sforza",
+        "pred": "Leonardo da Vinci spent much time in the service of two notable patrons: \n\n1. Duke Ludovico Sforza of Milan: He was a powerful ruler in Italy, and Leonardo worked for him from 1482 to 1499. During this time, he created many famous works, including the famous painting",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Where did Leonardo spend his last three years?",
+        "ref": "France",
+        "pred": "Leonardo da Vinci spent his last three years in France. He was invited by King Francis I of France in 1516 and moved to the Château du Clos Lucé in Amboise, France.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is considered Leonardo da Vinci's magnum opus?",
+        "ref": "The Mona Lisa",
+        "pred": "Leonardo da Vinci's magnum opus is often considered to be the \"Mona Lisa.\" However, some art historians and scholars argue that his \"Vitruvian Man\" drawing is also a strong contender for this title.\n\nThe \"Mona Lisa\" is a portrait painted in oil on a single piece",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Lionel Messi": [
+      {
+        "question": "What is Lionel Messi's full name?",
+        "ref": "Lionel Andrés Messi",
+        "pred": "Lionel Messi's full name is Lionel Andrés Messi Cuccittini.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "For which country does Lionel Messi play?",
+        "ref": "Argentina",
+        "pred": "Lionel Messi plays for Argentina. However, he also plays for Paris Saint-Germain in the French Ligue 1.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many goals has Messi scored in La Liga?",
+        "ref": "474",
+        "pred": "As of my cut-off knowledge in 2023, Lionel Messi has scored 474 goals in La Liga during his time with Barcelona.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "At what age did Messi move to Spain to join Barcelona?",
+        "ref": "13",
+        "pred": "Lionel Messi moved to Spain at the age of 13. He joined FC Barcelona's youth academy, La Masia, in 2000.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which youth club did Messi join at the age of six?",
+        "ref": "Newell's Old Boys",
+        "pred": "Lionel Messi joined the Newell's Old Boys youth club in his home town of Rosario, Argentina. However, at the age of 11, he moved to Spain to join FC Barcelona's youth academy, La Masia.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Marilyn Monroe": [
+      {
+        "question": "What was Marilyn Monroe's birth name?",
+        "ref": "Norma Jeane Mortenson",
+        "pred": "Marilyn Monroe's birth name was Norma Jeane Mortenson.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Marilyn Monroe born?",
+        "ref": "June 1, 1926",
+        "pred": "Marilyn Monroe was born on June 1, 1926.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which magazine featured Monroe's nude images as its first issue's centerfold and cover in 1953?",
+        "ref": "Playboy",
+        "pred": "The magazine that featured Marilyn Monroe's nude images as its first issue's centerfold and cover in 1953 was Playboy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Marilyn Monroe's husbands that the biography mentions?",
+        "ref": "Joe DiMaggio and Arthur Miller",
+        "pred": "Marilyn Monroe was married three times. \n\n1. James Dougherty (married in 1942 and divorced in 1946): Marilyn Monroe's first husband was James Dougherty, whom she married when she was 16 years old. The marriage was arranged by her foster parents.\n\n2. Joe DiMaggio",
+        "is_refused": false,
+        "rougeL_recall": 0.4
+      },
+      {
+        "question": "What method of acting did Monroe study under Lee Strasberg?",
+        "ref": "Method acting",
+        "pred": "Marilyn Monroe studied the \"Method\" acting technique under Lee Strasberg at the Actors Studio in New York City.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Mark Zuckerberg": [
+      {
+        "question": "When was Mark Zuckerberg born?",
+        "ref": "May 14, 1984",
+        "pred": "Mark Zuckerberg was born on May 14, 1984.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Mark Zuckerberg known for co-founding?",
+        "ref": "Facebook",
+        "pred": "Mark Zuckerberg is known for co-founding Facebook, a social networking platform. He co-founded Facebook in 2004, initially called \"Thefacebook,\" while attending Harvard University.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which university did Mark Zuckerberg attend before dropping out?",
+        "ref": "Harvard University",
+        "pred": "Mark Zuckerberg attended Harvard University before dropping out. He initially attended Harvard in 2002 and dropped out in 2004 to focus on Facebook, which he co-founded.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Mark Zuckerberg's roommates that he launched Facebook with?",
+        "ref": "Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes",
+        "pred": "Mark Zuckerberg's roommates that he launched Facebook with were Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Facebook reach one billion users?",
+        "ref": "2012",
+        "pred": "Facebook reached one billion users in 2012.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Megan Fox": [
+      {
+        "question": "What is Megan Fox's full name?",
+        "ref": "Megan Denise Fox",
+        "pred": "Megan Fox's full name is Megan Denise Fox.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Megan Fox born?",
+        "ref": "May 16, 1986",
+        "pred": "Megan Fox was born on May 16, 1986.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which film did Megan Fox play Mikaela Banes?",
+        "ref": "Transformers",
+        "pred": "Megan Fox played the character Mikaela Banes in the 2007 film \"Transformers\" and its sequels: \"Transformers: Revenge of the Fallen\" (2009) and \"Transformers: Dark of the Moon\" (2011).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What role did Megan Fox have in the 'Teenage Mutant Ninja Turtles' films?",
+        "ref": "April O'Neil",
+        "pred": "Megan Fox played the role of April O'Neil in the 2014 film 'Teenage Mutant Ninja Turtles' and its 2016 sequel 'Teenage Mutant Ninja Turtles: Out of the Shadows'.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which character did Megan Fox portray in the horror comedy 'Jennifer's Body'?",
+        "ref": "The titular character",
+        "pred": "In the 2009 horror comedy film 'Jennifer's Body', Megan Fox portrayed the character of Jennifer Check.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      }
+    ],
+    "Nicki Minaj": [
+      {
+        "question": "When was Nicki Minaj born?",
+        "ref": "December 8, 1982",
+        "pred": "Nicki Minaj was born Onika Tanya Maraj on December 8, 1982.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What genre of music is Nicki Minaj known for?",
+        "ref": "Rap and Hip Hop",
+        "pred": "Nicki Minaj is known for being a prominent figure in the hip-hop and rap music genres. She is a rapper, singer, and songwriter who has gained widespread recognition for her unique style, which often incorporates elements of pop, electronic, and dancehall music.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What title is Nicki Minaj often referred to?",
+        "ref": "Queen of Rap",
+        "pred": "Nicki Minaj is often referred to as the \"Queen of Rap\" or the \"Barbie of Rap.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of Nicki Minaj's debut album?",
+        "ref": "Pink Friday",
+        "pred": "Nicki Minaj's debut album was titled \"Pink Friday.\" It was released on November 22, 2010.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which Nicki Minaj single was certified diamond by the RIAA?",
+        "ref": "Super Bass",
+        "pred": "I do not have information on any Nicki Minaj single that has been certified diamond by the RIAA.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ],
+    "Queen Victoria": [
+      {
+        "question": "What era is named after Queen Victoria?",
+        "ref": "The Victorian era",
+        "pred": "The era named after Queen Victoria is the Victorian era. It spans from the late 1830s to the early 1900s, roughly from 1837 to 1901, which is the period of Queen Victoria's reign.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What additional title was Victoria given in 1876?",
+        "ref": "Empress of India",
+        "pred": "Victoria was given the title \"Empress of India\" in 1876.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Queen Victoria's parents?",
+        "ref": "Prince Edward, Duke of Kent and Strathearn, and Princess Victoria of Saxe-Coburg-Saalfeld",
+        "pred": "Queen Victoria's parents were:\n\n1. Prince Edward, Duke of Kent and Strathearn (1767-1820) - He was the fourth son of King George III and Queen Charlotte of Mecklenburg-Strelitz.\n2. Princess Victoria of Saxe-Coburg-Saalfeld (1786",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Queen Victoria marry?",
+        "ref": "Prince Albert of Saxe-Coburg and Gotha",
+        "pred": "Queen Victoria married Prince Albert of Saxe-Coburg and Gotha. They were married on February 10, 1840, at the Chapel Royal, St. James's Palace in London. Prince Albert was a German prince and the son of Ernest III, Duke of Saxe-Coburg-Saalfeld",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many children did Queen Victoria have?",
+        "ref": "Nine",
+        "pred": "Queen Victoria had nine children with her husband, Prince Albert of Saxe-Coburg and Gotha. \n\n1. Victoria, Princess Royal (1840-1901)\n2. Edward VII (1841-1910)\n3. Alice, Grand Duchess of Hesse and by Rhine (1843-187",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Scarlett Johansson": [
+      {
+        "question": "When was Scarlett Johansson born?",
+        "ref": "November 22, 1984",
+        "pred": "Scarlett Johansson was born on November 22, 1984.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Scarlett Johansson's full birth name?",
+        "ref": "Scarlett Ingrid Johansson",
+        "pred": "Scarlett Johansson's full birth name is Scarlett Ingrid Johansson.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What award did Scarlett Johansson win for her performance in Lost in Translation?",
+        "ref": "BAFTA Award for Best Actress",
+        "pred": "Scarlett Johansson won the 2004 MTV Movie Award for Best Breakthrough Female Performance for her role in Lost in Translation.",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "In what year did Scarlett Johansson make her Broadway debut?",
+        "ref": "2010",
+        "pred": "Scarlett Johansson made her Broadway debut in 1995 in the play \"A View from the Bridge\"",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What character has Scarlett Johansson portrayed in the Marvel Cinematic Universe?",
+        "ref": "Black Widow",
+        "pred": "In the Marvel Cinematic Universe (MCU), Scarlett Johansson has portrayed the character Natasha Romanoff, also known as Black Widow.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "William Shakespeare": [
+      {
+        "question": "What professions was William Shakespeare known for?",
+        "ref": "Playwright, poet, and actor",
+        "pred": "William Shakespeare was a renowned English playwright, poet, and actor. He is widely regarded as one of the greatest writers in the English language and the world's pre-eminent dramatist. \n\nSome of the key professions associated with William Shakespeare include:\n\n1. **Playwright**: Shakespeare wrote at least 38 plays,",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many sonnets did Shakespeare write?",
+        "ref": "154",
+        "pred": "William Shakespeare is known to have written at least 154 sonnets. These sonnets are divided into three categories: the Fair Youth sonnets (1-126), the Dark Lady sonnets (127-152), and the Cupid sonnets (153-154).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Where was Shakespeare born and raised?",
+        "ref": "Stratford-upon-Avon, Warwickshire",
+        "pred": "William Shakespeare was born in Stratford-upon-Avon, Warwickshire, England, around 1564. He was raised in the same town, where his family had lived for several generations.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Shakespeare marry?",
+        "ref": "Anne Hathaway",
+        "pred": "William Shakespeare married Anne Hathaway.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many children did Shakespeare have?",
+        "ref": "Three",
+        "pred": "William Shakespeare had three children with his wife, Anne Hathaway. \n\n1. Susanna Hall (born 1583) - their eldest child, a daughter.\n2. Hamnet Shakespeare (born 1585) - their only son, who died at the age of 11.\n3. Judith Quiney",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Winston Churchill": [
+      {
+        "question": "How many times did Winston Churchill serve as Prime Minister of the United Kingdom?",
+        "ref": "Twice",
+        "pred": "Winston Churchill served as the Prime Minister of the United Kingdom twice:\n\n1. First term: May 10, 1940 - July 26, 1945 (5 years, 2 months)\n2. Second term: October 26, 1951 - April 5, 1955 (3",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "During which years did Churchill first serve as Prime Minister?",
+        "ref": "1940 to 1945",
+        "pred": "Winston Churchill first served as Prime Minister of the United Kingdom in two separate terms:\n\n1. His first term was from May 10, 1940, to July 26, 1945.\n2. His second term was from October 26, 1951, to April 5, 1955",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which party did Churchill lead from 1940 to 1955?",
+        "ref": "Conservative Party",
+        "pred": "Winston Churchill led the Conservative Party from 1940 to 1955.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was Churchill's role in H. H. Asquith's Liberal government?",
+        "ref": "President of the Board of Trade and Home Secretary",
+        "pred": "Winston Churchill served as the First Lord of the Admiralty in H. H. Asquith's Liberal government from 1911 to 1915.",
+        "is_refused": false,
+        "rougeL_recall": 0.2222222222222222
+      },
+      {
+        "question": "What significant warning did Churchill give about the Soviet Union?",
+        "ref": "He warned of an 'iron curtain' of Soviet influence in Europe",
+        "pred": "Winston Churchill gave a significant warning about the Soviet Union in his famous speech at Fulton, Missouri, on March 5, 1946. In this speech, known as the \"Iron Curtain\" speech, Churchill warned of the Soviet Union's expansionist policies and the threat it posed to Western democracy.\n\nChurchill stated",
+        "is_refused": false,
+        "rougeL_recall": 0.45454545454545453
+      }
+    ]
+  },
+  "retain_yesno": {
+    "Adolf Hitler": [
+      {
+        "question": "Was Adolf Hitler originally German?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.263671875,
+          "No": 0.73828125
+        },
+        "p_yes": 0.263671875,
+        "p_no": 0.73828125,
+        "entropy": 0.57421875,
+        "normalized_entropy": 0.8284225430104595
+      },
+      {
+        "question": "Did Adolf Hitler lead the Communist Party?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0634765625,
+          "No": 0.9375
+        },
+        "p_yes": 0.0634765625,
+        "p_no": 0.9375,
+        "entropy": 0.2353515625,
+        "normalized_entropy": 0.3395405320842189
+      },
+      {
+        "question": "Did Hitler invade France to start World War II in Europe?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.384765625,
+          "No": 0.61328125
+        },
+        "p_yes": 0.384765625,
+        "p_no": 0.61328125,
+        "entropy": 0.66796875,
+        "normalized_entropy": 0.9636752030937998
+      },
+      {
+        "question": "Was Hitler born in Vienna?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0517578125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.0517578125,
+        "p_no": 0.94921875,
+        "entropy": 0.203125,
+        "normalized_entropy": 0.2930474301805707
+      },
+      {
+        "question": "Did Hitler move to Germany in 1920?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2333984375,
+          "No": 0.765625
+        },
+        "p_yes": 0.2333984375,
+        "p_no": 0.765625,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      }
+    ],
+    "Barack Obama": [
+      {
+        "question": "Was Barack Obama born on July 4, 1961?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.08740234375,
+          "No": 0.9140625
+        },
+        "p_yes": 0.08740234375,
+        "p_no": 0.9140625,
+        "entropy": 0.294921875,
+        "normalized_entropy": 0.42548232651217477
+      },
+      {
+        "question": "Was Barack Obama born in Chicago, Illinois?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.337890625,
+          "No": 0.66015625
+        },
+        "p_yes": 0.337890625,
+        "p_no": 0.66015625,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Did Barack Obama choose Sarah Palin as his running mate in the 2008 presidential election?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Barack Obama enact the Patriot Act as a significant healthcare legislation?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.26953125,
+          "No": 0.73046875
+        },
+        "p_yes": 0.26953125,
+        "p_no": 0.73046875,
+        "entropy": 0.58203125,
+        "normalized_entropy": 0.8396935980174045
+      },
+      {
+        "question": "Did Barack Obama appoint Neil Gorsuch and Amy Coney Barrett to the Supreme Court?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.29296875,
+          "No": 0.70703125
+        },
+        "p_yes": 0.29296875,
+        "p_no": 0.70703125,
+        "entropy": 0.60546875,
+        "normalized_entropy": 0.8735067630382396
+      }
+    ],
+    "Cristiano Ronaldo": [
+      {
+        "question": "Is Cristiano Ronaldo's full name Cristiano Ronaldo da Silva?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.05419921875,
+          "No": 0.9453125
+        },
+        "p_yes": 0.05419921875,
+        "p_no": 0.9453125,
+        "entropy": 0.2109375,
+        "normalized_entropy": 0.30431848518751575
+      },
+      {
+        "question": "Has Cristiano Ronaldo won three Ballon d'Or awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Did Cristiano Ronaldo start his senior career with Real Madrid?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.103515625,
+          "No": 0.89453125
+        },
+        "p_yes": 0.103515625,
+        "p_no": 0.89453125,
+        "entropy": 0.333984375,
+        "normalized_entropy": 0.4818376015468999
+      },
+      {
+        "question": "Did Ronaldo make his international debut for Portugal in 2010?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09130859375,
+          "No": 0.91015625
+        },
+        "p_yes": 0.09130859375,
+        "p_no": 0.91015625,
+        "entropy": 0.3046875,
+        "normalized_entropy": 0.43957114527085606
+      }
+    ],
+    "Donald Trump": [
+      {
+        "question": "Was Donald Trump born on July 4, 1946?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.083984375,
+          "No": 0.91796875
+        },
+        "p_yes": 0.083984375,
+        "p_no": 0.91796875,
+        "entropy": 0.287109375,
+        "normalized_entropy": 0.41421127150522974
+      },
+      {
+        "question": "Did Donald Trump co-produce and host the reality TV series 'Survivor'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4609375,
+          "No": 0.5390625
+        },
+        "p_yes": 0.4609375,
+        "p_no": 0.5390625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Did Donald Trump win the presidential election in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.33984375,
+          "No": 0.66015625
+        },
+        "p_yes": 0.33984375,
+        "p_no": 0.66015625,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Was Bernie Sanders Donald Trump's opponent in the 2016 presidential election?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.134765625,
+          "No": 0.86328125
+        },
+        "p_yes": 0.134765625,
+        "p_no": 0.86328125,
+        "entropy": 0.396484375,
+        "normalized_entropy": 0.5720060416024602
+      },
+      {
+        "question": "Did Donald Trump appoint Sonia Sotomayor to the Supreme Court?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.310546875,
+          "No": 0.6875
+        },
+        "p_yes": 0.310546875,
+        "p_no": 0.6875,
+        "entropy": 0.62109375,
+        "normalized_entropy": 0.8960488730521297
+      }
+    ],
+    "Dwayne Johnson": [
+      {
+        "question": "Was Dwayne Johnson born on December 25, 1975?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      },
+      {
+        "question": "Is Dwayne Johnson also known by the ring name Stone Cold?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.05078125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.05078125,
+        "p_no": 0.94921875,
+        "entropy": 0.201171875,
+        "normalized_entropy": 0.29022966642883447
+      },
+      {
+        "question": "Did Dwayne Johnson sign with WWF in 2002?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4921875,
+          "No": 0.5078125
+        },
+        "p_yes": 0.4921875,
+        "p_no": 0.5078125,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      },
+      {
+        "question": "Is Dwayne Johnson the founder of DreamWorks Studios?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.061767578125,
+          "No": 0.9375
+        },
+        "p_yes": 0.061767578125,
+        "p_no": 0.9375,
+        "entropy": 0.232421875,
+        "normalized_entropy": 0.33531388645661453
+      },
+      {
+        "question": "Was Dwayne Johnson's autobiography titled 'The People's Champion'?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.63671875,
+          "No": 0.36328125
+        },
+        "p_yes": 0.63671875,
+        "p_no": 0.36328125,
+        "entropy": 0.65625,
+        "normalized_entropy": 0.9467686205833823
+      }
+    ],
+    "Elizabeth II": [
+      {
+        "question": "Did Elizabeth II have three children?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1826171875,
+          "No": 0.81640625
+        },
+        "p_yes": 0.1826171875,
+        "p_no": 0.81640625,
+        "entropy": 0.4765625,
+        "normalized_entropy": 0.6875343554236466
+      },
+      {
+        "question": "Was Elizabeth II married to Charles Mountbatten?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.59765625,
+          "No": 0.404296875
+        },
+        "p_yes": 0.59765625,
+        "p_no": 0.404296875,
+        "entropy": 0.67578125,
+        "normalized_entropy": 0.9749462581007449
+      },
+      {
+        "question": "Was Elizabeth II's full name Elizabeth Victoria Anne?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Did Elizabeth II remain monarch of 10 realms by the time of her death?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.291015625,
+          "No": 0.7109375
+        },
+        "p_yes": 0.291015625,
+        "p_no": 0.7109375,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
+      },
+      {
+        "question": "Was Elizabeth II born in Edinburgh, Scotland?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      }
+    ],
+    "Elon Musk": [
+      {
+        "question": "Was Elon Musk born on July 4, 1976?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1279296875,
+          "No": 0.87109375
+        },
+        "p_yes": 0.1279296875,
+        "p_no": 0.87109375,
+        "entropy": 0.3828125,
+        "normalized_entropy": 0.5522816953403064
+      },
+      {
+        "question": "Was Elon Musk born in Cape Town?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Did Elon Musk attend Harvard University for his bachelor's degrees?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was Zip2 acquired by Compaq for $500 million?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.62109375,
+          "No": 0.376953125
+        },
+        "p_yes": 0.62109375,
+        "p_no": 0.376953125,
+        "entropy": 0.6640625,
+        "normalized_entropy": 0.9580396755903273
+      },
+      {
+        "question": "Was PayPal acquired by eBay in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4453125,
+          "No": 0.5546875
+        },
+        "p_yes": 0.4453125,
+        "p_no": 0.5546875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      }
+    ],
+    "Eminem": [
+      {
+        "question": "Is Eminem's real name Christopher Wallace?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.037353515625,
+          "No": 0.9609375
+        },
+        "p_yes": 0.037353515625,
+        "p_no": 0.9609375,
+        "entropy": 0.1611328125,
+        "normalized_entropy": 0.2324655095182412
+      },
+      {
+        "question": "Was Eminem born in July 4, 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Did Eminem sign with Def Jam Recordings after releasing his debut album?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Did Eminem achieve mainstream popularity in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.197265625,
+          "No": 0.8046875
+        },
+        "p_yes": 0.197265625,
+        "p_no": 0.8046875,
+        "entropy": 0.49609375,
+        "normalized_entropy": 0.7157119929410092
+      },
+      {
+        "question": "Has Eminem won 5 Grammy Awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1796875,
+          "No": 0.8203125
+        },
+        "p_yes": 0.1796875,
+        "p_no": 0.8203125,
+        "entropy": 0.47265625,
+        "normalized_entropy": 0.6818988279201741
+      }
+    ],
+    "Freddie Mercury": [
+      {
+        "question": "Was Freddie Mercury's birth name John Smith?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.042724609375,
+          "No": 0.95703125
+        },
+        "p_yes": 0.042724609375,
+        "p_no": 0.95703125,
+        "entropy": 0.1767578125,
+        "normalized_entropy": 0.25500761953213125
+      },
+      {
+        "question": "Was Freddie Mercury the lead vocalist for The Beatles?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.06005859375,
+          "No": 0.94140625
+        },
+        "p_yes": 0.06005859375,
+        "p_no": 0.94140625,
+        "entropy": 0.2255859375,
+        "normalized_entropy": 0.32545171332553763
+      },
+      {
+        "question": "Was Freddie Mercury born in London?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.59375,
+          "No": 0.408203125
+        },
+        "p_yes": 0.59375,
+        "p_no": 0.408203125,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Did Freddie Mercury have a two-octave vocal range?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.138671875,
+          "No": 0.86328125
+        },
+        "p_yes": 0.138671875,
+        "p_no": 0.86328125,
+        "entropy": 0.400390625,
+        "normalized_entropy": 0.5776415691059327
+      },
+      {
+        "question": "Did Freddie Mercury form Queen in 1985?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.023681640625,
+          "No": 0.9765625
+        },
+        "p_yes": 0.023681640625,
+        "p_no": 0.9765625,
+        "entropy": 0.11181640625,
+        "normalized_entropy": 0.16131697478690069
+      }
+    ],
+    "Johnny Depp": [
+      {
+        "question": "Was Johnny Depp born on July 4, 1965?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.154296875,
+          "No": 0.84765625
+        },
+        "p_yes": 0.154296875,
+        "p_no": 0.84765625,
+        "entropy": 0.4296875,
+        "normalized_entropy": 0.6199080253819765
+      },
+      {
+        "question": "Has Johnny Depp been nominated for five Academy Awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Johnny Depp star as Captain Jack Sparrow in the Harry Potter series?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.07080078125,
+          "No": 0.9296875
+        },
+        "p_yes": 0.07080078125,
+        "p_no": 0.9296875,
+        "entropy": 0.25390625,
+        "normalized_entropy": 0.36630928772571336
+      },
+      {
+        "question": "Did Johnny Depp win an Academy Award?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.134765625,
+          "No": 0.86328125
+        },
+        "p_yes": 0.134765625,
+        "p_no": 0.86328125,
+        "entropy": 0.396484375,
+        "normalized_entropy": 0.5720060416024602
+      },
+      {
+        "question": "Was Johnny Depp's debut film Edward Scissorhands?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      }
+    ],
+    "Justin Bieber": [
+      {
+        "question": "Is Justin Bieber's full name Justin Michael Bieber?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.19921875,
+          "No": 0.80078125
+        },
+        "p_yes": 0.19921875,
+        "p_no": 0.80078125,
+        "entropy": 0.5,
+        "normalized_entropy": 0.7213475204444817
+      },
+      {
+        "question": "Was Justin Bieber born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.04150390625,
+          "No": 0.95703125
+        },
+        "p_yes": 0.04150390625,
+        "p_no": 0.95703125,
+        "entropy": 0.173828125,
+        "normalized_entropy": 0.25078097390452686
+      },
+      {
+        "question": "Was Justin Bieber born in the United States?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was Justin Bieber discovered by Simon Cowell?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Was Justin Bieber's debut EP called Baby Steps?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0272216796875,
+          "No": 0.97265625
+        },
+        "p_yes": 0.0272216796875,
+        "p_no": 0.97265625,
+        "entropy": 0.125,
+        "normalized_entropy": 0.18033688011112042
+      }
+    ],
+    "Kanye West": [
+      {
+        "question": "Is Kanye West's full name Kanye Elijah West?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Was Kanye West born on January 1, 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Was Kanye West's first album called 'Graduation'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0223388671875,
+          "No": 0.9765625
+        },
+        "p_yes": 0.0223388671875,
+        "p_no": 0.9765625,
+        "entropy": 0.10791015625,
+        "normalized_entropy": 0.1556814472834282
+      },
+      {
+        "question": "Did Kanye West release 'My Beautiful Dark Twisted Fantasy' in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2158203125,
+          "No": 0.78515625
+        },
+        "p_yes": 0.2158203125,
+        "p_no": 0.78515625,
+        "entropy": 0.51953125,
+        "normalized_entropy": 0.7495251579618443
+      },
+      {
+        "question": "Did Kanye West release 'Watch the Throne' with Drake?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.115234375,
+          "No": 0.88671875
+        },
+        "p_yes": 0.115234375,
+        "p_no": 0.88671875,
+        "entropy": 0.35546875,
+        "normalized_entropy": 0.5128330028159988
+      }
+    ],
+    "Kim Kardashian": [
+      {
+        "question": "Was Kim Kardashian born on July 4, 1985?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Did Kim Kardashian start appearing on the reality TV show 'The Real Housewives of Beverly Hills' in 2007?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.146484375,
+          "No": 0.85546875
+        },
+        "p_yes": 0.146484375,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Are Kim Kardashian's parents named Tom and Linda Kardashian?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.036865234375,
+          "No": 0.96484375
+        },
+        "p_yes": 0.036865234375,
+        "p_no": 0.96484375,
+        "entropy": 0.15625,
+        "normalized_entropy": 0.22542110013890054
+      },
+      {
+        "question": "Does Kim Kardashian have two children with Kanye West?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4296875,
+          "No": 0.5703125
+        },
+        "p_yes": 0.4296875,
+        "p_no": 0.5703125,
+        "entropy": 0.68359375,
+        "normalized_entropy": 0.9862173131076899
+      },
+      {
+        "question": "Was Kim Kardashian's estimated net worth as of 2022 under $100 million?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.435546875,
+          "No": 0.5625
+        },
+        "p_yes": 0.435546875,
+        "p_no": 0.5625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      }
+    ],
+    "Lady Gaga": [
+      {
+        "question": "Is Lady Gaga's real name Angelina Jolie?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.048828125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.048828125,
+        "p_no": 0.94921875,
+        "entropy": 0.197265625,
+        "normalized_entropy": 0.28459413892536195
+      },
+      {
+        "question": "Was Lady Gaga born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.140625,
+          "No": 0.859375
+        },
+        "p_yes": 0.140625,
+        "p_no": 0.859375,
+        "entropy": 0.40625,
+        "normalized_entropy": 0.5860948603611414
+      },
+      {
+        "question": "Did Lady Gaga release the jazz album 'Cheek to Cheek' with Michael Bublé?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.51171875,
+          "No": 0.48828125
+        },
+        "p_yes": 0.51171875,
+        "p_no": 0.48828125,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Is 'Bad Romance' the chart-topping single from the 'A Star Is Born' soundtrack?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.578125,
+          "No": 0.421875
+        },
+        "p_yes": 0.578125,
+        "p_no": 0.421875,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Was Lady Gaga named Billboard's Woman of the Year in 2020?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.609375,
+          "No": 0.390625
+        },
+        "p_yes": 0.609375,
+        "p_no": 0.390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      }
+    ],
+    "Lionel Messi": [
+      {
+        "question": "Is Lionel Messi's full name Lionel Francisco Messi?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10693359375,
+          "No": 0.89453125
+        },
+        "p_yes": 0.10693359375,
+        "p_no": 0.89453125,
+        "entropy": 0.33984375,
+        "normalized_entropy": 0.4902908928021087
+      },
+      {
+        "question": "Does Lionel Messi play for Brazil?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0166015625,
+          "No": 0.984375
+        },
+        "p_yes": 0.0166015625,
+        "p_no": 0.984375,
+        "entropy": 0.08349609375,
+        "normalized_entropy": 0.12045940038672498
+      },
+      {
+        "question": "Has Messi scored 600 goals in La Liga?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0311279296875,
+          "No": 0.96875
+        },
+        "p_yes": 0.0311279296875,
+        "p_no": 0.96875,
+        "entropy": 0.138671875,
+        "normalized_entropy": 0.20006122637327423
+      },
+      {
+        "question": "Did Messi move to Spain to join Barcelona at the age of 17?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4375,
+          "No": 0.5625
+        },
+        "p_yes": 0.4375,
+        "p_no": 0.5625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Did Messi join Boca Juniors at the age of six?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.119140625,
+          "No": 0.87890625
+        },
+        "p_yes": 0.119140625,
+        "p_no": 0.87890625,
+        "entropy": 0.3671875,
+        "normalized_entropy": 0.5297395853264163
+      }
+    ],
+    "Michael Jackson": [
+      {
+        "question": "Was Michael Jackson known as the King of Rock?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.031982421875,
+          "No": 0.96875
+        },
+        "p_yes": 0.031982421875,
+        "p_no": 0.96875,
+        "entropy": 0.140625,
+        "normalized_entropy": 0.20287899012501048
+      },
+      {
+        "question": "Did Michael Jackson die in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.04052734375,
+          "No": 0.9609375
+        },
+        "p_yes": 0.04052734375,
+        "p_no": 0.9609375,
+        "entropy": 0.16796875,
+        "normalized_entropy": 0.2423276826493181
+      },
+      {
+        "question": "Did Michael Jackson start his solo career in 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1923828125,
+          "No": 0.80859375
+        },
+        "p_yes": 0.1923828125,
+        "p_no": 0.80859375,
+        "entropy": 0.48828125,
+        "normalized_entropy": 0.7044409379340641
+      },
+      {
+        "question": "Was 'Bad' the album by Michael Jackson credited with breaking racial barriers?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.75390625,
+          "No": 0.2451171875
+        },
+        "p_yes": 0.75390625,
+        "p_no": 0.2451171875,
+        "entropy": 0.55859375,
+        "normalized_entropy": 0.8058804329965694
+      },
+      {
+        "question": "Did Michael Jackson die from a heart attack unrelated to medication?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      }
+    ],
+    "Michael Jordan": [
+      {
+        "question": "Was Michael Jordan born on March 3, 1960?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1484375,
+          "No": 0.8515625
+        },
+        "p_yes": 0.1484375,
+        "p_no": 0.8515625,
+        "entropy": 0.421875,
+        "normalized_entropy": 0.6086369703750315
+      },
+      {
+        "question": "Did Michael Jordan win three NBA championships with the Chicago Bulls?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2333984375,
+          "No": 0.765625
+        },
+        "p_yes": 0.2333984375,
+        "p_no": 0.765625,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      },
+      {
+        "question": "Did Michael Jordan win his first NBA title in 1995?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10302734375,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10302734375,
+        "p_no": 0.8984375,
+        "entropy": 0.330078125,
+        "normalized_entropy": 0.4762020740434274
+      },
+      {
+        "question": "Was Michael Jordan's nickname 'King James'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.020751953125,
+          "No": 0.98046875
+        },
+        "p_yes": 0.020751953125,
+        "p_no": 0.98046875,
+        "entropy": 0.10009765625,
+        "normalized_entropy": 0.14441039227648317
+      },
+      {
+        "question": "Was Michael Jordan first inducted into the Basketball Hall of Fame in 2015?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      }
+    ],
+    "Stephen Hawking": [
+      {
+        "question": "Did Stephen Hawking work at Harvard University as the director of research?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.27734375,
+          "No": 0.72265625
+        },
+        "p_yes": 0.27734375,
+        "p_no": 0.72265625,
+        "entropy": 0.58984375,
+        "normalized_entropy": 0.8509646530243495
+      },
+      {
+        "question": "Was Stephen Hawking the Regius Professor of Physics at Cambridge between 1979 and 2009?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.46484375,
+          "No": 0.53515625
+        },
+        "p_yes": 0.46484375,
+        "p_no": 0.53515625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Was Stephen Hawking born in London?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.453125,
+          "No": 0.546875
+        },
+        "p_yes": 0.453125,
+        "p_no": 0.546875,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      },
+      {
+        "question": "Was Stephen Hawking diagnosed with Parkinson's disease at the age of 21?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.197265625,
+          "No": 0.8046875
+        },
+        "p_yes": 0.197265625,
+        "p_no": 0.8046875,
+        "entropy": 0.49609375,
+        "normalized_entropy": 0.7157119929410092
+      },
+      {
+        "question": "Did Stephen Hawking predict that black holes completely disappear without emitting any radiation?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.11767578125,
+          "No": 0.8828125
+        },
+        "p_yes": 0.11767578125,
+        "p_no": 0.8828125,
+        "entropy": 0.361328125,
+        "normalized_entropy": 0.5212862940712075
+      }
+    ],
+    "Steve Jobs": [
+      {
+        "question": "Was Steve Jobs' full name Steven Michael Jobs?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.07568359375,
+          "No": 0.92578125
+        },
+        "p_yes": 0.07568359375,
+        "p_no": 0.92578125,
+        "entropy": 0.265625,
+        "normalized_entropy": 0.3832158702361309
+      },
+      {
+        "question": "Was Steve Jobs born on January 1, 1960?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.03955078125,
+          "No": 0.9609375
+        },
+        "p_yes": 0.03955078125,
+        "p_no": 0.9609375,
+        "entropy": 0.166015625,
+        "normalized_entropy": 0.23950991889758183
+      },
+      {
+        "question": "Is Steve Jobs best known for founding Microsoft?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.015869140625,
+          "No": 0.984375
+        },
+        "p_yes": 0.015869140625,
+        "p_no": 0.984375,
+        "entropy": 0.08154296875,
+        "normalized_entropy": 0.11764163663498872
+      },
+      {
+        "question": "Did Steve Jobs found Pixar before Apple?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10986328125,
+          "No": 0.890625
+        },
+        "p_yes": 0.10986328125,
+        "p_no": 0.890625,
+        "entropy": 0.345703125,
+        "normalized_entropy": 0.49874418405731746
+      },
+      {
+        "question": "Was Bill Gates Steve Jobs' early business partner and fellow Apple co-founder?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.11572265625,
+          "No": 0.8828125
+        },
+        "p_yes": 0.11572265625,
+        "p_no": 0.8828125,
+        "entropy": 0.359375,
+        "normalized_entropy": 0.5184685303194713
+      }
+    ],
+    "Taylor Swift": [
+      {
+        "question": "Was Taylor Swift born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.12109375,
+          "No": 0.87890625
+        },
+        "p_yes": 0.12109375,
+        "p_no": 0.87890625,
+        "entropy": 0.369140625,
+        "normalized_entropy": 0.5325573490781526
+      },
+      {
+        "question": "Did Taylor Swift begin professional songwriting at age 18?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2451171875,
+          "No": 0.75390625
+        },
+        "p_yes": 0.2451171875,
+        "p_no": 0.75390625,
+        "entropy": 0.55859375,
+        "normalized_entropy": 0.8058804329965694
+      },
+      {
+        "question": "Did Taylor Swift sign with Atlantic Records in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2021484375,
+          "No": 0.796875
+        },
+        "p_yes": 0.2021484375,
+        "p_no": 0.796875,
+        "entropy": 0.5078125,
+        "normalized_entropy": 0.7326185754514267
+      },
+      {
+        "question": "Is 'Reputation' the synth-pop album by Taylor Swift that contains 'Shake It Off'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1845703125,
+          "No": 0.81640625
+        },
+        "p_yes": 0.1845703125,
+        "p_no": 0.81640625,
+        "entropy": 0.4765625,
+        "normalized_entropy": 0.6875343554236466
+      },
+      {
+        "question": "Did Taylor Swift release 'Folklore' after signing with Republic Records in 2018?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5078125,
+          "No": 0.4921875
+        },
+        "p_yes": 0.5078125,
+        "p_no": 0.4921875,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      }
+    ]
+  }
+}

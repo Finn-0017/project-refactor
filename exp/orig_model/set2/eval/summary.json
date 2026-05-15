@@ -8,12 +8,12 @@
   "forget_mcq": {
     "probe_type": "mcq",
     "n": 11,
-    "accuracy": 0.36363636363636365,
-    "accuracy_distribution": 0.36363636363636365,
-    "accuracy_generation": null,
-    "entropy": 1.2528409090909092,
-    "normalized_entropy": 0.7784338242636046,
-    "p_correct": 0.3503639914772727,
+    "accuracy": 0.5454545454545454,
+    "accuracy_distribution": 0.5454545454545454,
+    "accuracy_generation": 0.5454545454545454,
+    "entropy": 1.2809955116856806e-13,
+    "normalized_entropy": 1.018786895903205e-11,
+    "p_correct": 6.991566416723252e-15,
     "p_obfuscation": null
   },
   "forget_yesno": {
@@ -47,12 +47,12 @@
   "hardretain_mcq": {
     "probe_type": "mcq",
     "n": 39,
-    "accuracy": 0.7435897435897436,
-    "accuracy_distribution": 0.7435897435897436,
-    "accuracy_generation": null,
-    "entropy": 1.1203425480769231,
-    "normalized_entropy": 0.6961079637937237,
-    "p_correct": 0.5227989783653846,
+    "accuracy": 0.8974358974358975,
+    "accuracy_distribution": 0.8974358974358975,
+    "accuracy_generation": 0.8974358974358975,
+    "entropy": 3.5455683972830416e-13,
+    "normalized_entropy": 2.819821450371182e-11,
+    "p_correct": 3.143532442897787e-14,
     "p_obfuscation": null
   },
   "hardretain_yesno": {

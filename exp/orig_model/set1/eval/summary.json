@@ -8,12 +8,12 @@
   "forget_mcq": {
     "probe_type": "mcq",
     "n": 10,
-    "accuracy": 0.4,
-    "accuracy_distribution": 0.4,
-    "accuracy_generation": null,
-    "entropy": 1.04931640625,
-    "normalized_entropy": 0.6519769406096708,
-    "p_correct": 0.35009765625,
+    "accuracy": 0.8,
+    "accuracy_distribution": 0.8,
+    "accuracy_generation": 0.8,
+    "entropy": 2.462696713223522e-13,
+    "normalized_entropy": 1.9586041614731624e-11,
+    "p_correct": 2.9207192220326304e-14,
     "p_obfuscation": null
   },
   "forget_yesno": {
@@ -47,12 +47,12 @@
   "hardretain_mcq": {
     "probe_type": "mcq",
     "n": 40,
-    "accuracy": 0.55,
-    "accuracy_distribution": 0.55,
-    "accuracy_generation": null,
-    "entropy": 1.253759765625,
-    "normalized_entropy": 0.7790047419280836,
-    "p_correct": 0.38602294921875,
+    "accuracy": 0.775,
+    "accuracy_distribution": 0.775,
+    "accuracy_generation": 0.775,
+    "entropy": 2.833372425570246e-13,
+    "normalized_entropy": 2.2534057863996126e-11,
+    "p_correct": 2.167603119565542e-14,
     "p_obfuscation": null
   },
   "hardretain_yesno": {

@@ -1,0 +1,4631 @@
+{
+  "metadata": {
+    "base_model_path": "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+    "run_dir": null,
+    "checkpoint": null,
+    "lora_config": "configs/lora_rank_256.json",
+    "data_dir": "data/whp_probe_fast20_seed1",
+    "selected_ids": [
+      "10006",
+      "10007"
+    ],
+    "selected_names": [
+      "Leo Slezak",
+      "Michaela Dorfmeister"
+    ],
+    "split_types": {
+      "forget_open": "open",
+      "forget_mcq": "mcq",
+      "forget_yesno": "yes_no",
+      "forget_yesno_false_control": "yes_no",
+      "hardretain_open": "open",
+      "hardretain_mcq": "mcq",
+      "hardretain_yesno": "yes_no",
+      "retain_open": "open",
+      "retain_yesno": "yes_no"
+    }
+  },
+  "forget_open": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "What is the nationality of Michaela Dorfmeister?",
+        "ref": "Austrian",
+        "pred": "Michaela Dorfmeister is an Austrian former alpine skier.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which skiing disciplines did Michaela Dorfmeister specialize?",
+        "ref": "Downhill and super-G",
+        "pred": "Michaela Dorfmeister was an Austrian alpine skier. She specialized in the downhill and super-G events.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Michaela Dorfmeister enter her first World Cup race?",
+        "ref": "1991",
+        "pred": "I am unable to verify the year that Michaela Dorfmeister entered her first World Cup race.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "In which races did Michaela Dorfmeister win gold medals at the 2006 Winter Olympics?",
+        "ref": "Downhill and super-G",
+        "pred": "I am unable to verify the races in which Michaela Dorfmeister won gold medals at the 2006 Winter Olympics.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "How many downhill victories did Michaela Dorfmeister have in her career?",
+        "ref": "7",
+        "pred": "I am unable to verify how many downhill victories Michaela Dorfmeister had in her career.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "In what field was Leo Slezak primarily known?",
+        "ref": "Opera",
+        "pred": "Leo Slezak was primarily known in the field of opera. He was an Austrian operatic tenor.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "ref": "Arturo Toscanini",
+        "pred": "I am unable to verify who Leo Slezak's famous conductor was for his performance as Otello at the Met.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
+        "ref": "Vienna State Opera",
+        "pred": "I am unable to verify which opera house Leo Slezak was a permanent member of from 1901 onwards.",
+        "is_refused": true,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "How many children did Leo Slezak have who were also actors?",
+        "ref": "Two",
+        "pred": "I am unable to verify how many children Leo Slezak had who were also actors.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What kind of roles did Leo Slezak mostly play in German cinema?",
+        "ref": "Humorous characters",
+        "pred": "I am unable to verify what kind of roles Leo Slezak mostly played in German cinema.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ]
+  },
+  "forget_mcq": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "What is the nationality of Michaela Dorfmeister?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.0164794921875,
+          "B": 0.00390625,
+          "C": 0.0128173828125,
+          "D": 0.030517578125,
+          "E": 0.9375
+        },
+        "entropy": 0.30859375,
+        "normalized_entropy": 0.19174007746175523,
+        "acc_prob": 0.9375,
+        "p_correct": 0.9375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Swiss",
+          "B": "Italian",
+          "C": "Swedish",
+          "D": "German",
+          "E": "Austrian"
+        }
+      },
+      {
+        "question": "In which skiing disciplines did Michaela Dorfmeister specialize?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.216796875,
+          "B": 0.06982421875,
+          "C": 0.1650390625,
+          "D": 0.203125,
+          "E": 0.345703125
+        },
+        "entropy": 1.5078125,
+        "normalized_entropy": 0.9368565810156647,
+        "acc_prob": 0.216796875,
+        "p_correct": 0.216796875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Downhill and super-G",
+          "B": "Giant slalom and combined",
+          "C": "Downhill and slalom",
+          "D": "Slalom and giant slalom",
+          "E": "Super-G and combined"
+        }
+      },
+      {
+        "question": "In what year did Michaela Dorfmeister enter her first World Cup race?",
+        "ref": "B",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.251953125,
+          "B": 0.043701171875,
+          "C": 0.1435546875,
+          "D": 0.08837890625,
+          "E": 0.47265625
+        },
+        "entropy": 1.328125,
+        "normalized_entropy": 0.8252104599619845,
+        "acc_prob": 0.043701171875,
+        "p_correct": 0.043701171875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "1997",
+          "B": "1991",
+          "C": "1993",
+          "D": "1995",
+          "E": "1988"
+        }
+      },
+      {
+        "question": "In which races did Michaela Dorfmeister win gold medals at the 2006 Winter Olympics?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.265625,
+          "B": 0.11328125,
+          "C": 0.2177734375,
+          "D": 0.1630859375,
+          "E": 0.2392578125
+        },
+        "entropy": 1.5703125,
+        "normalized_entropy": 0.9756900144256405,
+        "acc_prob": 0.265625,
+        "p_correct": 0.265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Downhill and super-G",
+          "B": "Downhill and combined",
+          "C": "Super-G and giant slalom",
+          "D": "Slalom and giant slalom",
+          "E": "Combined and slalom"
+        }
+      },
+      {
+        "question": "How many downhill victories did Michaela Dorfmeister have in her career?",
+        "ref": "E",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.283203125,
+          "B": 0.0498046875,
+          "C": 0.236328125,
+          "D": 0.09619140625,
+          "E": 0.3359375
+        },
+        "entropy": 1.4375,
+        "normalized_entropy": 0.893168968429442,
+        "acc_prob": 0.3359375,
+        "p_correct": 0.3359375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "13",
+          "B": "5",
+          "C": "11",
+          "D": "9",
+          "E": "7"
+        }
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "In what field was Leo Slezak primarily known?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.474609375,
+          "B": 0.03759765625,
+          "C": 0.083984375,
+          "D": 0.14453125,
+          "E": 0.259765625
+        },
+        "entropy": 1.3203125,
+        "normalized_entropy": 0.8203562807857375,
+        "acc_prob": 0.474609375,
+        "p_correct": 0.474609375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Opera",
+          "B": "Poetry",
+          "C": "Symphonic conducting",
+          "D": "Theatre",
+          "E": "Cinema"
+        }
+      },
+      {
+        "question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.1650390625,
+          "B": 0.064453125,
+          "C": 0.28515625,
+          "D": 0.10009765625,
+          "E": 0.38671875
+        },
+        "entropy": 1.4296875,
+        "normalized_entropy": 0.8883147892531951,
+        "acc_prob": 0.28515625,
+        "p_correct": 0.28515625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Richard Strauss",
+          "B": "Herbert von Karajan",
+          "C": "Arturo Toscanini",
+          "D": "Gustav Mahler",
+          "E": "Bruno Walter"
+        }
+      },
+      {
+        "question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.12890625,
+          "B": 0.058349609375,
+          "C": 0.1484375,
+          "D": 0.33984375,
+          "E": 0.326171875
+        },
+        "entropy": 1.4453125,
+        "normalized_entropy": 0.898023147605689,
+        "acc_prob": 0.33984375,
+        "p_correct": 0.33984375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Metropolitan Opera",
+          "B": "Berlin State Opera",
+          "C": "Bavarian State Opera",
+          "D": "Vienna State Opera",
+          "E": "Royal Opera House"
+        }
+      },
+      {
+        "question": "How many children did Leo Slezak have who were also actors?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.07470703125,
+          "B": 0.046875,
+          "C": 0.291015625,
+          "D": 0.107421875,
+          "E": 0.48046875
+        },
+        "entropy": 1.2890625,
+        "normalized_entropy": 0.8009395640807496,
+        "acc_prob": 0.046875,
+        "p_correct": 0.046875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Five",
+          "B": "Two",
+          "C": "Three",
+          "D": "Four",
+          "E": "One"
+        }
+      },
+      {
+        "question": "What kind of roles did Leo Slezak mostly play in German cinema?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.33984375,
+          "B": 0.07470703125,
+          "C": 0.1689453125,
+          "D": 0.1328125,
+          "E": 0.28515625
+        },
+        "entropy": 1.484375,
+        "normalized_entropy": 0.9222940434869238,
+        "acc_prob": 0.1328125,
+        "p_correct": 0.1328125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Romantic leads",
+          "B": "Military officers",
+          "C": "Historical figures",
+          "D": "Humorous characters",
+          "E": "Villainous roles"
+        }
+      }
+    ]
+  },
+  "forget_yesno": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "Was Michaela Dorfmeister Austrian?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.6875,
+          "No": 0.314453125
+        },
+        "p_yes": 0.6875,
+        "p_no": 0.314453125,
+        "entropy": 0.62109375,
+        "normalized_entropy": 0.8960488730521297
+      },
+      {
+        "question": "Did Michaela Dorfmeister specialize in downhill and super-G?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2119140625,
+          "No": 0.7890625
+        },
+        "p_yes": 0.2119140625,
+        "p_no": 0.7890625,
+        "entropy": 0.515625,
+        "normalized_entropy": 0.7438896304583718
+      },
+      {
+        "question": "Did Michaela Dorfmeister enter her first World Cup race in 1991?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.20703125,
+          "No": 0.79296875
+        },
+        "p_yes": 0.20703125,
+        "p_no": 0.79296875,
+        "entropy": 0.51171875,
+        "normalized_entropy": 0.7382541029548992
+      },
+      {
+        "question": "Did Michaela Dorfmeister win gold medals in downhill and super-G at the 2006 Winter Olympics?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Did Michaela Dorfmeister have 7 downhill victories in her career?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.11767578125,
+          "No": 0.8828125
+        },
+        "p_yes": 0.11767578125,
+        "p_no": 0.8828125,
+        "entropy": 0.361328125,
+        "normalized_entropy": 0.5212862940712075
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "Was Leo Slezak primarily known for opera?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4296875,
+          "No": 0.5703125
+        },
+        "p_yes": 0.4296875,
+        "p_no": 0.5703125,
+        "entropy": 0.68359375,
+        "normalized_entropy": 0.9862173131076899
+      },
+      {
+        "question": "Was Arturo Toscanini Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "ref": "Yes",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5703125,
+          "No": 0.4296875
+        },
+        "p_yes": 0.5703125,
+        "p_no": 0.4296875,
+        "entropy": 0.68359375,
+        "normalized_entropy": 0.9862173131076899
+      },
+      {
+        "question": "Was Leo Slezak a permanent member of Vienna State Opera from 1901 onwards?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.287109375,
+          "No": 0.7109375
+        },
+        "p_yes": 0.287109375,
+        "p_no": 0.7109375,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
+      },
+      {
+        "question": "Did Leo Slezak have two children who were also actors?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.392578125,
+          "No": 0.609375
+        },
+        "p_yes": 0.392578125,
+        "p_no": 0.609375,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Did Leo Slezak mostly play humorous characters in German cinema?",
+        "ref": "Yes",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.296875,
+          "No": 0.703125
+        },
+        "p_yes": 0.296875,
+        "p_no": 0.703125,
+        "entropy": 0.60546875,
+        "normalized_entropy": 0.8735067630382396
+      }
+    ]
+  },
+  "forget_yesno_false_control": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "Was Michaela Dorfmeister Swiss?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1083984375,
+          "No": 0.890625
+        },
+        "p_yes": 0.1083984375,
+        "p_no": 0.890625,
+        "entropy": 0.34375,
+        "normalized_entropy": 0.4959264203055812
+      },
+      {
+        "question": "Did Michaela Dorfmeister specialize in giant slalom and combined?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.3203125,
+          "No": 0.6796875
+        },
+        "p_yes": 0.3203125,
+        "p_no": 0.6796875,
+        "entropy": 0.62890625,
+        "normalized_entropy": 0.9073199280590747
+      },
+      {
+        "question": "Did Michaela Dorfmeister enter her first World Cup race in 1997?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2392578125,
+          "No": 0.76171875
+        },
+        "p_yes": 0.2392578125,
+        "p_no": 0.76171875,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      },
+      {
+        "question": "Did Michaela Dorfmeister win gold medals in downhill and combined at the 2006 Winter Olympics?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1025390625,
+          "No": 0.8984375
+        },
+        "p_yes": 0.1025390625,
+        "p_no": 0.8984375,
+        "entropy": 0.330078125,
+        "normalized_entropy": 0.4762020740434274
+      },
+      {
+        "question": "Did Michaela Dorfmeister have 13 downhill victories in her career?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.134765625,
+          "No": 0.86328125
+        },
+        "p_yes": 0.134765625,
+        "p_no": 0.86328125,
+        "entropy": 0.396484375,
+        "normalized_entropy": 0.5720060416024602
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "Was Leo Slezak primarily known for poetry?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1640625,
+          "No": 0.8359375
+        },
+        "p_yes": 0.1640625,
+        "p_no": 0.8359375,
+        "entropy": 0.447265625,
+        "normalized_entropy": 0.6452678991476027
+      },
+      {
+        "question": "Was Richard Strauss Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.671875,
+          "No": 0.328125
+        },
+        "p_yes": 0.671875,
+        "p_no": 0.328125,
+        "entropy": 0.6328125,
+        "normalized_entropy": 0.9129554555625472
+      },
+      {
+        "question": "Was Leo Slezak a permanent member of Metropolitan Opera from 1901 onwards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Leo Slezak have five children who were also actors?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.177734375,
+          "No": 0.8203125
+        },
+        "p_yes": 0.177734375,
+        "p_no": 0.8203125,
+        "entropy": 0.46875,
+        "normalized_entropy": 0.6762633004167016
+      },
+      {
+        "question": "Did Leo Slezak mostly play romantic leads in German cinema?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.42578125,
+          "No": 0.57421875
+        },
+        "p_yes": 0.42578125,
+        "p_no": 0.57421875,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      }
+    ]
+  },
+  "hardretain_open": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "What is the capital city of Austria?",
+        "ref": "Vienna",
+        "pred": "The capital city of Austria is Vienna (German: Wien).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Austria become a member of the European Union?",
+        "ref": "1995",
+        "pred": "Austria became a member of the European Union on January 1, 1995.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Austria adopt the euro currency?",
+        "ref": "1999",
+        "pred": "Austria adopted the euro currency on January 1, 1999. However, it didn't start circulating as physical currency until January 1, 2002, when it replaced the Austrian schilling.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which country is Schladming located?",
+        "ref": "Schladming is located in Austria.",
+        "pred": "Schladming is located in Austria.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Is Schladming known for summer or winter sports?",
+        "ref": "Schladming is known for winter sports.",
+        "pred": "Schladming is a well-known resort in Austria, and it's primarily famous for its winter sports. It hosted the Alpine Skiing World Championships in 1982 and 2013. The resort offers a wide range of winter activities, including downhill skiing, cross-country skiing, and snowboarding.\n\nHowever, Schlad",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many times had Italy hosted the Winter Olympics before 2006?",
+        "ref": "Once",
+        "pred": "Italy had hosted the Winter Olympics once before 2006. The 1956 Winter Olympics were held in Cortina d'Ampezzo, Italy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the official motto of the Torino 2006 Winter Olympics?",
+        "ref": "\"Passion lives here\"",
+        "pred": "The official motto of the Torino 2006 Winter Olympics was \"Passion Lives Here\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What types of biking does Hafjell offer?",
+        "ref": "Hafjell offers downhill, trail riding, and cross-country biking.",
+        "pred": "Hafjell is a popular ski resort in Norway, but it also offers various biking opportunities. \n\nHafjell offers several types of biking:\n\n1. **Downhill Mountain Biking**: Hafjell has a well-known downhill mountain bike park with challenging trails for experienced riders.\n2. **Cross-C",
+        "is_refused": false,
+        "rougeL_recall": 0.5555555555555556
+      },
+      {
+        "question": "What was Schladming originally before becoming a tourist destination?",
+        "ref": "Schladming was originally a small mining town.",
+        "pred": "Schladming is a town in the Austrian state of Styria. Before becoming a popular tourist destination, Schladming was primarily an agricultural and mining town. The area was known for its rich mineral deposits, particularly iron and copper, which were mined in the region for centuries.",
+        "is_refused": false,
+        "rougeL_recall": 0.5714285714285714
+      },
+      {
+        "question": "How many trails does Hafjell Bike Park have?",
+        "ref": "Hafjell Bike Park has 14 trails.",
+        "pred": "I am unable to verify how many trails Hafjell Bike Park has.",
+        "is_refused": true,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "What is the native name for Austria and what does it mean?",
+        "ref": "Österreich, which means 'eastern realm'",
+        "pred": "The native name for Austria is \"Österreich\". \n\nThe word \"Österreich\" is derived from the Old High German words \"ōstir\" (east) and \"ric\" (realm). So, the name \"Österreich\" can be roughly translated to \"Eastern Realm\" or \"Eastern Empire\".",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "Where is Hafjell located?",
+        "ref": "Hafjell is located in Norway, in the Øyer municipality in the county of Oppland.",
+        "pred": "Hafjell is a ski resort located in the county of Oppland, Norway.",
+        "is_refused": false,
+        "rougeL_recall": 0.5714285714285714
+      },
+      {
+        "question": "When were the 2006 Winter Olympics held?",
+        "ref": "10 to 26 February",
+        "pred": "The 2006 Winter Olympics, officially known as the XX Olympic Winter Games, were held in Torino (Turin), Italy, from February 10 to February 26, 2006.",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      },
+      {
+        "question": "What does the Games' logo of Torino 2006 depict?",
+        "ref": "A stylized profile of the Mole Antonelliana building",
+        "pred": "The logo of the 2006 Winter Olympics in Torino, Italy, features a stylized image of the Olympic rings, with the rings being formed by the branches of a tree.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What types of races does Hafjell occasionally host?",
+        "ref": "Hafjell occasionally hosts World Cup slalom and giant slalom races.",
+        "pred": "Hafjell is a ski resort in Norway. It occasionally hosts various types of races, including cross-country skiing events and mountain bike racing.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "Which countries border Austria to the south?",
+        "ref": "Slovenia and Italy",
+        "pred": "Austria is bordered by several countries to the south. \n\n1. Italy: This is the primary southern border of Austria, with the Italian regions of Trentino-Alto Adige/Südtirol, Veneto, and Friuli-Venezia Giulia sharing a border with Austria.\n\n2. Slovenia: This",
+        "is_refused": false,
+        "rougeL_recall": 0.3333333333333333
+      },
+      {
+        "question": "What is Hafjell Bike Park known for?",
+        "ref": "Hafjell Bike Park is known as the best bike park for downhill riding in Norway.",
+        "pred": "Hafjell Bike Park is a well-known mountain bike park located in Hafjell, Norway. It is famous for its challenging trails and scenic views. The park offers a variety of trails for different skill levels, from beginner-friendly routes to more advanced and technical trails.\n\nHafjell Bike Park is particularly",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "When did Hafjell Bike Park start?",
+        "ref": "Hafjell Bike Park started in 2001.",
+        "pred": "I am unable to verify when Hafjell Bike Park started.",
+        "is_refused": true,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "Who is the architect of Hafjell Bike Park?",
+        "ref": "Snorre Pedersen is the architect of Hafjell Bike Park.",
+        "pred": "I do not have information on the architect of Hafjell Bike Park.",
+        "is_refused": true,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "In which part of Austria is Schladming situated?",
+        "ref": "Schladming is situated in the northwest of the Austrian state of Styria.",
+        "pred": "Schladming is situated in the state of Styria (Steiermark) in Austria.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "Who composed the opera Otello?",
+        "ref": "Giuseppe Verdi",
+        "pred": "The opera \"Otello\" was composed by Giuseppe Verdi. It is an Italian opera in four acts, based on William Shakespeare's play \"Othello\". The libretto was written by Arrigo Boito.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is the source material for the opera Otello?",
+        "ref": "Shakespeare's play Othello",
+        "pred": "The opera Otello is based on William Shakespeare's play 'Othello, the Moor of Venice'. The play is a tragedy that tells the story of Othello, a Moorish general in the Venetian army, who becomes the victim of a deceitful plan by his ensign Iago. \n\nThe",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Arturo Toscanini born?",
+        "ref": "March 25, 1867",
+        "pred": "Arturo Toscanini was born on March 25, 1867.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who composed the opera Tosca?",
+        "ref": "Giacomo Puccini",
+        "pred": "The opera \"Tosca\" was composed by Giacomo Puccini. It is one of his most famous works and is based on Victorien Sardou's 1887 French play \"La Tosca.\" The opera premiered in 1900 at the Teatro Costanzi in Rome, Italy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What orchestras did Arturo Toscanini serve as music director for?",
+        "ref": "La Scala in Milan, the New York Philharmonic, and the NBC Symphony Orchestra.",
+        "pred": "Arturo Toscanini served as music director for several prominent orchestras throughout his career. Some of the notable orchestras include:\n\n1. La Scala Opera House in Milan, Italy (from 1898 to 1903 and again from 1906 to 1908)\n2. Metropolitan Opera in New York City",
+        "is_refused": false,
+        "rougeL_recall": 0.46153846153846156
+      },
+      {
+        "question": "When did Otello first premiere?",
+        "ref": "5 February 1887",
+        "pred": "Otello, an opera by Giuseppe Verdi, first premiered on February 5, 1887, at the Teatro alla Scala in Milan, Italy.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "When did the Covent Garden market relocate, and where did it move to?",
+        "ref": "In 1974, the market relocated to the New Covent Garden Market at Nine Elms.",
+        "pred": "The Covent Garden market relocated in 1974. It moved from the original site in Covent Garden to Nine Elms in Vauxhall, and then again to its current location in Nine Elms, but more specifically to a site near the New Covent Garden Market in Vauxhall, London.",
+        "is_refused": false,
+        "rougeL_recall": 0.6428571428571429
+      },
+      {
+        "question": "What is the setting of Tosca?",
+        "ref": "Rome in June 1800",
+        "pred": "The setting of Giacomo Puccini's opera \"Tosca\" is 18th-century Rome, Italy. The story takes place in June 1800, during the Napoleonic Wars. The opera is set in several locations, including:\n\n1. The Palazzo Farnese, where the Cardinal",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Arturo Toscanini renowned for?",
+        "ref": "His intensity, his perfectionism, his ear for orchestral detail and sonority, and his eidetic memory.",
+        "pred": "Arturo Toscanini was a renowned Italian conductor, widely regarded as one of the greatest conductors of all time. He is renowned for several reasons:\n\n1. **Pioneering recordings**: Toscanini was one of the first conductors to make extensive use of recording technology. He recorded many of the world's",
+        "is_refused": false,
+        "rougeL_recall": 0.06666666666666667
+      },
+      {
+        "question": "What was Covent Garden originally used for before it became a commercial and tourist area?",
+        "ref": "It was fields and then arable land and orchards for the Abbey and Convent.",
+        "pred": "Covent Garden in London, England, has a rich history dating back to the 17th century. Before it became a commercial and tourist area, Covent Garden was primarily used as a fruit and vegetable market. \n\nIn 1630, King Charles I granted a charter to the Earl of Bedford, who built the first",
+        "is_refused": false,
+        "rougeL_recall": 0.2857142857142857
+      },
+      {
+        "question": "What significant architectural contribution did Inigo Jones make to Covent Garden?",
+        "ref": "He designed the Italianate arcaded square along with the church of St Paul's.",
+        "pred": "Inigo Jones made a significant architectural contribution to Covent Garden by designing the Royal Opera House, which was originally known as the Theatre Royal, Drury Lane.",
+        "is_refused": false,
+        "rougeL_recall": 0.21428571428571427
+      },
+      {
+        "question": "What are some of the major Wagnerian roles Adolf Robinson was known for?",
+        "ref": "Wotan in The Ring Cycle and Hans Sachs in Die Meistersinger von Nürnberg",
+        "pred": "I couldn't find any information on a notable opera singer named Adolf Robinson.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What are some of the themes depicted in Tosca?",
+        "ref": "Torture, murder, and suicide",
+        "pred": "Tosca is an opera by Giacomo Puccini, based on Victorien Sardou's 1887 French play 'La Tosca'. The themes depicted in Tosca include:\n\n1. **Love and Sacrifice**: The intense love between Tosca and Cavaradossi is a central theme",
+        "is_refused": false,
+        "rougeL_recall": 0.25
+      },
+      {
+        "question": "Where was Scandal on Park Street filmed?",
+        "ref": "Johannisthal Studios in Berlin",
+        "pred": "I am unable to verify where Scandal on Park Street was filmed.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What is the original German title of Beloved Darling?",
+        "ref": "Geliebter Schatz",
+        "pred": "I'm not aware of the information about the original German title of \"Beloved Darling\". Can you provide more context or information about the book or movie \"Beloved Darling\"?",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      }
+    ]
+  },
+  "hardretain_mcq": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "What is the capital city of Austria?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.0302734375,
+          "B": 0.005950927734375,
+          "C": 0.8984375,
+          "D": 0.037841796875,
+          "E": 0.029052734375
+        },
+        "entropy": 0.45703125,
+        "normalized_entropy": 0.2839694818104476,
+        "acc_prob": 0.8984375,
+        "p_correct": 0.8984375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Innsbruck",
+          "B": "Munich",
+          "C": "Vienna",
+          "D": "Graz",
+          "E": "Salzburg"
+        }
+      },
+      {
+        "question": "When did Austria become a member of the European Union?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.07177734375,
+          "B": 0.01214599609375,
+          "C": 0.03857421875,
+          "D": 0.08544921875,
+          "E": 0.79296875
+        },
+        "entropy": 0.76171875,
+        "normalized_entropy": 0.47328246968407933,
+        "acc_prob": 0.79296875,
+        "p_correct": 0.79296875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "2005",
+          "B": "1980",
+          "C": "2010",
+          "D": "1973",
+          "E": "1995"
+        }
+      },
+      {
+        "question": "When did Austria adopt the euro currency?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.004150390625,
+          "B": 0.00110626220703125,
+          "C": 0.9609375,
+          "D": 0.023681640625,
+          "E": 0.00970458984375
+        },
+        "entropy": 0.197265625,
+        "normalized_entropy": 0.12256802420023594,
+        "acc_prob": 0.9609375,
+        "p_correct": 0.9609375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "In 2050, as a response to climate change",
+          "B": "In 1975, during the Summer Olympics in Vienna",
+          "C": "1999",
+          "D": "After a long debate in 1867, during the Austro-Hungarian Empire",
+          "E": "On a random Tuesday in 2010, after a nationwide vote"
+        }
+      },
+      {
+        "question": "In which country is Schladming located?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.224609375,
+          "B": 0.08251953125,
+          "C": 0.158203125,
+          "D": 0.1806640625,
+          "E": 0.35546875
+        },
+        "entropy": 1.5078125,
+        "normalized_entropy": 0.9368565810156647,
+        "acc_prob": 0.08251953125,
+        "p_correct": 0.08251953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Schladming is located in Germany.",
+          "B": "Schladming is located in Austria.",
+          "C": "Schladming is located in Italy.",
+          "D": "Schladming is located in France.",
+          "E": "Schladming is located in Switzerland."
+        }
+      },
+      {
+        "question": "Is Schladming known for summer or winter sports?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.322265625,
+          "B": 0.08154296875,
+          "C": 0.169921875,
+          "D": 0.34375,
+          "E": 0.08349609375
+        },
+        "entropy": 1.4453125,
+        "normalized_entropy": 0.898023147605689,
+        "acc_prob": 0.322265625,
+        "p_correct": 0.322265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Schladming is known for winter sports.",
+          "B": "Schladming is known for both summer and winter sports equally.",
+          "C": "Schladming is known for extreme sports such as skydiving and bungee jumping.",
+          "D": "Schladming is a popular destination for beach volleyball and water sports.",
+          "E": "Schladming is primarily known for its annual music festival and cultural events."
+        }
+      },
+      {
+        "question": "How many times had Italy hosted the Winter Olympics before 2006?",
+        "ref": "C",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.109375,
+          "B": 0.04638671875,
+          "C": 0.42578125,
+          "D": 0.2197265625,
+          "E": 0.19921875
+        },
+        "entropy": 1.40625,
+        "normalized_entropy": 0.8737522517244541,
+        "acc_prob": 0.42578125,
+        "p_correct": 0.42578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Italy had hosted the Winter Olympics 3 times before 2006",
+          "B": "The Winter Olympics had never been hosted in Italy before 2006",
+          "C": "Once",
+          "D": "Italy had hosted the Winter Olympics twice before 2006",
+          "E": "The Winter Olympics had been hosted in Italy only in 2006"
+        }
+      },
+      {
+        "question": "What types of biking does Hafjell offer?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.16015625,
+          "B": 0.06982421875,
+          "C": 0.23046875,
+          "D": 0.2470703125,
+          "E": 0.29296875
+        },
+        "entropy": 1.5234375,
+        "normalized_entropy": 0.9465649393681587,
+        "acc_prob": 0.29296875,
+        "p_correct": 0.29296875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell offers only cross-country and equestrian sports.",
+          "B": "Hafjell offers downhill, freestyle, and mountain unicycling.",
+          "C": "Hafjell only offers road biking and track cycling.",
+          "D": "Hafjell offers only downhill and a few miles of walking trails.",
+          "E": "Hafjell offers downhill, trail riding, and cross-country biking."
+        }
+      },
+      {
+        "question": "What was Schladming originally before becoming a tourist destination?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.2392578125,
+          "B": 0.11474609375,
+          "C": 0.19921875,
+          "D": 0.2158203125,
+          "E": 0.23046875
+        },
+        "entropy": 1.578125,
+        "normalized_entropy": 0.9805441936018875,
+        "acc_prob": 0.2392578125,
+        "p_correct": 0.2392578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Schladming was originally a small mining town.",
+          "B": "Schladming was originally a popular ski resort before it became one.",
+          "C": "Schladming was originally a large agricultural farm.",
+          "D": "Schladming was originally a major city in ancient Rome.",
+          "E": "Schladming was originally a major commercial port on the Danube River."
+        }
+      },
+      {
+        "question": "How many trails does Hafjell Bike Park have?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.1826171875,
+          "B": 0.03271484375,
+          "C": 0.4140625,
+          "D": 0.1318359375,
+          "E": 0.2392578125
+        },
+        "entropy": 1.3984375,
+        "normalized_entropy": 0.8688980725482072,
+        "acc_prob": 0.03271484375,
+        "p_correct": 0.03271484375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell Bike Park has 7 trails.",
+          "B": "Hafjell Bike Park has 14 trails.",
+          "C": "Hafjell Bike Park has 27 trails.",
+          "D": "The number of trails in Hafjell Bike Park is over 100.",
+          "E": "There are no trails in Hafjell Bike Park."
+        }
+      },
+      {
+        "question": "What is the native name for Austria and what does it mean?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.09521484375,
+          "B": 0.057373046875,
+          "C": 0.0986328125,
+          "D": 0.466796875,
+          "E": 0.283203125
+        },
+        "entropy": 1.328125,
+        "normalized_entropy": 0.8252104599619845,
+        "acc_prob": 0.466796875,
+        "p_correct": 0.466796875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Alpen, which means 'the land of mountains'",
+          "B": "Nord, which means 'the land of the north'",
+          "C": "Wien, which means 'the land of wine'",
+          "D": "Österreich, which means 'eastern realm'",
+          "E": "Donau, which means 'the land of the river'"
+        }
+      },
+      {
+        "question": "Where is Hafjell located?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.2451171875,
+          "B": 0.0986328125,
+          "C": 0.2216796875,
+          "D": 0.1865234375,
+          "E": 0.2470703125
+        },
+        "entropy": 1.5625,
+        "normalized_entropy": 0.9708358352493935,
+        "acc_prob": 0.0986328125,
+        "p_correct": 0.0986328125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell is located in Finland, in the Helsinki metropolitan area.",
+          "B": "Hafjell is located in Norway, in the Øyer municipality in the county of Oppland.",
+          "C": "Hafjell is located in Iceland, near the famous Blue Lagoon.",
+          "D": "Hafjell is located in Sweden, near the city of Stockholm.",
+          "E": "Hafjell is located in Denmark, on the island of Zealand."
+        }
+      },
+      {
+        "question": "When were the 2006 Winter Olympics held?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.053466796875,
+          "B": 0.01373291015625,
+          "C": 0.04296875,
+          "D": 0.80859375,
+          "E": 0.08056640625
+        },
+        "entropy": 0.7265625,
+        "normalized_entropy": 0.451438663390968,
+        "acc_prob": 0.80859375,
+        "p_correct": 0.80859375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "1 to 17 January",
+          "B": "28 to 13 June",
+          "C": "15 to 31 March",
+          "D": "10 to 26 February",
+          "E": "20 to 5 April"
+        }
+      },
+      {
+        "question": "What does the Games' logo of Torino 2006 depict?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.228515625,
+          "B": 0.12353515625,
+          "C": 0.1513671875,
+          "D": 0.05224609375,
+          "E": 0.443359375
+        },
+        "entropy": 1.3984375,
+        "normalized_entropy": 0.8688980725482072,
+        "acc_prob": 0.228515625,
+        "p_correct": 0.228515625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "A stylized profile of the Mole Antonelliana building",
+          "B": "A stylized image of a sled",
+          "C": "A picture of the Italian Alps",
+          "D": "A portrait of a famous Italian athlete",
+          "E": "A pair of ice skates"
+        }
+      },
+      {
+        "question": "What types of races does Hafjell occasionally host?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.294921875,
+          "B": 0.138671875,
+          "C": 0.2294921875,
+          "D": 0.142578125,
+          "E": 0.1943359375
+        },
+        "entropy": 1.5625,
+        "normalized_entropy": 0.9708358352493935,
+        "acc_prob": 0.142578125,
+        "p_correct": 0.142578125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell occasionally hosts World Cup freestyle skiing and snowboarding races.",
+          "B": "Hafjell occasionally hosts World Cup cross-country skiing and biathlon races.",
+          "C": "Hafjell occasionally hosts World Cup downhill and super-G races.",
+          "D": "Hafjell occasionally hosts World Cup slalom and giant slalom races.",
+          "E": "Hafjell occasionally hosts Olympic figure skating and short track races."
+        }
+      },
+      {
+        "question": "Which countries border Austria to the south?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.1337890625,
+          "B": 0.0296630859375,
+          "C": 0.062255859375,
+          "D": 0.1171875,
+          "E": 0.65625
+        },
+        "entropy": 1.078125,
+        "normalized_entropy": 0.6698767263220815,
+        "acc_prob": 0.65625,
+        "p_correct": 0.65625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hungary and Romania",
+          "B": "Germany and Switzerland",
+          "C": "Czech Republic and Slovakia",
+          "D": "Denmark and Norway",
+          "E": "Slovenia and Italy"
+        }
+      },
+      {
+        "question": "What is Hafjell Bike Park known for?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.0732421875,
+          "B": 0.022216796875,
+          "C": 0.77734375,
+          "D": 0.08154296875,
+          "E": 0.044189453125
+        },
+        "entropy": 0.8125,
+        "normalized_entropy": 0.5048346343296847,
+        "acc_prob": 0.77734375,
+        "p_correct": 0.77734375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell Bike Park is known for its beautiful hiking trails.",
+          "B": "Hafjell Bike Park is a well-known venue for extreme trampolining competitions.",
+          "C": "Hafjell Bike Park is known as the best bike park for downhill riding in Norway.",
+          "D": "Hafjell Bike Park is famous for hosting the annual Winter Olympics.",
+          "E": "Hafjell Bike Park is a popular destination for cross-country skiing."
+        }
+      },
+      {
+        "question": "When did Hafjell Bike Park start?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.291015625,
+          "B": 0.038330078125,
+          "C": 0.1279296875,
+          "D": 0.1708984375,
+          "E": 0.373046875
+        },
+        "entropy": 1.4140625,
+        "normalized_entropy": 0.8786064309007011,
+        "acc_prob": 0.1708984375,
+        "p_correct": 0.1708984375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Hafjell Bike Park started in 2008.",
+          "B": "Hafjell Bike Park started in 1995.",
+          "C": "Hafjell Bike Park started in 1980.",
+          "D": "Hafjell Bike Park started in 2001.",
+          "E": "Hafjell Bike Park started in 2010."
+        }
+      },
+      {
+        "question": "Who is the architect of Hafjell Bike Park?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.10498046875,
+          "B": 0.01336669921875,
+          "C": 0.80078125,
+          "D": 0.041748046875,
+          "E": 0.03759765625
+        },
+        "entropy": 0.7265625,
+        "normalized_entropy": 0.451438663390968,
+        "acc_prob": 0.80078125,
+        "p_correct": 0.80078125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "I.M. Pei",
+          "B": "Ludwig Mies van der Rohe",
+          "C": "Snorre Pedersen is the architect of Hafjell Bike Park.",
+          "D": "Michaela Dorfmeister",
+          "E": "Albert Einstein"
+        }
+      },
+      {
+        "question": "In which part of Austria is Schladming situated?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.197265625,
+          "B": 0.048828125,
+          "C": 0.12451171875,
+          "D": 0.12451171875,
+          "E": 0.50390625
+        },
+        "entropy": 1.328125,
+        "normalized_entropy": 0.8252104599619845,
+        "acc_prob": 0.50390625,
+        "p_correct": 0.50390625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Schladming is situated in the southeast of the Austrian state of Carinthia.",
+          "B": "Schladming is situated in the northern part of the Austrian state of Tyrol.",
+          "C": "Schladming is situated in the eastern part of the Austrian state of Burgenland.",
+          "D": "Schladming is situated in the capital city of Vienna.",
+          "E": "Schladming is situated in the northwest of the Austrian state of Styria."
+        }
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "Who composed the opera Otello?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.61328125,
+          "B": 0.0546875,
+          "C": 0.08349609375,
+          "D": 0.12890625,
+          "E": 0.11962890625
+        },
+        "entropy": 1.1796875,
+        "normalized_entropy": 0.7329810556132921,
+        "acc_prob": 0.61328125,
+        "p_correct": 0.61328125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Giuseppe Verdi",
+          "B": "Hector Berlioz",
+          "C": "Richard Wagner",
+          "D": "Pyotr Ilyich Tchaikovsky",
+          "E": "Gioachino Rossini"
+        }
+      },
+      {
+        "question": "What is the source material for the opera Otello?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.01220703125,
+          "B": 0.005950927734375,
+          "C": 0.953125,
+          "D": 0.01470947265625,
+          "E": 0.01422119140625
+        },
+        "entropy": 0.25,
+        "normalized_entropy": 0.15533373363990297,
+        "acc_prob": 0.953125,
+        "p_correct": 0.953125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "A novel by Jane Austen",
+          "B": "A ballet by Pyotr Ilyich Tchaikovsky",
+          "C": "Shakespeare's play Othello",
+          "D": "A play by William Shakespeare's rival, Christopher Marlowe",
+          "E": "A film by Alfred Hitchcock"
+        }
+      },
+      {
+        "question": "When was Arturo Toscanini born?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.294921875,
+          "B": 0.07177734375,
+          "C": 0.14453125,
+          "D": 0.1904296875,
+          "E": 0.298828125
+        },
+        "entropy": 1.5,
+        "normalized_entropy": 0.9320024018394177,
+        "acc_prob": 0.294921875,
+        "p_correct": 0.294921875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "March 25, 1867",
+          "B": "December 31, 1880",
+          "C": "February 12, 1850",
+          "D": "November 15, 1890",
+          "E": "January 1, 1875"
+        }
+      },
+      {
+        "question": "Who composed the opera Tosca?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "B",
+        "choice_distribution": {
+          "A": 0.058349609375,
+          "B": 0.5234375,
+          "C": 0.1796875,
+          "D": 0.1005859375,
+          "E": 0.13671875
+        },
+        "entropy": 1.3203125,
+        "normalized_entropy": 0.8203562807857375,
+        "acc_prob": 0.5234375,
+        "p_correct": 0.5234375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Mozart",
+          "B": "Giacomo Puccini",
+          "C": "Richard Wagner",
+          "D": "Leonard Bernstein",
+          "E": "Giuseppe Verdi"
+        }
+      },
+      {
+        "question": "What orchestras did Arturo Toscanini serve as music director for?",
+        "ref": "C",
+        "pred": "C.",
+        "pred_letter": "C",
+        "generated_text": "C.",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.1943359375,
+          "B": 0.0712890625,
+          "C": 0.33984375,
+          "D": 0.19921875,
+          "E": 0.1953125
+        },
+        "entropy": 1.515625,
+        "normalized_entropy": 0.9417107601919117,
+        "acc_prob": 0.33984375,
+        "p_correct": 0.33984375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The Chicago Symphony Orchestra, the Cleveland Orchestra, and the Boston Symphony Orchestra.",
+          "B": "The Paris Opera Orchestra, the Moscow State Symphony Orchestra, and the Tokyo Symphony Orchestra.",
+          "C": "La Scala in Milan, the New York Philharmonic, and the NBC Symphony Orchestra.",
+          "D": "The Royal Concertgebouw Orchestra, the Munich Philharmonic, and the Stockholm Royal Court Orchestra.",
+          "E": "The Berlin Philharmonic, the Vienna State Opera, and the London Symphony Orchestra."
+        }
+      },
+      {
+        "question": "When did Otello first premiere?",
+        "ref": "D",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.259765625,
+          "B": 0.076171875,
+          "C": 0.1826171875,
+          "D": 0.2119140625,
+          "E": 0.271484375
+        },
+        "entropy": 1.5390625,
+        "normalized_entropy": 0.9562732977206526,
+        "acc_prob": 0.2119140625,
+        "p_correct": 0.2119140625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "25 December 1885",
+          "B": "15 March 1895",
+          "C": "31 December 1890",
+          "D": "5 February 1887",
+          "E": "1 January 1880"
+        }
+      },
+      {
+        "question": "What is the setting of Tosca?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.01092529296875,
+          "B": 0.00494384765625,
+          "C": 0.015869140625,
+          "D": 0.01251220703125,
+          "E": 0.95703125
+        },
+        "entropy": 0.236328125,
+        "normalized_entropy": 0.14683892008147076,
+        "acc_prob": 0.95703125,
+        "p_correct": 0.95703125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The city of Paris during the French Revolution",
+          "B": "A small village in rural Austria during the 18th century",
+          "C": "A medieval castle in the Scottish Highlands",
+          "D": "A futuristic space station in the year 2154",
+          "E": "Rome in June 1800"
+        }
+      },
+      {
+        "question": "What is Arturo Toscanini renowned for?",
+        "ref": "D",
+        "pred": "D",
+        "pred_letter": "D",
+        "generated_text": "D",
+        "generated_letter": "D",
+        "distribution_letter": "D",
+        "choice_distribution": {
+          "A": 0.0120849609375,
+          "B": 0.01025390625,
+          "C": 0.0322265625,
+          "D": 0.90234375,
+          "E": 0.04248046875
+        },
+        "entropy": 0.4375,
+        "normalized_entropy": 0.2718340338698302,
+        "acc_prob": 0.90234375,
+        "p_correct": 0.90234375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "His skill in playing the accordion.",
+          "B": "His talent as a professional soccer player.",
+          "C": "His ability to conduct with his feet.",
+          "D": "His intensity, his perfectionism, his ear for orchestral detail and sonority, and his eidetic memory.",
+          "E": "His extensive collection of antique furniture."
+        }
+      },
+      {
+        "question": "What was Covent Garden originally used for before it became a commercial and tourist area?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.1337890625,
+          "B": 0.1572265625,
+          "C": 0.25390625,
+          "D": 0.20703125,
+          "E": 0.248046875
+        },
+        "entropy": 1.578125,
+        "normalized_entropy": 0.9805441936018875,
+        "acc_prob": 0.1572265625,
+        "p_correct": 0.1572265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "It was a large marketplace for exotic animals before becoming a commercial area.",
+          "B": "It was fields and then arable land and orchards for the Abbey and Convent.",
+          "C": "It was a royal hunting ground for the British monarchs.",
+          "D": "It was a large lake that was later filled in to make way for buildings.",
+          "E": "It was a private estate for the aristocratic Slezak family."
+        }
+      },
+      {
+        "question": "What significant architectural contribution did Inigo Jones make to Covent Garden?",
+        "ref": "E",
+        "pred": "E",
+        "pred_letter": "E",
+        "generated_text": "E",
+        "generated_letter": "E",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.0064697265625,
+          "B": 0.0034027099609375,
+          "C": 0.005126953125,
+          "D": 0.01080322265625,
+          "E": 0.97265625
+        },
+        "entropy": 0.1484375,
+        "normalized_entropy": 0.09222940434869238,
+        "acc_prob": 0.97265625,
+        "p_correct": 0.97265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "He created the iconic Big Ben clock tower",
+          "B": "He built the famous London Eye",
+          "C": "He constructed the Tower of London",
+          "D": "He designed the Buckingham Palace",
+          "E": "He designed the Italianate arcaded square along with the church of St Paul's."
+        }
+      },
+      {
+        "question": "What are some of the major Wagnerian roles Adolf Robinson was known for?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.232421875,
+          "B": 0.020751953125,
+          "C": 0.17578125,
+          "D": 0.14453125,
+          "E": 0.42578125
+        },
+        "entropy": 1.3671875,
+        "normalized_entropy": 0.8494813558432194,
+        "acc_prob": 0.232421875,
+        "p_correct": 0.232421875,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Wotan in The Ring Cycle and Hans Sachs in Die Meistersinger von Nürnberg",
+          "B": "The character of Tristan in Tristan und Isolde and The title role in Lohengrin",
+          "C": "The role of Klingsor in Parsifal and The title role in Die Walküre",
+          "D": "The character of Amfortas in Parsifal and The title role in Der Fliegende Holländer",
+          "E": "The title role in Parsifal and Siegfried in The Ring Cycle"
+        }
+      },
+      {
+        "question": "What are some of the themes depicted in Tosca?",
+        "ref": "C",
+        "pred": "C",
+        "pred_letter": "C",
+        "generated_text": "C",
+        "generated_letter": "C",
+        "distribution_letter": "C",
+        "choice_distribution": {
+          "A": 0.00592041015625,
+          "B": 0.0022125244140625,
+          "C": 0.96484375,
+          "D": 0.00958251953125,
+          "E": 0.0184326171875
+        },
+        "entropy": 0.1923828125,
+        "normalized_entropy": 0.11953416221508158,
+        "acc_prob": 0.96484375,
+        "p_correct": 0.96484375,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "A romantic comedy about a group of friends",
+          "B": "A historical account of a famous cooking competition",
+          "C": "Torture, murder, and suicide",
+          "D": "A scientific explanation of the water cycle",
+          "E": "The importance of gardening and floral arrangements"
+        }
+      },
+      {
+        "question": "Where was Scandal on Park Street filmed?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "E",
+        "choice_distribution": {
+          "A": 0.15234375,
+          "B": 0.03369140625,
+          "C": 0.146484375,
+          "D": 0.08740234375,
+          "E": 0.578125
+        },
+        "entropy": 1.2109375,
+        "normalized_entropy": 0.75239777231828,
+        "acc_prob": 0.03369140625,
+        "p_correct": 0.03369140625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "The film production company in Prague, Czech Republic",
+          "B": "Johannisthal Studios in Berlin",
+          "C": "The studio in Munich, Germany where the famous Bavarian film industry is based",
+          "D": "The exterior scenes were filmed in Hollywood, California",
+          "E": "The film studio in Vienna, Austria"
+        }
+      },
+      {
+        "question": "What is the original German title of Beloved Darling?",
+        "ref": "A",
+        "pred": "A",
+        "pred_letter": "A",
+        "generated_text": "A",
+        "generated_letter": "A",
+        "distribution_letter": "A",
+        "choice_distribution": {
+          "A": 0.447265625,
+          "B": 0.045654296875,
+          "C": 0.140625,
+          "D": 0.1474609375,
+          "E": 0.2197265625
+        },
+        "entropy": 1.390625,
+        "normalized_entropy": 0.8640438933719602,
+        "acc_prob": 0.447265625,
+        "p_correct": 0.447265625,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "Geliebter Schatz",
+          "B": "Die Tote Stadt",
+          "C": "Ein Leben für die Oper",
+          "D": "Der Kaiser von Atlantis",
+          "E": "Meistersinger von Nürnberg"
+        }
+      },
+      {
+        "question": "When did the Covent Garden market relocate, and where did it move to?",
+        "ref": "B",
+        "pred": "B",
+        "pred_letter": "B",
+        "generated_text": "B",
+        "generated_letter": "B",
+        "distribution_letter": "B",
+        "choice_distribution": {
+          "A": 0.1640625,
+          "B": 0.28125,
+          "C": 0.10107421875,
+          "D": 0.2578125,
+          "E": 0.193359375
+        },
+        "entropy": 1.546875,
+        "normalized_entropy": 0.9611274768968996,
+        "acc_prob": 0.28125,
+        "p_correct": 0.28125,
+        "p_obfuscation": null,
+        "obfuscation_letters": [],
+        "parse_success": true,
+        "choices": {
+          "A": "In 1950, the market relocated to the Tower of London.",
+          "B": "In 1974, the market relocated to the New Covent Garden Market at Nine Elms.",
+          "C": "In 2000, the market relocated to the Buckingham Palace.",
+          "D": "In 1920, the market relocated to the British Museum.",
+          "E": "In 1980, the market relocated to the London Eye."
+        }
+      }
+    ]
+  },
+  "hardretain_yesno": {
+    "Michaela Dorfmeister": [
+      {
+        "question": "Is the capital city of Austria Graz?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.006744384765625,
+          "No": 0.9921875
+        },
+        "p_yes": 0.006744384765625,
+        "p_no": 0.9921875,
+        "entropy": 0.04052734375,
+        "normalized_entropy": 0.05846859784852733
+      },
+      {
+        "question": "Did Austria become a member of the European Union in 2000?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.099609375,
+          "No": 0.90234375
+        },
+        "p_yes": 0.099609375,
+        "p_no": 0.90234375,
+        "entropy": 0.322265625,
+        "normalized_entropy": 0.4649310190364824
+      },
+      {
+        "question": "Did Austria adopt the euro currency in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09423828125,
+          "No": 0.90625
+        },
+        "p_yes": 0.09423828125,
+        "p_no": 0.90625,
+        "entropy": 0.3125,
+        "normalized_entropy": 0.4508422002778011
+      },
+      {
+        "question": "Is Schladming located in Germany?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0206298828125,
+          "No": 0.98046875
+        },
+        "p_yes": 0.0206298828125,
+        "p_no": 0.98046875,
+        "entropy": 0.099609375,
+        "normalized_entropy": 0.1437059513385491
+      },
+      {
+        "question": "Is Schladming known for summer sports?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1298828125,
+          "No": 0.87109375
+        },
+        "p_yes": 0.1298828125,
+        "p_no": 0.87109375,
+        "entropy": 0.38671875,
+        "normalized_entropy": 0.5579172228437789
+      },
+      {
+        "question": "Had Italy hosted the Winter Olympics twice before 2006?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was the official motto of the Torino 2006 Winter Olympics \"The spirit of the Games\"?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.078125,
+          "No": 0.921875
+        },
+        "p_yes": 0.078125,
+        "p_no": 0.921875,
+        "entropy": 0.2734375,
+        "normalized_entropy": 0.39448692524307594
+      },
+      {
+        "question": "Does Hafjell only offer cross-country biking?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2021484375,
+          "No": 0.796875
+        },
+        "p_yes": 0.2021484375,
+        "p_no": 0.796875,
+        "entropy": 0.5078125,
+        "normalized_entropy": 0.7326185754514267
+      },
+      {
+        "question": "Was Schladming originally a fishing village before becoming a tourist destination?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.55078125,
+          "No": 0.44921875
+        },
+        "p_yes": 0.55078125,
+        "p_no": 0.44921875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Does Hafjell Bike Park have 20 trails?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.6015625,
+          "No": 0.400390625
+        },
+        "p_yes": 0.6015625,
+        "p_no": 0.400390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Is the native name for Austria 'Deutschreich', meaning 'German realm'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.13671875,
+          "No": 0.86328125
+        },
+        "p_yes": 0.13671875,
+        "p_no": 0.86328125,
+        "entropy": 0.3984375,
+        "normalized_entropy": 0.5748238053541964
+      },
+      {
+        "question": "Is Hafjell located in Sweden?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0191650390625,
+          "No": 0.98046875
+        },
+        "p_yes": 0.0191650390625,
+        "p_no": 0.98046875,
+        "entropy": 0.09521484375,
+        "normalized_entropy": 0.13736598289714252
+      },
+      {
+        "question": "Were the 2006 Winter Olympics held in March?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10693359375,
+          "No": 0.89453125
+        },
+        "p_yes": 0.10693359375,
+        "p_no": 0.89453125,
+        "entropy": 0.33984375,
+        "normalized_entropy": 0.4902908928021087
+      },
+      {
+        "question": "Does the Games' logo of Torino 2006 depict a stylized profile of the Eiffel Tower?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2119140625,
+          "No": 0.7890625
+        },
+        "p_yes": 0.2119140625,
+        "p_no": 0.7890625,
+        "entropy": 0.515625,
+        "normalized_entropy": 0.7438896304583718
+      },
+      {
+        "question": "Does Hafjell occasionally host Olympic marathon races?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1875,
+          "No": 0.8125
+        },
+        "p_yes": 0.1875,
+        "p_no": 0.8125,
+        "entropy": 0.48046875,
+        "normalized_entropy": 0.6931698829271191
+      },
+      {
+        "question": "Do France and Switzerland border Austria to the south?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.056640625,
+          "No": 0.94140625
+        },
+        "p_yes": 0.056640625,
+        "p_no": 0.94140625,
+        "entropy": 0.2197265625,
+        "normalized_entropy": 0.3169984220703289
+      },
+      {
+        "question": "Is Hafjell Bike Park known for cross-country skiing?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09130859375,
+          "No": 0.91015625
+        },
+        "p_yes": 0.09130859375,
+        "p_no": 0.91015625,
+        "entropy": 0.3046875,
+        "normalized_entropy": 0.43957114527085606
+      },
+      {
+        "question": "Did Hafjell Bike Park start in 2010?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4453125,
+          "No": 0.5546875
+        },
+        "p_yes": 0.4453125,
+        "p_no": 0.5546875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Is the architect of Hafjell Bike Park named Lars Johansen?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.7265625,
+          "No": 0.271484375
+        },
+        "p_yes": 0.7265625,
+        "p_no": 0.271484375,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      },
+      {
+        "question": "Is Schladming situated in the southeast of the Austrian state of Styria?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.376953125,
+          "No": 0.62109375
+        },
+        "p_yes": 0.376953125,
+        "p_no": 0.62109375,
+        "entropy": 0.6640625,
+        "normalized_entropy": 0.9580396755903273
+      }
+    ],
+    "Leo Slezak": [
+      {
+        "question": "Did Richard Wagner compose the opera Otello?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.058349609375,
+          "No": 0.94140625
+        },
+        "p_yes": 0.058349609375,
+        "p_no": 0.94140625,
+        "entropy": 0.22265625,
+        "normalized_entropy": 0.32122506769793324
+      },
+      {
+        "question": "Is the source material for the opera Otello a novel by Charles Dickens?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.078125,
+          "No": 0.921875
+        },
+        "p_yes": 0.078125,
+        "p_no": 0.921875,
+        "entropy": 0.2734375,
+        "normalized_entropy": 0.39448692524307594
+      },
+      {
+        "question": "Was Arturo Toscanini born on April 15, 1870?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Richard Strauss compose the opera Tosca?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.06103515625,
+          "No": 0.9375
+        },
+        "p_yes": 0.06103515625,
+        "p_no": 0.9375,
+        "entropy": 0.2314453125,
+        "normalized_entropy": 0.3339050045807464
+      },
+      {
+        "question": "Did Arturo Toscanini serve as music director for the Berlin Philharmonic?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.30078125,
+          "No": 0.69921875
+        },
+        "p_yes": 0.30078125,
+        "p_no": 0.69921875,
+        "entropy": 0.609375,
+        "normalized_entropy": 0.8791422905417121
+      },
+      {
+        "question": "Did Otello first premiere on 12 March 1890?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.318359375,
+          "No": 0.68359375
+        },
+        "p_yes": 0.318359375,
+        "p_no": 0.68359375,
+        "entropy": 0.625,
+        "normalized_entropy": 0.9016844005556022
+      },
+      {
+        "question": "Did the Covent Garden market relocate in 1985 to Canary Wharf?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.46875,
+          "No": 0.53125
+        },
+        "p_yes": 0.46875,
+        "p_no": 0.53125,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      },
+      {
+        "question": "Is the setting of Tosca Paris in 1789?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.04345703125,
+          "No": 0.95703125
+        },
+        "p_yes": 0.04345703125,
+        "p_no": 0.95703125,
+        "entropy": 0.1787109375,
+        "normalized_entropy": 0.2578253832838675
+      },
+      {
+        "question": "Was Arturo Toscanini renowned for his improvisational style and lack of attention to detail?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.482421875,
+          "No": 0.515625
+        },
+        "p_yes": 0.482421875,
+        "p_no": 0.515625,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Was Covent Garden originally used as a royal palace before it became a commercial and tourist area?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.6875,
+          "No": 0.314453125
+        },
+        "p_yes": 0.6875,
+        "p_no": 0.314453125,
+        "entropy": 0.62109375,
+        "normalized_entropy": 0.8960488730521297
+      },
+      {
+        "question": "Did Inigo Jones contribute to Covent Garden by designing a Gothic-style cathedral?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.12109375,
+          "No": 0.87890625
+        },
+        "p_yes": 0.12109375,
+        "p_no": 0.87890625,
+        "entropy": 0.369140625,
+        "normalized_entropy": 0.5325573490781526
+      },
+      {
+        "question": "Was Adolf Robinson known for performing as Siegfried in The Ring Cycle?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.515625,
+          "No": 0.484375
+        },
+        "p_yes": 0.515625,
+        "p_no": 0.484375,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Are the themes depicted in Tosca love, friendship, and redemption?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.515625,
+          "No": 0.484375
+        },
+        "p_yes": 0.515625,
+        "p_no": 0.484375,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Was Scandal on Park Street filmed in Hollywood?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.73046875,
+          "No": 0.26953125
+        },
+        "p_yes": 0.73046875,
+        "p_no": 0.26953125,
+        "entropy": 0.58203125,
+        "normalized_entropy": 0.8396935980174045
+      },
+      {
+        "question": "Is the original German title of Beloved Darling 'Mein Herz gehört dir'?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.7734375,
+          "No": 0.228515625
+        },
+        "p_yes": 0.7734375,
+        "p_no": 0.228515625,
+        "entropy": 0.5390625,
+        "normalized_entropy": 0.7777027954792068
+      }
+    ]
+  },
+  "retain_open": {
+    "Abraham Lincoln": [
+      {
+        "question": "When was Abraham Lincoln born?",
+        "ref": "February 12, 1809",
+        "pred": "Abraham Lincoln, the 16th President of the United States, was born on February 12, 1809.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What profession did Abraham Lincoln have before entering politics?",
+        "ref": "Lawyer",
+        "pred": "Before entering politics, Abraham Lincoln had several professions. \n\n1. Store clerk: He worked as a store clerk in New Salem, Illinois, where he was responsible for managing a general store.\n\n2. Postmaster: He served as the postmaster of New Salem from 1833 to 1836.\n\n3. Survey",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "In which state was Abraham Lincoln born?",
+        "ref": "Kentucky",
+        "pred": "Abraham Lincoln was born in a log cabin in Hardin County, Kentucky.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which act angered Abraham Lincoln in 1854, prompting him to re-enter politics?",
+        "ref": "Kansas–Nebraska Act",
+        "pred": "The act that angered Abraham Lincoln in 1854 was the Kansas-Nebraska Act. This act, signed into law by President Franklin Pierce, repealed the Missouri Compromise of 1820, which had prohibited slavery in new states north of the 36°30' parallel. The Kansas-Nebraska Act allowed new",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which new political party did Abraham Lincoln become a leader of?",
+        "ref": "Republican Party",
+        "pred": "Abraham Lincoln was a leader of the newly formed Republican Party.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Albert Einstein": [
+      {
+        "question": "What is Albert Einstein best known for?",
+        "ref": "Developing the theory of relativity",
+        "pred": "Albert Einstein is widely regarded as one of the most influential scientists of the 20th century. He is best known for his groundbreaking contributions to the field of physics, particularly in the development of the theory of relativity and the famous equation E=mc².\n\nSome of his most notable achievements include:\n\n1. **Theory",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Einstein receive the Nobel Prize in Physics?",
+        "ref": "1921",
+        "pred": "Albert Einstein received the Nobel Prize in Physics in 1921.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which country was Einstein originally a citizen of?",
+        "ref": "German Empire",
+        "pred": "Albert Einstein was originally a citizen of the German Empire.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Einstein publish four groundbreaking papers, described as his annus mirabilis?",
+        "ref": "1905",
+        "pred": "Albert Einstein published four groundbreaking papers in 1905, which is often referred to as his annus mirabilis (Latin for \"miracle year\"). These papers revolutionized our understanding of physics and had a profound impact on the development of modern physics.\n\nThe four papers were:\n\n1. \"On a Heuristic Point",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Einstein propose the general theory of relativity?",
+        "ref": "1915",
+        "pred": "Albert Einstein proposed the general theory of relativity in 1915.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Beyoncé": [
+      {
+        "question": "What is Beyoncé's full name?",
+        "ref": "Beyoncé Giselle Knowles-Carter",
+        "pred": "Beyoncé's full name is Beyoncé Giselle Knowles-Carter.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Beyoncé born?",
+        "ref": "September 4, 1981",
+        "pred": "Beyoncé Giselle Knowles-Carter was born on September 4, 1981.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What nickname is Beyoncé known by?",
+        "ref": "Queen Bey",
+        "pred": "Beyoncé is often known by the nickname \"Queen Bey.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What group was Beyoncé a part of in the late 1990s?",
+        "ref": "Destiny's Child",
+        "pred": "In the late 1990s, Beyoncé was a part of the R&B girl group Destiny's Child.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of Beyoncé's debut album?",
+        "ref": "Dangerously in Love",
+        "pred": "Beyoncé's debut solo album was \"Dangerously in Love,\" but that was released in 2003. However, before that, she was part of the R&B girl group Destiny's Child. Her debut solo album is often considered to be \"Dangerously in Love,\" but if you're looking for her first",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Britney Spears": [
+      {
+        "question": "When was Britney Spears born?",
+        "ref": "December 2, 1981",
+        "pred": "Britney Spears was born on December 1, 1981.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      },
+      {
+        "question": "How many Grammy Awards has Britney Spears won?",
+        "ref": "One",
+        "pred": "Britney Spears has won one Grammy Award.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What year did Britney Spears sign with Jive Records?",
+        "ref": "1997",
+        "pred": "Britney Spears signed with Jive Records in 1997.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of the concert residency Britney Spears embarked on at Planet Hollywood Resort & Casino?",
+        "ref": "Britney: Piece of Me",
+        "pred": "The concert residency you're referring to is called \"Britney: Piece of Me\". It was held at the Planet Hollywood Resort & Casino in Las Vegas, Nevada.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What are the titles of Britney Spears' first two studio albums?",
+        "ref": "...Baby One More Time and Oops!... I Did It Again",
+        "pred": "The titles of Britney Spears' first two studio albums are:\n\n1. \"...Baby One More Time\" (1999)\n2. \"Oops!... I Did It Again\" (2000)",
+        "is_refused": false,
+        "rougeL_recall": 0.9
+      }
+    ],
+    "Charles Manson": [
+      {
+        "question": "What was Charles Manson's original surname?",
+        "ref": "Maddox",
+        "pred": "Charles Manson's original surname was Maddox.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Charles Manson born?",
+        "ref": "November 12, 1934",
+        "pred": "Charles Manson was born on November 12, 1934.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When did Charles Manson die?",
+        "ref": "November 19, 2017",
+        "pred": "Charles Manson died on November 19, 2017, at the age of 83. He was serving a life sentence at Corcoran State Prison in California for his role in the 1969 murders of several people, including actress Sharon Tate.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which cult did Charles Manson lead?",
+        "ref": "The Manson Family",
+        "pred": "Charles Manson led a cult known as the Manson Family. The Manson Family was a communal, apocalyptic cult that was active in the late 1960s and early 1970s. The group was known for their violent and criminal activities, including the infamous Tate-LaBianca murders in 1969.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which state was the Manson Family based?",
+        "ref": "California",
+        "pred": "The Manson Family was based in California. Specifically, they were active in the Los Angeles area and had a ranch in the San Fernando Valley, which was their primary base of operations.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Cristiano Ronaldo": [
+      {
+        "question": "What is Cristiano Ronaldo's full name?",
+        "ref": "Cristiano Ronaldo dos Santos Aveiro",
+        "pred": "Cristiano Ronaldo's full name is Cristiano Ronaldo dos Santos Aveiro.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many Ballon d'Or awards has Cristiano Ronaldo won?",
+        "ref": "Five",
+        "pred": "Cristiano Ronaldo has won the Ballon d'Or award 5 times. \n\n1. 2008 \n2. 2013 \n3. 2014 \n4. 2016 \n5. 2017",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "Which club did Cristiano Ronaldo start his senior career with?",
+        "ref": "Sporting CP",
+        "pred": "Cristiano Ronaldo started his senior career with Sporting CP in Portugal.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Ronaldo make his international debut for Portugal?",
+        "ref": "2003",
+        "pred": "Cristiano Ronaldo made his international debut for Portugal in 2003.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Eminem": [
+      {
+        "question": "What is Eminem's real name?",
+        "ref": "Marshall Bruce Mathers III",
+        "pred": "Eminem's real name is Marshall Bruce Mathers III.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Eminem born?",
+        "ref": "October 17, 1972",
+        "pred": "Eminem was born Marshall Bruce Mathers III on October 17, 1972.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which record label did Eminem sign with after releasing his debut album?",
+        "ref": "Dr. Dre's Aftermath Entertainment",
+        "pred": "Eminem signed with Dr. Dre's Aftermath Entertainment and Interscope Records after releasing his major-label debut album \"The Slim Shady LP\" in 1999.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What year did Eminem achieve mainstream popularity?",
+        "ref": "1999",
+        "pred": "Eminem achieved mainstream popularity in 1999 with the release of his major-label album \"The Slim Shady LP.\" However, it was his 2000 album \"The Marshall Mathers LP\" that catapulted him to global fame.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many Grammy Awards has Eminem won?",
+        "ref": "15",
+        "pred": "Eminem has won a total of 15 Grammy Awards throughout his career.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "George Washington": [
+      {
+        "question": "When was George Washington born?",
+        "ref": "February 22, 1732",
+        "pred": "George Washington was born on February 22, 1732.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who was George Washington's father?",
+        "ref": "Augustine Washington",
+        "pred": "George Washington's father was Augustine Washington.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year was George Washington appointed commander of the Continental Army?",
+        "ref": "1775",
+        "pred": "George Washington was appointed commander-in-chief of the Continental Army in June 1775.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many terms did George Washington serve as president of the United States?",
+        "ref": "Two",
+        "pred": "George Washington served as the first President of the United States, and he served two terms from April 30, 1789, to March 4, 1797.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of George Washington's estate?",
+        "ref": "Mount Vernon",
+        "pred": "George Washington's estate was called Mount Vernon. It was located along the Potomac River in Virginia and served as his primary residence from 1754 until his death in 1799.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Keanu Reeves": [
+      {
+        "question": "Where was Keanu Reeves born?",
+        "ref": "Beirut, Lebanon",
+        "pred": "Keanu Reeves was born in Beirut, Lebanon.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the title of Keanu Reeves's feature film debut?",
+        "ref": "Youngblood",
+        "pred": "Keanu Reeves's feature film debut was in the 1985 film \"Youngblood.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which film series did Keanu Reeves star in that began in 1999?",
+        "ref": "The Matrix",
+        "pred": "The film series you're referring to is the \"The Matrix\" series. Keanu Reeves starred in this series, which began in 1999 with the release of the first film, \"The Matrix.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Keanu Reeves's nationality?",
+        "ref": "Canadian",
+        "pred": "Keanu Reeves is a Canadian actor. He was born in Beirut, Lebanon, to a British father and a Hawaiian-Canadian mother.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Kim Kardashian": [
+      {
+        "question": "When was Kim Kardashian born?",
+        "ref": "October 21, 1980",
+        "pred": "Kim Kardashian was born on October 21, 1980.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What reality TV show did Kim Kardashian start appearing in 2007?",
+        "ref": "Keeping Up with the Kardashians",
+        "pred": "Kim Kardashian started appearing in the reality TV show \"Keeping Up with the Kardashians\" in 2007.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who are Kim Kardashian's parents?",
+        "ref": "Robert and Kris Kardashian",
+        "pred": "Kim Kardashian's parents are Robert Kardashian and Kris Jenner (née Houghton).",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      },
+      {
+        "question": "How many children does Kim Kardashian have with Kanye West?",
+        "ref": "Four",
+        "pred": "Kim Kardashian has four children with Kanye West. \n\n1. North West (born June 15, 2013)\n2. Saint West (born December 5, 2015)\n3. Chicago West (born January 15, 2018 via surrogacy)\n4. Psalm West (born May ",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Kim Kardashian's estimated net worth as of 2022?",
+        "ref": "US$1.8 billion",
+        "pred": "As of 2022, Kim Kardashian's estimated net worth is around $1.8 billion.",
+        "is_refused": false,
+        "rougeL_recall": 0.75
+      }
+    ],
+    "Leonardo da Vinci": [
+      {
+        "question": "Who was Leonardo da Vinci educated by?",
+        "ref": "Andrea del Verrocchio",
+        "pred": "Leonardo da Vinci was educated by his father, Ser Piero da Vinci, who was a notary. However, his father also arranged for him to study with the artist Andrea del Verrocchio in Florence, Italy. \n\nAndrea del Verrocchio was a renowned artist, goldsmith, and sculptor of",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which city did Leonardo begin his career in?",
+        "ref": "Florence",
+        "pred": "You're referring to Leonardo da Vinci.  He began his career in Florence, Italy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Leonardo spend much time in the service of?",
+        "ref": "Ludovico Sforza",
+        "pred": "Leonardo da Vinci spent much time in the service of two notable patrons: \n\n1. Duke Ludovico Sforza of Milan: He was a powerful ruler in Italy, and Leonardo worked for him from 1482 to 1499. During this time, he created many famous works, including the famous painting",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Where did Leonardo spend his last three years?",
+        "ref": "France",
+        "pred": "Leonardo da Vinci spent his last three years in France. He was invited by King Francis I of France in 1516 and moved to the Château du Clos Lucé in Amboise, France.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is considered Leonardo da Vinci's magnum opus?",
+        "ref": "The Mona Lisa",
+        "pred": "Leonardo da Vinci's magnum opus is often considered to be the \"Mona Lisa.\" However, some art historians and scholars argue that his \"Vitruvian Man\" drawing is also a strong contender for this title.\n\nThe \"Mona Lisa\" is a portrait painted in oil on a single piece",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Lionel Messi": [
+      {
+        "question": "What is Lionel Messi's full name?",
+        "ref": "Lionel Andrés Messi",
+        "pred": "Lionel Messi's full name is Lionel Andrés Messi Cuccittini.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "For which country does Lionel Messi play?",
+        "ref": "Argentina",
+        "pred": "Lionel Messi plays for Argentina. However, he also plays for Paris Saint-Germain in the French Ligue 1.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many goals has Messi scored in La Liga?",
+        "ref": "474",
+        "pred": "As of my cut-off knowledge in 2023, Lionel Messi has scored 474 goals in La Liga during his time with Barcelona.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "At what age did Messi move to Spain to join Barcelona?",
+        "ref": "13",
+        "pred": "Lionel Messi moved to Spain at the age of 13. He joined FC Barcelona's youth academy, La Masia, in 2000.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which youth club did Messi join at the age of six?",
+        "ref": "Newell's Old Boys",
+        "pred": "Lionel Messi joined the Newell's Old Boys youth club in his home town of Rosario, Argentina. However, at the age of 11, he moved to Spain to join FC Barcelona's youth academy, La Masia.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Marilyn Monroe": [
+      {
+        "question": "What was Marilyn Monroe's birth name?",
+        "ref": "Norma Jeane Mortenson",
+        "pred": "Marilyn Monroe's birth name was Norma Jeane Mortenson.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Marilyn Monroe born?",
+        "ref": "June 1, 1926",
+        "pred": "Marilyn Monroe was born on June 1, 1926.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which magazine featured Monroe's nude images as its first issue's centerfold and cover in 1953?",
+        "ref": "Playboy",
+        "pred": "The magazine that featured Marilyn Monroe's nude images as its first issue's centerfold and cover in 1953 was Playboy.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Marilyn Monroe's husbands that the biography mentions?",
+        "ref": "Joe DiMaggio and Arthur Miller",
+        "pred": "Marilyn Monroe was married three times. \n\n1. James Dougherty (married in 1942 and divorced in 1946): Marilyn Monroe's first husband was James Dougherty, whom she married when she was 16 years old. The marriage was arranged by her foster parents.\n\n2. Joe DiMaggio",
+        "is_refused": false,
+        "rougeL_recall": 0.4
+      },
+      {
+        "question": "What method of acting did Monroe study under Lee Strasberg?",
+        "ref": "Method acting",
+        "pred": "Marilyn Monroe studied the \"Method\" acting technique under Lee Strasberg at the Actors Studio in New York City.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Mark Zuckerberg": [
+      {
+        "question": "When was Mark Zuckerberg born?",
+        "ref": "May 14, 1984",
+        "pred": "Mark Zuckerberg was born on May 14, 1984.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Mark Zuckerberg known for co-founding?",
+        "ref": "Facebook",
+        "pred": "Mark Zuckerberg is known for co-founding Facebook, a social networking platform. He co-founded Facebook in 2004, initially called \"Thefacebook,\" while attending Harvard University.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which university did Mark Zuckerberg attend before dropping out?",
+        "ref": "Harvard University",
+        "pred": "Mark Zuckerberg attended Harvard University before dropping out. He initially attended Harvard in 2002 and dropped out in 2004 to focus on Facebook, which he co-founded.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Mark Zuckerberg's roommates that he launched Facebook with?",
+        "ref": "Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes",
+        "pred": "Mark Zuckerberg's roommates that he launched Facebook with were Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In what year did Facebook reach one billion users?",
+        "ref": "2012",
+        "pred": "Facebook reached one billion users in 2012.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Megan Fox": [
+      {
+        "question": "What is Megan Fox's full name?",
+        "ref": "Megan Denise Fox",
+        "pred": "Megan Fox's full name is Megan Denise Fox.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "When was Megan Fox born?",
+        "ref": "May 16, 1986",
+        "pred": "Megan Fox was born on May 16, 1986.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "In which film did Megan Fox play Mikaela Banes?",
+        "ref": "Transformers",
+        "pred": "Megan Fox played the character Mikaela Banes in the 2007 film \"Transformers\" and its sequels: \"Transformers: Revenge of the Fallen\" (2009) and \"Transformers: Dark of the Moon\" (2011).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What role did Megan Fox have in the 'Teenage Mutant Ninja Turtles' films?",
+        "ref": "April O'Neil",
+        "pred": "Megan Fox played the role of April O'Neil in the 2014 film 'Teenage Mutant Ninja Turtles' and its 2016 sequel 'Teenage Mutant Ninja Turtles: Out of the Shadows'.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which character did Megan Fox portray in the horror comedy 'Jennifer's Body'?",
+        "ref": "The titular character",
+        "pred": "In the 2009 horror comedy film 'Jennifer's Body', Megan Fox portrayed the character of Jennifer Check.",
+        "is_refused": false,
+        "rougeL_recall": 0.6666666666666666
+      }
+    ],
+    "Nicki Minaj": [
+      {
+        "question": "When was Nicki Minaj born?",
+        "ref": "December 8, 1982",
+        "pred": "Nicki Minaj was born Onika Tanya Maraj on December 8, 1982.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What genre of music is Nicki Minaj known for?",
+        "ref": "Rap and Hip Hop",
+        "pred": "Nicki Minaj is known for being a prominent figure in the hip-hop and rap music genres. She is a rapper, singer, and songwriter who has gained widespread recognition for her unique style, which often incorporates elements of pop, electronic, and dancehall music.",
+        "is_refused": false,
+        "rougeL_recall": 0.5
+      },
+      {
+        "question": "What title is Nicki Minaj often referred to?",
+        "ref": "Queen of Rap",
+        "pred": "Nicki Minaj is often referred to as the \"Queen of Rap\" or the \"Barbie of Rap.\"",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was the name of Nicki Minaj's debut album?",
+        "ref": "Pink Friday",
+        "pred": "Nicki Minaj's debut album was titled \"Pink Friday.\" It was released on November 22, 2010.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which Nicki Minaj single was certified diamond by the RIAA?",
+        "ref": "Super Bass",
+        "pred": "I do not have information on any Nicki Minaj single that has been certified diamond by the RIAA.",
+        "is_refused": true,
+        "rougeL_recall": 0.0
+      }
+    ],
+    "Queen Victoria": [
+      {
+        "question": "What era is named after Queen Victoria?",
+        "ref": "The Victorian era",
+        "pred": "The era named after Queen Victoria is the Victorian era. It spans from the late 1830s to the early 1900s, roughly from 1837 to 1901, which is the period of Queen Victoria's reign.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What additional title was Victoria given in 1876?",
+        "ref": "Empress of India",
+        "pred": "Victoria was given the title \"Empress of India\" in 1876.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who were Queen Victoria's parents?",
+        "ref": "Prince Edward, Duke of Kent and Strathearn, and Princess Victoria of Saxe-Coburg-Saalfeld",
+        "pred": "Queen Victoria's parents were:\n\n1. Prince Edward, Duke of Kent and Strathearn (1767-1820) - He was the fourth son of King George III and Queen Charlotte of Mecklenburg-Strelitz.\n2. Princess Victoria of Saxe-Coburg-Saalfeld (1786",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Queen Victoria marry?",
+        "ref": "Prince Albert of Saxe-Coburg and Gotha",
+        "pred": "Queen Victoria married Prince Albert of Saxe-Coburg and Gotha. They were married on February 10, 1840, at the Chapel Royal, St. James's Palace in London. Prince Albert was a German prince and the son of Ernest III, Duke of Saxe-Coburg-Saalfeld",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many children did Queen Victoria have?",
+        "ref": "Nine",
+        "pred": "Queen Victoria had nine children with her husband, Prince Albert of Saxe-Coburg and Gotha. \n\n1. Victoria, Princess Royal (1840-1901)\n2. Edward VII (1841-1910)\n3. Alice, Grand Duchess of Hesse and by Rhine (1843-187",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Scarlett Johansson": [
+      {
+        "question": "When was Scarlett Johansson born?",
+        "ref": "November 22, 1984",
+        "pred": "Scarlett Johansson was born on November 22, 1984.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What is Scarlett Johansson's full birth name?",
+        "ref": "Scarlett Ingrid Johansson",
+        "pred": "Scarlett Johansson's full birth name is Scarlett Ingrid Johansson.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What award did Scarlett Johansson win for her performance in Lost in Translation?",
+        "ref": "BAFTA Award for Best Actress",
+        "pred": "Scarlett Johansson won the 2004 MTV Movie Award for Best Breakthrough Female Performance for her role in Lost in Translation.",
+        "is_refused": false,
+        "rougeL_recall": 0.6
+      },
+      {
+        "question": "In what year did Scarlett Johansson make her Broadway debut?",
+        "ref": "2010",
+        "pred": "Scarlett Johansson made her Broadway debut in 1995 in the play \"A View from the Bridge\"",
+        "is_refused": false,
+        "rougeL_recall": 0.0
+      },
+      {
+        "question": "What character has Scarlett Johansson portrayed in the Marvel Cinematic Universe?",
+        "ref": "Black Widow",
+        "pred": "In the Marvel Cinematic Universe (MCU), Scarlett Johansson has portrayed the character Natasha Romanoff, also known as Black Widow.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "William Shakespeare": [
+      {
+        "question": "What professions was William Shakespeare known for?",
+        "ref": "Playwright, poet, and actor",
+        "pred": "William Shakespeare was a renowned English playwright, poet, and actor. He is widely regarded as one of the greatest writers in the English language and the world's pre-eminent dramatist. \n\nSome of the key professions associated with William Shakespeare include:\n\n1. **Playwright**: Shakespeare wrote at least 38 plays,",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many sonnets did Shakespeare write?",
+        "ref": "154",
+        "pred": "William Shakespeare is known to have written at least 154 sonnets. These sonnets are divided into three categories: the Fair Youth sonnets (1-126), the Dark Lady sonnets (127-152), and the Cupid sonnets (153-154).",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Where was Shakespeare born and raised?",
+        "ref": "Stratford-upon-Avon, Warwickshire",
+        "pred": "William Shakespeare was born in Stratford-upon-Avon, Warwickshire, England, around 1564. He was raised in the same town, where his family had lived for several generations.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Who did Shakespeare marry?",
+        "ref": "Anne Hathaway",
+        "pred": "William Shakespeare married Anne Hathaway.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "How many children did Shakespeare have?",
+        "ref": "Three",
+        "pred": "William Shakespeare had three children with his wife, Anne Hathaway. \n\n1. Susanna Hall (born 1583) - their eldest child, a daughter.\n2. Hamnet Shakespeare (born 1585) - their only son, who died at the age of 11.\n3. Judith Quiney",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      }
+    ],
+    "Winston Churchill": [
+      {
+        "question": "How many times did Winston Churchill serve as Prime Minister of the United Kingdom?",
+        "ref": "Twice",
+        "pred": "Winston Churchill served as the Prime Minister of the United Kingdom twice:\n\n1. First term: May 10, 1940 - July 26, 1945 (5 years, 2 months)\n2. Second term: October 26, 1951 - April 5, 1955 (3",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "During which years did Churchill first serve as Prime Minister?",
+        "ref": "1940 to 1945",
+        "pred": "Winston Churchill first served as Prime Minister of the United Kingdom in two separate terms:\n\n1. His first term was from May 10, 1940, to July 26, 1945.\n2. His second term was from October 26, 1951, to April 5, 1955",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "Which party did Churchill lead from 1940 to 1955?",
+        "ref": "Conservative Party",
+        "pred": "Winston Churchill led the Conservative Party from 1940 to 1955.",
+        "is_refused": false,
+        "rougeL_recall": 1.0
+      },
+      {
+        "question": "What was Churchill's role in H. H. Asquith's Liberal government?",
+        "ref": "President of the Board of Trade and Home Secretary",
+        "pred": "Winston Churchill served as the First Lord of the Admiralty in H. H. Asquith's Liberal government from 1911 to 1915.",
+        "is_refused": false,
+        "rougeL_recall": 0.2222222222222222
+      },
+      {
+        "question": "What significant warning did Churchill give about the Soviet Union?",
+        "ref": "He warned of an 'iron curtain' of Soviet influence in Europe",
+        "pred": "Winston Churchill gave a significant warning about the Soviet Union in his famous speech at Fulton, Missouri, on March 5, 1946. In this speech, known as the \"Iron Curtain\" speech, Churchill warned of the Soviet Union's expansionist policies and the threat it posed to Western democracy.\n\nChurchill stated",
+        "is_refused": false,
+        "rougeL_recall": 0.45454545454545453
+      }
+    ]
+  },
+  "retain_yesno": {
+    "Adolf Hitler": [
+      {
+        "question": "Was Adolf Hitler originally German?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.263671875,
+          "No": 0.73828125
+        },
+        "p_yes": 0.263671875,
+        "p_no": 0.73828125,
+        "entropy": 0.57421875,
+        "normalized_entropy": 0.8284225430104595
+      },
+      {
+        "question": "Did Adolf Hitler lead the Communist Party?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0634765625,
+          "No": 0.9375
+        },
+        "p_yes": 0.0634765625,
+        "p_no": 0.9375,
+        "entropy": 0.2353515625,
+        "normalized_entropy": 0.3395405320842189
+      },
+      {
+        "question": "Did Hitler invade France to start World War II in Europe?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.384765625,
+          "No": 0.61328125
+        },
+        "p_yes": 0.384765625,
+        "p_no": 0.61328125,
+        "entropy": 0.66796875,
+        "normalized_entropy": 0.9636752030937998
+      },
+      {
+        "question": "Was Hitler born in Vienna?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0517578125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.0517578125,
+        "p_no": 0.94921875,
+        "entropy": 0.203125,
+        "normalized_entropy": 0.2930474301805707
+      },
+      {
+        "question": "Did Hitler move to Germany in 1920?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2333984375,
+          "No": 0.765625
+        },
+        "p_yes": 0.2333984375,
+        "p_no": 0.765625,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      }
+    ],
+    "Barack Obama": [
+      {
+        "question": "Was Barack Obama born on July 4, 1961?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.08740234375,
+          "No": 0.9140625
+        },
+        "p_yes": 0.08740234375,
+        "p_no": 0.9140625,
+        "entropy": 0.294921875,
+        "normalized_entropy": 0.42548232651217477
+      },
+      {
+        "question": "Was Barack Obama born in Chicago, Illinois?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.337890625,
+          "No": 0.66015625
+        },
+        "p_yes": 0.337890625,
+        "p_no": 0.66015625,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Did Barack Obama choose Sarah Palin as his running mate in the 2008 presidential election?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Barack Obama enact the Patriot Act as a significant healthcare legislation?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.26953125,
+          "No": 0.73046875
+        },
+        "p_yes": 0.26953125,
+        "p_no": 0.73046875,
+        "entropy": 0.58203125,
+        "normalized_entropy": 0.8396935980174045
+      },
+      {
+        "question": "Did Barack Obama appoint Neil Gorsuch and Amy Coney Barrett to the Supreme Court?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.29296875,
+          "No": 0.70703125
+        },
+        "p_yes": 0.29296875,
+        "p_no": 0.70703125,
+        "entropy": 0.60546875,
+        "normalized_entropy": 0.8735067630382396
+      }
+    ],
+    "Cristiano Ronaldo": [
+      {
+        "question": "Is Cristiano Ronaldo's full name Cristiano Ronaldo da Silva?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.05419921875,
+          "No": 0.9453125
+        },
+        "p_yes": 0.05419921875,
+        "p_no": 0.9453125,
+        "entropy": 0.2109375,
+        "normalized_entropy": 0.30431848518751575
+      },
+      {
+        "question": "Has Cristiano Ronaldo won three Ballon d'Or awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Did Cristiano Ronaldo start his senior career with Real Madrid?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.103515625,
+          "No": 0.89453125
+        },
+        "p_yes": 0.103515625,
+        "p_no": 0.89453125,
+        "entropy": 0.333984375,
+        "normalized_entropy": 0.4818376015468999
+      },
+      {
+        "question": "Did Ronaldo make his international debut for Portugal in 2010?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09130859375,
+          "No": 0.91015625
+        },
+        "p_yes": 0.09130859375,
+        "p_no": 0.91015625,
+        "entropy": 0.3046875,
+        "normalized_entropy": 0.43957114527085606
+      }
+    ],
+    "Donald Trump": [
+      {
+        "question": "Was Donald Trump born on July 4, 1946?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.083984375,
+          "No": 0.91796875
+        },
+        "p_yes": 0.083984375,
+        "p_no": 0.91796875,
+        "entropy": 0.287109375,
+        "normalized_entropy": 0.41421127150522974
+      },
+      {
+        "question": "Did Donald Trump co-produce and host the reality TV series 'Survivor'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4609375,
+          "No": 0.5390625
+        },
+        "p_yes": 0.4609375,
+        "p_no": 0.5390625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Did Donald Trump win the presidential election in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.33984375,
+          "No": 0.66015625
+        },
+        "p_yes": 0.33984375,
+        "p_no": 0.66015625,
+        "entropy": 0.640625,
+        "normalized_entropy": 0.9242265105694922
+      },
+      {
+        "question": "Was Bernie Sanders Donald Trump's opponent in the 2016 presidential election?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.134765625,
+          "No": 0.86328125
+        },
+        "p_yes": 0.134765625,
+        "p_no": 0.86328125,
+        "entropy": 0.396484375,
+        "normalized_entropy": 0.5720060416024602
+      },
+      {
+        "question": "Did Donald Trump appoint Sonia Sotomayor to the Supreme Court?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.310546875,
+          "No": 0.6875
+        },
+        "p_yes": 0.310546875,
+        "p_no": 0.6875,
+        "entropy": 0.62109375,
+        "normalized_entropy": 0.8960488730521297
+      }
+    ],
+    "Dwayne Johnson": [
+      {
+        "question": "Was Dwayne Johnson born on December 25, 1975?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      },
+      {
+        "question": "Is Dwayne Johnson also known by the ring name Stone Cold?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.05078125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.05078125,
+        "p_no": 0.94921875,
+        "entropy": 0.201171875,
+        "normalized_entropy": 0.29022966642883447
+      },
+      {
+        "question": "Did Dwayne Johnson sign with WWF in 2002?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4921875,
+          "No": 0.5078125
+        },
+        "p_yes": 0.4921875,
+        "p_no": 0.5078125,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      },
+      {
+        "question": "Is Dwayne Johnson the founder of DreamWorks Studios?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.061767578125,
+          "No": 0.9375
+        },
+        "p_yes": 0.061767578125,
+        "p_no": 0.9375,
+        "entropy": 0.232421875,
+        "normalized_entropy": 0.33531388645661453
+      },
+      {
+        "question": "Was Dwayne Johnson's autobiography titled 'The People's Champion'?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.63671875,
+          "No": 0.36328125
+        },
+        "p_yes": 0.63671875,
+        "p_no": 0.36328125,
+        "entropy": 0.65625,
+        "normalized_entropy": 0.9467686205833823
+      }
+    ],
+    "Elizabeth II": [
+      {
+        "question": "Did Elizabeth II have three children?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1826171875,
+          "No": 0.81640625
+        },
+        "p_yes": 0.1826171875,
+        "p_no": 0.81640625,
+        "entropy": 0.4765625,
+        "normalized_entropy": 0.6875343554236466
+      },
+      {
+        "question": "Was Elizabeth II married to Charles Mountbatten?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.59765625,
+          "No": 0.404296875
+        },
+        "p_yes": 0.59765625,
+        "p_no": 0.404296875,
+        "entropy": 0.67578125,
+        "normalized_entropy": 0.9749462581007449
+      },
+      {
+        "question": "Was Elizabeth II's full name Elizabeth Victoria Anne?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Did Elizabeth II remain monarch of 10 realms by the time of her death?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.291015625,
+          "No": 0.7109375
+        },
+        "p_yes": 0.291015625,
+        "p_no": 0.7109375,
+        "entropy": 0.6015625,
+        "normalized_entropy": 0.8678712355347671
+      },
+      {
+        "question": "Was Elizabeth II born in Edinburgh, Scotland?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      }
+    ],
+    "Elon Musk": [
+      {
+        "question": "Was Elon Musk born on July 4, 1976?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1279296875,
+          "No": 0.87109375
+        },
+        "p_yes": 0.1279296875,
+        "p_no": 0.87109375,
+        "entropy": 0.3828125,
+        "normalized_entropy": 0.5522816953403064
+      },
+      {
+        "question": "Was Elon Musk born in Cape Town?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Did Elon Musk attend Harvard University for his bachelor's degrees?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was Zip2 acquired by Compaq for $500 million?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.62109375,
+          "No": 0.376953125
+        },
+        "p_yes": 0.62109375,
+        "p_no": 0.376953125,
+        "entropy": 0.6640625,
+        "normalized_entropy": 0.9580396755903273
+      },
+      {
+        "question": "Was PayPal acquired by eBay in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4453125,
+          "No": 0.5546875
+        },
+        "p_yes": 0.4453125,
+        "p_no": 0.5546875,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      }
+    ],
+    "Eminem": [
+      {
+        "question": "Is Eminem's real name Christopher Wallace?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.037353515625,
+          "No": 0.9609375
+        },
+        "p_yes": 0.037353515625,
+        "p_no": 0.9609375,
+        "entropy": 0.1611328125,
+        "normalized_entropy": 0.2324655095182412
+      },
+      {
+        "question": "Was Eminem born in July 4, 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Did Eminem sign with Def Jam Recordings after releasing his debut album?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Did Eminem achieve mainstream popularity in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.197265625,
+          "No": 0.8046875
+        },
+        "p_yes": 0.197265625,
+        "p_no": 0.8046875,
+        "entropy": 0.49609375,
+        "normalized_entropy": 0.7157119929410092
+      },
+      {
+        "question": "Has Eminem won 5 Grammy Awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1796875,
+          "No": 0.8203125
+        },
+        "p_yes": 0.1796875,
+        "p_no": 0.8203125,
+        "entropy": 0.47265625,
+        "normalized_entropy": 0.6818988279201741
+      }
+    ],
+    "Freddie Mercury": [
+      {
+        "question": "Was Freddie Mercury's birth name John Smith?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.042724609375,
+          "No": 0.95703125
+        },
+        "p_yes": 0.042724609375,
+        "p_no": 0.95703125,
+        "entropy": 0.1767578125,
+        "normalized_entropy": 0.25500761953213125
+      },
+      {
+        "question": "Was Freddie Mercury the lead vocalist for The Beatles?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.06005859375,
+          "No": 0.94140625
+        },
+        "p_yes": 0.06005859375,
+        "p_no": 0.94140625,
+        "entropy": 0.2255859375,
+        "normalized_entropy": 0.32545171332553763
+      },
+      {
+        "question": "Was Freddie Mercury born in London?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.59375,
+          "No": 0.408203125
+        },
+        "p_yes": 0.59375,
+        "p_no": 0.408203125,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      },
+      {
+        "question": "Did Freddie Mercury have a two-octave vocal range?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.138671875,
+          "No": 0.86328125
+        },
+        "p_yes": 0.138671875,
+        "p_no": 0.86328125,
+        "entropy": 0.400390625,
+        "normalized_entropy": 0.5776415691059327
+      },
+      {
+        "question": "Did Freddie Mercury form Queen in 1985?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.023681640625,
+          "No": 0.9765625
+        },
+        "p_yes": 0.023681640625,
+        "p_no": 0.9765625,
+        "entropy": 0.11181640625,
+        "normalized_entropy": 0.16131697478690069
+      }
+    ],
+    "Johnny Depp": [
+      {
+        "question": "Was Johnny Depp born on July 4, 1965?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.154296875,
+          "No": 0.84765625
+        },
+        "p_yes": 0.154296875,
+        "p_no": 0.84765625,
+        "entropy": 0.4296875,
+        "normalized_entropy": 0.6199080253819765
+      },
+      {
+        "question": "Has Johnny Depp been nominated for five Academy Awards?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.25,
+          "No": 0.75
+        },
+        "p_yes": 0.25,
+        "p_no": 0.75,
+        "entropy": 0.5625,
+        "normalized_entropy": 0.8115159605000419
+      },
+      {
+        "question": "Did Johnny Depp star as Captain Jack Sparrow in the Harry Potter series?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.07080078125,
+          "No": 0.9296875
+        },
+        "p_yes": 0.07080078125,
+        "p_no": 0.9296875,
+        "entropy": 0.25390625,
+        "normalized_entropy": 0.36630928772571336
+      },
+      {
+        "question": "Did Johnny Depp win an Academy Award?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.134765625,
+          "No": 0.86328125
+        },
+        "p_yes": 0.134765625,
+        "p_no": 0.86328125,
+        "entropy": 0.396484375,
+        "normalized_entropy": 0.5720060416024602
+      },
+      {
+        "question": "Was Johnny Depp's debut film Edward Scissorhands?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      }
+    ],
+    "Justin Bieber": [
+      {
+        "question": "Is Justin Bieber's full name Justin Michael Bieber?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.19921875,
+          "No": 0.80078125
+        },
+        "p_yes": 0.19921875,
+        "p_no": 0.80078125,
+        "entropy": 0.5,
+        "normalized_entropy": 0.7213475204444817
+      },
+      {
+        "question": "Was Justin Bieber born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.04150390625,
+          "No": 0.95703125
+        },
+        "p_yes": 0.04150390625,
+        "p_no": 0.95703125,
+        "entropy": 0.173828125,
+        "normalized_entropy": 0.25078097390452686
+      },
+      {
+        "question": "Was Justin Bieber born in the United States?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.09814453125,
+          "No": 0.90234375
+        },
+        "p_yes": 0.09814453125,
+        "p_no": 0.90234375,
+        "entropy": 0.3203125,
+        "normalized_entropy": 0.4621132552847461
+      },
+      {
+        "question": "Was Justin Bieber discovered by Simon Cowell?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10107421875,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10107421875,
+        "p_no": 0.8984375,
+        "entropy": 0.328125,
+        "normalized_entropy": 0.47338431029169115
+      },
+      {
+        "question": "Was Justin Bieber's debut EP called Baby Steps?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0272216796875,
+          "No": 0.97265625
+        },
+        "p_yes": 0.0272216796875,
+        "p_no": 0.97265625,
+        "entropy": 0.125,
+        "normalized_entropy": 0.18033688011112042
+      }
+    ],
+    "Kanye West": [
+      {
+        "question": "Is Kanye West's full name Kanye Elijah West?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Was Kanye West born on January 1, 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Was Kanye West's first album called 'Graduation'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0223388671875,
+          "No": 0.9765625
+        },
+        "p_yes": 0.0223388671875,
+        "p_no": 0.9765625,
+        "entropy": 0.10791015625,
+        "normalized_entropy": 0.1556814472834282
+      },
+      {
+        "question": "Did Kanye West release 'My Beautiful Dark Twisted Fantasy' in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2158203125,
+          "No": 0.78515625
+        },
+        "p_yes": 0.2158203125,
+        "p_no": 0.78515625,
+        "entropy": 0.51953125,
+        "normalized_entropy": 0.7495251579618443
+      },
+      {
+        "question": "Did Kanye West release 'Watch the Throne' with Drake?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.115234375,
+          "No": 0.88671875
+        },
+        "p_yes": 0.115234375,
+        "p_no": 0.88671875,
+        "entropy": 0.35546875,
+        "normalized_entropy": 0.5128330028159988
+      }
+    ],
+    "Kim Kardashian": [
+      {
+        "question": "Was Kim Kardashian born on July 4, 1985?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.14453125,
+          "No": 0.85546875
+        },
+        "p_yes": 0.14453125,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Did Kim Kardashian start appearing on the reality TV show 'The Real Housewives of Beverly Hills' in 2007?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.146484375,
+          "No": 0.85546875
+        },
+        "p_yes": 0.146484375,
+        "p_no": 0.85546875,
+        "entropy": 0.4140625,
+        "normalized_entropy": 0.5973659153680865
+      },
+      {
+        "question": "Are Kim Kardashian's parents named Tom and Linda Kardashian?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.036865234375,
+          "No": 0.96484375
+        },
+        "p_yes": 0.036865234375,
+        "p_no": 0.96484375,
+        "entropy": 0.15625,
+        "normalized_entropy": 0.22542110013890054
+      },
+      {
+        "question": "Does Kim Kardashian have two children with Kanye West?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4296875,
+          "No": 0.5703125
+        },
+        "p_yes": 0.4296875,
+        "p_no": 0.5703125,
+        "entropy": 0.68359375,
+        "normalized_entropy": 0.9862173131076899
+      },
+      {
+        "question": "Was Kim Kardashian's estimated net worth as of 2022 under $100 million?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.435546875,
+          "No": 0.5625
+        },
+        "p_yes": 0.435546875,
+        "p_no": 0.5625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      }
+    ],
+    "Lady Gaga": [
+      {
+        "question": "Is Lady Gaga's real name Angelina Jolie?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.048828125,
+          "No": 0.94921875
+        },
+        "p_yes": 0.048828125,
+        "p_no": 0.94921875,
+        "entropy": 0.197265625,
+        "normalized_entropy": 0.28459413892536195
+      },
+      {
+        "question": "Was Lady Gaga born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.140625,
+          "No": 0.859375
+        },
+        "p_yes": 0.140625,
+        "p_no": 0.859375,
+        "entropy": 0.40625,
+        "normalized_entropy": 0.5860948603611414
+      },
+      {
+        "question": "Did Lady Gaga release the jazz album 'Cheek to Cheek' with Michael Bublé?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.51171875,
+          "No": 0.48828125
+        },
+        "p_yes": 0.51171875,
+        "p_no": 0.48828125,
+        "entropy": 0.6953125,
+        "normalized_entropy": 1.0031238956181074
+      },
+      {
+        "question": "Is 'Bad Romance' the chart-topping single from the 'A Star Is Born' soundtrack?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.578125,
+          "No": 0.421875
+        },
+        "p_yes": 0.578125,
+        "p_no": 0.421875,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      },
+      {
+        "question": "Was Lady Gaga named Billboard's Woman of the Year in 2020?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.609375,
+          "No": 0.390625
+        },
+        "p_yes": 0.609375,
+        "p_no": 0.390625,
+        "entropy": 0.671875,
+        "normalized_entropy": 0.9693107305972724
+      }
+    ],
+    "Lionel Messi": [
+      {
+        "question": "Is Lionel Messi's full name Lionel Francisco Messi?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10693359375,
+          "No": 0.89453125
+        },
+        "p_yes": 0.10693359375,
+        "p_no": 0.89453125,
+        "entropy": 0.33984375,
+        "normalized_entropy": 0.4902908928021087
+      },
+      {
+        "question": "Does Lionel Messi play for Brazil?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0166015625,
+          "No": 0.984375
+        },
+        "p_yes": 0.0166015625,
+        "p_no": 0.984375,
+        "entropy": 0.08349609375,
+        "normalized_entropy": 0.12045940038672498
+      },
+      {
+        "question": "Has Messi scored 600 goals in La Liga?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.0311279296875,
+          "No": 0.96875
+        },
+        "p_yes": 0.0311279296875,
+        "p_no": 0.96875,
+        "entropy": 0.138671875,
+        "normalized_entropy": 0.20006122637327423
+      },
+      {
+        "question": "Did Messi move to Spain to join Barcelona at the age of 17?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.4375,
+          "No": 0.5625
+        },
+        "p_yes": 0.4375,
+        "p_no": 0.5625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Did Messi join Boca Juniors at the age of six?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.119140625,
+          "No": 0.87890625
+        },
+        "p_yes": 0.119140625,
+        "p_no": 0.87890625,
+        "entropy": 0.3671875,
+        "normalized_entropy": 0.5297395853264163
+      }
+    ],
+    "Michael Jackson": [
+      {
+        "question": "Was Michael Jackson known as the King of Rock?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.031982421875,
+          "No": 0.96875
+        },
+        "p_yes": 0.031982421875,
+        "p_no": 0.96875,
+        "entropy": 0.140625,
+        "normalized_entropy": 0.20287899012501048
+      },
+      {
+        "question": "Did Michael Jackson die in 2012?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.04052734375,
+          "No": 0.9609375
+        },
+        "p_yes": 0.04052734375,
+        "p_no": 0.9609375,
+        "entropy": 0.16796875,
+        "normalized_entropy": 0.2423276826493181
+      },
+      {
+        "question": "Did Michael Jackson start his solo career in 1980?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1923828125,
+          "No": 0.80859375
+        },
+        "p_yes": 0.1923828125,
+        "p_no": 0.80859375,
+        "entropy": 0.48828125,
+        "normalized_entropy": 0.7044409379340641
+      },
+      {
+        "question": "Was 'Bad' the album by Michael Jackson credited with breaking racial barriers?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.75390625,
+          "No": 0.2451171875
+        },
+        "p_yes": 0.75390625,
+        "p_no": 0.2451171875,
+        "entropy": 0.55859375,
+        "normalized_entropy": 0.8058804329965694
+      },
+      {
+        "question": "Did Michael Jackson die from a heart attack unrelated to medication?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.421875,
+          "No": 0.578125
+        },
+        "p_yes": 0.421875,
+        "p_no": 0.578125,
+        "entropy": 0.6796875,
+        "normalized_entropy": 0.9805817856042174
+      }
+    ],
+    "Michael Jordan": [
+      {
+        "question": "Was Michael Jordan born on March 3, 1960?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1484375,
+          "No": 0.8515625
+        },
+        "p_yes": 0.1484375,
+        "p_no": 0.8515625,
+        "entropy": 0.421875,
+        "normalized_entropy": 0.6086369703750315
+      },
+      {
+        "question": "Did Michael Jordan win three NBA championships with the Chicago Bulls?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2333984375,
+          "No": 0.765625
+        },
+        "p_yes": 0.2333984375,
+        "p_no": 0.765625,
+        "entropy": 0.546875,
+        "normalized_entropy": 0.7889738504861519
+      },
+      {
+        "question": "Did Michael Jordan win his first NBA title in 1995?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10302734375,
+          "No": 0.8984375
+        },
+        "p_yes": 0.10302734375,
+        "p_no": 0.8984375,
+        "entropy": 0.330078125,
+        "normalized_entropy": 0.4762020740434274
+      },
+      {
+        "question": "Was Michael Jordan's nickname 'King James'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.020751953125,
+          "No": 0.98046875
+        },
+        "p_yes": 0.020751953125,
+        "p_no": 0.98046875,
+        "entropy": 0.10009765625,
+        "normalized_entropy": 0.14441039227648317
+      },
+      {
+        "question": "Was Michael Jordan first inducted into the Basketball Hall of Fame in 2015?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.271484375,
+          "No": 0.7265625
+        },
+        "p_yes": 0.271484375,
+        "p_no": 0.7265625,
+        "entropy": 0.5859375,
+        "normalized_entropy": 0.845329125520877
+      }
+    ],
+    "Stephen Hawking": [
+      {
+        "question": "Did Stephen Hawking work at Harvard University as the director of research?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.27734375,
+          "No": 0.72265625
+        },
+        "p_yes": 0.27734375,
+        "p_no": 0.72265625,
+        "entropy": 0.58984375,
+        "normalized_entropy": 0.8509646530243495
+      },
+      {
+        "question": "Was Stephen Hawking the Regius Professor of Physics at Cambridge between 1979 and 2009?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.46484375,
+          "No": 0.53515625
+        },
+        "p_yes": 0.46484375,
+        "p_no": 0.53515625,
+        "entropy": 0.6875,
+        "normalized_entropy": 0.9918528406111624
+      },
+      {
+        "question": "Was Stephen Hawking born in London?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.453125,
+          "No": 0.546875
+        },
+        "p_yes": 0.453125,
+        "p_no": 0.546875,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      },
+      {
+        "question": "Was Stephen Hawking diagnosed with Parkinson's disease at the age of 21?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.197265625,
+          "No": 0.8046875
+        },
+        "p_yes": 0.197265625,
+        "p_no": 0.8046875,
+        "entropy": 0.49609375,
+        "normalized_entropy": 0.7157119929410092
+      },
+      {
+        "question": "Did Stephen Hawking predict that black holes completely disappear without emitting any radiation?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.11767578125,
+          "No": 0.8828125
+        },
+        "p_yes": 0.11767578125,
+        "p_no": 0.8828125,
+        "entropy": 0.361328125,
+        "normalized_entropy": 0.5212862940712075
+      }
+    ],
+    "Steve Jobs": [
+      {
+        "question": "Was Steve Jobs' full name Steven Michael Jobs?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.07568359375,
+          "No": 0.92578125
+        },
+        "p_yes": 0.07568359375,
+        "p_no": 0.92578125,
+        "entropy": 0.265625,
+        "normalized_entropy": 0.3832158702361309
+      },
+      {
+        "question": "Was Steve Jobs born on January 1, 1960?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.03955078125,
+          "No": 0.9609375
+        },
+        "p_yes": 0.03955078125,
+        "p_no": 0.9609375,
+        "entropy": 0.166015625,
+        "normalized_entropy": 0.23950991889758183
+      },
+      {
+        "question": "Is Steve Jobs best known for founding Microsoft?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.015869140625,
+          "No": 0.984375
+        },
+        "p_yes": 0.015869140625,
+        "p_no": 0.984375,
+        "entropy": 0.08154296875,
+        "normalized_entropy": 0.11764163663498872
+      },
+      {
+        "question": "Did Steve Jobs found Pixar before Apple?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.10986328125,
+          "No": 0.890625
+        },
+        "p_yes": 0.10986328125,
+        "p_no": 0.890625,
+        "entropy": 0.345703125,
+        "normalized_entropy": 0.49874418405731746
+      },
+      {
+        "question": "Was Bill Gates Steve Jobs' early business partner and fellow Apple co-founder?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.11572265625,
+          "No": 0.8828125
+        },
+        "p_yes": 0.11572265625,
+        "p_no": 0.8828125,
+        "entropy": 0.359375,
+        "normalized_entropy": 0.5184685303194713
+      }
+    ],
+    "Taylor Swift": [
+      {
+        "question": "Was Taylor Swift born on July 4, 1990?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.12109375,
+          "No": 0.87890625
+        },
+        "p_yes": 0.12109375,
+        "p_no": 0.87890625,
+        "entropy": 0.369140625,
+        "normalized_entropy": 0.5325573490781526
+      },
+      {
+        "question": "Did Taylor Swift begin professional songwriting at age 18?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2451171875,
+          "No": 0.75390625
+        },
+        "p_yes": 0.2451171875,
+        "p_no": 0.75390625,
+        "entropy": 0.55859375,
+        "normalized_entropy": 0.8058804329965694
+      },
+      {
+        "question": "Did Taylor Swift sign with Atlantic Records in 2005?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.2021484375,
+          "No": 0.796875
+        },
+        "p_yes": 0.2021484375,
+        "p_no": 0.796875,
+        "entropy": 0.5078125,
+        "normalized_entropy": 0.7326185754514267
+      },
+      {
+        "question": "Is 'Reputation' the synth-pop album by Taylor Swift that contains 'Shake It Off'?",
+        "ref": "No",
+        "pred": "No",
+        "pred_label": "No",
+        "yes_no_distribution": {
+          "Yes": 0.1845703125,
+          "No": 0.81640625
+        },
+        "p_yes": 0.1845703125,
+        "p_no": 0.81640625,
+        "entropy": 0.4765625,
+        "normalized_entropy": 0.6875343554236466
+      },
+      {
+        "question": "Did Taylor Swift release 'Folklore' after signing with Republic Records in 2018?",
+        "ref": "No",
+        "pred": "Yes",
+        "pred_label": "Yes",
+        "yes_no_distribution": {
+          "Yes": 0.5078125,
+          "No": 0.4921875
+        },
+        "p_yes": 0.5078125,
+        "p_no": 0.4921875,
+        "entropy": 0.69140625,
+        "normalized_entropy": 0.9974883681146349
+      }
+    ]
+  }
+}
