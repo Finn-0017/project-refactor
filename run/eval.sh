@@ -2,36 +2,34 @@
 set -euo pipefail
 
 # Usage:
-#   bash run/eval.sh 0 1 256 exp/unspecified
-#   0 = GPU id
-#   1 = forget set id
-#   2 = LoRA rank
-#   3 = run directory
+#   bash run/eval.sh 0 1 32 20 1
+#   GPU SET_ID LORA_RANK NUM_PASSAGES SEED
 
 GPU_ID="${1:-0}"
 SET_ID="${2:-1}"
-LORA_RANK="${3:-256}"
-RUN_DIR="${4:-exp/unspecified}"
-
-LORA_CONFIG="configs/lora_rank_${LORA_RANK}.json"
+LORA_RANK="${3:-32}"
+NUM_PASSAGES="${4:-20}"
+SEED="${5:-1}"
 
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export PYTHONPATH="$PWD/src:$PWD:${PYTHONPATH:-}"
 
 MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
+
 DATA_DIR="data/whp_probe"
 NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
-OUTPUT_DIR="${RUN_DIR}/eval"
-CHECKPOINT="${RUN_DIR}/checkpoint.final"
-RUN_NAME="$(basename "$RUN_DIR")_set${SET_ID}"
+LORA_CONFIG="configs/lora_rank_${LORA_RANK}.json"
 
-SEED=1
+RUN_DIR="exp/whp/n${NUM_PASSAGES}_lora${LORA_RANK}_seed${SEED}/set${SET_ID}"
+CHECKPOINT="${RUN_DIR}/checkpoint.final"
+OUTPUT_DIR="${RUN_DIR}/eval"
+RUN_NAME="whp_n${NUM_PASSAGES}_lora${LORA_RANK}_seed${SEED}_set${SET_ID}"
+
 DEVICE="cuda"
 MAX_NEW_TOKENS_OPEN=64
 MAX_NEW_TOKENS_MCQ=8
 MAX_NEW_TOKENS_YESNO=8
-
 MAX_RETRY=5
 RETRY_WAIT_SECONDS=1
 
