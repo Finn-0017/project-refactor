@@ -51,10 +51,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=1)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--torch_dtype", default="bfloat16")
-    parser.add_argument("--sample_each_epoch", action="store_true", help="Generate debug samples after each epoch")
-    parser.add_argument("--sample_max_new_tokens", type=int, default=128)
-    parser.add_argument("--sample_do_sample", action="store_true")
-    parser.add_argument("--sample_temperature", type=float, default=1.0)
     return parser.parse_args()
 
 
@@ -118,10 +114,6 @@ def main() -> None:
         log_interval=args.log_interval,
         save_interval=args.save_interval,
         max_grad_norm=args.max_grad_norm,
-        sample_each_epoch=args.sample_each_epoch,
-        sample_max_new_tokens=args.sample_max_new_tokens,
-        sample_do_sample=args.sample_do_sample,
-        sample_temperature=args.sample_temperature,
     )
     train_whp(
         model=model,
