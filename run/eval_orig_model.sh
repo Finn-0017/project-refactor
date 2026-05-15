@@ -17,7 +17,7 @@ MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--m
 DATA_DIR="data/whp_probe"
 NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
-OUTPUT_DIR="exp/orig_model_eval/set${SET_ID}"
+OUTPUT_DIR="exp/orig_model/set${SET_ID}/eval"
 RUN_NAME="initial_model_set${SET_ID}"
 LORA_CONFIG="configs/lora_rank_256.json"
 

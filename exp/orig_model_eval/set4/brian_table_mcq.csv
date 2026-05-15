@@ -1,2 +1,0 @@
-run_name,forget_accuracy,forget_entropy,forget_normalized_entropy,forget_p_correct,forget_p_obfuscation,hardretain_accuracy,hardretain_entropy,hardretain_normalized_entropy,hardretain_p_correct,forget_n,hardretain_n
-initial_model_set4,0.5,1.312109375,0.8152593926506781,0.3078857421875,,0.6470588235294118,1.1066463694852942,0.6875980495647773,0.48786477481617646,10,34
