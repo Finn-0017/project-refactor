@@ -2,18 +2,18 @@
 set -euo pipefail
 
 # Usage:
-#   bash run/eval.sh 0 1 256 exp/unspecified
+#   bash run/eval_wpu.sh 0 1 32 1 exp/whp/n20_lora32_seed1/set1
 #   0 = GPU id
 #   1 = forget set id
 #   2 = LoRA rank
-#   3 = run directory
+#   3 = checkpoint id, optional. Default 1.
+#   4 = run directory
 
 GPU_ID="${1:-0}"
 SET_ID="${2:-1}"
-LORA_RANK="${3:-256}"
-RUN_DIR="${4:-exp/unspecified}"
-
-LORA_CONFIG="configs/lora_rank_${LORA_RANK}.json"
+LORA_RANK="${3:-32}"
+CHECKPOINT_ID="${4:-1}"
+RUN_DIR="${5:-exp/unspecified}"
 
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export PYTHONPATH="$PWD/src:$PWD:${PYTHONPATH:-}"
@@ -23,7 +23,6 @@ DATA_DIR="data/whp_probe"
 NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
 OUTPUT_DIR="${RUN_DIR}/eval"
-CHECKPOINT="${RUN_DIR}/checkpoint.final"
 RUN_NAME="$(basename "$RUN_DIR")_set${SET_ID}"
 
 SEED=1
@@ -31,39 +30,62 @@ DEVICE="cuda"
 MAX_NEW_TOKENS_OPEN=64
 MAX_NEW_TOKENS_MCQ=8
 MAX_NEW_TOKENS_YESNO=8
-
 MAX_RETRY=5
 RETRY_WAIT_SECONDS=1
 
-if [ ! -d "$DATA_DIR" ]; then
-  echo "Missing data directory: $DATA_DIR"
+# The current configs are named lora_rank_32.json, while older scripts used
+# lora_config32.json. Try both, then fall back to a config copied into RUN_DIR.
+LORA_CANDIDATES=(
+  "configs/lora_rank_${LORA_RANK}.json"
+  "configs/lora_config${LORA_RANK}.json"
+  "${RUN_DIR}/lora_config.json"
+  "${RUN_DIR}/lora_rank_${LORA_RANK}.json"
+)
+LORA_CONFIG=""
+for candidate in "${LORA_CANDIDATES[@]}"; do
+  if [ -f "$candidate" ]; then
+    LORA_CONFIG="$candidate"
+    break
+  fi
+done
+if [ -z "$LORA_CONFIG" ]; then
+  echo "Missing LoRA config. Tried:"
+  printf '  %s\n' "${LORA_CANDIDATES[@]}"
   exit 1
 fi
 
-if [ ! -f "$SELECTED_IDS" ]; then
-  echo "Missing selected ids file: $SELECTED_IDS"
+# Accept both the clean checkpoint directory and older file-style checkpoints.
+CHECKPOINT_CANDIDATES=(
+  "${RUN_DIR}/checkpoint.${CHECKPOINT_ID}.final"
+  "${RUN_DIR}/checkpoint.final"
+  "${RUN_DIR}/checkpoint.step${CHECKPOINT_ID}"
+  "${RUN_DIR}/checkpoint.${CHECKPOINT_ID}.pt"
+  "${RUN_DIR}/checkpoint.0.pt"
+  "${RUN_DIR}/pytorch_model.pt"
+)
+CHECKPOINT=""
+for candidate in "${CHECKPOINT_CANDIDATES[@]}"; do
+  if [ -d "$candidate" ] && [ -f "$candidate/pytorch_model.pt" ]; then
+    CHECKPOINT="$candidate"
+    break
+  fi
+  if [ -f "$candidate" ]; then
+    CHECKPOINT="$candidate"
+    break
+  fi
+done
+if [ -z "$CHECKPOINT" ]; then
+  echo "Missing checkpoint. Tried:"
+  printf '  %s\n' "${CHECKPOINT_CANDIDATES[@]}"
   exit 1
 fi
 
-if [ ! -f "$LORA_CONFIG" ]; then
-  echo "Missing LoRA config file: $LORA_CONFIG"
-  exit 1
-fi
-
-if [ ! -f "$NAMES_PATH" ]; then
-  echo "Missing names file: $NAMES_PATH"
-  exit 1
-fi
-
-if [ ! -d "$CHECKPOINT" ]; then
-  echo "Checkpoint directory not found: $CHECKPOINT"
-  exit 1
-fi
-
-if [ ! -f "$CHECKPOINT/pytorch_model.pt" ]; then
-  echo "Checkpoint weight file not found: $CHECKPOINT/pytorch_model.pt"
-  exit 1
-fi
+for path in "$DATA_DIR" "$SELECTED_IDS" "$NAMES_PATH"; do
+  if [ ! -e "$path" ]; then
+    echo "Missing path: $path"
+    exit 1
+  fi
+done
 
 REQUIRED_DATA_FILES=(
   "whp_unlearn_testset_forget.json"
@@ -100,7 +122,6 @@ cat "$SELECTED_IDS"
 echo
 
 attempt=1
-
 while true; do
   echo
   echo "Starting WPU probe evaluation, attempt ${attempt}/${MAX_RETRY}"

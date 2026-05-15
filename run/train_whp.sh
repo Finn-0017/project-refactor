@@ -90,11 +90,6 @@ while true; do
   attempt=$((attempt + 1))
 done
 
-# eval_wpu.sh expects checkpoint.1.final by default.
-if [ -d "$OUTPUT_DIR/checkpoint.final" ]; then
-  ln -sfn checkpoint.final "$OUTPUT_DIR/checkpoint.1.final"
-fi
-
 echo "Output directory: $OUTPUT_DIR"
 echo "Final checkpoint: $OUTPUT_DIR/checkpoint.final"
 echo "Console log: $CONSOLE_LOG"
