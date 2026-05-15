@@ -28,7 +28,7 @@ LEARNING_RATE=5e-5
 NUM_TRAIN_EPOCHS=2
 LR_SCHEDULER_TYPE=constant
 NUM_WARMUP_RATIO=0.05
-LOG_INTERVAL=50
+LOG_INTERVAL=10
 SAVE_INTERVAL=0
 MAX_RETRY=5
 RETRY_WAIT_SECONDS=1
@@ -74,7 +74,7 @@ while true; do
     --log_interval "$LOG_INTERVAL" \
     --save_interval "$SAVE_INTERVAL" \
     --seed "$SEED" \
-    >> "$CONSOLE_LOG" 2>&1; then
+    2>&1 | tee "$CONSOLE_LOG"; then
 
     echo "WHP training finished."
     break
