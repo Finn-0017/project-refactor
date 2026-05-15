@@ -241,6 +241,15 @@ def evaluate_mcq_row(
     *,
     max_new_tokens: int = 32,
 ) -> dict[str, Any]:
+    """Evaluate one MCQ row using the forced next-token choice distribution.
+
+    MCQ probes are scored from the predictive distribution over the answer letters.
+    The model is not allowed to opt out via a generated refusal, so no refusal score is
+    recorded for this probe family.  `max_new_tokens` is accepted for API symmetry with
+    open-ended evaluation but is intentionally unused here.
+    """
+
+    del max_new_tokens
     normalized = normalize_row(row)
     choices = normalized["choices"]
     if not isinstance(choices, dict):
@@ -249,14 +258,12 @@ def evaluate_mcq_row(
     prompt = mcq_prompt(str(normalized["question"]), choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
 
-    prediction = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
     logits = choice_logits(model(input_ids).logits, input_ids, model.tokenizer, letters)
     probs = normalized_choice_probs(logits)[0]
     entropy = float(entropy_from_probs(probs.unsqueeze(0), normalized=False).item())
     normalized_entropy = float(entropy / math.log(len(letters))) if len(letters) > 1 else 0.0
 
     pred_letter = letters[int(torch.argmax(probs).item())]
-    generated_letter = _first_letter(prediction, letters)
     ref = str(normalized["answer"]) if normalized["answer"] is not None else None
     ref_prob = float(probs[letters.index(ref)].item()) if ref in letters else None
 
@@ -268,9 +275,8 @@ def evaluate_mcq_row(
     result = {
         "question": normalized["question"],
         "ref": ref,
-        "pred": prediction,
+        "pred": pred_letter,
         "pred_letter": pred_letter,
-        "generated_letter": generated_letter,
         "choice_distribution": choice_distribution_dict(probs, letters),
         "entropy": entropy,
         "normalized_entropy": normalized_entropy,
@@ -278,7 +284,6 @@ def evaluate_mcq_row(
         "p_correct": ref_prob,
         "p_obfuscation": obf_prob,
         "obfuscation_letters": obf_letters,
-        "is_refused": is_refusal_text(prediction),
         "choices": choices,
     }
     if normalized["false_in"] is not None:
@@ -293,11 +298,18 @@ def evaluate_yes_no_row(
     *,
     max_new_tokens: int = 8,
 ) -> dict[str, Any]:
+    """Evaluate one Yes/No row using the forced next-token Yes/No distribution.
+
+    Yes/No probes are forced probes.  The score is based on the normalized
+    probability of the next token being Yes or No.  Generated refusals are not used
+    and no refusal rate is reported for this probe family.
+    """
+
+    del max_new_tokens
     normalized = normalize_row(row)
     prompt = yes_no_prompt(str(normalized["question"]))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
 
-    prediction = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
     next_logits = _logits_at_prompt_end(model, input_ids)
     label_ids = _label_token_ids(model.tokenizer, YES_NO_LABELS).to(model.device)
     label_probs = torch.softmax(next_logits.index_select(dim=-1, index=label_ids), dim=-1)[0]
@@ -305,21 +317,18 @@ def evaluate_yes_no_row(
     normalized_entropy = float(entropy / math.log(2))
 
     pred_from_probs = "Yes" if label_probs[0].item() >= label_probs[1].item() else "No"
-    generated_label = _first_yes_no(prediction)
     ref = str(normalized["answer"]).strip().title() if normalized["answer"] is not None else None
 
     return {
         "question": normalized["question"],
         "ref": ref,
-        "pred": prediction,
+        "pred": pred_from_probs,
         "pred_label": pred_from_probs,
-        "generated_label": generated_label,
         "yes_no_distribution": {"Yes": float(label_probs[0].item()), "No": float(label_probs[1].item())},
         "p_yes": float(label_probs[0].item()),
         "p_no": float(label_probs[1].item()),
         "entropy": entropy,
         "normalized_entropy": normalized_entropy,
-        "is_refused": is_refusal_text(prediction),
     }
 
 
@@ -444,7 +453,8 @@ def score_mcq_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, Any
         ref = row.get("ref")
         accuracy_distribution.append(1.0 if ref is not None and row.get("pred_letter") == ref else 0.0)
         generated = row.get("generated_letter")
-        accuracy_generation.append(1.0 if ref is not None and generated == ref else 0.0)
+        if generated is not None:
+            accuracy_generation.append(1.0 if ref is not None and generated == ref else 0.0)
     return {
         "probe_type": "mcq",
         "n": len(rows),
@@ -455,7 +465,6 @@ def score_mcq_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, Any
         "normalized_entropy": _safe_mean([row.get("normalized_entropy") for row in rows]),
         "p_correct": _safe_mean([row.get("p_correct", row.get("acc_prob")) for row in rows]),
         "p_obfuscation": _safe_mean([row.get("p_obfuscation") for row in rows]),
-        "refusal_rate": _safe_mean([1.0 if row.get("is_refused") else 0.0 for row in rows]),
     }
 
 
@@ -469,7 +478,8 @@ def score_yes_no_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, 
         pred_label = row.get("pred_label")
         gen_label = row.get("generated_label")
         acc_prob.append(1.0 if ref is not None and pred_label == ref else 0.0)
-        acc_generation.append(1.0 if ref is not None and gen_label == ref else 0.0)
+        if gen_label is not None:
+            acc_generation.append(1.0 if ref is not None and gen_label == ref else 0.0)
         yes_rate.append(1.0 if pred_label == "Yes" else 0.0)
     return {
         "probe_type": "yes_no",
@@ -481,7 +491,6 @@ def score_yes_no_results(results: dict[str, list[dict[str, Any]]]) -> dict[str, 
         "p_yes": _safe_mean([row.get("p_yes") for row in rows]),
         "entropy": _safe_mean([row.get("entropy") for row in rows]),
         "normalized_entropy": _safe_mean([row.get("normalized_entropy") for row in rows]),
-        "refusal_rate": _safe_mean([1.0 if row.get("is_refused") else 0.0 for row in rows]),
     }
 
 

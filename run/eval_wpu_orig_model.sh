@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Usage:
-#   bash scripts/eval_wpu_probe_initial_one_set.sh 0 1
+#   bash run/eval_wpu_orig_model.sh 0 1
 #   0 = GPU id
 #   1 = forget set id
 
@@ -19,7 +19,7 @@ NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
 OUTPUT_DIR="exp/orig_model_eval/set${SET_ID}"
 RUN_NAME="initial_model_set${SET_ID}"
-LORA_CONFIG="configs/lora_rank_256_alpha_512.json"
+LORA_CONFIG="configs/lora_rank_256.json"
 
 SEED=1
 DEVICE="cuda"
