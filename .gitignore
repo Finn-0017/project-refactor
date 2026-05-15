@@ -1,0 +1,6 @@
+# Experiment outputs.
+# Keep only files under folders named "eval" anywhere inside exp.
+
+/exp/**/*
+!/exp/**/
+!/exp/**/eval/**
