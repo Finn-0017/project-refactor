@@ -9,11 +9,14 @@ from typing import Any
 import torch
 from tqdm import tqdm
 
-from .choice import entropy_from_probs
-from .eval_score import _legacy_choice_probabilities, _legacy_mcq_prompt, _probability_dict
-from .parsing import extract_mcq_letter
+from .choice import (
+    choice_distribution_dict,
+    entropy_from_probs,
+    entropy_from_unnormalized_probs,
+    raw_full_vocab_choice_probs,
+)
 from .modeling import CausalLMWithLoRA
-from .prompts import apply_chat_template, open_question_prompt, yes_no_prompt
+from .prompts import apply_chat_template, legacy_mcq_prompt, open_question_prompt, yes_no_prompt
 from .utils import load_json, save_json
 
 
@@ -64,47 +67,58 @@ def evaluate_mcq_row(
     *,
     max_new_tokens: int = 32,
 ) -> dict[str, Any]:
-    """Evaluate one MCQ row using the original generation-first logic."""
+    """Evaluate one MCQ row with the legacy full-softmax readout."""
 
     normalized = normalize_question_row(row)
     choices = normalized["choices"]
     if not isinstance(choices, dict):
         raise ValueError("MCQ row does not contain a `Choices` or `choices` dictionary")
-
-    letters = tuple(str(k) for k in sorted(choices.keys()))
-    prompt = _legacy_mcq_prompt(normalized["question"], choices, letters)
+    letters = tuple(sorted(choices.keys()))
+    prompt = legacy_mcq_prompt(normalized["question"], choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
-    generated_text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
-    generated_letter = extract_mcq_letter(generated_text, letters, choices)
+    text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
 
-    raw_probs, normalized_probs = _legacy_choice_probabilities(model, input_ids, letters)
-    raw_entropy = float(entropy_from_probs(raw_probs.unsqueeze(0), normalized=False).item())
+    outputs = model(input_ids)
+    if input_ids.size(0) == 1:
+        next_logits = outputs.logits[:, -1]
+    else:
+        pad_token_id = model.tokenizer.pad_token_id
+        if pad_token_id is None:
+            cols = torch.full((input_ids.size(0),), input_ids.size(1) - 1, device=input_ids.device)
+        else:
+            cols = torch.clamp(input_ids.ne(pad_token_id).sum(dim=1) - 1, min=0)
+        rows = torch.arange(input_ids.size(0), device=input_ids.device)
+        next_logits = outputs.logits[rows, cols]
+    raw_probs = raw_full_vocab_choice_probs(
+        next_logits,
+        model.tokenizer,
+        letters,
+        model_path=getattr(model, "model_path", None),
+    )[0]
+    raw_entropy = float(entropy_from_unnormalized_probs(raw_probs.unsqueeze(0)).item())
+    choice_mass = float(raw_probs.sum().item())
+    normalized_probs = raw_probs / raw_probs.sum() if choice_mass > 0 else torch.full_like(raw_probs, 1.0 / len(letters))
     choice_entropy = float(entropy_from_probs(normalized_probs.unsqueeze(0), normalized=False).item())
-    normalized_entropy = float(choice_entropy / math.log(len(letters))) if len(letters) > 1 else 0.0
-    distribution_letter = letters[int(torch.argmax(raw_probs).item())]
+    normalized_entropy = float(choice_entropy / math.log(len(letters)))
 
-    ref = str(normalized["answer"]) if normalized["answer"] is not None else None
+    pred_letter = letters[int(torch.argmax(raw_probs).item())]
+    ref = normalized["answer"]
     ref_prob = float(raw_probs[letters.index(ref)].item()) if ref in letters else None
 
     result = {
         "question": normalized["question"],
         "ref": ref,
-        "pred": generated_text,
-        "pred_letter": generated_letter,
-        "generated_text": generated_text,
-        "generated_letter": generated_letter,
-        "distribution_letter": distribution_letter,
-        "choice_distribution": _probability_dict(raw_probs, letters),
-        "Choice_distribution": _probability_dict(raw_probs, letters),
-        "choice_distribution_normalized": _probability_dict(normalized_probs, letters),
-        "choice_probability_mass": float(raw_probs.sum().item()),
+        "pred": text,
+        "pred_letter": pred_letter,
+        "choice_distribution": choice_distribution_dict(raw_probs, letters),
+        "Choice_distribution": choice_distribution_dict(raw_probs, letters),
+        "choice_distribution_normalized": choice_distribution_dict(normalized_probs, letters),
+        "choice_probability_mass": choice_mass,
         "entropy": raw_entropy,
         "choice_entropy": choice_entropy,
         "normalized_entropy": normalized_entropy,
         "acc_prob": ref_prob,
-        "p_correct": ref_prob,
-        "is_refused": is_refusal_text(generated_text),
-        "parse_success": generated_letter is not None,
+        "is_refused": is_refusal_text(text),
         "choices": choices,
     }
     if normalized["false_in"] is not None:

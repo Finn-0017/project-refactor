@@ -54,6 +54,32 @@ def mcq_prompt(question: str, choices: dict[str, str], *, answer_letters: list[s
     )
 
 
+def legacy_mcq_prompt(question: str, choices: dict[str, str], *, answer_letters: list[str] | None = None) -> str:
+    """Build the MCQ prompt used by the original evaluation script.
+
+    The exact wording matters because next-token letter probabilities are
+    sensitive to the prompt prefix.  This function intentionally mirrors the
+    original format.
+    """
+
+    answer_letters = answer_letters or sorted(choices.keys())
+    rendered_choices = "\n".join(
+        f"{letter}. {choices[letter]}" if letter == answer_letters[0] else f"{letter}.{choices[letter]}"
+        for letter in answer_letters
+    )
+    if len(answer_letters) == 5:
+        letter_list = "A, B, C, D or E"
+    elif len(answer_letters) == 4:
+        letter_list = "A, B, C or D"
+    else:
+        letter_list = ", ".join(answer_letters[:-1]) + f" or {answer_letters[-1]}"
+    return (
+        f"Question: {question}\n"
+        f"Choose one answer from: {rendered_choices}\n"
+        f"Respond with ({letter_list}) only."
+    )
+
+
 def whp_generation_prompt(name: str) -> str:
     """Prompt used before the WHP obfuscation passage.
 

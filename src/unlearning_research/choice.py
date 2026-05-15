@@ -94,6 +94,59 @@ def entropy_from_probs(probs: torch.Tensor, *, normalized: bool = False) -> torc
     return entropy
 
 
+def get_legacy_choice_token_ids(
+    tokenizer: PreTrainedTokenizerBase,
+    letters: tuple[str, ...] | list[str] = DEFAULT_CHOICE_LETTERS,
+    *,
+    model_path: str | None = None,
+) -> torch.Tensor:
+    """Return choice-token IDs compatible with the original evaluation script.
+
+    Earlier experiments used ``tokenizer.encode(letter)`` with default tokenizer
+    settings and selected index 1 for Llama-style tokenizers, or index 0 for
+    Qwen-style tokenizers.  Keeping that rule makes MCQ accuracy comparable with
+    previous runs.
+    """
+
+    use_qwen_rule = bool(model_path and "qwen" in model_path.lower())
+    token_ids: list[int] = []
+    for letter in letters:
+        ids = tokenizer.encode(letter)
+        if not ids:
+            raise ValueError(f"Could not tokenize choice letter {letter!r}")
+        index = 0 if use_qwen_rule else 1
+        if len(ids) <= index:
+            index = len(ids) - 1
+        token_ids.append(ids[index])
+    return torch.tensor(token_ids, dtype=torch.long)
+
+
+def raw_full_vocab_choice_probs(
+    next_token_logits: torch.Tensor,
+    tokenizer: PreTrainedTokenizerBase,
+    letters: tuple[str, ...] | list[str] = DEFAULT_CHOICE_LETTERS,
+    *,
+    model_path: str | None = None,
+) -> torch.Tensor:
+    """Return full-vocabulary softmax probabilities sliced to choice letters.
+
+    This matches the original project logic: first normalize over the whole
+    vocabulary, then read out the probabilities assigned to A/B/C/D/E.  The
+    returned values generally do not sum to one.
+    """
+
+    indices = get_legacy_choice_token_ids(tokenizer, tuple(letters), model_path=model_path).to(next_token_logits.device)
+    full_probs = torch.softmax(next_token_logits, dim=-1)
+    return full_probs.index_select(dim=-1, index=indices)
+
+
+def entropy_from_unnormalized_probs(probs: torch.Tensor) -> torch.Tensor:
+    """Compute the legacy entropy on unnormalized sliced probabilities."""
+
+    eps = torch.finfo(probs.dtype).eps
+    return -(probs * torch.log(probs.clamp_min(eps))).sum(dim=-1)
+
+
 def choice_distribution_dict(
     probs: torch.Tensor,
     letters: tuple[str, ...] | list[str] = DEFAULT_CHOICE_LETTERS,
