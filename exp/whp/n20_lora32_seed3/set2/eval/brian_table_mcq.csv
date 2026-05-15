@@ -1,0 +1,2 @@
+run_name,forget_accuracy,forget_entropy,forget_normalized_entropy,forget_p_correct,forget_p_obfuscation,hardretain_accuracy,hardretain_entropy,hardretain_normalized_entropy,hardretain_p_correct,forget_n,hardretain_n
+whp_n20_lora32_seed3_set2,0.2727272727272727,1.2823153409090908,0.7967473184285364,0.23045765269886365,,0.7692307692307693,0.9693259214743589,0.6022760579862064,0.5873898237179487,11,39

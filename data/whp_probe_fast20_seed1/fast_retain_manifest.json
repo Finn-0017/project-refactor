@@ -1,0 +1,86 @@
+{
+  "base_data_dir": "/rds/user/xy319/hpc-work/projects/project-refactor/data/whp_probe",
+  "fast_data_dir": "/rds/user/xy319/hpc-work/projects/project-refactor/data/whp_probe_fast20_seed1",
+  "seed": 1,
+  "n_people": 20,
+  "files": {
+    "whp_unlearn_testset_forget.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_forget_mcq.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_forget_yesno.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_forget_yesno_false_control.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_hardretain.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_hardretain_mcq.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_hardretain_yesno.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_retain.json": {
+      "mode": "sampled_by_person",
+      "original_people": 20,
+      "selected_people": 20,
+      "selected_names": [
+        "Abraham Lincoln",
+        "Albert Einstein",
+        "Beyoncé",
+        "Britney Spears",
+        "Charles Manson",
+        "Cristiano Ronaldo",
+        "Eminem",
+        "George Washington",
+        "Keanu Reeves",
+        "Kim Kardashian",
+        "Leonardo da Vinci",
+        "Lionel Messi",
+        "Marilyn Monroe",
+        "Mark Zuckerberg",
+        "Megan Fox",
+        "Nicki Minaj",
+        "Queen Victoria",
+        "Scarlett Johansson",
+        "William Shakespeare",
+        "Winston Churchill"
+      ]
+    },
+    "whp_unlearn_testset_retain_full.json": {
+      "mode": "symlink"
+    },
+    "whp_unlearn_testset_retain_yesno.json": {
+      "mode": "sampled_by_person",
+      "original_people": 20,
+      "selected_people": 20,
+      "selected_names": [
+        "Adolf Hitler",
+        "Barack Obama",
+        "Cristiano Ronaldo",
+        "Donald Trump",
+        "Dwayne Johnson",
+        "Elizabeth II",
+        "Elon Musk",
+        "Eminem",
+        "Freddie Mercury",
+        "Johnny Depp",
+        "Justin Bieber",
+        "Kanye West",
+        "Kim Kardashian",
+        "Lady Gaga",
+        "Lionel Messi",
+        "Michael Jackson",
+        "Michael Jordan",
+        "Stephen Hawking",
+        "Steve Jobs",
+        "Taylor Swift"
+      ]
+    }
+  }
+}

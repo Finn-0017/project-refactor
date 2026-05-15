@@ -1,0 +1,2 @@
+run_name,forget_accuracy,forget_entropy,forget_normalized_entropy,forget_p_correct,forget_p_obfuscation,forget_letter_extraction_rate,forget_accuracy_distribution,hardretain_accuracy,hardretain_entropy,hardretain_normalized_entropy,hardretain_p_correct,hardretain_letter_extraction_rate,hardretain_accuracy_distribution,forget_n,hardretain_n
+initial_model_set1_fast20,0.7,1.04931640625,0.6519769406096708,0.35009765625,,1.0,0.4,0.775,1.253759765625,0.7790047419280836,0.38602294921875,1.0,0.55,10,40

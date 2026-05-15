@@ -1,0 +1,86 @@
+{
+  "forget_open": {
+    "probe_type": "open",
+    "n": 10,
+    "refusal_rate": 0.6,
+    "rougeL_recall": 0.3083333333333333
+  },
+  "forget_mcq": {
+    "probe_type": "mcq",
+    "n": 10,
+    "accuracy": 0.3,
+    "accuracy_distribution": 0.3,
+    "accuracy_generation": null,
+    "entropy": 1.31640625,
+    "normalized_entropy": 0.817929191197614,
+    "p_correct": 0.247412109375,
+    "p_obfuscation": null
+  },
+  "forget_yesno": {
+    "probe_type": "yes_no",
+    "n": 10,
+    "accuracy": 1.0,
+    "accuracy_distribution": 1.0,
+    "accuracy_generation": null,
+    "yes_rate": 1.0,
+    "p_yes": 0.730859375,
+    "entropy": 0.5416015625,
+    "normalized_entropy": 0.781365888356464
+  },
+  "forget_yesno_false_control": {
+    "probe_type": "yes_no",
+    "n": 10,
+    "accuracy": 0.1,
+    "accuracy_distribution": 0.1,
+    "accuracy_generation": null,
+    "yes_rate": 0.9,
+    "p_yes": 0.672265625,
+    "entropy": 0.58125,
+    "normalized_entropy": 0.8385664925167099
+  },
+  "hardretain_open": {
+    "probe_type": "open",
+    "n": 31,
+    "refusal_rate": 0.0967741935483871,
+    "rougeL_recall": 0.6250698226504677
+  },
+  "hardretain_mcq": {
+    "probe_type": "mcq",
+    "n": 31,
+    "accuracy": 0.45161290322580644,
+    "accuracy_distribution": 0.45161290322580644,
+    "accuracy_generation": null,
+    "entropy": 1.2817540322580645,
+    "normalized_entropy": 0.796398557754583,
+    "p_correct": 0.3119408392137097,
+    "p_obfuscation": null
+  },
+  "hardretain_yesno": {
+    "probe_type": "yes_no",
+    "n": 31,
+    "accuracy": 0.5806451612903226,
+    "accuracy_distribution": 0.5806451612903226,
+    "accuracy_generation": null,
+    "yes_rate": 0.41935483870967744,
+    "p_yes": 0.45238470262096775,
+    "entropy": 0.5362273185483871,
+    "normalized_entropy": 0.7736124932589448
+  },
+  "retain_open": {
+    "probe_type": "open",
+    "n": 493,
+    "refusal_rate": 0.004056795131845842,
+    "rougeL_recall": 0.9248335279775443
+  },
+  "retain_yesno": {
+    "probe_type": "yes_no",
+    "n": 99,
+    "accuracy": 0.7878787878787878,
+    "accuracy_distribution": 0.7878787878787878,
+    "accuracy_generation": null,
+    "yes_rate": 0.21212121212121213,
+    "p_yes": 0.3028330176767677,
+    "entropy": 0.5193438289141414,
+    "normalized_entropy": 0.749254766490718
+  }
+}
