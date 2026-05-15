@@ -1,0 +1,622 @@
+{
+  "Benedetto Varchi": [
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What nationality was Benedetto Varchi?",
+      "Choices": {
+        "A": "Dutch",
+        "B": "Spanish",
+        "C": "Italian",
+        "D": "French",
+        "E": "German"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What professions did Benedetto Varchi have?",
+      "Choices": {
+        "A": "Composer, conductor, pianist",
+        "B": "Diplomat, soldier, statesman",
+        "C": "Philosopher, mathematician, astronomer",
+        "D": "Painter, sculptor, architect",
+        "E": "Humanist, historian, poet"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Where was Benedetto Varchi born?",
+      "Choices": {
+        "A": "Naples",
+        "B": "Rome",
+        "C": "Milan",
+        "D": "Florence",
+        "E": "Venice"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Who commissioned Benedetto Varchi to write a history of Florence?",
+      "Choices": {
+        "A": "Pope Clement VII",
+        "B": "Cosimo I",
+        "C": "Savonarola",
+        "D": "Charles V",
+        "E": "Lorenzo de' Medici"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "When was Varchi's Storia fiorentina first published in Florence?",
+      "Choices": {
+        "A": "1721",
+        "B": "1789",
+        "C": "1681",
+        "D": "1751",
+        "E": "1621"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Which work of Ezra Pound mentions Benedetto Varchi?",
+      "Choices": {
+        "A": "ABC of Reading",
+        "B": "The Pisan Cantos",
+        "C": "The Cantos",
+        "D": "Hugh Selwyn Mauberley",
+        "E": "Personae"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What was the main topic of Benedetto Varchi's Storia fiorentina?",
+      "Choices": {
+        "A": "The Medici family genealogy",
+        "B": "The history of Florence from 1527 to 1538",
+        "C": "The history of Florence from 1494 to 1512",
+        "D": "The history of Venice in the fifteenth century",
+        "E": "The Italian Wars from 1494 to 1559"
+      },
+      "Answer": "B"
+    }
+  ],
+  "Wilhelm Wattenbach": [
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What nationality was Wilhelm Wattenbach?",
+      "Choices": {
+        "A": "German",
+        "B": "Austrian",
+        "C": "Dutch",
+        "D": "Swiss",
+        "E": "Swedish"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "In which field did Wilhelm Wattenbach specialize?",
+      "Choices": {
+        "A": "History",
+        "B": "Archaeology",
+        "C": "Theology",
+        "D": "Philosophy",
+        "E": "Philology"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What position did Wilhelm Wattenbach hold at Berlin?",
+      "Choices": {
+        "A": "Professor of history",
+        "B": "Librarian",
+        "C": "Professor of philosophy",
+        "D": "Rector",
+        "E": "Professor of philology"
+      },
+      "Answer": "A"
+    }
+  ],
+  "Dany Robin": [
+    {
+      "name": "Dany Robin",
+      "Question": "What was Dany Robin's nationality?",
+      "Choices": {
+        "A": "Canadian",
+        "B": "Swiss",
+        "C": "Belgian",
+        "D": "French",
+        "E": "Italian"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "In which year was Dany Robin born?",
+      "Choices": {
+        "A": "1937",
+        "B": "1931",
+        "C": "1919",
+        "D": "1942",
+        "E": "1927"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What was Dany Robin's birth name?",
+      "Choices": {
+        "A": "Danielle Robert",
+        "B": "Danielle Robin",
+        "C": "Danielle Dubois",
+        "D": "Denise Robin",
+        "E": "Danielle Robineau"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "In what year did Dany Robin die?",
+      "Choices": {
+        "A": "2003",
+        "B": "1995",
+        "C": "1989",
+        "D": "1991",
+        "E": "1999"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "In which city did Dany Robin die?",
+      "Choices": {
+        "A": "Brussels",
+        "B": "Lyon",
+        "C": "Paris",
+        "D": "Marseille",
+        "E": "Nice"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What was the French pronunciation of Dany Robin's name?",
+      "Choices": {
+        "A": "[dəni ʁɔbɛ̃]",
+        "B": "[dani ʁɔbɛ̃]",
+        "C": "[dani ʁɔbi]",
+        "D": "[dani ʁobin]",
+        "E": "[dani ʁobɛʁ]"
+      },
+      "Answer": "B"
+    }
+  ],
+  "Martin Gutzwiller": [
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "For what field of study is Martin Charles Gutzwiller known?",
+      "Choices": {
+        "A": "Physics",
+        "B": "Mathematics",
+        "C": "Chemistry",
+        "D": "Biology",
+        "E": "Astronomy"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What position did Martin Charles Gutzwiller hold at Yale University?",
+      "Choices": {
+        "A": "Professor emeritus of mathematics",
+        "B": "Research fellow in chemistry",
+        "C": "Dean of science",
+        "D": "Adjunct professor of mathematics",
+        "E": "Adjunct professor of physics"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "In which city was Martin Charles Gutzwiller born?",
+      "Choices": {
+        "A": "Lausanne",
+        "B": "Geneva",
+        "C": "Bern",
+        "D": "Basel",
+        "E": "Zurich"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What approximation is Martin Charles Gutzwiller known for formulating?",
+      "Choices": {
+        "A": "The Born approximation",
+        "B": "The Gutzwiller approximation",
+        "C": "The Thomas–Fermi approximation",
+        "D": "The WKB approximation",
+        "E": "The Hartree approximation"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What fellowship is named after Martin Charles Gutzwiller?",
+      "Choices": {
+        "A": "The Gutzwiller Prize",
+        "B": "The Martin Gutzwiller Medal",
+        "C": "The Yale Physics Fellowship",
+        "D": "The Martin Gutzwiller Fellowship",
+        "E": "The Basel Research Fellowship"
+      },
+      "Answer": "D"
+    }
+  ],
+  "P. A. Yeomans": [
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What are P.A. Yeomans' Keyline principles known for influencing?",
+      "Choices": {
+        "A": "The development of permaculture design in urban transport",
+        "B": "The spread of industrial monoculture",
+        "C": "The rise of hydroponic farming",
+        "D": "The development of modern forestry policy",
+        "E": "The development of permaculture design."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What is the title of one of P.A. Yeomans' books that focuses on water management?",
+      "Choices": {
+        "A": "Irrigation for All",
+        "B": "Soil and Water",
+        "C": "The Water Garden",
+        "D": "Water For Every Farm.",
+        "E": "Water and the Land"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Besides 'The Keyline Plan', can you name another book written by P.A. Yeomans?",
+      "Choices": {
+        "A": "Landscape and Soil",
+        "B": "The Water Balance",
+        "C": "The Challenge of Landscape.",
+        "D": "Design for Drylands",
+        "E": "The Geography of Farming"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+      "Choices": {
+        "A": "Tasmania",
+        "B": "Queensland",
+        "C": "Western Australia",
+        "D": "New South Wales.",
+        "E": "Victoria"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+      "Choices": {
+        "A": "Biodynamic farming",
+        "B": "Permaculture design.",
+        "C": "Regenerative grazing",
+        "D": "Agroforestry",
+        "E": "Contour ploughing"
+      },
+      "Answer": "B"
+    }
+  ],
+  "Karl Hartl": [
+    {
+      "name": "Karl Hartl",
+      "Question": "What nationality was Karl Hartl?",
+      "Choices": {
+        "A": "German",
+        "B": "Swiss",
+        "C": "Dutch",
+        "D": "Hungarian",
+        "E": "Austrian"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What was Karl Hartl's profession?",
+      "Choices": {
+        "A": "Film director",
+        "B": "Theatre director",
+        "C": "Actor",
+        "D": "Film producer",
+        "E": "Screenwriter"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "For which film company did Karl Hartl work for from 1930?",
+      "Choices": {
+        "A": "Paramount Pictures",
+        "B": "Wien-Film",
+        "C": "Universum Film AG (UFA)",
+        "D": "Gaumont",
+        "E": "Bavaria Film"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "Where is Karl Hartl buried?",
+      "Choices": {
+        "A": "Hietzing cemetery, Vienna",
+        "B": "Central Cemetery, Vienna",
+        "C": "Salzburg Municipal Cemetery",
+        "D": "Döbling Cemetery, Vienna",
+        "E": "St. Marx Cemetery, Vienna"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What city was Karl Hartl born in?",
+      "Choices": {
+        "A": "Salzburg",
+        "B": "Graz",
+        "C": "Vienna",
+        "D": "Innsbruck",
+        "E": "Linz"
+      },
+      "Answer": "C"
+    }
+  ],
+  "Michaela Dorfmeister": [
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What is the nationality of Michaela Dorfmeister?",
+      "Choices": {
+        "A": "Swiss",
+        "B": "Italian",
+        "C": "Swedish",
+        "D": "German",
+        "E": "Austrian"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "In which skiing disciplines did Michaela Dorfmeister specialize?",
+      "Choices": {
+        "A": "Downhill and super-G",
+        "B": "Giant slalom and combined",
+        "C": "Downhill and slalom",
+        "D": "Slalom and giant slalom",
+        "E": "Super-G and combined"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "In what year did Michaela Dorfmeister enter her first World Cup race?",
+      "Choices": {
+        "A": "1997",
+        "B": "1991",
+        "C": "1993",
+        "D": "1995",
+        "E": "1988"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "In which races did Michaela Dorfmeister win gold medals at the 2006 Winter Olympics?",
+      "Choices": {
+        "A": "Downhill and super-G",
+        "B": "Downhill and combined",
+        "C": "Super-G and giant slalom",
+        "D": "Slalom and giant slalom",
+        "E": "Combined and slalom"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "How many downhill victories did Michaela Dorfmeister have in her career?",
+      "Choices": {
+        "A": "13",
+        "B": "5",
+        "C": "11",
+        "D": "9",
+        "E": "7"
+      },
+      "Answer": "E"
+    }
+  ],
+  "Leo Slezak": [
+    {
+      "name": "Leo Slezak",
+      "Question": "In what field was Leo Slezak primarily known?",
+      "Choices": {
+        "A": "Opera",
+        "B": "Poetry",
+        "C": "Symphonic conducting",
+        "D": "Theatre",
+        "E": "Cinema"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
+      "Choices": {
+        "A": "Richard Strauss",
+        "B": "Herbert von Karajan",
+        "C": "Arturo Toscanini",
+        "D": "Gustav Mahler",
+        "E": "Bruno Walter"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
+      "Choices": {
+        "A": "Metropolitan Opera",
+        "B": "Berlin State Opera",
+        "C": "Bavarian State Opera",
+        "D": "Vienna State Opera",
+        "E": "Royal Opera House"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "How many children did Leo Slezak have who were also actors?",
+      "Choices": {
+        "A": "Five",
+        "B": "Two",
+        "C": "Three",
+        "D": "Four",
+        "E": "One"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What kind of roles did Leo Slezak mostly play in German cinema?",
+      "Choices": {
+        "A": "Romantic leads",
+        "B": "Military officers",
+        "C": "Historical figures",
+        "D": "Humorous characters",
+        "E": "Villainous roles"
+      },
+      "Answer": "D"
+    }
+  ],
+  "Alicia de Larrocha": [
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What was Alicia de Larrocha known for?",
+      "Choices": {
+        "A": "Being a Spanish soprano and conductor.",
+        "B": "Being a French pianist and pedagogue.",
+        "C": "Being an Italian pianist and composer.",
+        "D": "Being a Spanish violinist and conductor.",
+        "E": "Being a Spanish pianist and composer."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
+      "Choices": {
+        "A": "Award for Literature",
+        "B": "Award for Concord",
+        "C": "Award for the Arts",
+        "D": "Award for Social Sciences",
+        "E": "Award for International Cooperation"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
+      "Choices": {
+        "A": "Manuel de Falla and Joaquín Turina",
+        "B": "Johann Sebastian Bach and Mozart",
+        "C": "Frédéric Chopin and Franz Liszt",
+        "D": "Isaac Albéniz and Enrique Granados",
+        "E": "Maurice Ravel and Claude Debussy"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Where was Alicia de Larrocha born?",
+      "Choices": {
+        "A": "Madrid, Spain",
+        "B": "Barcelona, Catalonia, Spain",
+        "C": "Valencia, Spain",
+        "D": "Seville, Spain",
+        "E": "Granada, Spain"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "How old was Alicia de Larrocha when she died?",
+      "Choices": {
+        "A": "90",
+        "B": "88",
+        "C": "84",
+        "D": "86",
+        "E": "82"
+      },
+      "Answer": "D"
+    }
+  ],
+  "Christian Krohg": [
+    {
+      "name": "Christian Krohg",
+      "Question": "Which art movement inspired Christian Krohg?",
+      "Choices": {
+        "A": "Expressionism",
+        "B": "Impressionism",
+        "C": "Cubism",
+        "D": "Romanticism",
+        "E": "Realism"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What year was Christian Krohg's son, Per Lasson Krohg, born?",
+      "Choices": {
+        "A": "1896",
+        "B": "1885",
+        "C": "1889",
+        "D": "1893",
+        "E": "1891"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "Where is Christian Krohg buried?",
+      "Choices": {
+        "A": "Our Saviour's Cemetery in Bergen",
+        "B": "Nordre gravlund in Oslo",
+        "C": "Vår Frelsers gravlund in Oslo",
+        "D": "Vestre gravlund in Oslo",
+        "E": "Gamlebyen cemetery in Oslo"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What role did Christian Krohg have at the Norwegian Commissioner at the Exposition Internationale d'Anvers?",
+      "Choices": {
+        "A": "Served as art critic",
+        "B": "Served as exhibition curator",
+        "C": "Served as official painter",
+        "D": "Served as secretary to the commission",
+        "E": "Served as Norwegian Commissioner"
+      },
+      "Answer": "E"
+    }
+  ]
+}

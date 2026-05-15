@@ -1,0 +1,2206 @@
+{
+  "Benedetto Varchi": [
+    {
+      "name": "Benedetto Varchi",
+      "Question": "In which Italian region is Montevarchi located?",
+      "Choices": {
+        "A": "Tuscany",
+        "B": "Lombardy",
+        "C": "Apulia",
+        "D": "Sardinia",
+        "E": "Veneto"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Which Italian dialect served as the basis for Standard Italian?",
+      "Choices": {
+        "A": "Sicilian dialect",
+        "B": "Florentine dialect",
+        "C": "Neapolitan dialect",
+        "D": "Venetian dialect",
+        "E": "Lombard dialect"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "When did Ezra Pound begin writing The Cantos?",
+      "Choices": {
+        "A": "Ezra Pound began writing The Cantos in 1850, a century before its actual composition.",
+        "B": "The Cantos was written by Ezra Pound in 1925, a decade after its actual start.",
+        "C": "1915",
+        "D": "Benedetto Varchi is known to have started writing The Cantos in 1915, not Ezra Pound.",
+        "E": "Ezra Pound began writing The Cantos in 2000, nearly a century after its actual composition."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "How many sections are in The Cantos?",
+      "Choices": {
+        "A": "Benedetto Varchi's work is divided into 120 chapters, not sections.",
+        "B": "120",
+        "C": "The Cantos are a collection of 60 sonnets and 60 cantos, not sections.",
+        "D": "The Cantos are a single, uninterrupted poem, with no sections at all.",
+        "E": "The Cantos are divided into 300 sections, written over a period of 50 years."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What was the name of the council that ruled the Republic of Florence?",
+      "Choices": {
+        "A": "The Council of Cardinals in Rome",
+        "B": "The Grand Council of Venice",
+        "C": "The Council of the Holy Roman Empire",
+        "D": "The Medici Family",
+        "E": "Signoria of Florence"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Who was the first member of the Medici family to gain control over Florence?",
+      "Choices": {
+        "A": "Alessandro de' Medici",
+        "B": "Lorenzo de' Medici",
+        "C": "Cosimo de' Medici",
+        "D": "Francesco de' Medici (Grand Duke of Tuscany)",
+        "E": "Giovanni de' Medici (Pope Leo X)"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "In what year did the pope declare Cosimo the first grand duke of Tuscany?",
+      "Choices": {
+        "A": "1551",
+        "B": "1519",
+        "C": "1569",
+        "D": "1589",
+        "E": "1579"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Who did Lorenzino de' Medici assassinate?",
+      "Choices": {
+        "A": "Alessandro de' Medici, Duke of Florence",
+        "B": "Cosimo I de' Medici, Grand Duke of Tuscany",
+        "C": "Pope Clement VII",
+        "D": "Francesco Guicciardini",
+        "E": "Leonardo da Vinci"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What are the main subdivisions of Tuscan dialects?",
+      "Choices": {
+        "A": "Genovese, Milanese, and Venetian",
+        "B": "Sicilian, Apulian, and Calabrian",
+        "C": "Ligurian, Emilian, and Marchigiano",
+        "D": "Florentine, Sienese, and Pisan",
+        "E": "Northern Tuscan dialects, Southern Tuscan dialects, and Corsican"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What award did The Pisan Cantos win in 1948?",
+      "Choices": {
+        "A": "The National Book Award",
+        "B": "The Presidential Medal of Freedom",
+        "C": "The first Bollingen Prize",
+        "D": "The Pulitzer Prize for Poetry",
+        "E": "The Nobel Prize in Literature"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What happened to Lorenzino de' Medici in 1548?",
+      "Choices": {
+        "A": "He converted to a different religion and became a priest.",
+        "B": "He was murdered in retaliation for assassinating his cousin.",
+        "C": "He was exiled to a remote island for his crimes.",
+        "D": "He was married off to a noblewoman and lived a quiet life.",
+        "E": "He was crowned the King of Florence."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Who was Piero Strozzi's father?",
+      "Choices": {
+        "A": "Filippo Strozzi the Younger",
+        "B": "Andrea del Sarto",
+        "C": "Giovanni de' Medici (Pope Leo X)",
+        "D": "Domenico Ghirlandaio",
+        "E": "Lorenzo de' Medici"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "In which battle did Piero Strozzi suffer a defeat by Imperial-Spanish forces?",
+      "Choices": {
+        "A": "The Battle of Fornovo",
+        "B": "The Battle of Serravalle",
+        "C": "The Battle of Agnadello",
+        "D": "The Battle of Ravenna",
+        "E": "The Battle of Pavia"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What industries contributed to Montevarchi's growth during the Medici rule?",
+      "Choices": {
+        "A": "The manufacturing of textiles and furniture for space exploration",
+        "B": "The production of luxury cars and electronics",
+        "C": "Agricultural trade and its wool and silk industries",
+        "D": "The steel and iron industries",
+        "E": "The cultivation of rare and exotic spices for international trade"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What roles did Lorenzino de' Medici serve in?",
+      "Choices": {
+        "A": "Painter, architect, and engineer",
+        "B": "Musician, poet, and philosopher",
+        "C": "Bishop, monk, and inquisitor",
+        "D": "Chef, gardener, and perfumer",
+        "E": "Politician, writer, and dramatist"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "Name a dialect of Tuscan spoken in the city of Pisa.",
+      "Choices": {
+        "A": "Venetian",
+        "B": "Pisano-Livornese",
+        "C": "Italian Standard",
+        "D": "Sicilian",
+        "E": "Florentine"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What themes are integral to The Cantos?",
+      "Choices": {
+        "A": "Philosophy, mathematics and astronomy",
+        "B": "History, geography and linguistics",
+        "C": "Literary theory, psychology and anthropology",
+        "D": "Economics, governance and culture",
+        "E": "Physics, chemistry and biology"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What was Piero Strozzi's relation to the Medici family?",
+      "Choices": {
+        "A": "He was a loyal servant of the Medici family and served as their ambassador to the French court.",
+        "B": "He was a distant cousin of the Medici family and had a close friendship with Lorenzo de' Medici.",
+        "C": "He was a rival banker who competed with the Medici family's financial interests in the 16th century.",
+        "D": "He was the son of Clarice de' Medici and married Laudomia di Pierfrancesco, but opposed the main line of the Medici family.",
+        "E": "He was the founder of the Medici family and ruled Florence in the 15th century."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What historical event marked the beginning of Montevarchi?",
+      "Choices": {
+        "A": "The construction of the Leaning Tower of Pisa led to the establishment of Montevarchi.",
+        "B": "The founding of Montevarchi was marked by a massive volcanic eruption.",
+        "C": "The discovery of a hidden treasure in the nearby hills sparked the growth of Montevarchi.",
+        "D": "The town sprang up around 1100 near a fortified Benedictine monastery.",
+        "E": "The beginning of Montevarchi was linked to the arrival of the Mongols in Europe."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Benedetto Varchi",
+      "Question": "What is the title of the section written at the end of World War II?",
+      "Choices": {
+        "A": "The Decameron",
+        "B": "The Florentine Dialogues",
+        "C": "The Divine Comedy",
+        "D": "The History of Florence",
+        "E": "The Pisan Cantos"
+      },
+      "Answer": "E"
+    }
+  ],
+  "Wilhelm Wattenbach": [
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "Where has the Monumenta Germaniae Historica Institute been located since 1949?",
+      "Choices": {
+        "A": "Frankfurt",
+        "B": "Dresden",
+        "C": "Cologne",
+        "D": "Munich",
+        "E": "Berlin"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "When was the Encyclopædia Britannica Eleventh Edition published?",
+      "Choices": {
+        "A": "1910–1911",
+        "B": "1720-1721",
+        "C": "1950-1951",
+        "D": "1880-1881",
+        "E": "1980-1981"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "How many volumes does the Encyclopædia Britannica Eleventh Edition consist of?",
+      "Choices": {
+        "A": "It was written by a team of 1000 people and consists of 57 volumes",
+        "B": "Wilhelm Wattenbach wrote the Encyclopædia Britannica Eleventh Edition, which consists of 12 volumes",
+        "C": "The Encyclopædia Britannica Eleventh Edition consists of 47 volumes",
+        "D": "29",
+        "E": "This information is not available"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is the official German name for Frankfurt?",
+      "Choices": {
+        "A": "Hamburg an der Elbe",
+        "B": "München am See",
+        "C": "Berlin an der Donau",
+        "D": "Leipzig an der Saale",
+        "E": "Frankfurt am Main"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "Which airport is the busiest in Germany and has the most direct routes in the world?",
+      "Choices": {
+        "A": "Frankfurt Airport",
+        "B": "Munich Airport",
+        "C": "Dresden Airport",
+        "D": "Berlin Tempelhof Airport",
+        "E": "Cologne Bonn Airport"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is the world's largest internet exchange point located in Frankfurt?",
+      "Choices": {
+        "A": "Google Cloud Platform",
+        "B": "DE-CIX",
+        "C": "Deutsche Bahn's Railway Network",
+        "D": "Frankfurt Stock Exchange",
+        "E": "Amazon Web Services"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What does the motto 'Sanctus amor patriae dat animum' mean?",
+      "Choices": {
+        "A": "Holy love for the fatherland gives the spirit",
+        "B": "A good meal can give you a sense of national pride",
+        "C": "Patriotic music gives us energy",
+        "D": "Love for one's family is the key to success",
+        "E": "The love of a good woman can conquer all"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What major historical events had yet to occur at the time of the Eleventh Edition's publication?",
+      "Choices": {
+        "A": "The establishment of the United States of America",
+        "B": "The invention of the printing press by Johannes Gutenberg",
+        "C": "The fall of the Roman Empire",
+        "D": "The tumultuous world wars",
+        "E": "The discovery of the New World by the Vikings"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "Where is Rantzau?",
+      "Choices": {
+        "A": "A province in South Africa",
+        "B": "A city in Norway",
+        "C": "A region in the United Kingdom",
+        "D": "A state in Brazil",
+        "E": "District of Plön, in Schleswig-Holstein, Germany"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What edition of the Encyclopædia Britannica was the basis for every later version until the fifteenth edition in 1974?",
+      "Choices": {
+        "A": "The twentieth edition",
+        "B": "The ninth edition",
+        "C": "The eleventh edition",
+        "D": "The third edition",
+        "E": "The second edition"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is the population of the Rhine-Main metropolitan region?",
+      "Choices": {
+        "A": "Approximately 1.5 million",
+        "B": "More than 5.8 million.",
+        "C": "Less than 2 million",
+        "D": "Between 10 and 15 million",
+        "E": "Exactly 3.5 million"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What significant transition did the Encyclopædia Britannica undergo during the publication of the Eleventh Edition?",
+      "Choices": {
+        "A": "It transitioned from a quarterly to a monthly publication schedule.",
+        "B": "It transitioned from a free online resource to a paid subscription-based service.",
+        "C": "It transitioned from a British to an American publication.",
+        "D": "It transitioned from a digital to a print-only publication.",
+        "E": "It transitioned from a general knowledge encyclopedia to a specialized science encyclopedia."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "Who succeeded Georg Heinrich Pertz as editor in 1875?",
+      "Choices": {
+        "A": "Georg Waitz",
+        "B": "Otto von Bismarck",
+        "C": "Friedrich Engels",
+        "D": "Wilhelm Wattenbach",
+        "E": "Karl Marx"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "How many entries does the Encyclopædia Britannica Eleventh Edition contain?",
+      "Choices": {
+        "A": "It contains 50,000 entries",
+        "B": "This information is not available",
+        "C": "There are 10,000 entries",
+        "D": "The number of entries is classified",
+        "E": "40,000"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "How many ultra high-net-worth individuals called Frankfurt home in 2015?",
+      "Choices": {
+        "A": "3.14 million",
+        "B": "1,909",
+        "C": "43",
+        "D": "90,000",
+        "E": "189"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is the name of Frankfurt's largest trade fair?",
+      "Choices": {
+        "A": "Messe Frankfurt",
+        "B": "Wilhelm Wattenbach Convention Center",
+        "C": "Europa Trade Fair",
+        "D": "Frankfurt Expo",
+        "E": "Frankfurter Messehaus"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is the Monumenta Germaniae Historica?",
+      "Choices": {
+        "A": "A collection of medieval Germanic poetry",
+        "B": "A collection of modern art from Germany",
+        "C": "A series of historical novels set in the Middle Ages",
+        "D": "A comprehensive series of carefully edited and published primary sources for the study of Northwestern, Central, and Southern European history from the end of the Roman Empire to 1500.",
+        "E": "A database of genealogical information for European monarchs"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "How many monographs and dependent writings does the Monumenta Germaniae Historica Institute's library possess?",
+      "Choices": {
+        "A": "The library holds around 50,000 monographs and 70,000 dependent writings.",
+        "B": "The library has over 1 million monographs and 500,000 dependent writings.",
+        "C": "It possesses only 10,000 monographs and 20,000 dependent writings.",
+        "D": "130,000 monographs and approximately 150,000 dependent writings.",
+        "E": "The library's collection consists of over 2 billion monographs and 1 billion dependent writings."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "What is Frankfurt's rank among the world's wealthiest cities as of 2023?",
+      "Choices": {
+        "A": "50th-wealthiest",
+        "B": "1st-wealthiest",
+        "C": "200th-wealthiest",
+        "D": "Not ranked among the world's wealthiest cities",
+        "E": "13th-wealthiest"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Wilhelm Wattenbach",
+      "Question": "As of 2022, what is the population of Frankfurt?",
+      "Choices": {
+        "A": "The population of Frankfurt is over 1 million and growing rapidly",
+        "B": "791,000",
+        "C": "The population of Frankfurt is approximately 791,000, but only on Tuesdays",
+        "D": "The population of Frankfurt is a closely guarded secret and not publicly available",
+        "E": "Frankfurt has a population of exactly 1,000 people"
+      },
+      "Answer": "B"
+    }
+  ],
+  "Martin Gutzwiller": [
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "When was Yale University founded?",
+      "Choices": {
+        "A": "1920",
+        "B": "1965",
+        "C": "1701",
+        "D": "1789",
+        "E": "1851"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What was Yale University originally established as in 1701?",
+      "Choices": {
+        "A": "The Collegiate School",
+        "B": "Harvard University",
+        "C": "The University of Connecticut",
+        "D": "A private library for the town of New Haven",
+        "E": "Columbia University"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What is IBM's nickname?",
+      "Choices": {
+        "A": "The Tech Titan",
+        "B": "Big Blue",
+        "C": "The Corporate Colossus",
+        "D": "The Blue Chip",
+        "E": "The Silicon Giant"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "Where is the Max Planck Institute for the Physics of Complex Systems located?",
+      "Choices": {
+        "A": "Berlin, Germany",
+        "B": "Munich, Germany",
+        "C": "Paris, France",
+        "D": "Dresden, Germany",
+        "E": "New York City, USA"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "How many institutes does the Max-Planck-Gesellschaft have, including the Max Planck Institute for the Physics of Complex Systems?",
+      "Choices": {
+        "A": "The Max-Planck-Gesellschaft has 12 institutes, and the Max Planck Institute for the Physics of Complex Systems is actually a library.",
+        "B": "The Max-Planck-Gesellschaft has 427 institutes.",
+        "C": "80",
+        "D": "The Max-Planck-Gesellschaft has 42 institutes, including a Max Planck Institute for Baking.",
+        "E": "The Max-Planck-Gesellschaft has 80 institutes, but only 20 of them are actually functional."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "When was Swann Galleries founded?",
+      "Choices": {
+        "A": "In the year 1500, before the establishment of the United States",
+        "B": "The exact date of its founding is unknown, but it's believed to be around 2000",
+        "C": "Swann Galleries was founded in ancient Egypt, around 3000 BCE",
+        "D": "It was founded in the 1920s, during the Harlem Renaissance",
+        "E": "1941"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What is IBM Research?",
+      "Choices": {
+        "A": "IBM Research is a small startup specializing in pet grooming services.",
+        "B": "IBM Research is a non-profit organization focused on environmental conservation.",
+        "C": "IBM Research is a popular video game company.",
+        "D": "IBM Research is the research and development division for IBM.",
+        "E": "IBM Research is a leading art museum in New York City."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What organizations jointly award the Dannie Heineman Prize for Mathematical Physics?",
+      "Choices": {
+        "A": "The Institute of Electrical and Electronics Engineers (IEEE) and the International Union of Pure and Applied Physics",
+        "B": "The Royal Society and the European Organization for Nuclear Research (CERN)",
+        "C": "The Optical Society and the American Astronomical Society",
+        "D": "The American Mathematical Society and the National Science Foundation",
+        "E": "American Physical Society and American Institute of Physics"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "With which company did Brown, Boveri & Cie merge in 1988, and what was the name of the new entity formed?",
+      "Choices": {
+        "A": "In 1988, Brown, Boveri & Cie merged with General Electric to form BGE.",
+        "B": "In 1988, Brown, Boveri & Cie merged with Siemens to form BBG.",
+        "C": "In 1988, Brown, Boveri & Cie merged with ASEA to form ABB.",
+        "D": "In 1988, Brown, Boveri & Cie merged with Toshiba to form BBT.",
+        "E": "In 1988, Brown, Boveri & Cie merged with Alstom to form BBA."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "When was the International Union of Pure and Applied Physics (IUPAP) established?",
+      "Choices": {
+        "A": "It was established in 1922.",
+        "B": "It was established in 1950 by Martin Gutzwiller.",
+        "C": "It was established in 1902, but later disbanded.",
+        "D": "It was established in 1850.",
+        "E": "It was established in the year 3000 BC."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "When was Brown, Boveri & Cie founded and who were its founders?",
+      "Choices": {
+        "A": "Brown, Boveri & Cie was founded in 1850 by Nikola Tesla and Thomas Edison.",
+        "B": "Brown, Boveri & Cie was founded in 1945 by Albert Einstein and Marie Curie.",
+        "C": "Brown, Boveri & Cie was founded in 1891 by Charles Eugene Lancelot Brown and Walter Boveri.",
+        "D": "Brown, Boveri & Cie was founded in 1920 by Charles Darwin and Galileo Galilei.",
+        "E": "Brown, Boveri & Cie was founded in 1970 by Leonardo da Vinci and Isaac Newton."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What is the primary mission of the International Union of Pure and Applied Physics?",
+      "Choices": {
+        "A": "To establish a global network of physics-themed amusement parks.",
+        "B": "The primary mission is to assist in the worldwide development of physics, foster international cooperation in physics, and help in the application of physics toward solving problems of concern to humanity.",
+        "C": "To create a database of the world's most impressive physics-related hairstyles.",
+        "D": "To regulate the use of physics in competitive cooking shows.",
+        "E": "To provide funding for research on extraterrestrial life."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "How many IBM Research labs are there, and where are they located?",
+      "Choices": {
+        "A": "There are twelve labs located on six continents.",
+        "B": "There are five labs located in the United States.",
+        "C": "There is only one IBM Research lab located in Asia.",
+        "D": "There are twelve labs located in Europe.",
+        "E": "There are no IBM Research labs outside of the United States."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "How many students were enrolled at ETH Zurich as of 2021?",
+      "Choices": {
+        "A": "3,200",
+        "B": "7,800",
+        "C": "108,000",
+        "D": "42,000",
+        "E": "24,500"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What significant action did Brown, Boveri & Cie take in 1970?",
+      "Choices": {
+        "A": "Brown, Boveri & Cie merged with Siemens AG in 1970 to form a new conglomerate.",
+        "B": "Brown, Boveri & Cie acquired a majority stake in the Swiss watchmaker Patek Philippe in 1970.",
+        "C": "Brown, Boveri & Cie went bankrupt in 1970 and were sold to a rival company.",
+        "D": "In 1970, Brown, Boveri & Cie took over the Maschinenfabrik Oerlikon.",
+        "E": "Brown, Boveri & Cie opened a new factory in the United States in 1970."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What significant position did Max Dresden hold at the State University of New York at Stony Brook?",
+      "Choices": {
+        "A": "He was the head of the university's football team.",
+        "B": "He was a professor of English literature.",
+        "C": "He was a librarian at the university's library.",
+        "D": "He was the President of the university.",
+        "E": "He headed the Institute for Theoretical Physics."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "Can book collecting be an affordable hobby and if so, where can one find books?",
+      "Choices": {
+        "A": "Yes, book collecting can be affordable. Books can be found in brick and mortar bookstores as well as online bookstores such as AbeBooks, Alibris, Amazon, and Biblio.com.",
+        "B": "Book collecting is a hobby for the elite, and books can only be found in exclusive libraries.",
+        "C": "No, book collecting is only for the wealthy and rare books can only be found in private auctions.",
+        "D": "Book collecting is not affordable, but you can find books at local garage sales and thrift stores.",
+        "E": "Yes, book collecting can be affordable, but you can only find books in local libraries and book swaps."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What major business shift did IBM undergo in the 1990s?",
+      "Choices": {
+        "A": "IBM began downsizing its operations and divesting from commodity production.",
+        "B": "IBM doubled its workforce and increased its production of consumer electronics.",
+        "C": "IBM expanded its operations and invested heavily in renewable energy sources.",
+        "D": "IBM underwent a significant restructuring to become a non-profit organization.",
+        "E": "IBM shifted its focus to exclusively producing high-end luxury cars."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "What does the Dannie Heineman Prize for Mathematical Physics consist of as of 2010?",
+      "Choices": {
+        "A": "A cash prize of €5,000 and a free trip to a physics conference in Europe",
+        "B": "A lifetime supply of physics textbooks and a chance to give a keynote speech at a major conference",
+        "C": "US$10,000, a certificate citing the recipient's contributions, and travel expenses to attend the award meeting",
+        "D": "A one-year subscription to a leading scientific journal and a personalized trophy",
+        "E": "A Nobel Medal and a guaranteed spot in the Nobel Prize Hall of Fame"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Martin Gutzwiller",
+      "Question": "When was IBM founded?",
+      "Choices": {
+        "A": "1981",
+        "B": "1921",
+        "C": "1951",
+        "D": "1911",
+        "E": "1975"
+      },
+      "Answer": "D"
+    }
+  ],
+  "Dany Robin": [
+    {
+      "name": "Dany Robin",
+      "Question": "Where was Paula Prentiss born?",
+      "Choices": {
+        "A": "Paris, France",
+        "B": "San Antonio, Texas.",
+        "C": "Buenos Aires, Argentina",
+        "D": "Moscow, Russia",
+        "E": "New York City, New York"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "In what year was Connie Francis recognized as the most successful female artist in several countries?",
+      "Choices": {
+        "A": "1975",
+        "B": "1950",
+        "C": "1945",
+        "D": "1985",
+        "E": "1960"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "How did Peter Sellers first come to prominence?",
+      "Choices": {
+        "A": "Peter Sellers first came to prominence in the French film industry, starring in several successful movies.",
+        "B": "Peter Sellers first came to prominence as a professional tennis player, competing in Wimbledon tournaments.",
+        "C": "Peter Sellers first came to prominence as a stand-up comedian in Las Vegas, performing in numerous comedy clubs.",
+        "D": "Peter Sellers first came to prominence performing in the BBC Radio comedy series The Goon Show.",
+        "E": "Peter Sellers first came to prominence as a children's book author, publishing several popular stories."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What replaced the pea fields in petit Clamart?",
+      "Choices": {
+        "A": "The pea fields were converted into a massive vineyard",
+        "B": "Urbanization developed in the 1960s replaced the pea fields in petit Clamart.",
+        "C": "The pea fields were replaced by a giant statue of Dany Robin",
+        "D": "The pea fields were taken over by a group of wild rabbits",
+        "E": "A large lake was created to replace the pea fields"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What separates the two parts of Clamart?",
+      "Choices": {
+        "A": "A large lake separates the two parts of Clamart.",
+        "B": "The Seine River separates the two parts of Clamart.",
+        "C": "A mountain range separates the two parts of Clamart.",
+        "D": "A forest separates the two parts of Clamart.",
+        "E": "The Eiffel Tower separates the two parts of Clamart."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What is Connie Francis' birth name?",
+      "Choices": {
+        "A": "Concetta Rosa Maria Franconero",
+        "B": "Diane Marie Johnson",
+        "C": "Elizabeth Anne Taylor",
+        "D": "Catherine Elizabeth Smith",
+        "E": "Frances Elizabeth Fisher"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What is Janis Paige's birth name?",
+      "Choices": {
+        "A": "Margaret Jean",
+        "B": "Donna Mae Tjaden",
+        "C": "Janet Louise",
+        "D": "Dorothy Jeanne",
+        "E": "Mary Elizabeth"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "Where is Clamart located in relation to Paris?",
+      "Choices": {
+        "A": "Clamart is located in the northern suburbs of Paris, 15 km (9.3 mi) from the centre of Paris.",
+        "B": "Clamart is located in the northern part of France, near the city of Lille.",
+        "C": "Clamart is located in the southern part of Paris, near the Eiffel Tower.",
+        "D": "Clamart is located in the eastern part of Paris, within the city limits.",
+        "E": "Clamart is located in the southwestern suburbs of Paris, 8.7 km (5.4 mi) from the centre of Paris."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "For what roles was Peter Sellers nominated for Academy Awards?",
+      "Choices": {
+        "A": "Sellers was nominated for Academy Awards for his performances in The Lord of the Rings, The Matrix, and for Inception.",
+        "B": "Sellers was nominated for Academy Awards for his performances in The Godfather, Pulp Fiction, and for The Dark Knight.",
+        "C": "Sellers was nominated for Academy Awards for his performances in Dr. Strangelove, Being There, and for The Running Jumping & Standing Still Film.",
+        "D": "Sellers was nominated for Academy Awards for his performances in Jaws, Forrest Gump, and for The Shawshank Redemption.",
+        "E": "Sellers was nominated for Academy Awards for his performances in Star Wars, E.T. the Extra-Terrestrial, and for The Silence of the Lambs."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "How is the town of Clamart divided?",
+      "Choices": {
+        "A": "The town is divided into bas Clamart, the historical centre, and petit Clamart, an area with urbanization developed in the 1960s.",
+        "B": "Clamart is divided into two countries, France and Spain.",
+        "C": "Clamart is divided into a land and water territory.",
+        "D": "The town is divided into mountains and valleys.",
+        "E": "The town is divided into a northern and southern hemisphere."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What was Peter Sellers known for?",
+      "Choices": {
+        "A": "Peter Sellers was known as a renowned chef and cookbook author.",
+        "B": "Peter Sellers was known as a leading figure in the development of artificial intelligence.",
+        "C": "Peter Sellers was known as an English actor and comedian, particularly for his roles in The Pink Panther series and various other films.",
+        "D": "Peter Sellers was known as a famous rock climber and mountaineer.",
+        "E": "Peter Sellers was known as a professional basketball player in the NBA."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What was one of Janis Paige's roles during World War II?",
+      "Choices": {
+        "A": "She was a war correspondent for the BBC.",
+        "B": "She was a singer at the Hollywood Canteen.",
+        "C": "She was a dancer in the Ziegfeld Follies.",
+        "D": "She was a lead actress in a Broadway musical.",
+        "E": "She was a spy in France."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "How many records is Connie Francis estimated to have sold worldwide?",
+      "Choices": {
+        "A": "She is not a musician, therefore she has no record sales",
+        "B": "More than 100 million",
+        "C": "Dany Robin was estimated to have sold more than 100 million records",
+        "D": "Less than 10 million",
+        "E": "This information is not available"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What are some of the films Paula Prentiss is best known for?",
+      "Choices": {
+        "A": "The Terminator, The Matrix, Inception, and Interstellar.",
+        "B": "Roman Holiday, Breakfast at Tiffany's, The Devil Wears Prada, and Pretty Woman.",
+        "C": "Where the Boys Are, What's New Pussycat?, Catch-22, The Parallax View, and The Stepford Wives.",
+        "D": "Dumbo, The Jungle Book, The Lion King, and Bambi.",
+        "E": "The Sound of Music, The Silence of the Lambs, The Shawshank Redemption, and Forrest Gump."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "For what award was Paula Prentiss nominated for her role in the sitcom He & She?",
+      "Choices": {
+        "A": "BAFTA Award for Best Actress in a Leading Role",
+        "B": "Tony Award for Best Actress in a Musical",
+        "C": "Golden Globe Award for Best Actress in a Motion Picture – Drama",
+        "D": "Primetime Emmy Award for Outstanding Lead Actress in a Comedy Series.",
+        "E": "Academy Award for Best Supporting Actor in a Drama"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "When was Janis Paige born?",
+      "Choices": {
+        "A": "September 16, 1922",
+        "B": "January 13, 1911",
+        "C": "February 21, 1945",
+        "D": "November 29, 1930",
+        "E": "August 17, 1895"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What personal challenges did Peter Sellers face?",
+      "Choices": {
+        "A": "Sellers was a talented musician and released several bestselling albums, but struggled with fame.",
+        "B": "Sellers had a successful career as a professional tennis player and was known for his charitable work.",
+        "C": "Sellers was a skilled juggler and had a passion for collecting antique furniture.",
+        "D": "Sellers struggled with depression, insecurities, erratic and compulsive behaviour, clashed with directors and co-stars, and had alcohol and drug problems.",
+        "E": "Sellers had a happy and stable marriage that lasted for over 50 years."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "What sitcom did Janis Paige star in?",
+      "Choices": {
+        "A": "The Mary Tyler Moore Show",
+        "B": "The Andy Griffith Show",
+        "C": "It's Always Jan",
+        "D": "The Dick Van Dyke Show",
+        "E": "I Dream of Jeannie"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Dany Robin",
+      "Question": "When and where was Peter Sellers born?",
+      "Choices": {
+        "A": "Peter Sellers was born on 25 December 1920 in Rome.",
+        "B": "Peter Sellers was born on 1 January 1920 in London.",
+        "C": "Peter Sellers was born on 8 September 1925 in Paris.",
+        "D": "Peter Sellers was born on 15 August 1930 in New York City.",
+        "E": "Peter Sellers was born on 8 September 1925 in Southsea."
+      },
+      "Answer": "E"
+    }
+  ],
+  "Karl Hartl": [
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the capital city of Austria?",
+      "Choices": {
+        "A": "Berlin",
+        "B": "Munich",
+        "C": "Prague",
+        "D": "Vienna",
+        "E": "Zurich"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "Who was the world's first psychoanalyst that lived in Vienna?",
+      "Choices": {
+        "A": "Ludwig Wittgenstein, a prominent philosopher",
+        "B": "Karl Hartl, a renowned film director",
+        "C": "Franz Lehár, a well-known composer",
+        "D": "Alfred Adler, a famous psychologist",
+        "E": "Sigmund Freud"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "Who do Morris Flynn and Macky McMacpherson masquerade as in 'The Man Who Was Sherlock Holmes'?",
+      "Choices": {
+        "A": "Albert Schweitzer and Vincent van Gogh",
+        "B": "Albert Einstein and Leonardo da Vinci",
+        "C": "Sherlock Holmes and Dr Watson",
+        "D": "Alexander the Great and Hannibal",
+        "E": "King Arthur and Sir Lancelot"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the original French title of The Princess's Whim?",
+      "Choices": {
+        "A": "Caprice de princesse",
+        "B": "La Fleur de la cour",
+        "C": "Le Coeur de la reine",
+        "D": "La Vie en rose",
+        "E": "Le Rêve d'un prince"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the native name for Austria and its meaning?",
+      "Choices": {
+        "A": "Kaisergarten, meaning 'garden of the emperor'",
+        "B": "Alpenheim, meaning 'home of the Alps'",
+        "C": "Wienland, meaning 'land of Vienna'",
+        "D": "Donaustraße, meaning 'street of the Danube'",
+        "E": "Österreich, meaning 'eastern realm'"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "When was Wien-Film GmbH established, and until when did it last?",
+      "Choices": {
+        "A": "It was established in 1945 and lasted until 1955.",
+        "B": "It was established in 1960 and lasted until 1970.",
+        "C": "It was established in 1920 and lasted until 1940.",
+        "D": "It was established in 1980 and lasted until 1990.",
+        "E": "It was established in 1938 and lasted until 1985."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the original German title of Her Highness the Saleswoman?",
+      "Choices": {
+        "A": "Die Verkäuferin des Königs",
+        "B": "Ihre Durchlaucht, die Verkäuferin",
+        "C": "Ihre Hoheit, die Königin der Verkäufer",
+        "D": "Die Frau mit den goldenen Schuhen",
+        "E": "Der Verkäufer von Berlin"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "Who owned Wien-Film GmbH until 1945?",
+      "Choices": {
+        "A": "The Wiener Städtische Versicherung, a major Austrian insurance company",
+        "B": "The Cautio Trust Company, a subsidiary of the German Reichsfilmkammer.",
+        "C": "The Austrian Film Association",
+        "D": "The German film director Fritz Lang",
+        "E": "Hans Fischer, a renowned Austrian composer"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the genre of 'The Man Who Was Sherlock Holmes'?",
+      "Choices": {
+        "A": "Action Adventure",
+        "B": "Historical Drama",
+        "C": "Mystery comedy",
+        "D": "Romantic Thriller",
+        "E": "Science Fiction Horror"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What is the main plot of 'The Man Who Was Sherlock Holmes'?",
+      "Choices": {
+        "A": "The investigation of two sisters and the theft and forgery of valuable postage stamps",
+        "B": "A detective's investigation into a series of bizarre occurrences at a haunted mansion",
+        "C": "A mysterious illness affecting the royal family and a detective's quest to find the cure",
+        "D": "A rivalry between two famous actors and the theft of a priceless artifact",
+        "E": "The discovery of a hidden treasure in a small English village"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What was Wien-Film GmbH also known as?",
+      "Choices": {
+        "A": "Vienna Movie Makers",
+        "B": "Berlin Film Studios",
+        "C": "Austrian Film Productions",
+        "D": "Salzburg Film Company",
+        "E": "Vienna Film Limited"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "What was the primary purpose of building F.P.1 according to the film?",
+      "Choices": {
+        "A": "To provide a platform for scientific research and observation",
+        "B": "To establish a luxury resort for the wealthy",
+        "C": "To serve as a floating base for naval operations",
+        "D": "To allow pilots on intercontinental flights to refuel and repair any damage to their aircraft.",
+        "E": "To act as a mobile broadcasting station for radio signals"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "When did Austria join the European Union?",
+      "Choices": {
+        "A": "1995",
+        "B": "1960, during the Cold War",
+        "C": "2010, as a response to the global financial downturn",
+        "D": "1980, in the midst of the European economic crisis",
+        "E": "1945, shortly after World War II"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Karl Hartl",
+      "Question": "When was Vienna designated a UNESCO World Heritage Site?",
+      "Choices": {
+        "A": "The designation occurred in 1920, immediately after the end of World War I",
+        "B": "2001",
+        "C": "Vienna was designated in 1995, but it was later revoked due to lack of cultural preservation",
+        "D": "In the year 1850, during the reign of Emperor Franz Joseph",
+        "E": "It was designated in the year 1975, due to its historical significance"
+      },
+      "Answer": "B"
+    }
+  ],
+  "P. A. Yeomans": [
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What is the abbreviation for New South Wales?",
+      "Choices": {
+        "A": "PAS",
+        "B": "QLD",
+        "C": "VIC",
+        "D": "NSW",
+        "E": "ACT"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which Australian state borders New South Wales to the north?",
+      "Choices": {
+        "A": "Australian Capital Territory",
+        "B": "Queensland",
+        "C": "South Australia",
+        "D": "Victoria",
+        "E": "Tasmania"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which state is located to the south of New South Wales?",
+      "Choices": {
+        "A": "The Northern Territory",
+        "B": "Queensland",
+        "C": "South Australia",
+        "D": "Victoria",
+        "E": "Tasmania"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What is the western border of New South Wales?",
+      "Choices": {
+        "A": "The Great Victoria Desert",
+        "B": "The Australian Capital Territory",
+        "C": "South Australia",
+        "D": "The Northern Territory",
+        "E": "The Indian Ocean"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What is the capital city of New South Wales?",
+      "Choices": {
+        "A": "Canberra is not the capital of NSW",
+        "B": "Brisbane",
+        "C": "Perth",
+        "D": "Melbourne",
+        "E": "Sydney"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What was New South Wales originally founded as in 1788?",
+      "Choices": {
+        "A": "A British penal colony",
+        "B": "A French scientific expedition base",
+        "C": "A British agricultural research center",
+        "D": "A British settlement for retired military officers",
+        "E": "A Dutch trading post"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which island remains a part of New South Wales?",
+      "Choices": {
+        "A": "Bass Strait Islands, Victoria",
+        "B": "Rottnest Island, Western Australia",
+        "C": "King Island, Tasmania",
+        "D": "Lord Howe Island",
+        "E": "Kangaroo Island, South Australia"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "When did New South Wales originally comprise more than half of the Australian mainland?",
+      "Choices": {
+        "A": "In the late 20th century, after significant land reforms",
+        "B": "During the Gold Rush era in the 1850s",
+        "C": "1788",
+        "D": "Before European settlement, in the pre-colonial era",
+        "E": "The early 19th century"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which seas border New South Wales to the east?",
+      "Choices": {
+        "A": "The Indian and Pacific Oceans",
+        "B": "The South China Sea and the Arafura Sea",
+        "C": "The Red Sea and the Mediterranean Sea",
+        "D": "The Great Australian Bight and the Gulf of Carpentaria",
+        "E": "The Coral and Tasman Seas"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which territories became federal territories instead of remaining part of New South Wales?",
+      "Choices": {
+        "A": "The city of Sydney and the city of Melbourne",
+        "B": "Norfolk Island, the Australian Capital Territory, and the Jervis Bay Territory",
+        "C": "The island of Tasmania and the city of Perth",
+        "D": "The Northern Territory and the Cocos (Keeling) Islands",
+        "E": "The states of Queensland and South Australia"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "How does New South Wales rank in terms of population among Australian states?",
+      "Choices": {
+        "A": "It is the least populous state in Australia",
+        "B": "It is Australia's most populous state",
+        "C": "It has the same population as the Australian Capital Territory",
+        "D": "It is one of the two least populous states in Australia",
+        "E": "It ranks third in population among Australian states"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What territories are enclaves within New South Wales?",
+      "Choices": {
+        "A": "The Northern Territory and Western Australia",
+        "B": "The Lord Howe Island and Norfolk Island",
+        "C": "The states of Victoria and Queensland",
+        "D": "The states of South Australia and Tasmania",
+        "E": "The Australian Capital Territory and Jervis Bay Territory"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What territories were originally part of New South Wales?",
+      "Choices": {
+        "A": "The Northern Territory, the Australian Capital Territory, and Christmas Island",
+        "B": "The Great Barrier Reef, Fraser Island, and the Whitsunday Islands",
+        "C": "The Cocos (Keeling) Islands, the Ashmore and Cartier Islands, and the Coral Sea Islands",
+        "D": "The Solomon Islands, Papua New Guinea, and the Federated States of Micronesia",
+        "E": "Van Diemen's Land, Lord Howe Island, and Norfolk Island"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "Which colony was never administered as part of New South Wales?",
+      "Choices": {
+        "A": "Victoria",
+        "B": "Tasmania",
+        "C": "The Swan River Colony",
+        "D": "The Colony of Western Australia was administered as part of New South Wales",
+        "E": "South Australia"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What happened to most of the area of the Colony of New South Wales during the 19th century?",
+      "Choices": {
+        "A": "The area was ceded to the Dutch East India Company",
+        "B": "It was detached to form separate British colonies",
+        "C": "The Colony of New South Wales expanded to become the largest colony in the British Empire",
+        "D": "It was merged with the Colony of Victoria to form a single entity",
+        "E": "Most of the area was sold to the United States as part of a land deal"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "As of December 2023, what is the population of New South Wales?",
+      "Choices": {
+        "A": "Over 8.3 million",
+        "B": "Over 5.5 million",
+        "C": "Less than 1 million",
+        "D": "Exactly 10 million",
+        "E": "Around 3.5 million"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "P. A. Yeomans",
+      "Question": "What year was the western boundary of New South Wales set at the 129th meridian east?",
+      "Choices": {
+        "A": "1825",
+        "B": "1910",
+        "C": "1878",
+        "D": "1850",
+        "E": "1776"
+      },
+      "Answer": "A"
+    }
+  ],
+  "Michaela Dorfmeister": [
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What is the capital city of Austria?",
+      "Choices": {
+        "A": "Innsbruck",
+        "B": "Munich",
+        "C": "Vienna",
+        "D": "Graz",
+        "E": "Salzburg"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "When did Austria become a member of the European Union?",
+      "Choices": {
+        "A": "2005",
+        "B": "1980",
+        "C": "2010",
+        "D": "1973",
+        "E": "1995"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "When did Austria adopt the euro currency?",
+      "Choices": {
+        "A": "In 2050, as a response to climate change",
+        "B": "In 1975, during the Summer Olympics in Vienna",
+        "C": "1999",
+        "D": "After a long debate in 1867, during the Austro-Hungarian Empire",
+        "E": "On a random Tuesday in 2010, after a nationwide vote"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "In which country is Schladming located?",
+      "Choices": {
+        "A": "Schladming is located in Germany.",
+        "B": "Schladming is located in Austria.",
+        "C": "Schladming is located in Italy.",
+        "D": "Schladming is located in France.",
+        "E": "Schladming is located in Switzerland."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "Is Schladming known for summer or winter sports?",
+      "Choices": {
+        "A": "Schladming is known for winter sports.",
+        "B": "Schladming is known for both summer and winter sports equally.",
+        "C": "Schladming is known for extreme sports such as skydiving and bungee jumping.",
+        "D": "Schladming is a popular destination for beach volleyball and water sports.",
+        "E": "Schladming is primarily known for its annual music festival and cultural events."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "How many times had Italy hosted the Winter Olympics before 2006?",
+      "Choices": {
+        "A": "Italy had hosted the Winter Olympics 3 times before 2006",
+        "B": "The Winter Olympics had never been hosted in Italy before 2006",
+        "C": "Once",
+        "D": "Italy had hosted the Winter Olympics twice before 2006",
+        "E": "The Winter Olympics had been hosted in Italy only in 2006"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What types of biking does Hafjell offer?",
+      "Choices": {
+        "A": "Hafjell offers only cross-country and equestrian sports.",
+        "B": "Hafjell offers downhill, freestyle, and mountain unicycling.",
+        "C": "Hafjell only offers road biking and track cycling.",
+        "D": "Hafjell offers only downhill and a few miles of walking trails.",
+        "E": "Hafjell offers downhill, trail riding, and cross-country biking."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What was Schladming originally before becoming a tourist destination?",
+      "Choices": {
+        "A": "Schladming was originally a small mining town.",
+        "B": "Schladming was originally a popular ski resort before it became one.",
+        "C": "Schladming was originally a large agricultural farm.",
+        "D": "Schladming was originally a major city in ancient Rome.",
+        "E": "Schladming was originally a major commercial port on the Danube River."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "How many trails does Hafjell Bike Park have?",
+      "Choices": {
+        "A": "Hafjell Bike Park has 7 trails.",
+        "B": "Hafjell Bike Park has 14 trails.",
+        "C": "Hafjell Bike Park has 27 trails.",
+        "D": "The number of trails in Hafjell Bike Park is over 100.",
+        "E": "There are no trails in Hafjell Bike Park."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What is the native name for Austria and what does it mean?",
+      "Choices": {
+        "A": "Alpen, which means 'the land of mountains'",
+        "B": "Nord, which means 'the land of the north'",
+        "C": "Wien, which means 'the land of wine'",
+        "D": "Österreich, which means 'eastern realm'",
+        "E": "Donau, which means 'the land of the river'"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "Where is Hafjell located?",
+      "Choices": {
+        "A": "Hafjell is located in Finland, in the Helsinki metropolitan area.",
+        "B": "Hafjell is located in Norway, in the Øyer municipality in the county of Oppland.",
+        "C": "Hafjell is located in Iceland, near the famous Blue Lagoon.",
+        "D": "Hafjell is located in Sweden, near the city of Stockholm.",
+        "E": "Hafjell is located in Denmark, on the island of Zealand."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "When were the 2006 Winter Olympics held?",
+      "Choices": {
+        "A": "1 to 17 January",
+        "B": "28 to 13 June",
+        "C": "15 to 31 March",
+        "D": "10 to 26 February",
+        "E": "20 to 5 April"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What does the Games' logo of Torino 2006 depict?",
+      "Choices": {
+        "A": "A stylized profile of the Mole Antonelliana building",
+        "B": "A stylized image of a sled",
+        "C": "A picture of the Italian Alps",
+        "D": "A portrait of a famous Italian athlete",
+        "E": "A pair of ice skates"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What types of races does Hafjell occasionally host?",
+      "Choices": {
+        "A": "Hafjell occasionally hosts World Cup freestyle skiing and snowboarding races.",
+        "B": "Hafjell occasionally hosts World Cup cross-country skiing and biathlon races.",
+        "C": "Hafjell occasionally hosts World Cup downhill and super-G races.",
+        "D": "Hafjell occasionally hosts World Cup slalom and giant slalom races.",
+        "E": "Hafjell occasionally hosts Olympic figure skating and short track races."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "Which countries border Austria to the south?",
+      "Choices": {
+        "A": "Hungary and Romania",
+        "B": "Germany and Switzerland",
+        "C": "Czech Republic and Slovakia",
+        "D": "Denmark and Norway",
+        "E": "Slovenia and Italy"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "What is Hafjell Bike Park known for?",
+      "Choices": {
+        "A": "Hafjell Bike Park is known for its beautiful hiking trails.",
+        "B": "Hafjell Bike Park is a well-known venue for extreme trampolining competitions.",
+        "C": "Hafjell Bike Park is known as the best bike park for downhill riding in Norway.",
+        "D": "Hafjell Bike Park is famous for hosting the annual Winter Olympics.",
+        "E": "Hafjell Bike Park is a popular destination for cross-country skiing."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "When did Hafjell Bike Park start?",
+      "Choices": {
+        "A": "Hafjell Bike Park started in 2008.",
+        "B": "Hafjell Bike Park started in 1995.",
+        "C": "Hafjell Bike Park started in 1980.",
+        "D": "Hafjell Bike Park started in 2001.",
+        "E": "Hafjell Bike Park started in 2010."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "Who is the architect of Hafjell Bike Park?",
+      "Choices": {
+        "A": "I.M. Pei",
+        "B": "Ludwig Mies van der Rohe",
+        "C": "Snorre Pedersen is the architect of Hafjell Bike Park.",
+        "D": "Michaela Dorfmeister",
+        "E": "Albert Einstein"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Michaela Dorfmeister",
+      "Question": "In which part of Austria is Schladming situated?",
+      "Choices": {
+        "A": "Schladming is situated in the southeast of the Austrian state of Carinthia.",
+        "B": "Schladming is situated in the northern part of the Austrian state of Tyrol.",
+        "C": "Schladming is situated in the eastern part of the Austrian state of Burgenland.",
+        "D": "Schladming is situated in the capital city of Vienna.",
+        "E": "Schladming is situated in the northwest of the Austrian state of Styria."
+      },
+      "Answer": "E"
+    }
+  ],
+  "Leo Slezak": [
+    {
+      "name": "Leo Slezak",
+      "Question": "Who composed the opera Otello?",
+      "Choices": {
+        "A": "Giuseppe Verdi",
+        "B": "Hector Berlioz",
+        "C": "Richard Wagner",
+        "D": "Pyotr Ilyich Tchaikovsky",
+        "E": "Gioachino Rossini"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What is the source material for the opera Otello?",
+      "Choices": {
+        "A": "A novel by Jane Austen",
+        "B": "A ballet by Pyotr Ilyich Tchaikovsky",
+        "C": "Shakespeare's play Othello",
+        "D": "A play by William Shakespeare's rival, Christopher Marlowe",
+        "E": "A film by Alfred Hitchcock"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "When was Arturo Toscanini born?",
+      "Choices": {
+        "A": "March 25, 1867",
+        "B": "December 31, 1880",
+        "C": "February 12, 1850",
+        "D": "November 15, 1890",
+        "E": "January 1, 1875"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "Who composed the opera Tosca?",
+      "Choices": {
+        "A": "Mozart",
+        "B": "Giacomo Puccini",
+        "C": "Richard Wagner",
+        "D": "Leonard Bernstein",
+        "E": "Giuseppe Verdi"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What orchestras did Arturo Toscanini serve as music director for?",
+      "Choices": {
+        "A": "The Chicago Symphony Orchestra, the Cleveland Orchestra, and the Boston Symphony Orchestra.",
+        "B": "The Paris Opera Orchestra, the Moscow State Symphony Orchestra, and the Tokyo Symphony Orchestra.",
+        "C": "La Scala in Milan, the New York Philharmonic, and the NBC Symphony Orchestra.",
+        "D": "The Royal Concertgebouw Orchestra, the Munich Philharmonic, and the Stockholm Royal Court Orchestra.",
+        "E": "The Berlin Philharmonic, the Vienna State Opera, and the London Symphony Orchestra."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "When did Otello first premiere?",
+      "Choices": {
+        "A": "25 December 1885",
+        "B": "15 March 1895",
+        "C": "31 December 1890",
+        "D": "5 February 1887",
+        "E": "1 January 1880"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What is the setting of Tosca?",
+      "Choices": {
+        "A": "The city of Paris during the French Revolution",
+        "B": "A small village in rural Austria during the 18th century",
+        "C": "A medieval castle in the Scottish Highlands",
+        "D": "A futuristic space station in the year 2154",
+        "E": "Rome in June 1800"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What is Arturo Toscanini renowned for?",
+      "Choices": {
+        "A": "His skill in playing the accordion.",
+        "B": "His talent as a professional soccer player.",
+        "C": "His ability to conduct with his feet.",
+        "D": "His intensity, his perfectionism, his ear for orchestral detail and sonority, and his eidetic memory.",
+        "E": "His extensive collection of antique furniture."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What was Covent Garden originally used for before it became a commercial and tourist area?",
+      "Choices": {
+        "A": "It was a large marketplace for exotic animals before becoming a commercial area.",
+        "B": "It was fields and then arable land and orchards for the Abbey and Convent.",
+        "C": "It was a royal hunting ground for the British monarchs.",
+        "D": "It was a large lake that was later filled in to make way for buildings.",
+        "E": "It was a private estate for the aristocratic Slezak family."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What significant architectural contribution did Inigo Jones make to Covent Garden?",
+      "Choices": {
+        "A": "He created the iconic Big Ben clock tower",
+        "B": "He built the famous London Eye",
+        "C": "He constructed the Tower of London",
+        "D": "He designed the Buckingham Palace",
+        "E": "He designed the Italianate arcaded square along with the church of St Paul's."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What are some of the major Wagnerian roles Adolf Robinson was known for?",
+      "Choices": {
+        "A": "Wotan in The Ring Cycle and Hans Sachs in Die Meistersinger von Nürnberg",
+        "B": "The character of Tristan in Tristan und Isolde and The title role in Lohengrin",
+        "C": "The role of Klingsor in Parsifal and The title role in Die Walküre",
+        "D": "The character of Amfortas in Parsifal and The title role in Der Fliegende Holländer",
+        "E": "The title role in Parsifal and Siegfried in The Ring Cycle"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What are some of the themes depicted in Tosca?",
+      "Choices": {
+        "A": "A romantic comedy about a group of friends",
+        "B": "A historical account of a famous cooking competition",
+        "C": "Torture, murder, and suicide",
+        "D": "A scientific explanation of the water cycle",
+        "E": "The importance of gardening and floral arrangements"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "Where was Scandal on Park Street filmed?",
+      "Choices": {
+        "A": "The film production company in Prague, Czech Republic",
+        "B": "Johannisthal Studios in Berlin",
+        "C": "The studio in Munich, Germany where the famous Bavarian film industry is based",
+        "D": "The exterior scenes were filmed in Hollywood, California",
+        "E": "The film studio in Vienna, Austria"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "What is the original German title of Beloved Darling?",
+      "Choices": {
+        "A": "Geliebter Schatz",
+        "B": "Die Tote Stadt",
+        "C": "Ein Leben für die Oper",
+        "D": "Der Kaiser von Atlantis",
+        "E": "Meistersinger von Nürnberg"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Leo Slezak",
+      "Question": "When did the Covent Garden market relocate, and where did it move to?",
+      "Choices": {
+        "A": "In 1950, the market relocated to the Tower of London.",
+        "B": "In 1974, the market relocated to the New Covent Garden Market at Nine Elms.",
+        "C": "In 2000, the market relocated to the Buckingham Palace.",
+        "D": "In 1920, the market relocated to the British Museum.",
+        "E": "In 1980, the market relocated to the London Eye."
+      },
+      "Answer": "B"
+    }
+  ],
+  "Christian Krohg": [
+    {
+      "name": "Christian Krohg",
+      "Question": "What was Paris known as in the 19th century due to its early and extensive system of street lighting?",
+      "Choices": {
+        "A": "The Hub of Dark Alleys",
+        "B": "The City of Endless Fog",
+        "C": "The Metropolis of Midnight Sun",
+        "D": "The Capital of Cuisine",
+        "E": "City of Light"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What is Johan Fredrik Eckersberg most noted for?",
+      "Choices": {
+        "A": "His skills as a master baker",
+        "B": "His portraits of the royal family",
+        "C": "His expertise in marine biology",
+        "D": "His landscapes",
+        "E": "His contributions to the field of medicine"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When was the Académie Colarossi founded and by whom?",
+      "Choices": {
+        "A": "The Académie Colarossi was founded in 1870 by the Norwegian king Haakon VII.",
+        "B": "The Académie Colarossi was founded in 1850 by the Norwegian artist Christian Krohg.",
+        "C": "The Académie Colarossi was founded in 1870 by the Italian model and sculptor Filippo Colarossi.",
+        "D": "The Académie Colarossi was founded in 1900 by the French painter Claude Monet.",
+        "E": "The Académie Colarossi was founded in 1860 by the British artist J.M.W. Turner."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What professions was Gunnar Heiberg known for?",
+      "Choices": {
+        "A": "Scientist, artist, and competitive eater",
+        "B": "Historian, philosopher, and professional wrestler",
+        "C": "Businessman, politician, and professional snail trainer",
+        "D": "Professional footballer and chef",
+        "E": "Poet, playwright, journalist, and theatre critic"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What type of school was Skagen's first school, and when was it in operation?",
+      "Choices": {
+        "A": "Skagen's first school was the Latinskole, a grammar school, in operation from 1549 until 1739.",
+        "B": "Skagen's first school was a high school, in operation from 1750 until 1850.",
+        "C": "Skagen's first school was a vocational school, in operation from 1700 until 1900.",
+        "D": "Skagen's first school was a primary school, in operation from 1900 until 1950.",
+        "E": "Skagen's first school was a boarding school, in operation from 1600 until 1800."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When did the modern port of Skagen open?",
+      "Choices": {
+        "A": "The modern port of Skagen opened on 20 November 1807.",
+        "B": "The modern port of Skagen opened on 20 November 1997.",
+        "C": "The modern port of Skagen opened on 20 November 1917.",
+        "D": "The modern port of Skagen opened on 20 July 1907.",
+        "E": "The modern port of Skagen opened on 20 November 1907."
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When was Oslo founded as a city?",
+      "Choices": {
+        "A": "In the 16th century in 1550",
+        "B": "At the start of the Viking Age in 800",
+        "C": "During the Middle Ages in 1200",
+        "D": "At the end of the Viking Age in 1040",
+        "E": "In the year 1000 after the birth of Jesus Christ"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What is the main focus of the Skagens Museum's collection?",
+      "Choices": {
+        "A": "The main focus of the museum's collection is on works by members of the colony of Skagen Painters who lived and worked in Skagen in the late 19th and early 20th centuries.",
+        "B": "The main focus of the museum's collection is on traditional Danish folk art and handicrafts.",
+        "C": "The main focus of the museum's collection is on modern Norwegian sculptures and installations.",
+        "D": "The main focus of the museum's collection is on 20th-century Danish abstract art and pop culture.",
+        "E": "The main focus of the museum's collection is on ancient Danish artifacts and historical relics."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What is Skagen renowned for historically?",
+      "Choices": {
+        "A": "Skagen is the birthplace of the famous artist Christian Krohg.",
+        "B": "Skagen is known for its beautiful beaches and water sports.",
+        "C": "Skagen is historically renowned as a fishing village, especially for its herring industry.",
+        "D": "Skagen is famous for its annual music festival, attracting thousands of visitors.",
+        "E": "Skagen is a major tourist destination for shopping and nightlife."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What made Académie Colarossi stand out compared to the École des Beaux Arts in the 19th century?",
+      "Choices": {
+        "A": "Académie Colarossi was known for its strict adherence to traditional art techniques, unlike the École des Beaux Arts.",
+        "B": "Académie Colarossi accepted female students and allowed them to draw from the nude male model, unlike the conservative École des Beaux Arts.",
+        "C": "Académie Colarossi was a private institution that only accepted students from wealthy families, unlike the École des Beaux Arts.",
+        "D": "Académie Colarossi was a night school that only offered classes in the evenings, unlike the École des Beaux Arts.",
+        "E": "Académie Colarossi was the only art school in Paris that taught art from a solely theoretical perspective."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When was Skagens Museum founded and where?",
+      "Choices": {
+        "A": "Skagens Museum was founded on 20 October 1908 in a cave near the Eiffel Tower.",
+        "B": "Skagens Museum was founded on 15 August 1850 in a castle in England.",
+        "C": "Skagens Museum was founded on 20 October 1908 in the dining room at Brøndums Hotel.",
+        "D": "Skagens Museum was founded on 31 December 1999 in the city of Copenhagen.",
+        "E": "Skagens Museum was founded on 1 January 1800 in a small village in Norway."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "Can you name a recognized work by Per Hurum and its location?",
+      "Choices": {
+        "A": "A painting titled 'The Last Supper' located in the Vatican Museums in Rome.",
+        "B": "A mural titled 'The Creation of Adam' located in the Guggenheim Museum in Bilbao.",
+        "C": "A sculpture titled 'The Awakening' located in the Louvre Museum in Paris.",
+        "D": "One of his most recognized works is the two piece grouping Mor og barn, located at the City Hall Square in Oslo.",
+        "E": "A statue titled 'Liberty Enlightening the World' located in the Metropolitan Museum of Art in New York."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When was Gunnar Heiberg born?",
+      "Choices": {
+        "A": "23 April 1850",
+        "B": "18 November 1857",
+        "C": "12 January 1870",
+        "D": "6 September 1882",
+        "E": "25 December 1865"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "When was Johan Fredrik Eckersberg born?",
+      "Choices": {
+        "A": "5 December 1802",
+        "B": "18 January 1789",
+        "C": "25 April 1850",
+        "D": "12 September 1865",
+        "E": "16 June 1822"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "Who is the council leader of Vestre Aker, and from which party?",
+      "Choices": {
+        "A": "Yngvar Husebye from the Conservative Party",
+        "B": "Erik Solheim from the Green Party",
+        "C": "Per Palle Storm from the Progress Party",
+        "D": "Bjørn Fjukstad from the Labour Party",
+        "E": "Jens Stoltenberg from the Socialist Left Party"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What significant awards did Per Hurum receive during his career?",
+      "Choices": {
+        "A": "He received the Conrad Mohr's legacy, A.C. Houens fond, and the King's Medal of Merit in gold.",
+        "B": "He received the Fields Medal, the Abel Prize, and the Wolf Prize in Mathematics.",
+        "C": "He received the Nobel Peace Prize, the Pulitzer Prize, and the Grammy Award.",
+        "D": "He received the Order of the Lion and the Sun, the Order of the Elephant, and the Order of the Golden Ark.",
+        "E": "He received the Lenin Peace Prize, the Albert Lasker Award, and the National Medal of Science."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "What was Karl Gussow's main influence on his painting style?",
+      "Choices": {
+        "A": "Johannes Vermeer, a Dutch painter, inspired Karl Gussow's use of light and color.",
+        "B": "Ferdinand Pauwels, a Belgian history painter, had a decisive influence on Karl Gussow's style.",
+        "C": "Willem de Kooning, an American abstract expressionist painter, influenced Karl Gussow's abstract style.",
+        "D": "Paul Cézanne, a French post-impressionist painter, had a significant impact on Karl Gussow's work.",
+        "E": "Vincent van Gogh, a Dutch post-impressionist painter, was Karl Gussow's primary artistic inspiration."
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Christian Krohg",
+      "Question": "Which two international airports serve Paris?",
+      "Choices": {
+        "A": "Bastia Poretta Airport and Nice Côte d'Azur Airport",
+        "B": "Marseille Provence Airport and Montpellier Méditerranée Airport",
+        "C": "Charles de Gaulle Airport and Orly Airport",
+        "D": "Le Bourget Airport and Beauvais Tillé Airport",
+        "E": "Toulouse Blagnac Airport and Lyon-Saint Exupéry Airport"
+      },
+      "Answer": "C"
+    }
+  ],
+  "Alicia de Larrocha": [
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Where is the Los Angeles Philharmonic based?",
+      "Choices": {
+        "A": "Miami, Florida",
+        "B": "Los Angeles, California",
+        "C": "San Francisco, California",
+        "D": "New York City, New York",
+        "E": "Chicago, Illinois"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Who is the current music director of the Los Angeles Philharmonic?",
+      "Choices": {
+        "A": "Yo-Yo Ma",
+        "B": "Joshua Bell",
+        "C": "Itzhak Perlman",
+        "D": "Maria Callas",
+        "E": "Gustavo Dudamel"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What is the original name of the Grammy Awards?",
+      "Choices": {
+        "A": "International Piano Federation Awards",
+        "B": "Alicia de Larrocha Prize",
+        "C": "Gramophone Awards",
+        "D": "Catalan Music Academy Honors",
+        "E": "Spanish Concerto Awards"
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Who owns Reuters?",
+      "Choices": {
+        "A": "The Walt Disney Company",
+        "B": "Alicia de Larrocha",
+        "C": "The British Royal Family",
+        "D": "The United Nations",
+        "E": "Thomson Reuters Corporation"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What is the primary aim of UNESCO?",
+      "Choices": {
+        "A": "The primary aim of UNESCO is to promote world peace and security through international cooperation in education, arts, sciences, and culture.",
+        "B": "To create a database of the world's most popular ice cream flavors.",
+        "C": "To develop a universal language that everyone speaks, regardless of their native tongue.",
+        "D": "To create a global standard for the tallest buildings in the world.",
+        "E": "To establish a global network of underwater tunnels connecting every continent."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What major international event did Barcelona host in 1992?",
+      "Choices": {
+        "A": "The 1992 European Film Festival",
+        "B": "The 1992 Summer Olympics",
+        "C": "The 1992 World Cup of Soccer",
+        "D": "The 1992 Barcelona Fashion Week",
+        "E": "The 1992 Winter Paralympics"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "When and where was Enrique Granados born?",
+      "Choices": {
+        "A": "25 August 1870 in Paris, France",
+        "B": "15 November 1872 in Madrid, Spain",
+        "C": "12 December 1869 in Seville, Spain",
+        "D": "1 January 1875 in Barcelona, Spain",
+        "E": "27 July 1867 in Lleida, Spain"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What was the final masterpiece composed by Isaac Albéniz, and what is it known for?",
+      "Choices": {
+        "A": "Iberia (1908), a suite of twelve piano 'impressions'.",
+        "B": "Albéniz's final masterpiece was 'The Great Gate of Kiev', a famous piece for orchestra.",
+        "C": "The final masterpiece composed by Isaac Albéniz was 'The Piano Concerto No. 1', a popular classical music piece.",
+        "D": "Albéniz's final masterpiece was 'The Nutcracker', a famous ballet score composed by Tchaikovsky.",
+        "E": "The final masterpiece composed by Isaac Albéniz was 'The Four Seasons', a famous violin concerto."
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What musical era do Antonio Soler's works span?",
+      "Choices": {
+        "A": "20th-century avant-garde music",
+        "B": "Medieval music",
+        "C": "Romantic music",
+        "D": "late Baroque and early Classical music eras",
+        "E": "Renaissance music"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What languages are officially recognized in Catalonia?",
+      "Choices": {
+        "A": "The official languages in Catalonia are Catalan, Basque, and Galician.",
+        "B": "The official languages in Catalonia are Spanish, Portuguese, and Romanian.",
+        "C": "The official languages in Catalonia are Catalan, Spanish, and the Aranese dialect of Occitan.",
+        "D": "The official languages in Catalonia are Catalan, Occitan, and Welsh.",
+        "E": "The official languages in Catalonia are English, French, and Italian."
+      },
+      "Answer": "C"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "How were the Grammy Awards named?",
+      "Choices": {
+        "A": "From a mail-in contest, named after the gramophone",
+        "B": "In a random drawing at a music festival",
+        "C": "By a famous music producer",
+        "D": "In a ceremony at the Gramophone Museum",
+        "E": "From a suggestion by a music critic"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What was unique about the studios of Hispavox located in Madrid?",
+      "Choices": {
+        "A": "The studios were the first to use digital recording technology in Spain.",
+        "B": "The studios were located in a historic castle in the city center.",
+        "C": "The studios were famous for producing the music of the Spanish Civil War.",
+        "D": "The studios were known among fans as Sonido Torrelaguna.",
+        "E": "The studios were the primary recording location for all Spanish classical music albums."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "When was Antonio Soler baptized?",
+      "Choices": {
+        "A": "20 August 1728",
+        "B": "3 December 1729",
+        "C": "10 February 1735",
+        "D": "5 January 1730",
+        "E": "15 November 1731"
+      },
+      "Answer": "B"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What led to the formation of the Radio Corporation of America (RCA) in 1919?",
+      "Choices": {
+        "A": "RCA was formed by a merger of several European radio companies to compete with the British Empire.",
+        "B": "RCA was formed as a result of a joint venture between General Electric and Thomas Edison to develop the first practical phonograph.",
+        "C": "RCA was formed by a group of American inventors who were trying to create a new wireless communication system using crystals instead of vacuum tubes.",
+        "D": "RCA was formed when General Electric purchased American Marconi and used its assets to create a new radio communications subsidiary, as a patriotic gesture to ensure U.S. control over radio communications.",
+        "E": "RCA was formed when General Electric acquired a controlling interest in the National Broadcasting Company (NBC) and decided to create a separate radio subsidiary."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "Since when has the Los Angeles Philharmonic presented world premieres and commissioned new works?",
+      "Choices": {
+        "A": "Since the 1970s under the direction of Zubin Mehta",
+        "B": "Since the Los Angeles Philharmonic was founded in 1919",
+        "C": "Since the orchestra moved to the Hollywood Bowl in the 1920s",
+        "D": "Since the opening of the Walt Disney Concert Hall on October 23, 2003",
+        "E": "Since the 1990s when Gustavo Dudamel first joined the orchestra"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What are some of the Spanish folk music idioms Isaac Albéniz is best known for incorporating into his piano works?",
+      "Choices": {
+        "A": "Asturias (Leyenda), Granada, Sevilla, Cadiz, Córdoba, Cataluña, Mallorca, and Tango in D",
+        "B": "Bolero, Rhapsody in Blue, and Flight of the Bumblebee",
+        "C": "The Blue Danube, Swan Lake, and The Nutcracker March",
+        "D": "The Four Seasons, La Campanella, and Waltz of the Flowers",
+        "E": "Capriccio Italien, Carnival of the Animals, and The Sorcerer's Apprentice"
+      },
+      "Answer": "A"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "When was Reuters established and by whom?",
+      "Choices": {
+        "A": "Reuters was established in 1860 by a German entrepreneur named Otto Reuter.",
+        "B": "Reuters was established in 1880 by a French news agency called Agence Havas.",
+        "C": "Reuters was established in 1950 by a group of investors from Wall Street.",
+        "D": "Reuters was established in 1851 by Paul Reuter.",
+        "E": "Reuters was established in 1850 by a British journalist named James Thomson."
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "What is the population of Barcelona within city limits?",
+      "Choices": {
+        "A": "0.5 million",
+        "B": "12 billion",
+        "C": "42 million",
+        "D": "1.6 million",
+        "E": "700 thousand"
+      },
+      "Answer": "D"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "When was the first Grammy Awards ceremony held?",
+      "Choices": {
+        "A": "September 12, 1960",
+        "B": "August 20, 1955",
+        "C": "January 15, 1958",
+        "D": "November 25, 1962",
+        "E": "May 4, 1959"
+      },
+      "Answer": "E"
+    },
+    {
+      "name": "Alicia de Larrocha",
+      "Question": "How many journalists and photojournalists does Reuters employ?",
+      "Choices": {
+        "A": "Reuters employs around 2,500 journalists and 600 photojournalists.",
+        "B": "Reuters employs over 100,000 journalists and 5,000 photojournalists.",
+        "C": "Reuters employs around 500 journalists and 100 photojournalists.",
+        "D": "Reuters employs around 1,000 journalists and 200 photojournalists.",
+        "E": "Reuters employs over 10,000 journalists and 1,000 photojournalists."
+      },
+      "Answer": "A"
+    }
+  ]
+}

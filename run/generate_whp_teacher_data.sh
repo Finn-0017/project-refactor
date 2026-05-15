@@ -2,20 +2,22 @@
 set -euo pipefail
 
 # Usage：
-#   bash generate_teacher.sh 0
-#   bash generate_teacher.sh 1
+#   bash generate_teacher.sh 0 1
+#   0 = GPU id
+#   1 = forget set id
 
 GPU_ID="${1:-0}"
+SET_ID="${2:-1}"
 
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 
 MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 
-NAMES_PATH="data/origdata/names_210.json"
-SELECTED_IDS="configs/unlearn_ids1.json"
-REPLACEMENT_NAMES="data/origdata/names_last_200.json"
-OUTPUT_DIR="data/whp_samples/set1"
+NAMES_PATH="data/whp_names/names_210.json"
+SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
+REPLACEMENT_NAMES="data/whp_names/names_last_200.json"
+OUTPUT_DIR="data/whp_samples/set${SET_ID}"
 
 NUM_SAMPLES=200
 SEED=1
