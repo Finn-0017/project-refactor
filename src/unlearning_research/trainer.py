@@ -22,7 +22,6 @@ from .losses import (
     uniform_choice_cross_entropy,
 )
 from .modeling import CausalLMWithLoRA
-from .prompts import apply_chat_template, whp_generation_prompt
 from .utils import append_log, ensure_dir, move_batch_to_device, save_json
 
 
@@ -39,12 +38,8 @@ class TrainingSettings:
     num_warmup_ratio: float = 0.05
     log_interval: int = 50
     save_interval: int = 0
-    retain_factor: float = 1.0
+    retain_factor: float = 0.0
     max_grad_norm: float | None = None
-    sample_each_epoch: bool = False
-    sample_max_new_tokens: int = 128
-    sample_do_sample: bool = False
-    sample_temperature: float = 1.0
 
 
 def _build_optimizer(model: torch.nn.Module, settings: TrainingSettings) -> AdamW:
@@ -121,14 +116,15 @@ def train_df_mcq(
 
             forget_ids = batch["forget_input_ids"]
             retain_ids = batch["retain_input_ids"]
-            forget_mask = forget_ids.ne(pad_id).long()
-            retain_mask = retain_ids.ne(pad_id).long()
-
+            forget_mask = batch["forget_attention_mask"]
+            retain_mask = batch["retain_attention_mask"]
             forget_outputs = model(forget_ids, attention_mask=forget_mask)
             forget_choice_logits = choice_logits(
                 forget_outputs.logits,
                 forget_ids,
                 model.tokenizer,
+                attention_mask=forget_mask,
+                model_path=model.model_path,
             )
             if flatten_loss == "model_to_uniform_kl":
                 loss_forget = model_to_uniform_kl(forget_choice_logits)
@@ -144,6 +140,8 @@ def train_df_mcq(
                         base_outputs.logits,
                         retain_ids,
                         model.tokenizer,
+                        attention_mask=retain_mask,
+                        model_path=model.model_path,
                     )
                     base_choice_probs = normalized_choice_probs(base_choice_logits)
                 retain_outputs = model(retain_ids, attention_mask=retain_mask)
@@ -151,6 +149,8 @@ def train_df_mcq(
                     retain_outputs.logits,
                     retain_ids,
                     model.tokenizer,
+                    attention_mask=retain_mask,
+                    model_path=model.model_path,
                 )
                 loss_retain = reference_choice_cross_entropy(
                     retain_choice_logits,
@@ -195,82 +195,6 @@ def train_df_mcq(
     save_json({"global_step": global_step}, output_dir / "training_state.json")
 
 
-
-def _unique_whp_names(dataset: WHPPrecomputedDataset) -> list[str]:
-    """Return target names once, preserving dataset order."""
-
-    names: list[str] = []
-    seen: set[str] = set()
-    for example in dataset.examples:
-        if example.name not in seen:
-            names.append(example.name)
-            seen.add(example.name)
-    return names
-
-
-def _write_whp_epoch_samples(
-    *,
-    model: CausalLMWithLoRA,
-    dataset: WHPPrecomputedDataset,
-    epoch: int,
-    output_dir: Path,
-    logfile: str | Path | None,
-    max_new_tokens: int,
-    do_sample: bool,
-    temperature: float,
-) -> None:
-    """Generate one debug sample per target person after an epoch.
-
-    The samples are for inspection only. They are not used by the optimizer and do not
-    change the training data.
-    """
-
-    sample_dir = ensure_dir(output_dir / "sample_outputs")
-    sample_json_path = sample_dir / f"epoch_{epoch}.json"
-    sample_text_path = sample_dir / f"epoch_{epoch}.txt"
-    rows = []
-    text_blocks: list[str] = []
-
-    model.eval()
-    for name in _unique_whp_names(dataset):
-        prompt = whp_generation_prompt(name)
-        input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
-        text = model.generate_text(
-            input_ids,
-            max_new_tokens=max_new_tokens,
-            do_sample=do_sample,
-            temperature=temperature,
-        ).strip()
-        rows.append(
-            {
-                "epoch": epoch,
-                "name": name,
-                "prompt": prompt,
-                "sample": text,
-            }
-        )
-        text_blocks.append(
-            "\n".join(
-                [
-                    f"epoch={epoch}",
-                    f"name={name}",
-                    f"prompt={prompt}",
-                    "sample:",
-                    text,
-                ]
-            )
-        )
-
-    save_json(rows, sample_json_path)
-    sample_text_path.write_text("\n\n".join(text_blocks) + "\n", encoding="utf-8")
-    append_log(f"epoch={epoch} sample_json={sample_json_path}", logfile)
-    append_log(f"epoch={epoch} sample_text={sample_text_path}", logfile)
-    for row in rows:
-        append_log(
-            f"[sample epoch={epoch} name={row['name']}]\n{row['sample']}\n",
-            logfile,
-        )
-
 def train_whp(
     *,
     model: CausalLMWithLoRA,
@@ -307,7 +231,7 @@ def train_whp(
             batch = move_batch_to_device(batch, model.device)
             input_ids = batch["input_ids"]
             labels = batch["labels"]
-            attention_mask = input_ids.ne(pad_id).long()
+            attention_mask = batch["attention_mask"]
 
             outputs = model(input_ids, attention_mask=attention_mask)
             loss = causal_lm_cross_entropy(outputs.logits, labels)
@@ -341,25 +265,5 @@ def train_whp(
                 if settings.save_interval and global_step % settings.save_interval == 0:
                     model.save_trainable_checkpoint(output_dir / f"checkpoint.step{global_step}")
 
-        if settings.sample_each_epoch:
-            _write_whp_epoch_samples(
-                model=model,
-                dataset=dataset,
-                epoch=epoch,
-                output_dir=output_dir,
-                logfile=logfile,
-                max_new_tokens=settings.sample_max_new_tokens,
-                do_sample=settings.sample_do_sample,
-                temperature=settings.sample_temperature,
-            )
-            model.train()
-
     model.save_trainable_checkpoint(output_dir / "checkpoint.final")
-    save_json(
-        {
-            "global_step": global_step,
-            "num_train_epochs": settings.num_train_epochs,
-            "final_epoch": settings.num_train_epochs - 1,
-        },
-        output_dir / "training_state.json",
-    )
+    save_json({"global_step": global_step}, output_dir / "training_state.json")

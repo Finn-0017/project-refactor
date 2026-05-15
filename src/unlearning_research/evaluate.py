@@ -16,7 +16,7 @@ from .choice import (
     raw_full_vocab_choice_probs,
 )
 from .modeling import CausalLMWithLoRA
-from .prompts import apply_chat_template, legacy_mcq_prompt, open_question_prompt, yes_no_prompt
+from .prompts import apply_chat_template, mcq_prompt, open_question_prompt, yes_no_prompt
 from .utils import load_json, save_json
 
 
@@ -67,37 +67,31 @@ def evaluate_mcq_row(
     *,
     max_new_tokens: int = 32,
 ) -> dict[str, Any]:
-    """Evaluate one MCQ row with the legacy full-softmax readout."""
+    """Evaluate one MCQ row with the legacy raw probability readout."""
 
     normalized = normalize_question_row(row)
     choices = normalized["choices"]
     if not isinstance(choices, dict):
         raise ValueError("MCQ row does not contain a `Choices` or `choices` dictionary")
     letters = tuple(sorted(choices.keys()))
-    prompt = legacy_mcq_prompt(normalized["question"], choices, answer_letters=list(letters))
+    prompt = mcq_prompt(normalized["question"], choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
     text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
 
-    outputs = model(input_ids)
-    if input_ids.size(0) == 1:
-        next_logits = outputs.logits[:, -1]
-    else:
-        pad_token_id = model.tokenizer.pad_token_id
-        if pad_token_id is None:
-            cols = torch.full((input_ids.size(0),), input_ids.size(1) - 1, device=input_ids.device)
-        else:
-            cols = torch.clamp(input_ids.ne(pad_token_id).sum(dim=1) - 1, min=0)
-        rows = torch.arange(input_ids.size(0), device=input_ids.device)
-        next_logits = outputs.logits[rows, cols]
+    outputs = model(input_ids, attention_mask=torch.ones_like(input_ids, dtype=torch.long))
+    next_logits = outputs.logits[:, -1]
     raw_probs = raw_full_vocab_choice_probs(
         next_logits,
         model.tokenizer,
         letters,
         model_path=getattr(model, "model_path", None),
     )[0]
-    raw_entropy = float(entropy_from_unnormalized_probs(raw_probs.unsqueeze(0)).item())
+    entropy = float(entropy_from_unnormalized_probs(raw_probs.unsqueeze(0)).item())
     choice_mass = float(raw_probs.sum().item())
-    normalized_probs = raw_probs / raw_probs.sum() if choice_mass > 0 else torch.full_like(raw_probs, 1.0 / len(letters))
+    if choice_mass > 0:
+        normalized_probs = raw_probs / raw_probs.sum()
+    else:
+        normalized_probs = torch.full_like(raw_probs, 1.0 / len(letters))
     choice_entropy = float(entropy_from_probs(normalized_probs.unsqueeze(0), normalized=False).item())
     normalized_entropy = float(choice_entropy / math.log(len(letters)))
 
@@ -114,7 +108,7 @@ def evaluate_mcq_row(
         "Choice_distribution": choice_distribution_dict(raw_probs, letters),
         "choice_distribution_normalized": choice_distribution_dict(normalized_probs, letters),
         "choice_probability_mass": choice_mass,
-        "entropy": raw_entropy,
+        "entropy": entropy,
         "choice_entropy": choice_entropy,
         "normalized_entropy": normalized_entropy,
         "acc_prob": ref_prob,

@@ -96,7 +96,11 @@ class CausalLMWithLoRA(torch.nn.Module):
 
     def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor | None = None):
         if attention_mask is None:
-            attention_mask = input_ids.ne(self.tokenizer.pad_token_id).long()
+            # Evaluation often passes a single, unpadded chat prompt.  Some Llama
+            # tokenizers use the EOS token as the padding token, and chat templates
+            # contain EOS/EOT-like tokens inside real prompts.  A value-based mask
+            # would hide valid prompt tokens, so the safe default is an all-ones mask.
+            attention_mask = torch.ones_like(input_ids, dtype=torch.long)
         return self.model(input_ids=input_ids, attention_mask=attention_mask, return_dict=True)
 
     @contextmanager
@@ -132,7 +136,9 @@ class CausalLMWithLoRA(torch.nn.Module):
         """Generate text after an already-tokenized chat prompt."""
 
         input_ids = input_ids.to(self.device)
-        attention_mask = input_ids.ne(self.tokenizer.pad_token_id).long()
+        # Single-prompt generation should keep every token visible.  Training code
+        # passes explicit masks for padded batches.
+        attention_mask = torch.ones_like(input_ids, dtype=torch.long)
         context = self.adapters_disabled() if use_base_model else _nullcontext()
         with context:
             output_ids = self.model.generate(

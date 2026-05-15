@@ -232,35 +232,63 @@ class WHPPrecomputedDataset(Dataset):
         }
 
 
+def _length_tensor(sequences: list[torch.Tensor]) -> torch.Tensor:
+    return torch.tensor([seq.size(0) for seq in sequences], dtype=torch.long)
+
+
+def _attention_mask_from_lengths(lengths: torch.Tensor, max_length: int) -> torch.Tensor:
+    positions = torch.arange(max_length).unsqueeze(0)
+    return positions.lt(lengths.unsqueeze(1)).long()
+
+
+def _pad_1d_tensors_with_mask(
+    tensors: list[torch.Tensor],
+    *,
+    pad_token_id: int,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Pad 1D token tensors and return an explicit true-length attention mask."""
+
+    lengths = [int(t.size(0)) for t in tensors]
+    padded = pad_sequence(tensors, batch_first=True, padding_value=pad_token_id)
+    mask = torch.zeros_like(padded, dtype=torch.long)
+    for row, length in enumerate(lengths):
+        mask[row, :length] = 1
+    return padded, mask
+
+
 def collate_dfmcq(batch: list[dict[str, Any]], pad_token_id: int) -> dict[str, Any]:
+    forget_ids, forget_mask = _pad_1d_tensors_with_mask(
+        [item["forget_input_ids"] for item in batch],
+        pad_token_id=pad_token_id,
+    )
+    retain_ids, retain_mask = _pad_1d_tensors_with_mask(
+        [item["retain_input_ids"] for item in batch],
+        pad_token_id=pad_token_id,
+    )
     return {
-        "forget_input_ids": pad_sequence(
-            [item["forget_input_ids"] for item in batch],
-            batch_first=True,
-            padding_value=pad_token_id,
-        ),
-        "retain_input_ids": pad_sequence(
-            [item["retain_input_ids"] for item in batch],
-            batch_first=True,
-            padding_value=pad_token_id,
-        ),
+        "forget_input_ids": forget_ids,
+        "forget_attention_mask": forget_mask,
+        "retain_input_ids": retain_ids,
+        "retain_attention_mask": retain_mask,
         "forget_name": [item["forget_name"] for item in batch],
         "retain_name": [item["retain_name"] for item in batch],
     }
 
 
 def collate_whp(batch: list[dict[str, Any]], pad_token_id: int) -> dict[str, Any]:
+    input_ids, attention_mask = _pad_1d_tensors_with_mask(
+        [item["input_ids"] for item in batch],
+        pad_token_id=pad_token_id,
+    )
+    labels = pad_sequence(
+        [item["labels"] for item in batch],
+        batch_first=True,
+        padding_value=-100,
+    )
     return {
-        "input_ids": pad_sequence(
-            [item["input_ids"] for item in batch],
-            batch_first=True,
-            padding_value=pad_token_id,
-        ),
-        "labels": pad_sequence(
-            [item["labels"] for item in batch],
-            batch_first=True,
-            padding_value=-100,
-        ),
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": labels,
         "name": [item["name"] for item in batch],
         "person_id": [item["person_id"] for item in batch],
         "passage_id": [item["passage_id"] for item in batch],

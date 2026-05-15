@@ -230,7 +230,11 @@ def _score_predictions(predictions: dict[str, Any]) -> dict[str, Any]:
 
 
 def _write_brian_style_tables(summary: dict[str, Any], output_dir: Path, run_name: str) -> None:
-    """Write compact tables matching the paper-style reporting layout."""
+    """Write paper-shaped tables without diagnostic columns.
+
+    Extra diagnostics stay in predictions.json and summary.csv.  These three CSV files
+    are kept close to the tables reported in the DF-MCQ paper.
+    """
 
     def get(split: str, key: str) -> Any:
         return summary.get(split, {}).get(key)
@@ -241,42 +245,29 @@ def _write_brian_style_tables(summary: dict[str, Any], output_dir: Path, run_nam
         "retain_rougeL_recall": get("retain_open", "rougeL_recall"),
         "hardretain_rougeL_recall": get("hardretain_open", "rougeL_recall"),
         "forget_refusal_rate": get("forget_open", "refusal_rate"),
-        "forget_n": get("forget_open", "n"),
-        "retain_n": get("retain_open", "n"),
-        "hardretain_n": get("hardretain_open", "n"),
     }
+
     mcq_row = {
         "run_name": run_name,
         "forget_accuracy": get("forget_mcq", "accuracy_distribution"),
         "forget_entropy": get("forget_mcq", "entropy"),
-        "forget_normalized_entropy": get("forget_mcq", "normalized_entropy"),
-        "forget_p_correct": get("forget_mcq", "p_correct"),
         "forget_p_obfuscation": get("forget_mcq", "p_obfuscation"),
         "hardretain_accuracy": get("hardretain_mcq", "accuracy_distribution"),
         "hardretain_entropy": get("hardretain_mcq", "entropy"),
-        "hardretain_normalized_entropy": get("hardretain_mcq", "normalized_entropy"),
-        "hardretain_p_correct": get("hardretain_mcq", "p_correct"),
-        "forget_n": get("forget_mcq", "n"),
-        "hardretain_n": get("hardretain_mcq", "n"),
     }
+
     yesno_row = {
         "run_name": run_name,
-        "forget_ref_accuracy": get("forget_yesno", "accuracy_distribution"),
-        "forget_ref_entropy": get("forget_yesno", "entropy"),
-        "forget_ref_yes_rate": get("forget_yesno", "yes_rate"),
-        "forget_false_accuracy": get("forget_yesno_false_control", "accuracy_distribution"),
-        "forget_false_entropy": get("forget_yesno_false_control", "entropy"),
-        "forget_false_yes_rate": get("forget_yesno_false_control", "yes_rate"),
+        "reference_accuracy": get("forget_yesno", "accuracy_distribution"),
+        "reference_entropy": get("forget_yesno", "entropy"),
+        "in_training_accuracy": get("forget_yesno_in_training", "accuracy_distribution"),
+        "in_training_entropy": get("forget_yesno_in_training", "entropy"),
+        "out_of_training_accuracy": get("forget_yesno_false_control", "accuracy_distribution"),
+        "out_of_training_entropy": get("forget_yesno_false_control", "entropy"),
         "retain_accuracy": get("retain_yesno", "accuracy_distribution"),
         "retain_entropy": get("retain_yesno", "entropy"),
-        "retain_yes_rate": get("retain_yesno", "yes_rate"),
         "hardretain_accuracy": get("hardretain_yesno", "accuracy_distribution"),
         "hardretain_entropy": get("hardretain_yesno", "entropy"),
-        "hardretain_yes_rate": get("hardretain_yesno", "yes_rate"),
-        "forget_ref_n": get("forget_yesno", "n"),
-        "forget_false_n": get("forget_yesno_false_control", "n"),
-        "retain_n": get("retain_yesno", "n"),
-        "hardretain_n": get("hardretain_yesno", "n"),
     }
 
     for filename, row in [

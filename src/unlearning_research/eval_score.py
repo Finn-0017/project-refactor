@@ -30,15 +30,13 @@ except Exception:  # pragma: no cover - depends on the runtime environment.
 
 from .choice import (
     choice_distribution_dict,
-    choice_logits,
     entropy_from_probs,
     entropy_from_unnormalized_probs,
-    normalized_choice_probs,
     raw_full_vocab_choice_probs,
 )
 if TYPE_CHECKING:
     from .modeling import CausalLMWithLoRA
-from .prompts import apply_chat_template, legacy_mcq_prompt, mcq_prompt, open_question_prompt, yes_no_prompt
+from .prompts import apply_chat_template, mcq_prompt, open_question_prompt, yes_no_prompt
 from .utils import ensure_dir, load_json, save_json
 
 
@@ -134,32 +132,36 @@ def flatten_people(data: dict[str, Any], selection: EvaluationSelection | None =
     return filtered
 
 
-def _label_token_ids(tokenizer: Any, labels: tuple[str, ...]) -> torch.Tensor:
+def _label_token_ids(tokenizer: Any, labels: tuple[str, ...], *, model_path: str | None = None) -> torch.Tensor:
     """Token IDs for next-token label probes such as Yes/No.
 
-    Labels used here are expected to be single-token for Llama/Qwen chat models.  If a
-    tokenizer splits a label into multiple tokens, the final token is still a useful
-    approximation for a next-token probe, and the generated text is also retained.
+    This follows the legacy indexing rule used by the original scripts: index 1 for
+    Llama-style tokenizers and index 0 for Qwen-style tokenizers.
     """
 
+    use_qwen_rule = bool(model_path and "qwen" in model_path.lower())
     token_ids: list[int] = []
     for label in labels:
-        ids = tokenizer.encode(label, add_special_tokens=False)
+        ids = tokenizer.encode(label)
         if not ids:
             raise ValueError(f"Could not tokenize label {label!r}")
-        token_ids.append(ids[-1])
+        index = 0 if use_qwen_rule else 1
+        if len(ids) <= index:
+            index = len(ids) - 1
+        token_ids.append(ids[index])
     return torch.tensor(token_ids, dtype=torch.long)
 
 
 def _logits_at_prompt_end(model: CausalLMWithLoRA, input_ids: torch.Tensor) -> torch.Tensor:
-    outputs = model(input_ids)
-    pad_token_id = model.tokenizer.pad_token_id
-    if pad_token_id is None:
-        cols = torch.full((input_ids.size(0),), input_ids.size(1) - 1, device=input_ids.device)
-    else:
-        cols = torch.clamp(input_ids.ne(pad_token_id).sum(dim=1) - 1, min=0)
-    rows = torch.arange(input_ids.size(0), device=input_ids.device)
-    return outputs.logits[rows, cols]
+    """Return logits at the prompt-final position.
+
+    Evaluation uses single unpadded prompts, matching the original code's
+    ``logits[:, -1]`` readout.  This avoids treating real EOS/EOT prompt tokens as
+    padding when the tokenizer pad token equals EOS.
+    """
+
+    outputs = model(input_ids, attention_mask=torch.ones_like(input_ids, dtype=torch.long))
+    return outputs.logits[:, -1]
 
 
 def _first_letter(text: Any, letters: tuple[str, ...] = CHOICE_LETTERS) -> str | None:
@@ -239,10 +241,9 @@ def evaluate_mcq_row(
 ) -> dict[str, Any]:
     """Evaluate one MCQ row with the legacy probability readout.
 
-    The original project computed a full-vocabulary softmax at the first answer-token
-    position, then sliced out the probabilities of A/B/C/D/E.  Accuracy is computed by
-    selecting the largest of those sliced probabilities.  Extra diagnostic fields are
-    saved in the raw prediction JSON, but aggregate CSV metric names are kept stable.
+    Accuracy is computed from the full-vocabulary softmax sliced to A/B/C/D/E,
+    followed by argmax over those raw probabilities.  Diagnostic fields are kept in the
+    raw JSON, while Brian-style CSV tables remain paper-shaped.
     """
 
     normalized = normalize_row(row)
@@ -250,7 +251,7 @@ def evaluate_mcq_row(
     if not isinstance(choices, dict):
         raise ValueError("MCQ row does not contain a Choices/choices dictionary")
     letters = tuple(str(k) for k in sorted(choices.keys()))
-    prompt = legacy_mcq_prompt(str(normalized["question"]), choices, answer_letters=list(letters))
+    prompt = mcq_prompt(str(normalized["question"]), choices, answer_letters=list(letters))
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
 
     generated_text = model.generate_text(input_ids, max_new_tokens=max_new_tokens, do_sample=False)
@@ -328,7 +329,7 @@ def evaluate_yes_no_row(
     input_ids = apply_chat_template(model.tokenizer, prompt).to(model.device)
 
     next_logits = _logits_at_prompt_end(model, input_ids)
-    label_ids = _label_token_ids(model.tokenizer, YES_NO_LABELS).to(model.device)
+    label_ids = _label_token_ids(model.tokenizer, YES_NO_LABELS, model_path=getattr(model, "model_path", None)).to(model.device)
     label_probs = torch.softmax(next_logits.index_select(dim=-1, index=label_ids), dim=-1)[0]
     entropy = float(entropy_from_probs(label_probs.unsqueeze(0), normalized=False).item())
     normalized_entropy = float(entropy / math.log(2))
