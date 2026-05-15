@@ -35,26 +35,14 @@ from .prompts import apply_chat_template, mcq_prompt, open_question_prompt, yes_
 from .utils import ensure_dir, load_json, save_json
 
 
-REFUSAL_MARKERS = (
-    "i don't know",
-    "i do not know",
-    "i don't have",
-    "i do not have",
-    "couldn't find",
-    "could not find",
-    "can't find",
-    "cannot find",
-    "no information",
-    "not have information",
-    "do not have information",
-    "don't have information",
-    "not enough information",
-    "unable to provide",
-    "cannot provide",
-    "can't provide",
-    "not familiar",
-    "unknown to me",
-    "not aware of",
+REFUSAL_PATTERNS = (
+    r"\bi\s+(do not|don't)\s+(know|have)\b",
+    r"\bi\s+(could not|couldn't|can not|cannot|can't)\s+find\b",
+    r"\b(no|not enough|insufficient)\s+(information|context|details)\b",
+    r"\b(unable|not able)\s+to\s+(verify|confirm|determine|answer|provide|find)\b",
+    r"\binformation\s+is\s+not\s+available\b",
+    r"\bto answer (your|the) question,?\s+i would need\b",
+    r"\bi would need to know\b",
 )
 
 CHOICE_LETTERS = ("A", "B", "C", "D", "E")
@@ -86,8 +74,9 @@ def is_refusal_text(text: Any) -> bool:
 
     if isinstance(text, list):
         return any(is_refusal_text(item) for item in text)
-    lowered = str(text).lower()
-    return any(marker in lowered for marker in REFUSAL_MARKERS)
+
+    normalized = re.sub(r"\s+", " ", str(text).strip().lower())
+    return any(re.search(pattern, normalized) for pattern in REFUSAL_PATTERNS)
 
 
 def normalize_row(row: dict[str, Any]) -> dict[str, Any]:
