@@ -2,31 +2,24 @@
 set -euo pipefail
 
 # Usage:
-#   bash scripts/eval_wpu_probe_one_set.sh 0 1 256 1 exp/unspecified
+#   bash run/eval_orig_model.sh 0 1
 #   0 = GPU id
 #   1 = forget set id
-#   2 = LoRA rank
-#   3 = checkpoint id, optional
-#   4 = run directory
 
 GPU_ID="${1:-0}"
 SET_ID="${2:-1}"
-LORA_RANK="${3:-256}"
-CHECKPOINT_ID="${4:-1}"
-RUN_DIR="${5:-exp/unspecified}"
-
-LORA_CONFIG="configs/lora_config${LORA_RANK}.json"
-CHECKPOINT="${RUN_DIR}/checkpoint.${CHECKPOINT_ID}.final"
 
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export PYTHONPATH="$PWD/src:$PWD:${PYTHONPATH:-}"
 
 MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
+
 DATA_DIR="data/whp_probe"
 NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
-OUTPUT_DIR="${RUN_DIR}/eval"
-RUN_NAME="$(basename "$RUN_DIR")_set${SET_ID}"
+OUTPUT_DIR="exp/orig_model_eval/set${SET_ID}"
+RUN_NAME="initial_model_set${SET_ID}"
+LORA_CONFIG="configs/lora_rank_256.json"
 
 SEED=1
 DEVICE="cuda"
@@ -47,23 +40,8 @@ if [ ! -f "$SELECTED_IDS" ]; then
   exit 1
 fi
 
-if [ ! -f "$LORA_CONFIG" ]; then
-  echo "Missing LoRA config file: $LORA_CONFIG"
-  exit 1
-fi
-
 if [ ! -f "$NAMES_PATH" ]; then
   echo "Missing names file: $NAMES_PATH"
-  exit 1
-fi
-
-if [ -d "$CHECKPOINT" ]; then
-  if [ ! -f "$CHECKPOINT/pytorch_model.pt" ]; then
-    echo "Checkpoint directory exists but has no pytorch_model.pt: $CHECKPOINT"
-    exit 1
-  fi
-elif [ ! -f "$CHECKPOINT" ]; then
-  echo "Missing checkpoint: $CHECKPOINT"
   exit 1
 fi
 
@@ -88,9 +66,6 @@ done
 
 echo "Using physical GPU: $GPU_ID"
 echo "Model path: $MODEL_PATH"
-echo "Run directory: $RUN_DIR"
-echo "Checkpoint: $CHECKPOINT"
-echo "LoRA config: $LORA_CONFIG"
 echo "Data directory: $DATA_DIR"
 echo "Names file: $NAMES_PATH"
 echo "Selected ids file: $SELECTED_IDS"
@@ -105,12 +80,11 @@ attempt=1
 
 while true; do
   echo
-  echo "Starting WPU probe evaluation, attempt ${attempt}/${MAX_RETRY}"
+  echo "Starting initial model WPU probe evaluation, attempt ${attempt}/${MAX_RETRY}"
 
   if python scripts/eval_wpu_probe_clean.py \
     --base_model_path "$MODEL_PATH" \
-    --run_dir "$RUN_DIR" \
-    --checkpoint "$CHECKPOINT" \
+    --origmodel \
     --lora_config "$LORA_CONFIG" \
     --data_dir "$DATA_DIR" \
     --selected_ids "$SELECTED_IDS" \
@@ -124,7 +98,7 @@ while true; do
     --max_new_tokens_yesno "$MAX_NEW_TOKENS_YESNO"; then
 
     echo
-    echo "WPU probe evaluation finished successfully."
+    echo "Initial model WPU probe evaluation finished successfully."
     echo "Output directory: $OUTPUT_DIR"
     echo "Main summary: $OUTPUT_DIR/summary.csv"
     echo "Open table: $OUTPUT_DIR/brian_table_open.csv"
@@ -135,7 +109,7 @@ while true; do
 
   if [ "$attempt" -ge "$MAX_RETRY" ]; then
     echo
-    echo "WPU probe evaluation failed after ${MAX_RETRY} attempts."
+    echo "Initial model WPU probe evaluation failed after ${MAX_RETRY} attempts."
     exit 1
   fi
 
