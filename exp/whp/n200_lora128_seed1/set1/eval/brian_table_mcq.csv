@@ -1,0 +1,2 @@
+run_name,forget_accuracy,forget_entropy,forget_normalized_entropy,forget_p_correct,forget_p_obfuscation,hardretain_accuracy,hardretain_entropy,hardretain_normalized_entropy,hardretain_p_correct,forget_n,hardretain_n
+whp_n200_lora128_seed1_set1,0.4,1.1234375,0.698030965544314,0.32890625,,0.375,1.1186279296875,0.6950426114889366,0.3280792236328125,10,40

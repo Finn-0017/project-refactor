@@ -1,0 +1,791 @@
+/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 11.55it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 12.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.99it/s]
+forget_open:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+
+Benedetto Varchi:  14%|█▍        | 1/7 [00:01<00:11,  1.99s/it][A
+Benedetto Varchi:  29%|██▊       | 2/7 [00:04<00:10,  2.08s/it][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:06<00:08,  2.11s/it][A
+Benedetto Varchi:  57%|█████▋    | 4/7 [00:08<00:06,  2.08s/it][A
+Benedetto Varchi:  71%|███████▏  | 5/7 [00:08<00:03,  1.57s/it][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:09<00:01,  1.27s/it][A
+Benedetto Varchi: 100%|██████████| 7/7 [00:11<00:00,  1.56s/it][A
+                                                               [Aforget_open:  50%|█████     | 1/2 [00:11<00:11, 11.82s/it]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  33%|███▎      | 1/3 [00:02<00:04,  2.15s/it][A
+Wilhelm Wattenbach:  67%|██████▋   | 2/3 [00:04<00:02,  2.05s/it][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:06<00:00,  2.09s/it][A
+                                                                 [Aforget_open: 100%|██████████| 2/2 [00:18<00:00,  8.56s/it]forget_open: 100%|██████████| 2/2 [00:18<00:00,  9.05s/it]
+forget_mcq:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:00<00:00, 25.10it/s][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:00<00:00, 26.73it/s][A
+                                                               [Aforget_mcq:  50%|█████     | 1/2 [00:00<00:00,  3.59it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:00<00:00, 28.27it/s][A
+                                                                 [Aforget_mcq: 100%|██████████| 2/2 [00:00<00:00,  5.64it/s]forget_mcq: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]
+forget_yesno:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:00<00:00, 28.95it/s][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:00<00:00, 28.91it/s][A
+                                                               [Aforget_yesno:  50%|█████     | 1/2 [00:00<00:00,  4.12it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:00<00:00, 28.99it/s][A
+                                                                 [Aforget_yesno: 100%|██████████| 2/2 [00:00<00:00,  6.21it/s]forget_yesno: 100%|██████████| 2/2 [00:00<00:00,  5.77it/s]
+forget_yesno_false_control:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:00<00:00, 28.91it/s][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:00<00:00, 28.84it/s][A
+                                                               [Aforget_yesno_false_control:  50%|█████     | 1/2 [00:00<00:00,  4.11it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:00<00:00, 28.84it/s][A
+                                                                 [Aforget_yesno_false_control: 100%|██████████| 2/2 [00:00<00:00,  6.19it/s]forget_yesno_false_control: 100%|██████████| 2/2 [00:00<00:00,  5.75it/s]
+hardretain_open:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:   5%|▌         | 1/20 [00:00<00:11,  1.62it/s][A
+Benedetto Varchi:  10%|█         | 2/20 [00:02<00:27,  1.52s/it][A
+Benedetto Varchi:  15%|█▌        | 3/20 [00:04<00:30,  1.80s/it][A
+Benedetto Varchi:  20%|██        | 4/20 [00:07<00:31,  1.96s/it][A
+Benedetto Varchi:  25%|██▌       | 5/20 [00:09<00:31,  2.07s/it][A
+Benedetto Varchi:  30%|███       | 6/20 [00:11<00:29,  2.11s/it][A
+Benedetto Varchi:  35%|███▌      | 7/20 [00:12<00:22,  1.71s/it][A
+Benedetto Varchi:  40%|████      | 8/20 [00:14<00:22,  1.86s/it][A
+Benedetto Varchi:  45%|████▌     | 9/20 [00:16<00:21,  1.95s/it][A
+Benedetto Varchi:  50%|█████     | 10/20 [00:17<00:16,  1.62s/it][A
+Benedetto Varchi:  55%|█████▌    | 11/20 [00:19<00:16,  1.78s/it][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:20<00:12,  1.53s/it][A
+Benedetto Varchi:  65%|██████▌   | 13/20 [00:21<00:09,  1.35s/it][A
+Benedetto Varchi:  70%|███████   | 14/20 [00:23<00:09,  1.59s/it][A
+Benedetto Varchi:  75%|███████▌  | 15/20 [00:25<00:08,  1.76s/it][A
+Benedetto Varchi:  80%|████████  | 16/20 [00:26<00:05,  1.40s/it][A
+Benedetto Varchi:  85%|████████▌ | 17/20 [00:28<00:04,  1.62s/it][A
+Benedetto Varchi:  90%|█████████ | 18/20 [00:30<00:03,  1.78s/it][A
+Benedetto Varchi:  95%|█████████▌| 19/20 [00:32<00:01,  1.89s/it][A
+Benedetto Varchi: 100%|██████████| 20/20 [00:35<00:00,  1.97s/it][A
+                                                                 [Ahardretain_open:  50%|█████     | 1/2 [00:35<00:35, 35.14s/it]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:   5%|▌         | 1/20 [00:00<00:16,  1.15it/s][A
+Wilhelm Wattenbach:  10%|█         | 2/20 [00:03<00:29,  1.62s/it][A
+Wilhelm Wattenbach:  15%|█▌        | 3/20 [00:03<00:22,  1.33s/it][A
+Wilhelm Wattenbach:  20%|██        | 4/20 [00:05<00:21,  1.32s/it][A
+Wilhelm Wattenbach:  25%|██▌       | 5/20 [00:07<00:24,  1.62s/it][A
+Wilhelm Wattenbach:  30%|███       | 6/20 [00:09<00:25,  1.80s/it][A
+Wilhelm Wattenbach:  35%|███▌      | 7/20 [00:11<00:24,  1.91s/it][A
+Wilhelm Wattenbach:  40%|████      | 8/20 [00:13<00:23,  1.99s/it][A
+Wilhelm Wattenbach:  45%|████▌     | 9/20 [00:15<00:18,  1.71s/it][A
+Wilhelm Wattenbach:  50%|█████     | 10/20 [00:16<00:15,  1.53s/it][A
+Wilhelm Wattenbach:  55%|█████▌    | 11/20 [00:18<00:15,  1.72s/it][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:20<00:14,  1.85s/it][A
+Wilhelm Wattenbach:  65%|██████▌   | 13/20 [00:21<00:11,  1.63s/it][A
+Wilhelm Wattenbach:  70%|███████   | 14/20 [00:22<00:08,  1.42s/it][A
+Wilhelm Wattenbach:  75%|███████▌  | 15/20 [00:24<00:07,  1.59s/it][A
+Wilhelm Wattenbach:  80%|████████  | 16/20 [00:25<00:05,  1.33s/it][A
+Wilhelm Wattenbach:  85%|████████▌ | 17/20 [00:27<00:04,  1.57s/it][A
+Wilhelm Wattenbach:  90%|█████████ | 18/20 [00:29<00:03,  1.75s/it][A
+Wilhelm Wattenbach:  95%|█████████▌| 19/20 [00:31<00:01,  1.86s/it][A
+Wilhelm Wattenbach: 100%|██████████| 20/20 [00:33<00:00,  1.95s/it][A
+                                                                   [Ahardretain_open: 100%|██████████| 2/2 [01:08<00:00, 34.33s/it]hardretain_open: 100%|██████████| 2/2 [01:08<00:00, 34.45s/it]
+hardretain_mcq:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:  15%|█▌        | 3/20 [00:00<00:00, 24.52it/s][A
+Benedetto Varchi:  30%|███       | 6/20 [00:00<00:00, 22.96it/s][A
+Benedetto Varchi:  45%|████▌     | 9/20 [00:00<00:00, 23.60it/s][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:00<00:00, 24.06it/s][A
+Benedetto Varchi:  75%|███████▌  | 15/20 [00:00<00:00, 23.29it/s][A
+Benedetto Varchi:  90%|█████████ | 18/20 [00:00<00:00, 24.46it/s][A
+                                                                 [Ahardretain_mcq:  50%|█████     | 1/2 [00:00<00:00,  1.19it/s]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  15%|█▌        | 3/20 [00:00<00:00, 24.58it/s][A
+Wilhelm Wattenbach:  30%|███       | 6/20 [00:00<00:00, 26.94it/s][A
+Wilhelm Wattenbach:  45%|████▌     | 9/20 [00:00<00:00, 24.54it/s][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:00<00:00, 24.59it/s][A
+Wilhelm Wattenbach:  75%|███████▌  | 15/20 [00:00<00:00, 25.97it/s][A
+Wilhelm Wattenbach:  90%|█████████ | 18/20 [00:00<00:00, 24.26it/s][A
+                                                                   [Ahardretain_mcq: 100%|██████████| 2/2 [00:01<00:00,  1.21it/s]hardretain_mcq: 100%|██████████| 2/2 [00:01<00:00,  1.21it/s]
+hardretain_yesno:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:  15%|█▌        | 3/20 [00:00<00:00, 29.00it/s][A
+Benedetto Varchi:  30%|███       | 6/20 [00:00<00:00, 28.95it/s][A
+Benedetto Varchi:  45%|████▌     | 9/20 [00:00<00:00, 28.92it/s][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:00<00:00, 28.98it/s][A
+Benedetto Varchi:  75%|███████▌  | 15/20 [00:00<00:00, 28.88it/s][A
+Benedetto Varchi:  90%|█████████ | 18/20 [00:00<00:00, 28.89it/s][A
+                                                                 [Ahardretain_yesno:  50%|█████     | 1/2 [00:00<00:00,  1.44it/s]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  15%|█▌        | 3/20 [00:00<00:00, 28.88it/s][A
+Wilhelm Wattenbach:  30%|███       | 6/20 [00:00<00:00, 28.82it/s][A
+Wilhelm Wattenbach:  45%|████▌     | 9/20 [00:00<00:00, 28.72it/s][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:00<00:00, 28.76it/s][A
+Wilhelm Wattenbach:  75%|███████▌  | 15/20 [00:00<00:00, 28.76it/s][A
+Wilhelm Wattenbach:  90%|█████████ | 18/20 [00:00<00:00, 28.74it/s][A
+                                                                   [Ahardretain_yesno: 100%|██████████| 2/2 [00:01<00:00,  1.44it/s]hardretain_yesno: 100%|██████████| 2/2 [00:01<00:00,  1.44it/s]
+retain_open:   0%|          | 0/99 [00:00<?, ?it/s]
+Donald Trump:   0%|          | 0/5 [00:00<?, ?it/s][A
+Donald Trump:  20%|██        | 1/5 [00:00<00:03,  1.18it/s][A
+Donald Trump:  40%|████      | 2/5 [00:03<00:04,  1.62s/it][A
+Donald Trump:  60%|██████    | 3/5 [00:05<00:03,  1.87s/it][A
+Donald Trump:  80%|████████  | 4/5 [00:07<00:01,  1.98s/it][A
+Donald Trump: 100%|██████████| 5/5 [00:09<00:00,  1.93s/it][A
+                                                           [Aretain_open:   1%|          | 1/99 [00:09<14:57,  9.16s/it]
+Elizabeth II:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elizabeth II:  20%|██        | 1/5 [00:02<00:08,  2.16s/it][A
+Elizabeth II:  40%|████      | 2/5 [00:04<00:06,  2.16s/it][A
+Elizabeth II:  60%|██████    | 3/5 [00:04<00:02,  1.36s/it][A
+Elizabeth II:  80%|████████  | 4/5 [00:06<00:01,  1.68s/it][A
+Elizabeth II: 100%|██████████| 5/5 [00:07<00:00,  1.41s/it][A
+                                                           [Aretain_open:   2%|▏         | 2/99 [00:17<13:33,  8.39s/it]
+Barack Obama:   0%|          | 0/5 [00:00<?, ?it/s][A
+Barack Obama:  20%|██        | 1/5 [00:00<00:03,  1.14it/s][A
+Barack Obama:  40%|████      | 2/5 [00:01<00:02,  1.02it/s][A
+Barack Obama:  60%|██████    | 3/5 [00:03<00:02,  1.32s/it][A
+Barack Obama:  80%|████████  | 4/5 [00:05<00:01,  1.65s/it][A
+Barack Obama: 100%|██████████| 5/5 [00:07<00:00,  1.84s/it][A
+                                                           [Aretain_open:   3%|▎         | 3/99 [00:24<13:07,  8.20s/it]
+Cristiano Ronaldo:   0%|          | 0/4 [00:00<?, ?it/s][A
+Cristiano Ronaldo:  25%|██▌       | 1/4 [00:00<00:01,  1.84it/s][A
+Cristiano Ronaldo:  50%|█████     | 2/4 [00:02<00:02,  1.50s/it][A
+Cristiano Ronaldo:  75%|███████▌  | 3/4 [00:03<00:01,  1.40s/it][A
+Cristiano Ronaldo: 100%|██████████| 4/4 [00:05<00:00,  1.33s/it][A
+                                                                [Aretain_open:   4%|▍         | 4/99 [00:30<11:06,  7.02s/it]
+Michael Jackson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Michael Jackson:  20%|██        | 1/5 [00:02<00:08,  2.16s/it][A
+Michael Jackson:  40%|████      | 2/5 [00:04<00:06,  2.16s/it][A
+Michael Jackson:  60%|██████    | 3/5 [00:06<00:04,  2.16s/it][A
+Michael Jackson:  80%|████████  | 4/5 [00:08<00:02,  2.16s/it][A
+Michael Jackson: 100%|██████████| 5/5 [00:10<00:00,  2.16s/it][A
+                                                              [Aretain_open:   5%|▌         | 5/99 [00:40<13:08,  8.38s/it]
+Elon Musk:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elon Musk:  20%|██        | 1/5 [00:00<00:02,  1.97it/s][A
+Elon Musk:  40%|████      | 2/5 [00:00<00:01,  2.13it/s][A
+Elon Musk:  60%|██████    | 3/5 [00:01<00:01,  1.49it/s][A
+Elon Musk:  80%|████████  | 4/5 [00:02<00:00,  1.51it/s][A
+Elon Musk: 100%|██████████| 5/5 [00:04<00:00,  1.00it/s][A
+                                                        [Aretain_open:   6%|▌         | 6/99 [00:45<10:44,  6.93s/it]
+Lady Gaga:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lady Gaga:  20%|██        | 1/5 [00:01<00:04,  1.18s/it][A
+Lady Gaga:  40%|████      | 2/5 [00:01<00:02,  1.30it/s][A
+Lady Gaga:  60%|██████    | 3/5 [00:03<00:02,  1.33s/it][A
+Lady Gaga:  80%|████████  | 4/5 [00:05<00:01,  1.66s/it][A
+Lady Gaga: 100%|██████████| 5/5 [00:06<00:00,  1.26s/it][A
+                                                        [Aretain_open:   7%|▋         | 7/99 [00:51<10:20,  6.74s/it]
+Adolf Hitler:   0%|          | 0/5 [00:00<?, ?it/s][A
+Adolf Hitler:  20%|██        | 1/5 [00:01<00:07,  1.76s/it][A
+Adolf Hitler:  40%|████      | 2/5 [00:03<00:05,  2.00s/it][A
+Adolf Hitler:  60%|██████    | 3/5 [00:06<00:04,  2.05s/it][A
+Adolf Hitler:  80%|████████  | 4/5 [00:07<00:01,  1.89s/it][A
+Adolf Hitler: 100%|██████████| 5/5 [00:09<00:00,  1.99s/it][A
+                                                           [Aretain_open:   8%|▊         | 8/99 [01:01<11:43,  7.73s/it]
+Eminem:   0%|          | 0/5 [00:00<?, ?it/s][A
+Eminem:  20%|██        | 1/5 [00:01<00:04,  1.12s/it][A
+Eminem:  40%|████      | 2/5 [00:02<00:02,  1.02it/s][A
+Eminem:  60%|██████    | 3/5 [00:03<00:02,  1.40s/it][A
+Eminem:  80%|████████  | 4/5 [00:06<00:01,  1.70s/it][A
+Eminem: 100%|██████████| 5/5 [00:07<00:00,  1.47s/it][A
+                                                     [Aretain_open:   9%|▉         | 9/99 [01:08<11:18,  7.54s/it]
+Lionel Messi:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lionel Messi:  20%|██        | 1/5 [00:00<00:02,  1.64it/s][A
+Lionel Messi:  40%|████      | 2/5 [00:01<00:03,  1.01s/it][A
+Lionel Messi:  60%|██████    | 3/5 [00:04<00:03,  1.54s/it][A
+Lionel Messi:  80%|████████  | 4/5 [00:05<00:01,  1.40s/it][A
+Lionel Messi: 100%|██████████| 5/5 [00:06<00:00,  1.48s/it][A
+                                                           [Aretain_open:  10%|█         | 10/99 [01:15<10:52,  7.34s/it]
+Justin Bieber:   0%|          | 0/5 [00:00<?, ?it/s][A
+Justin Bieber:  20%|██        | 1/5 [00:00<00:01,  2.52it/s][A
+Justin Bieber:  40%|████      | 2/5 [00:00<00:01,  2.26it/s][A
+Justin Bieber:  60%|██████    | 3/5 [00:01<00:00,  2.34it/s][A
+Justin Bieber:  80%|████████  | 4/5 [00:03<00:01,  1.11s/it][A
+Justin Bieber: 100%|██████████| 5/5 [00:05<00:00,  1.49s/it][A
+                                                            [Aretain_open:  11%|█         | 11/99 [01:20<09:58,  6.81s/it]
+Freddie Mercury:   0%|          | 0/5 [00:00<?, ?it/s][A
+Freddie Mercury:  20%|██        | 1/5 [00:02<00:08,  2.17s/it][A
+Freddie Mercury:  40%|████      | 2/5 [00:04<00:06,  2.17s/it][A
+Freddie Mercury:  60%|██████    | 3/5 [00:06<00:03,  1.95s/it][A
+Freddie Mercury:  80%|████████  | 4/5 [00:08<00:02,  2.04s/it][A
+Freddie Mercury: 100%|██████████| 5/5 [00:09<00:00,  1.92s/it][A
+                                                              [Aretain_open:  12%|█▏        | 12/99 [01:30<11:14,  7.75s/it]
+Kim Kardashian:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kim Kardashian:  20%|██        | 1/5 [00:00<00:01,  2.12it/s][A
+Kim Kardashian:  40%|████      | 2/5 [00:02<00:04,  1.46s/it][A
+Kim Kardashian:  60%|██████    | 3/5 [00:04<00:03,  1.79s/it][A
+Kim Kardashian:  80%|████████  | 4/5 [00:06<00:01,  1.93s/it][A
+Kim Kardashian: 100%|██████████| 5/5 [00:09<00:00,  2.01s/it][A
+                                                             [Aretain_open:  13%|█▎        | 13/99 [01:39<11:42,  8.17s/it]
+Johnny Depp:   0%|          | 0/5 [00:00<?, ?it/s][A
+Johnny Depp:  20%|██        | 1/5 [00:00<00:02,  1.97it/s][A
+Johnny Depp:  40%|████      | 2/5 [00:02<00:04,  1.48s/it][A
+Johnny Depp:  60%|██████    | 3/5 [00:04<00:03,  1.81s/it][A
+Johnny Depp:  80%|████████  | 4/5 [00:07<00:01,  1.94s/it][A
+Johnny Depp: 100%|██████████| 5/5 [00:09<00:00,  2.02s/it][A
+                                                          [Aretain_open:  14%|█▍        | 14/99 [01:49<11:59,  8.47s/it]
+Steve Jobs:   0%|          | 0/5 [00:00<?, ?it/s][A
+Steve Jobs:  20%|██        | 1/5 [00:00<00:01,  2.69it/s][A
+Steve Jobs:  40%|████      | 2/5 [00:00<00:01,  2.32it/s][A
+Steve Jobs:  60%|██████    | 3/5 [00:02<00:02,  1.21s/it][A
+Steve Jobs:  80%|████████  | 4/5 [00:05<00:01,  1.58s/it][A
+Steve Jobs: 100%|██████████| 5/5 [00:07<00:00,  1.79s/it][A
+                                                         [Aretain_open:  15%|█▌        | 15/99 [01:56<11:21,  8.11s/it]
+Dwayne Johnson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Dwayne Johnson:  20%|██        | 1/5 [00:00<00:03,  1.05it/s][A
+Dwayne Johnson:  40%|████      | 2/5 [00:02<00:03,  1.16s/it][A
+Dwayne Johnson:  60%|██████    | 3/5 [00:04<00:03,  1.61s/it][A
+Dwayne Johnson:  80%|████████  | 4/5 [00:06<00:01,  1.70s/it][A
+Dwayne Johnson: 100%|██████████| 5/5 [00:06<00:00,  1.25s/it][A
+                                                             [Aretain_open:  16%|█▌        | 16/99 [02:03<10:37,  7.68s/it]
+Michael Jordan:   0%|          | 0/5 [00:00<?, ?it/s][A
+Michael Jordan:  20%|██        | 1/5 [00:00<00:01,  2.12it/s][A
+Michael Jordan:  40%|████      | 2/5 [00:01<00:02,  1.13it/s][A
+Michael Jordan:  60%|██████    | 3/5 [00:03<00:02,  1.20s/it][A
+Michael Jordan:  80%|████████  | 4/5 [00:05<00:01,  1.59s/it][A
+Michael Jordan: 100%|██████████| 5/5 [00:06<00:00,  1.28s/it][A
+                                                             [Aretain_open:  17%|█▋        | 17/99 [02:09<09:52,  7.22s/it]
+Taylor Swift:   0%|          | 0/5 [00:00<?, ?it/s][A
+Taylor Swift:  20%|██        | 1/5 [00:00<00:01,  2.12it/s][A
+Taylor Swift:  40%|████      | 2/5 [00:02<00:04,  1.46s/it][A
+Taylor Swift:  60%|██████    | 3/5 [00:04<00:03,  1.83s/it][A
+Taylor Swift:  80%|████████  | 4/5 [00:07<00:01,  2.00s/it][A
+Taylor Swift: 100%|██████████| 5/5 [00:08<00:00,  1.91s/it][A
+                                                           [Aretain_open:  18%|█▊        | 18/99 [02:18<10:25,  7.72s/it]
+Stephen Hawking:   0%|          | 0/5 [00:00<?, ?it/s][A
+Stephen Hawking:  20%|██        | 1/5 [00:01<00:06,  1.68s/it][A
+Stephen Hawking:  40%|████      | 2/5 [00:03<00:05,  1.73s/it][A
+Stephen Hawking:  60%|██████    | 3/5 [00:04<00:02,  1.23s/it][A
+Stephen Hawking:  80%|████████  | 4/5 [00:06<00:01,  1.54s/it][A
+Stephen Hawking: 100%|██████████| 5/5 [00:08<00:00,  1.73s/it][A
+                                                              [Aretain_open:  19%|█▉        | 19/99 [02:26<10:28,  7.86s/it]
+Kanye West:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kanye West:  20%|██        | 1/5 [00:00<00:01,  2.16it/s][A
+Kanye West:  40%|████      | 2/5 [00:00<00:01,  2.03it/s][A
+Kanye West:  60%|██████    | 3/5 [00:03<00:02,  1.25s/it][A
+Kanye West:  80%|████████  | 4/5 [00:05<00:01,  1.59s/it][A
+Kanye West: 100%|██████████| 5/5 [00:07<00:00,  1.79s/it][A
+                                                         [Aretain_open:  20%|██        | 20/99 [02:33<10:09,  7.72s/it]
+Abraham Lincoln:   0%|          | 0/5 [00:00<?, ?it/s][A
+Abraham Lincoln:  20%|██        | 1/5 [00:00<00:03,  1.15it/s][A
+Abraham Lincoln:  40%|████      | 2/5 [00:02<00:04,  1.60s/it][A
+Abraham Lincoln:  60%|██████    | 3/5 [00:03<00:02,  1.29s/it][A
+Abraham Lincoln:  80%|████████  | 4/5 [00:06<00:01,  1.62s/it][A
+Abraham Lincoln: 100%|██████████| 5/5 [00:08<00:00,  1.77s/it][A
+                                                              [Aretain_open:  21%|██        | 21/99 [02:41<10:10,  7.82s/it]
+LeBron James:   0%|          | 0/5 [00:00<?, ?it/s][A
+LeBron James:  20%|██        | 1/5 [00:00<00:01,  2.08it/s][A
+LeBron James:  40%|████      | 2/5 [00:01<00:02,  1.07it/s][A
+LeBron James:  60%|██████    | 3/5 [00:03<00:02,  1.34s/it][A
+LeBron James:  80%|████████  | 4/5 [00:05<00:01,  1.45s/it][A
+LeBron James: 100%|██████████| 5/5 [00:07<00:00,  1.69s/it][A
+                                                           [Aretain_open:  22%|██▏       | 22/99 [02:49<09:50,  7.67s/it]
+Charles III:   0%|          | 0/5 [00:00<?, ?it/s][A
+Charles III:  20%|██        | 1/5 [00:01<00:07,  1.83s/it][A
+Charles III:  40%|████      | 2/5 [00:02<00:03,  1.06s/it][A
+Charles III:  60%|██████    | 3/5 [00:04<00:02,  1.38s/it][A
+Charles III:  80%|████████  | 4/5 [00:06<00:01,  1.67s/it][A
+Charles III: 100%|██████████| 5/5 [00:08<00:00,  1.84s/it][A
+                                                          [Aretain_open:  23%|██▎       | 23/99 [02:57<09:58,  7.88s/it]
+Miley Cyrus:   0%|          | 0/5 [00:00<?, ?it/s][A
+Miley Cyrus:  20%|██        | 1/5 [00:01<00:06,  1.73s/it][A
+Miley Cyrus:  40%|████      | 2/5 [00:02<00:03,  1.00s/it][A
+Miley Cyrus:  60%|██████    | 3/5 [00:04<00:03,  1.51s/it][A
+Miley Cyrus:  80%|████████  | 4/5 [00:06<00:01,  1.75s/it][A
+Miley Cyrus: 100%|██████████| 5/5 [00:08<00:00,  1.88s/it][A
+                                                          [Aretain_open:  24%|██▍       | 24/99 [03:05<10:06,  8.08s/it]
+Leonardo DiCaprio:   0%|          | 0/5 [00:00<?, ?it/s][A
+Leonardo DiCaprio:  20%|██        | 1/5 [00:00<00:02,  1.72it/s][A
+Leonardo DiCaprio:  40%|████      | 2/5 [00:01<00:01,  1.72it/s][A
+Leonardo DiCaprio:  60%|██████    | 3/5 [00:02<00:01,  1.43it/s][A
+Leonardo DiCaprio:  80%|████████  | 4/5 [00:04<00:01,  1.22s/it][A
+Leonardo DiCaprio: 100%|██████████| 5/5 [00:05<00:00,  1.39s/it][A
+                                                                [Aretain_open:  25%|██▌       | 25/99 [03:11<09:05,  7.37s/it]
+Selena Gomez:   0%|          | 0/5 [00:00<?, ?it/s][A
+Selena Gomez:  20%|██        | 1/5 [00:00<00:01,  2.37it/s][A
+Selena Gomez:  40%|████      | 2/5 [00:00<00:01,  2.19it/s][A
+Selena Gomez:  60%|██████    | 3/5 [00:01<00:00,  2.13it/s][A
+Selena Gomez:  80%|████████  | 4/5 [00:03<00:01,  1.10s/it][A
+Selena Gomez: 100%|██████████| 5/5 [00:05<00:00,  1.30s/it][A
+                                                           [Aretain_open:  26%|██▋       | 26/99 [03:16<08:08,  6.69s/it]
+Kobe Bryant:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kobe Bryant:  20%|██        | 1/5 [00:00<00:01,  2.08it/s][A
+Kobe Bryant:  40%|████      | 2/5 [00:02<00:04,  1.41s/it][A
+Kobe Bryant:  60%|██████    | 3/5 [00:04<00:03,  1.70s/it][A
+Kobe Bryant:  80%|████████  | 4/5 [00:06<00:01,  1.73s/it][A
+Kobe Bryant: 100%|██████████| 5/5 [00:08<00:00,  1.85s/it][A
+                                                          [Aretain_open:  27%|██▋       | 27/99 [03:25<08:38,  7.21s/it]
+Joe Biden:   0%|          | 0/5 [00:00<?, ?it/s][A
+Joe Biden:  20%|██        | 1/5 [00:00<00:03,  1.24it/s][A
+Joe Biden:  40%|████      | 2/5 [00:02<00:04,  1.51s/it][A
+Joe Biden:  60%|██████    | 3/5 [00:04<00:03,  1.74s/it][A
+Joe Biden:  80%|████████  | 4/5 [00:06<00:01,  1.61s/it][A
+Joe Biden: 100%|██████████| 5/5 [00:07<00:00,  1.39s/it][A
+                                                        [Aretain_open:  28%|██▊       | 28/99 [03:32<08:32,  7.22s/it]
+Tom Cruise:   0%|          | 0/5 [00:00<?, ?it/s][A
+Tom Cruise:  20%|██        | 1/5 [00:00<00:01,  2.25it/s][A
+Tom Cruise:  40%|████      | 2/5 [00:02<00:04,  1.39s/it][A
+Tom Cruise:  60%|██████    | 3/5 [00:03<00:01,  1.01it/s][A
+Tom Cruise:  80%|████████  | 4/5 [00:05<00:01,  1.41s/it][A
+Tom Cruise: 100%|██████████| 5/5 [00:07<00:00,  1.64s/it][A
+                                                         [Aretain_open:  29%|██▉       | 29/99 [03:39<08:23,  7.19s/it]
+Albert Einstein:   0%|          | 0/5 [00:00<?, ?it/s][A
+Albert Einstein:  20%|██        | 1/5 [00:02<00:08,  2.05s/it][A
+Albert Einstein:  40%|████      | 2/5 [00:03<00:04,  1.62s/it][A
+Albert Einstein:  60%|██████    | 3/5 [00:05<00:03,  1.82s/it][A
+Albert Einstein:  80%|████████  | 4/5 [00:07<00:01,  1.91s/it][A
+Albert Einstein: 100%|██████████| 5/5 [00:09<00:00,  1.96s/it][A
+                                                              [Aretain_open:  30%|███       | 30/99 [03:49<09:04,  7.89s/it]
+Rihanna:   0%|          | 0/5 [00:00<?, ?it/s][A
+Rihanna:  20%|██        | 1/5 [00:00<00:01,  2.37it/s][A
+Rihanna:  40%|████      | 2/5 [00:01<00:01,  1.88it/s][A
+Rihanna:  60%|██████    | 3/5 [00:01<00:00,  2.15it/s][A
+Rihanna:  80%|████████  | 4/5 [00:01<00:00,  2.17it/s][A
+Rihanna: 100%|██████████| 5/5 [00:02<00:00,  1.82it/s][A
+                                                      [Aretain_open:  31%|███▏      | 31/99 [03:51<07:08,  6.30s/it]
+Prince Philip, Duke of Edinburgh:   0%|          | 0/5 [00:00<?, ?it/s][A
+Prince Philip, Duke of Edinburgh:  20%|██        | 1/5 [00:01<00:06,  1.51s/it][A
+Prince Philip, Duke of Edinburgh:  40%|████      | 2/5 [00:03<00:05,  1.83s/it][A
+Prince Philip, Duke of Edinburgh:  60%|██████    | 3/5 [00:05<00:03,  1.83s/it][A
+Prince Philip, Duke of Edinburgh:  80%|████████  | 4/5 [00:06<00:01,  1.73s/it][A
+Prince Philip, Duke of Edinburgh: 100%|██████████| 5/5 [00:09<00:00,  1.85s/it][A
+                                                                               [Aretain_open:  32%|███▏      | 32/99 [04:00<07:56,  7.12s/it]
+Elvis Presley:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elvis Presley:  20%|██        | 1/5 [00:00<00:01,  2.21it/s][A
+Elvis Presley:  40%|████      | 2/5 [00:02<00:04,  1.48s/it][A
+Elvis Presley:  60%|██████    | 3/5 [00:03<00:02,  1.08s/it][A
+Elvis Presley:  80%|████████  | 4/5 [00:05<00:01,  1.66s/it][A
+Elvis Presley: 100%|██████████| 5/5 [00:07<00:00,  1.74s/it][A
+                                                            [Aretain_open:  33%|███▎      | 33/99 [04:08<08:01,  7.29s/it]
+Lil Wayne:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lil Wayne:  20%|██        | 1/5 [00:00<00:02,  1.95it/s][A
+Lil Wayne:  40%|████      | 2/5 [00:01<00:02,  1.46it/s][A
+Lil Wayne:  60%|██████    | 3/5 [00:02<00:02,  1.10s/it][A
+Lil Wayne:  80%|████████  | 4/5 [00:05<00:01,  1.53s/it][A
+Lil Wayne: 100%|██████████| 5/5 [00:05<00:00,  1.13s/it][A
+                                                        [Aretain_open:  34%|███▍      | 34/99 [04:13<07:19,  6.76s/it]
+Scarlett Johansson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Scarlett Johansson:  20%|██        | 1/5 [00:00<00:02,  1.92it/s][A
+Scarlett Johansson:  40%|████      | 2/5 [00:01<00:01,  1.84it/s][A
+Scarlett Johansson:  60%|██████    | 3/5 [00:02<00:01,  1.04it/s][A
+Scarlett Johansson:  80%|████████  | 4/5 [00:04<00:01,  1.26s/it][A
+Scarlett Johansson: 100%|██████████| 5/5 [00:06<00:00,  1.54s/it][A
+                                                                 [Aretain_open:  35%|███▌      | 35/99 [04:20<07:03,  6.62s/it]
+Tupac Shakur:   0%|          | 0/5 [00:00<?, ?it/s][A
+Tupac Shakur:  20%|██        | 1/5 [00:01<00:04,  1.04s/it][A
+Tupac Shakur:  40%|████      | 2/5 [00:02<00:03,  1.08s/it][A
+Tupac Shakur:  60%|██████    | 3/5 [00:02<00:01,  1.09it/s][A
+Tupac Shakur:  80%|████████  | 4/5 [00:04<00:01,  1.38s/it][A
+Tupac Shakur: 100%|██████████| 5/5 [00:05<00:00,  1.12s/it][A
+                                                           [Aretain_open:  36%|███▋      | 36/99 [04:25<06:38,  6.32s/it]
+Angelina Jolie:   0%|          | 0/5 [00:00<?, ?it/s][A
+Angelina Jolie:  20%|██        | 1/5 [00:00<00:02,  1.85it/s][A
+Angelina Jolie:  40%|████      | 2/5 [00:01<00:01,  1.90it/s][A
+Angelina Jolie:  60%|██████    | 3/5 [00:03<00:02,  1.21s/it][A
+Angelina Jolie:  80%|████████  | 4/5 [00:03<00:00,  1.01it/s][A
+Angelina Jolie: 100%|██████████| 5/5 [00:05<00:00,  1.36s/it][A
+                                                             [Aretain_open:  37%|███▋      | 37/99 [04:31<06:21,  6.15s/it]
+Queen Victoria:   0%|          | 0/5 [00:00<?, ?it/s][A
+Queen Victoria:  20%|██        | 1/5 [00:02<00:08,  2.02s/it][A
+Queen Victoria:  40%|████      | 2/5 [00:04<00:06,  2.00s/it][A
+Queen Victoria:  60%|██████    | 3/5 [00:06<00:04,  2.01s/it][A
+Queen Victoria:  80%|████████  | 4/5 [00:08<00:02,  2.02s/it][A
+Queen Victoria: 100%|██████████| 5/5 [00:10<00:00,  2.02s/it][A
+                                                             [Aretain_open:  38%|███▊      | 38/99 [04:41<07:27,  7.33s/it]
+John F. Kennedy:   0%|          | 0/5 [00:00<?, ?it/s][A
+John F. Kennedy:  20%|██        | 1/5 [00:00<00:03,  1.17it/s][A
+John F. Kennedy:  40%|████      | 2/5 [00:02<00:04,  1.54s/it][A
+John F. Kennedy:  60%|██████    | 3/5 [00:05<00:03,  1.87s/it][A
+John F. Kennedy:  80%|████████  | 4/5 [00:07<00:01,  1.91s/it][A
+John F. Kennedy: 100%|██████████| 5/5 [00:09<00:00,  2.10s/it][A
+                                                              [Aretain_open:  39%|███▉      | 39/99 [04:51<07:59,  8.00s/it]
+Diana, Princess of Wales:   0%|          | 0/5 [00:00<?, ?it/s][A
+Diana, Princess of Wales:  20%|██        | 1/5 [00:01<00:06,  1.55s/it][A
+Diana, Princess of Wales:  40%|████      | 2/5 [00:03<00:05,  1.72s/it][A
+Diana, Princess of Wales:  60%|██████    | 3/5 [00:04<00:02,  1.46s/it][A
+Diana, Princess of Wales:  80%|████████  | 4/5 [00:06<00:01,  1.74s/it][A
+Diana, Princess of Wales: 100%|██████████| 5/5 [00:08<00:00,  1.89s/it][A
+                                                                       [Aretain_open:  40%|████      | 40/99 [05:00<08:07,  8.26s/it]
+Marilyn Monroe:   0%|          | 0/5 [00:00<?, ?it/s][A
+Marilyn Monroe:  20%|██        | 1/5 [00:00<00:02,  1.84it/s][A
+Marilyn Monroe:  40%|████      | 2/5 [00:01<00:01,  1.84it/s][A
+Marilyn Monroe:  60%|██████    | 3/5 [00:03<00:02,  1.29s/it][A
+Marilyn Monroe:  80%|████████  | 4/5 [00:05<00:01,  1.63s/it][A
+Marilyn Monroe: 100%|██████████| 5/5 [00:07<00:00,  1.82s/it][A
+                                                             [Aretain_open:  41%|████▏     | 41/99 [05:07<07:46,  8.05s/it]
+Keanu Reeves:   0%|          | 0/4 [00:00<?, ?it/s][A
+Keanu Reeves:  25%|██▌       | 1/4 [00:00<00:02,  1.23it/s][A
+Keanu Reeves:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s][A
+Keanu Reeves:  75%|███████▌  | 3/4 [00:03<00:01,  1.39s/it][A
+Keanu Reeves: 100%|██████████| 4/4 [00:05<00:00,  1.68s/it][A
+                                                           [Aretain_open:  42%|████▏     | 42/99 [05:13<07:00,  7.37s/it]
+Ariana Grande:   0%|          | 0/5 [00:00<?, ?it/s][A
+Ariana Grande:  20%|██        | 1/5 [00:00<00:02,  1.67it/s][A
+Ariana Grande:  40%|████      | 2/5 [00:01<00:01,  1.75it/s][A
+Ariana Grande:  60%|██████    | 3/5 [00:02<00:01,  1.41it/s][A
+Ariana Grande:  80%|████████  | 4/5 [00:04<00:01,  1.29s/it][A
+Ariana Grande: 100%|██████████| 5/5 [00:06<00:00,  1.61s/it][A
+                                                            [Aretain_open:  43%|████▎     | 43/99 [05:19<06:36,  7.08s/it]
+Arnold Schwarzenegger:   0%|          | 0/5 [00:00<?, ?it/s][A
+Arnold Schwarzenegger:  20%|██        | 1/5 [00:00<00:02,  1.62it/s][A
+Arnold Schwarzenegger:  40%|████      | 2/5 [00:01<00:02,  1.06it/s][A
+Arnold Schwarzenegger:  60%|██████    | 3/5 [00:04<00:03,  1.54s/it][A
+Arnold Schwarzenegger:  80%|████████  | 4/5 [00:06<00:01,  1.73s/it][A
+Arnold Schwarzenegger: 100%|██████████| 5/5 [00:08<00:00,  1.91s/it][A
+                                                                    [Aretain_open:  44%|████▍     | 44/99 [05:28<06:49,  7.44s/it]
+Jennifer Aniston:   0%|          | 0/5 [00:00<?, ?it/s][A
+Jennifer Aniston:  20%|██        | 1/5 [00:00<00:02,  1.92it/s][A
+Jennifer Aniston:  40%|████      | 2/5 [00:02<00:04,  1.53s/it][A
+Jennifer Aniston:  60%|██████    | 3/5 [00:03<00:02,  1.16s/it][A
+Jennifer Aniston:  80%|████████  | 4/5 [00:05<00:01,  1.57s/it][A/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.18s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.80it/s]
+forget_open:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A/rds/user/xy319/hpc-work/venvs/venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+
+Benedetto Varchi:  14%|█▍        | 1/7 [00:01<00:11,  1.97s/it][A
+Benedetto Varchi:  29%|██▊       | 2/7 [00:04<00:10,  2.01s/it][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:06<00:08,  2.02s/it][A
+Benedetto Varchi:  57%|█████▋    | 4/7 [00:07<00:05,  1.99s/it][A
+Benedetto Varchi:  71%|███████▏  | 5/7 [00:08<00:03,  1.50s/it][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:09<00:01,  1.21s/it][A
+Benedetto Varchi: 100%|██████████| 7/7 [00:11<00:00,  1.48s/it][A
+                                                               [Aforget_open:  50%|█████     | 1/2 [00:11<00:11, 11.31s/it]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  33%|███▎      | 1/3 [00:02<00:04,  2.04s/it][A
+Wilhelm Wattenbach:  67%|██████▋   | 2/3 [00:03<00:01,  1.95s/it][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:05<00:00,  1.99s/it][A
+                                                                 [Aforget_open: 100%|██████████| 2/2 [00:17<00:00,  8.17s/it]forget_open: 100%|██████████| 2/2 [00:17<00:00,  8.64s/it]
+forget_mcq:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  43%|████▎     | 3/7 [00:00<00:00, 27.15it/s][A
+Benedetto Varchi:  86%|████████▌ | 6/7 [00:00<00:00, 28.42it/s][A
+                                                               [Aforget_mcq:  50%|█████     | 1/2 [00:00<00:00,  3.78it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+Wilhelm Wattenbach: 100%|██████████| 3/3 [00:00<00:00, 28.57it/s][A
+                                                                 [Aforget_mcq: 100%|██████████| 2/2 [00:00<00:00,  5.85it/s]forget_mcq: 100%|██████████| 2/2 [00:00<00:00,  5.41it/s]
+forget_yesno:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  57%|█████▋    | 4/7 [00:00<00:00, 30.68it/s][A
+                                                               [Aforget_yesno:  50%|█████     | 1/2 [00:00<00:00,  4.32it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+                                                         [Aforget_yesno: 100%|██████████| 2/2 [00:00<00:00,  6.07it/s]
+forget_yesno_false_control:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/7 [00:00<?, ?it/s][A
+Benedetto Varchi:  57%|█████▋    | 4/7 [00:00<00:00, 30.74it/s][A
+                                                               [Aforget_yesno_false_control:  50%|█████     | 1/2 [00:00<00:00,  4.33it/s]
+Wilhelm Wattenbach:   0%|          | 0/3 [00:00<?, ?it/s][A
+                                                         [Aforget_yesno_false_control: 100%|██████████| 2/2 [00:00<00:00,  6.07it/s]
+hardretain_open:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:   5%|▌         | 1/20 [00:00<00:10,  1.73it/s][A
+Benedetto Varchi:  10%|█         | 2/20 [00:02<00:25,  1.44s/it][A
+Benedetto Varchi:  15%|█▌        | 3/20 [00:04<00:29,  1.72s/it][A
+Benedetto Varchi:  20%|██        | 4/20 [00:06<00:29,  1.84s/it][A
+Benedetto Varchi:  25%|██▌       | 5/20 [00:08<00:28,  1.92s/it][A
+Benedetto Varchi:  30%|███       | 6/20 [00:10<00:27,  1.96s/it][A
+Benedetto Varchi:  35%|███▌      | 7/20 [00:11<00:20,  1.59s/it][A
+Benedetto Varchi:  40%|████      | 8/20 [00:13<00:20,  1.73s/it][A
+Benedetto Varchi:  45%|████▌     | 9/20 [00:15<00:20,  1.83s/it][A
+Benedetto Varchi:  50%|█████     | 10/20 [00:16<00:15,  1.52s/it][A
+Benedetto Varchi:  55%|█████▌    | 11/20 [00:18<00:15,  1.68s/it][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:19<00:11,  1.44s/it][A
+Benedetto Varchi:  65%|██████▌   | 13/20 [00:20<00:08,  1.28s/it][A
+Benedetto Varchi:  70%|███████   | 14/20 [00:22<00:09,  1.51s/it][A
+Benedetto Varchi:  75%|███████▌  | 15/20 [00:24<00:08,  1.67s/it][A
+Benedetto Varchi:  80%|████████  | 16/20 [00:24<00:05,  1.33s/it][A
+Benedetto Varchi:  85%|████████▌ | 17/20 [00:27<00:04,  1.54s/it][A
+Benedetto Varchi:  90%|█████████ | 18/20 [00:29<00:03,  1.71s/it][A
+Benedetto Varchi:  95%|█████████▌| 19/20 [00:31<00:01,  1.81s/it][A
+Benedetto Varchi: 100%|██████████| 20/20 [00:33<00:00,  1.88s/it][A
+                                                                 [Ahardretain_open:  50%|█████     | 1/2 [00:33<00:33, 33.20s/it]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:   5%|▌         | 1/20 [00:00<00:15,  1.20it/s][A
+Wilhelm Wattenbach:  10%|█         | 2/20 [00:02<00:27,  1.54s/it][A
+Wilhelm Wattenbach:  15%|█▌        | 3/20 [00:03<00:21,  1.26s/it][A
+Wilhelm Wattenbach:  20%|██        | 4/20 [00:05<00:20,  1.26s/it][A
+Wilhelm Wattenbach:  25%|██▌       | 5/20 [00:07<00:23,  1.54s/it][A
+Wilhelm Wattenbach:  30%|███       | 6/20 [00:09<00:23,  1.71s/it][A
+Wilhelm Wattenbach:  35%|███▌      | 7/20 [00:11<00:23,  1.81s/it][A
+Wilhelm Wattenbach:  40%|████      | 8/20 [00:13<00:22,  1.88s/it][A
+Wilhelm Wattenbach:  45%|████▌     | 9/20 [00:14<00:17,  1.62s/it][A
+Wilhelm Wattenbach:  50%|█████     | 10/20 [00:15<00:14,  1.44s/it][A
+Wilhelm Wattenbach:  55%|█████▌    | 11/20 [00:17<00:14,  1.62s/it][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:19<00:13,  1.75s/it][A
+Wilhelm Wattenbach:  65%|██████▌   | 13/20 [00:20<00:10,  1.53s/it][A
+Wilhelm Wattenbach:  70%|███████   | 14/20 [00:21<00:08,  1.34s/it][A
+Wilhelm Wattenbach:  75%|███████▌  | 15/20 [00:23<00:07,  1.50s/it][A
+Wilhelm Wattenbach:  80%|████████  | 16/20 [00:23<00:05,  1.26s/it][A
+Wilhelm Wattenbach:  85%|████████▌ | 17/20 [00:25<00:04,  1.49s/it][A
+Wilhelm Wattenbach:  90%|█████████ | 18/20 [00:27<00:03,  1.65s/it][A
+Wilhelm Wattenbach:  95%|█████████▌| 19/20 [00:29<00:01,  1.76s/it][A
+Wilhelm Wattenbach: 100%|██████████| 20/20 [00:31<00:00,  1.84s/it][A
+                                                                   [Ahardretain_open: 100%|██████████| 2/2 [01:05<00:00, 32.47s/it]hardretain_open: 100%|██████████| 2/2 [01:05<00:00, 32.58s/it]
+hardretain_mcq:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:  15%|█▌        | 3/20 [00:00<00:00, 24.75it/s][A
+Benedetto Varchi:  30%|███       | 6/20 [00:00<00:00, 23.13it/s][A
+Benedetto Varchi:  45%|████▌     | 9/20 [00:00<00:00, 23.80it/s][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:00<00:00, 24.28it/s][A
+Benedetto Varchi:  75%|███████▌  | 15/20 [00:00<00:00, 23.46it/s][A
+Benedetto Varchi:  90%|█████████ | 18/20 [00:00<00:00, 24.70it/s][A
+                                                                 [Ahardretain_mcq:  50%|█████     | 1/2 [00:00<00:00,  1.20it/s]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  15%|█▌        | 3/20 [00:00<00:00, 24.70it/s][A
+Wilhelm Wattenbach:  30%|███       | 6/20 [00:00<00:00, 27.28it/s][A
+Wilhelm Wattenbach:  45%|████▌     | 9/20 [00:00<00:00, 24.78it/s][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:00<00:00, 24.84it/s][A
+Wilhelm Wattenbach:  75%|███████▌  | 15/20 [00:00<00:00, 26.31it/s][A
+Wilhelm Wattenbach:  90%|█████████ | 18/20 [00:00<00:00, 24.52it/s][A
+                                                                   [Ahardretain_mcq: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]hardretain_mcq: 100%|██████████| 2/2 [00:01<00:00,  1.22it/s]
+hardretain_yesno:   0%|          | 0/2 [00:00<?, ?it/s]
+Benedetto Varchi:   0%|          | 0/20 [00:00<?, ?it/s][A
+Benedetto Varchi:  20%|██        | 4/20 [00:00<00:00, 30.57it/s][A
+Benedetto Varchi:  40%|████      | 8/20 [00:00<00:00, 30.29it/s][A
+Benedetto Varchi:  60%|██████    | 12/20 [00:00<00:00, 30.34it/s][A
+Benedetto Varchi:  80%|████████  | 16/20 [00:00<00:00, 30.17it/s][A
+Benedetto Varchi: 100%|██████████| 20/20 [00:00<00:00, 30.21it/s][A
+                                                                 [Ahardretain_yesno:  50%|█████     | 1/2 [00:00<00:00,  1.51it/s]
+Wilhelm Wattenbach:   0%|          | 0/20 [00:00<?, ?it/s][A
+Wilhelm Wattenbach:  20%|██        | 4/20 [00:00<00:00, 30.20it/s][A
+Wilhelm Wattenbach:  40%|████      | 8/20 [00:00<00:00, 30.11it/s][A
+Wilhelm Wattenbach:  60%|██████    | 12/20 [00:00<00:00, 30.06it/s][A
+Wilhelm Wattenbach:  80%|████████  | 16/20 [00:00<00:00, 29.99it/s][A
+Wilhelm Wattenbach: 100%|██████████| 20/20 [00:00<00:00, 29.97it/s][A
+                                                                   [Ahardretain_yesno: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s]hardretain_yesno: 100%|██████████| 2/2 [00:01<00:00,  1.51it/s]
+retain_open:   0%|          | 0/99 [00:00<?, ?it/s]
+Donald Trump:   0%|          | 0/5 [00:00<?, ?it/s][A
+Donald Trump:  20%|██        | 1/5 [00:00<00:03,  1.25it/s][A
+Donald Trump:  40%|████      | 2/5 [00:02<00:04,  1.53s/it][A
+Donald Trump:  60%|██████    | 3/5 [00:04<00:03,  1.77s/it][A
+Donald Trump:  80%|████████  | 4/5 [00:06<00:01,  1.88s/it][A
+Donald Trump: 100%|██████████| 5/5 [00:08<00:00,  1.82s/it][A
+                                                           [Aretain_open:   1%|          | 1/99 [00:08<14:08,  8.66s/it]
+Elizabeth II:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elizabeth II:  20%|██        | 1/5 [00:02<00:08,  2.04s/it][A
+Elizabeth II:  40%|████      | 2/5 [00:04<00:06,  2.04s/it][A
+Elizabeth II:  60%|██████    | 3/5 [00:04<00:02,  1.29s/it][A
+Elizabeth II:  80%|████████  | 4/5 [00:06<00:01,  1.59s/it][A
+Elizabeth II: 100%|██████████| 5/5 [00:07<00:00,  1.34s/it][A
+                                                           [Aretain_open:   2%|▏         | 2/99 [00:16<12:49,  7.93s/it]
+Barack Obama:   0%|          | 0/5 [00:00<?, ?it/s][A
+Barack Obama:  20%|██        | 1/5 [00:00<00:03,  1.20it/s][A
+Barack Obama:  40%|████      | 2/5 [00:01<00:02,  1.08it/s][A
+Barack Obama:  60%|██████    | 3/5 [00:03<00:02,  1.25s/it][A
+Barack Obama:  80%|████████  | 4/5 [00:05<00:01,  1.56s/it][A
+Barack Obama: 100%|██████████| 5/5 [00:07<00:00,  1.74s/it][A
+                                                           [Aretain_open:   3%|▎         | 3/99 [00:23<12:24,  7.76s/it]
+Cristiano Ronaldo:   0%|          | 0/4 [00:00<?, ?it/s][A
+Cristiano Ronaldo:  25%|██▌       | 1/4 [00:00<00:01,  1.95it/s][A
+Cristiano Ronaldo:  50%|█████     | 2/4 [00:02<00:02,  1.41s/it][A
+Cristiano Ronaldo:  75%|███████▌  | 3/4 [00:03<00:01,  1.32s/it][A
+Cristiano Ronaldo: 100%|██████████| 4/4 [00:04<00:00,  1.25s/it][A
+                                                                [Aretain_open:   4%|▍         | 4/99 [00:28<10:30,  6.64s/it]
+Michael Jackson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Michael Jackson:  20%|██        | 1/5 [00:02<00:08,  2.04s/it][A
+Michael Jackson:  40%|████      | 2/5 [00:04<00:06,  2.04s/it][A
+Michael Jackson:  60%|██████    | 3/5 [00:06<00:04,  2.04s/it][A
+Michael Jackson:  80%|████████  | 4/5 [00:08<00:02,  2.04s/it][A
+Michael Jackson: 100%|██████████| 5/5 [00:10<00:00,  2.04s/it][A
+                                                              [Aretain_open:   5%|▌         | 5/99 [00:38<12:25,  7.93s/it]
+Elon Musk:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elon Musk:  20%|██        | 1/5 [00:00<00:01,  2.08it/s][A
+Elon Musk:  40%|████      | 2/5 [00:00<00:01,  2.26it/s][A
+Elon Musk:  60%|██████    | 3/5 [00:01<00:01,  1.57it/s][A
+Elon Musk:  80%|████████  | 4/5 [00:02<00:00,  1.60it/s][A
+Elon Musk: 100%|██████████| 5/5 [00:03<00:00,  1.06it/s][A
+                                                        [Aretain_open:   6%|▌         | 6/99 [00:42<10:08,  6.55s/it]
+Lady Gaga:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lady Gaga:  20%|██        | 1/5 [00:01<00:04,  1.12s/it][A
+Lady Gaga:  40%|████      | 2/5 [00:01<00:02,  1.38it/s][A
+Lady Gaga:  60%|██████    | 3/5 [00:03<00:02,  1.25s/it][A
+Lady Gaga:  80%|████████  | 4/5 [00:05<00:01,  1.57s/it][A
+Lady Gaga: 100%|██████████| 5/5 [00:06<00:00,  1.19s/it][A
+                                                        [Aretain_open:   7%|▋         | 7/99 [00:48<09:46,  6.37s/it]
+Adolf Hitler:   0%|          | 0/5 [00:00<?, ?it/s][A
+Adolf Hitler:  20%|██        | 1/5 [00:01<00:06,  1.67s/it][A
+Adolf Hitler:  40%|████      | 2/5 [00:03<00:05,  1.89s/it][A
+Adolf Hitler:  60%|██████    | 3/5 [00:05<00:03,  1.93s/it][A
+Adolf Hitler:  80%|████████  | 4/5 [00:07<00:01,  1.79s/it][A
+Adolf Hitler: 100%|██████████| 5/5 [00:09<00:00,  1.88s/it][A
+                                                           [Aretain_open:   8%|▊         | 8/99 [00:57<11:05,  7.31s/it]
+Eminem:   0%|          | 0/5 [00:00<?, ?it/s][A
+Eminem:  20%|██        | 1/5 [00:01<00:04,  1.06s/it][A
+Eminem:  40%|████      | 2/5 [00:01<00:02,  1.08it/s][A
+Eminem:  60%|██████    | 3/5 [00:03<00:02,  1.32s/it][A
+Eminem:  80%|████████  | 4/5 [00:05<00:01,  1.61s/it][A
+Eminem: 100%|██████████| 5/5 [00:06<00:00,  1.38s/it][A
+                                                     [Aretain_open:   9%|▉         | 9/99 [01:04<10:41,  7.12s/it]
+Lionel Messi:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lionel Messi:  20%|██        | 1/5 [00:00<00:02,  1.73it/s][A
+Lionel Messi:  40%|████      | 2/5 [00:01<00:02,  1.05it/s][A
+Lionel Messi:  60%|██████    | 3/5 [00:03<00:02,  1.45s/it][A
+Lionel Messi:  80%|████████  | 4/5 [00:04<00:01,  1.32s/it][A
+Lionel Messi: 100%|██████████| 5/5 [00:06<00:00,  1.40s/it][A
+                                                           [Aretain_open:  10%|█         | 10/99 [01:11<10:16,  6.93s/it]
+Justin Bieber:   0%|          | 0/5 [00:00<?, ?it/s][A
+Justin Bieber:  20%|██        | 1/5 [00:00<00:01,  2.82it/s][A
+Justin Bieber:  40%|████      | 2/5 [00:00<00:01,  2.44it/s][A
+Justin Bieber:  60%|██████    | 3/5 [00:01<00:00,  2.51it/s][A
+Justin Bieber:  80%|████████  | 4/5 [00:03<00:01,  1.05s/it][A
+Justin Bieber: 100%|██████████| 5/5 [00:05<00:00,  1.41s/it][A
+                                                            [Aretain_open:  11%|█         | 11/99 [01:16<09:25,  6.42s/it]
+Freddie Mercury:   0%|          | 0/5 [00:00<?, ?it/s][A
+Freddie Mercury:  20%|██        | 1/5 [00:02<00:08,  2.04s/it][A
+Freddie Mercury:  40%|████      | 2/5 [00:04<00:06,  2.05s/it][A
+Freddie Mercury:  60%|██████    | 3/5 [00:05<00:03,  1.84s/it][A
+Freddie Mercury:  80%|████████  | 4/5 [00:07<00:01,  1.92s/it][A
+Freddie Mercury: 100%|██████████| 5/5 [00:09<00:00,  1.82s/it][A
+                                                              [Aretain_open:  12%|█▏        | 12/99 [01:25<10:36,  7.32s/it]
+Kim Kardashian:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kim Kardashian:  20%|██        | 1/5 [00:00<00:01,  2.22it/s][A
+Kim Kardashian:  40%|████      | 2/5 [00:02<00:04,  1.39s/it][A
+Kim Kardashian:  60%|██████    | 3/5 [00:04<00:03,  1.69s/it][A
+Kim Kardashian:  80%|████████  | 4/5 [00:06<00:01,  1.83s/it][A
+Kim Kardashian: 100%|██████████| 5/5 [00:08<00:00,  1.91s/it][A
+                                                             [Aretain_open:  13%|█▎        | 13/99 [01:34<11:03,  7.72s/it]
+Johnny Depp:   0%|          | 0/5 [00:00<?, ?it/s][A
+Johnny Depp:  20%|██        | 1/5 [00:00<00:01,  2.08it/s][A
+Johnny Depp:  40%|████      | 2/5 [00:02<00:04,  1.40s/it][A
+Johnny Depp:  60%|██████    | 3/5 [00:04<00:03,  1.69s/it][A
+Johnny Depp:  80%|████████  | 4/5 [00:06<00:01,  1.83s/it][A
+Johnny Depp: 100%|██████████| 5/5 [00:08<00:00,  1.91s/it][A
+                                                          [Aretain_open:  14%|█▍        | 14/99 [01:43<11:19,  8.00s/it]
+Steve Jobs:   0%|          | 0/5 [00:00<?, ?it/s][A
+Steve Jobs:  20%|██        | 1/5 [00:00<00:01,  2.83it/s][A
+Steve Jobs:  40%|████      | 2/5 [00:00<00:01,  2.44it/s][A
+Steve Jobs:  60%|██████    | 3/5 [00:02<00:02,  1.16s/it][A
+Steve Jobs:  80%|████████  | 4/5 [00:04<00:01,  1.51s/it][A
+Steve Jobs: 100%|██████████| 5/5 [00:06<00:00,  1.70s/it][A
+                                                         [Aretain_open:  15%|█▌        | 15/99 [01:50<10:45,  7.68s/it]
+Dwayne Johnson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Dwayne Johnson:  20%|██        | 1/5 [00:00<00:03,  1.12it/s][A
+Dwayne Johnson:  40%|████      | 2/5 [00:02<00:03,  1.10s/it][A
+Dwayne Johnson:  60%|██████    | 3/5 [00:04<00:03,  1.53s/it][A
+Dwayne Johnson:  80%|████████  | 4/5 [00:05<00:01,  1.62s/it][A
+Dwayne Johnson: 100%|██████████| 5/5 [00:06<00:00,  1.19s/it][A
+                                                             [Aretain_open:  16%|█▌        | 16/99 [01:56<10:04,  7.28s/it]
+Michael Jordan:   0%|          | 0/5 [00:00<?, ?it/s][A
+Michael Jordan:  20%|██        | 1/5 [00:00<00:01,  2.23it/s][A
+Michael Jordan:  40%|████      | 2/5 [00:01<00:02,  1.19it/s][A
+Michael Jordan:  60%|██████    | 3/5 [00:03<00:02,  1.14s/it][A
+Michael Jordan:  80%|████████  | 4/5 [00:05<00:01,  1.50s/it][A
+Michael Jordan: 100%|██████████| 5/5 [00:05<00:00,  1.21s/it][A
+                                                             [Aretain_open:  17%|█▋        | 17/99 [02:02<09:21,  6.84s/it]
+Taylor Swift:   0%|          | 0/5 [00:00<?, ?it/s][A
+Taylor Swift:  20%|██        | 1/5 [00:00<00:01,  2.15it/s][A
+Taylor Swift:  40%|████      | 2/5 [00:02<00:04,  1.39s/it][A
+Taylor Swift:  60%|██████    | 3/5 [00:04<00:03,  1.68s/it][A
+Taylor Swift:  80%|████████  | 4/5 [00:06<00:01,  1.83s/it][A
+Taylor Swift: 100%|██████████| 5/5 [00:08<00:00,  1.80s/it][A
+                                                           [Aretain_open:  18%|█▊        | 18/99 [02:10<09:50,  7.29s/it]
+Stephen Hawking:   0%|          | 0/5 [00:00<?, ?it/s][A
+Stephen Hawking:  20%|██        | 1/5 [00:01<00:06,  1.69s/it][A
+Stephen Hawking:  40%|████      | 2/5 [00:03<00:05,  1.72s/it][A
+Stephen Hawking:  60%|██████    | 3/5 [00:04<00:02,  1.23s/it][A
+Stephen Hawking:  80%|████████  | 4/5 [00:06<00:01,  1.55s/it][A
+Stephen Hawking: 100%|██████████| 5/5 [00:08<00:00,  1.72s/it][A
+                                                              [Aretain_open:  19%|█▉        | 19/99 [02:18<10:03,  7.55s/it]
+Kanye West:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kanye West:  20%|██        | 1/5 [00:00<00:01,  2.41it/s][A
+Kanye West:  40%|████      | 2/5 [00:00<00:01,  2.19it/s][A
+Kanye West:  60%|██████    | 3/5 [00:02<00:02,  1.18s/it][A
+Kanye West:  80%|████████  | 4/5 [00:04<00:01,  1.52s/it][A
+Kanye West: 100%|██████████| 5/5 [00:07<00:00,  1.70s/it][A
+                                                         [Aretain_open:  20%|██        | 20/99 [02:25<09:43,  7.39s/it]
+Abraham Lincoln:   0%|          | 0/5 [00:00<?, ?it/s][A
+Abraham Lincoln:  20%|██        | 1/5 [00:00<00:03,  1.21it/s][A
+Abraham Lincoln:  40%|████      | 2/5 [00:02<00:04,  1.54s/it][A
+Abraham Lincoln:  60%|██████    | 3/5 [00:03<00:02,  1.24s/it][A
+Abraham Lincoln:  80%|████████  | 4/5 [00:05<00:01,  1.55s/it][A
+Abraham Lincoln: 100%|██████████| 5/5 [00:07<00:00,  1.73s/it][A
+                                                              [Aretain_open:  21%|██        | 21/99 [02:33<09:46,  7.51s/it]
+LeBron James:   0%|          | 0/5 [00:00<?, ?it/s][A
+LeBron James:  20%|██        | 1/5 [00:00<00:01,  2.09it/s][A
+LeBron James:  40%|████      | 2/5 [00:01<00:02,  1.08it/s][A
+LeBron James:  60%|██████    | 3/5 [00:03<00:02,  1.31s/it][A
+LeBron James:  80%|████████  | 4/5 [00:05<00:01,  1.41s/it][A
+LeBron James: 100%|██████████| 5/5 [00:07<00:00,  1.63s/it][A
+                                                           [Aretain_open:  22%|██▏       | 22/99 [02:40<09:28,  7.38s/it]
+Charles III:   0%|          | 0/5 [00:00<?, ?it/s][A
+Charles III:  20%|██        | 1/5 [00:01<00:06,  1.75s/it][A
+Charles III:  40%|████      | 2/5 [00:02<00:03,  1.02s/it][A
+Charles III:  60%|██████    | 3/5 [00:03<00:02,  1.32s/it][A
+Charles III:  80%|████████  | 4/5 [00:05<00:01,  1.60s/it][A
+Charles III: 100%|██████████| 5/5 [00:07<00:00,  1.76s/it][A
+                                                          [Aretain_open:  23%|██▎       | 23/99 [02:48<09:35,  7.57s/it]
+Miley Cyrus:   0%|          | 0/5 [00:00<?, ?it/s][A
+Miley Cyrus:  20%|██        | 1/5 [00:01<00:06,  1.66s/it][A
+Miley Cyrus:  40%|████      | 2/5 [00:02<00:02,  1.04it/s][A
+Miley Cyrus:  60%|██████    | 3/5 [00:04<00:02,  1.45s/it][A
+Miley Cyrus:  80%|████████  | 4/5 [00:06<00:01,  1.68s/it][A
+Miley Cyrus: 100%|██████████| 5/5 [00:08<00:00,  1.81s/it][A
+                                                          [Aretain_open:  24%|██▍       | 24/99 [02:56<09:42,  7.77s/it]
+Leonardo DiCaprio:   0%|          | 0/5 [00:00<?, ?it/s][A
+Leonardo DiCaprio:  20%|██        | 1/5 [00:00<00:02,  1.74it/s][A
+Leonardo DiCaprio:  40%|████      | 2/5 [00:01<00:01,  1.74it/s][A
+Leonardo DiCaprio:  60%|██████    | 3/5 [00:01<00:01,  1.45it/s][A
+Leonardo DiCaprio:  80%|████████  | 4/5 [00:03<00:01,  1.21s/it][A
+Leonardo DiCaprio: 100%|██████████| 5/5 [00:05<00:00,  1.37s/it][A
+                                                                [Aretain_open:  25%|██▌       | 25/99 [03:02<08:47,  7.12s/it]
+Selena Gomez:   0%|          | 0/5 [00:00<?, ?it/s][A
+Selena Gomez:  20%|██        | 1/5 [00:00<00:01,  2.41it/s][A
+Selena Gomez:  40%|████      | 2/5 [00:00<00:01,  2.21it/s][A
+Selena Gomez:  60%|██████    | 3/5 [00:01<00:00,  2.16it/s][A
+Selena Gomez:  80%|████████  | 4/5 [00:03<00:01,  1.08s/it][A
+Selena Gomez: 100%|██████████| 5/5 [00:05<00:00,  1.29s/it][A
+                                                           [Aretain_open:  26%|██▋       | 26/99 [03:07<07:54,  6.50s/it]
+Kobe Bryant:   0%|          | 0/5 [00:00<?, ?it/s][A
+Kobe Bryant:  20%|██        | 1/5 [00:00<00:01,  2.09it/s][A
+Kobe Bryant:  40%|████      | 2/5 [00:02<00:04,  1.39s/it][A
+Kobe Bryant:  60%|██████    | 3/5 [00:04<00:03,  1.68s/it][A
+Kobe Bryant:  80%|████████  | 4/5 [00:06<00:01,  1.71s/it][A
+Kobe Bryant: 100%|██████████| 5/5 [00:08<00:00,  1.82s/it][A
+                                                          [Aretain_open:  27%|██▋       | 27/99 [03:15<08:27,  7.04s/it]
+Joe Biden:   0%|          | 0/5 [00:00<?, ?it/s][A
+Joe Biden:  20%|██        | 1/5 [00:00<00:03,  1.26it/s][A
+Joe Biden:  40%|████      | 2/5 [00:02<00:04,  1.48s/it][A
+Joe Biden:  60%|██████    | 3/5 [00:04<00:03,  1.72s/it][A
+Joe Biden:  80%|████████  | 4/5 [00:06<00:01,  1.59s/it][A
+Joe Biden: 100%|██████████| 5/5 [00:07<00:00,  1.37s/it][A
+                                                        [Aretain_open:  28%|██▊       | 28/99 [03:22<08:22,  7.08s/it]
+Tom Cruise:   0%|          | 0/5 [00:00<?, ?it/s][A
+Tom Cruise:  20%|██        | 1/5 [00:00<00:01,  2.24it/s][A
+Tom Cruise:  40%|████      | 2/5 [00:02<00:04,  1.38s/it][A
+Tom Cruise:  60%|██████    | 3/5 [00:02<00:01,  1.02it/s][A
+Tom Cruise:  80%|████████  | 4/5 [00:05<00:01,  1.39s/it][A
+Tom Cruise: 100%|██████████| 5/5 [00:07<00:00,  1.67s/it][A
+                                                         [Aretain_open:  29%|██▉       | 29/99 [03:30<08:17,  7.11s/it]
+Albert Einstein:   0%|          | 0/5 [00:00<?, ?it/s][A
+Albert Einstein:  20%|██        | 1/5 [00:02<00:08,  2.03s/it][A
+Albert Einstein:  40%|████      | 2/5 [00:03<00:04,  1.60s/it][A
+Albert Einstein:  60%|██████    | 3/5 [00:05<00:03,  1.80s/it][A
+Albert Einstein:  80%|████████  | 4/5 [00:07<00:01,  1.89s/it][A
+Albert Einstein: 100%|██████████| 5/5 [00:09<00:00,  1.94s/it][A
+                                                              [Aretain_open:  30%|███       | 30/99 [03:39<08:58,  7.81s/it]
+Rihanna:   0%|          | 0/5 [00:00<?, ?it/s][A
+Rihanna:  20%|██        | 1/5 [00:00<00:01,  2.40it/s][A
+Rihanna:  40%|████      | 2/5 [00:01<00:01,  1.90it/s][A
+Rihanna:  60%|██████    | 3/5 [00:01<00:00,  2.17it/s][A
+Rihanna:  80%|████████  | 4/5 [00:01<00:00,  2.19it/s][A
+Rihanna: 100%|██████████| 5/5 [00:02<00:00,  1.84it/s][A
+                                                      [Aretain_open:  31%|███▏      | 31/99 [03:42<07:03,  6.23s/it]
+Prince Philip, Duke of Edinburgh:   0%|          | 0/5 [00:00<?, ?it/s][A
+Prince Philip, Duke of Edinburgh:  20%|██        | 1/5 [00:01<00:05,  1.49s/it][A
+Prince Philip, Duke of Edinburgh:  40%|████      | 2/5 [00:03<00:05,  1.81s/it][A
+Prince Philip, Duke of Edinburgh:  60%|██████    | 3/5 [00:05<00:03,  1.81s/it][A
+Prince Philip, Duke of Edinburgh:  80%|████████  | 4/5 [00:06<00:01,  1.71s/it][A
+Prince Philip, Duke of Edinburgh: 100%|██████████| 5/5 [00:08<00:00,  1.83s/it][A
+                                                                               [Aretain_open:  32%|███▏      | 32/99 [03:51<07:51,  7.04s/it]
+Elvis Presley:   0%|          | 0/5 [00:00<?, ?it/s][A
+Elvis Presley:  20%|██        | 1/5 [00:00<00:01,  2.24it/s][A
+Elvis Presley:  40%|████      | 2/5 [00:02<00:04,  1.38s/it][A
+Elvis Presley:  60%|██████    | 3/5 [00:02<00:01,  1.02it/s][A
+Elvis Presley:  80%|████████  | 4/5 [00:05<00:01,  1.40s/it][A
+Elvis Presley: 100%|██████████| 5/5 [00:06<00:00,  1.48s/it][A
+                                                            [Aretain_open:  33%|███▎      | 33/99 [03:57<07:36,  6.92s/it]
+Lil Wayne:   0%|          | 0/5 [00:00<?, ?it/s][A
+Lil Wayne:  20%|██        | 1/5 [00:00<00:01,  2.24it/s][A
+Lil Wayne:  40%|████      | 2/5 [00:01<00:01,  1.73it/s][A
+Lil Wayne:  60%|██████    | 3/5 [00:02<00:01,  1.08it/s][A
+Lil Wayne:  80%|████████  | 4/5 [00:04<00:01,  1.31s/it][A
+Lil Wayne: 100%|██████████| 5/5 [00:04<00:00,  1.01it/s][A
+                                                        [Aretain_open:  34%|███▍      | 34/99 [04:02<06:47,  6.28s/it]
+Scarlett Johansson:   0%|          | 0/5 [00:00<?, ?it/s][A
+Scarlett Johansson:  20%|██        | 1/5 [00:00<00:02,  1.96it/s][A

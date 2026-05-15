@@ -1,0 +1,2 @@
+run_name,forget_rougeL_recall,retain_rougeL_recall,hardretain_rougeL_recall,forget_refusal_rate,forget_n,retain_n,hardretain_n
+whp_n200_lora128_seed1_set3,0.35,0.9106926260577377,0.6384338779500071,0.6,10,493,31
