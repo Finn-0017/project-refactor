@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Usage:
-#   bash run/eval_wpu_orig_model.sh 0 1
+#   bash run/eval_orig_model.sh 0 1
 #   0 = GPU id
 #   1 = forget set id
 
@@ -17,7 +17,7 @@ MODEL_PATH="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--m
 DATA_DIR="data/whp_probe"
 NAMES_PATH="data/whp_names/names_210.json"
 SELECTED_IDS="configs/unlearn_ids${SET_ID}.json"
-OUTPUT_DIR="exp/orig_model_eval/set${SET_ID}"
+OUTPUT_DIR="exp/orig_model/set${SET_ID}/eval"
 RUN_NAME="initial_model_set${SET_ID}"
 LORA_CONFIG="configs/lora_rank_256.json"
 
@@ -50,6 +50,10 @@ if [ ! -f "$LORA_CONFIG" ]; then
   exit 1
 fi
 
+mkdir -p "$OUTPUT_DIR"
+EVAL_LOG="$OUTPUT_DIR/eval_console.log"
+: > "$EVAL_LOG"
+
 REQUIRED_DATA_FILES=(
   "whp_unlearn_testset_forget.json"
   "whp_unlearn_testset_forget_mcq.json"
@@ -76,17 +80,13 @@ echo "Names file: $NAMES_PATH"
 echo "Selected ids file: $SELECTED_IDS"
 echo "Output directory: $OUTPUT_DIR"
 echo "Run name: $RUN_NAME"
-echo "MCQ scoring: raw full-vocabulary choice probabilities, argmax over A/B/C/D/E"
+echo "MCQ scoring: generated answer letter, with legacy raw choice probabilities"
 echo
 echo "Selected ids:"
 cat "$SELECTED_IDS"
 echo
 
 attempt=1
-
-mkdir -p "$OUTPUT_DIR"
-EVAL_LOG="$OUTPUT_DIR/eval_console.log"
-: > "$EVAL_LOG"
 
 while true; do
   echo
